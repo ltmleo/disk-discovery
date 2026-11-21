@@ -900,5 +900,26 @@
       "Can't You Hear Me Knocking": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/b4/93/52b49308-8ed6-61dc-d3a8-f25e404fd1c5/mzaf_8823409699242381422.plus.aac.p.m4a"
     },
     "v": 3
+  },
+  "allman-brothers-at-fillmore-east": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/da/e0/c9/dae0c9cf-2977-19f8-06fa-8adcf7ca86f0/00602547880314.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Whipping Post (Live at the Fillmore East, 1971)": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0e/bd/c7/0ebdc74f-f6b3-417c-e9d7-b513d6c20129/mzaf_12798114327302558638.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "hole-live-through-this": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3d/8e/89/3d8e8923-602c-a6c7-2cc4-677988b8c3e9/06UMGIM05560.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Violet": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/1c/7f/b2/1c7fb226-a92f-37b6-1340-2d8e84e6a8c1/mzaf_4245308207088709241.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "television-marquee-moon": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/1b/6a/c1/1b6ac100-8d0e-ec9d-4639-88b11ed2cdad/603497886029.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Marquee Moon": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/1d/e7/a3/1de7a30a-992b-914e-6367-f0a96d63a944/mzaf_1091236108158872649.plus.aac.p.m4a"
+    },
+    "v": 3
   }
 }
