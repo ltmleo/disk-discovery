@@ -32,6 +32,13 @@ Os 500 discos estão no jogo, então as chances acima são as reais.
 - **Galeria:** tocar numa carta faz ela voar ao centro girando. Esc ou "Fechar" devolvem a carta ao lugar. Ctrl/Cmd+clique abre a página direto.
 - **Movimento reduzido:** quem ativou essa preferência no sistema não recebe nada disso.
 
+## Compartilhar (prévia no WhatsApp)
+
+- Cada página compartilhável é um HTML estático com tags Open Graph próprias (`scripts/static-pages.ts`, que roda no `npm run build`). São elas: a home, `galeria/` e `disco/<id>/` (500 páginas). Os robôs de prévia não rodam JavaScript, então as tags precisam estar no HTML. Essas páginas também respondem 200 em vez de cair no `404.html`.
+- `npm run og` (Playwright, depois do build) gera os cards 1200×630 em `dist/og/`: `site.jpg` e um por disco, com a capa, a moldura da raridade, o título e a posição. O modelo está em `scripts/og/template.html`. Os 500 cards levam ~30 s e ficam entre 80 e 100 KB cada.
+- O botão **Compartilhar** (na revelação e na página do disco) abre o menu nativo do celular; no desktop, copia o link. O link leva `?espiar`, para quem receber ver o disco mesmo sem tê-lo tirado. O evento é `share` (`method`, `content_type`, `item_id`).
+- O WhatsApp guarda a prévia de cada URL em cache. Se o card de um link mudar, a prévia antiga pode continuar aparecendo por um tempo.
+
 ## Analytics
 
 O site faz parte do ecossistema ltmleo.github.io (skill `ltm-novo-site`): GA4 `G-714QFE3V9G` com `content_group: 'disk-discovery'` e a barra `<ltm-bar>`.
@@ -46,6 +53,7 @@ O site faz parte do ecossistema ltmleo.github.io (skill `ltm-novo-site`): GA4 `G
 | `select_content` | página do disco aberta | `content_type`, `content_id`, `rarity`, `source` (`reveal`, `inspect`, `gallery`, `direct`, `back`) |
 | `inspect_card` | carta ampliada na galeria | `content_id`, `rarity` |
 | `play_preview` | prévia começou a tocar | `content_id`, `rarity`, `source` (`reveal`, `inspect`, `tracklist`) |
+| `share` | link compartilhado | `method` (`web_share`, `copy`), `content_type`, `item_id` |
 | `gallery_search` | busca estabilizada (1,2 s sem digitar) | `has_results` (o texto digitado **não** é enviado) |
 | `toggle_spy` / `toggle_sound` | botões | `enabled` |
 | `unlock_achievement` | 10, 25, 50, 100, 250 e 500 discos; primeiro de cada raridade | `achievement_id` |

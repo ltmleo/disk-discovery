@@ -29,6 +29,8 @@ export interface Events {
   /** A settled gallery search. The typed text is never sent (free text may contain personal data). */
   gallery_search: { has_results: YesNo };
   toggle_sound: { enabled: YesNo };
+  /** Link shared. GA recommended event. */
+  share: { method: 'web_share' | 'copy'; content_type: 'album' | 'site'; item_id: string };
   /** Collection milestones and first card of each rarity. GA recommended event. */
   unlock_achievement: { achievement_id: string };
 }

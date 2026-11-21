@@ -3,7 +3,7 @@ import type { Collection } from '../collection';
 import { ALBUMS } from '../data/albums';
 import { drawAlbum } from '../draw';
 import { rarityForRank } from '../rarity';
-import { renderCard, attachMotion } from './card';
+import { renderCard, attachMotion, stars } from './card';
 import { enableGyro, recalibrateGyro } from './motion';
 import { h, prefersReducedMotion, ransom, wait } from './dom';
 import * as sfx from '../audio/sfx';
@@ -11,6 +11,7 @@ import { playPreview, prefetchPreview, stopPreview } from '../audio/preview';
 import { preloadArt } from '../cover';
 import { prefetchContent } from '../data/content';
 import { href } from '../router';
+import { shareButton, SITE_URL } from './share';
 import { achievementsFor, setPlayerProfile, track, yesNo } from '../analytics';
 
 type Phase = 'sealed' | 'tearing' | 'facedown' | 'revealed';
@@ -194,6 +195,14 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     status.textContent = `${rarity.label}! ${album.title}, de ${album.artist} (#${album.rank}).`;
     actions.replaceChildren(
       h('a', { class: 'btn btn--primary', href: href.album(album.id), 'data-source': 'reveal' }, 'Ler a história'),
+      shareButton({
+        title: `${album.title} · ${album.artist}`,
+        text: `Tirei ${stars(rarity.stars)} ${rarity.label} no Disk Discovery: ${album.title}, de ${album.artist} (#${album.rank} dos 500)!`,
+        // ?espiar: whoever opens the link can see the album without having pulled it.
+        url: `${SITE_URL}disco/${album.id}/?espiar`,
+        contentType: 'album',
+        itemId: album.id,
+      }),
       h('button', { class: 'btn', type: 'button', onclick: mountPack }, 'Abrir outro pacote'),
     );
   }

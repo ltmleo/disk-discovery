@@ -18,8 +18,10 @@ export type Route =
 
 export const href = {
   pack: () => BASE,
-  gallery: (spy = false) => `${BASE}galeria${spy ? `?${SPY_PARAM}` : ''}`,
-  album: (id: string, spy = false) => `${BASE}disco/${encodeURIComponent(id)}${spy ? `?${SPY_PARAM}` : ''}`,
+  gallery: (spy = false) => `${BASE}galeria/${spy ? `?${SPY_PARAM}` : ''}`,
+  // Trailing slash: these paths are real static pages (scripts/static-pages.ts); without it
+  // GitHub Pages answers a 301 first.
+  album: (id: string, spy = false) => `${BASE}disco/${encodeURIComponent(id)}/${spy ? `?${SPY_PARAM}` : ''}`,
 };
 
 export function parse(pathname: string, search = ''): Route {

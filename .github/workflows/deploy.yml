@@ -29,6 +29,9 @@ jobs:
       # (e.g. an album added without running `npm run media` locally).
       - run: npm run media
       - run: npm run build
+      # Open Graph share cards (WhatsApp/Telegram previews): one 1200×630 image per album.
+      - run: npx playwright install --with-deps chromium
+      - run: npm run og
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

@@ -10,6 +10,7 @@ import type { Album, AlbumContent } from '../types';
 import { loadContent } from '../data/content';
 import { href, takeSource } from '../router';
 import { track } from '../analytics';
+import { shareButton, SITE_URL } from './share';
 
 const dateFmt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' });
 
@@ -50,6 +51,13 @@ export function renderDetail(id: string, collection: Collection, spy = false): H
           h('span', { class: 'btn__icon', 'aria-hidden': 'true' }, '●'),
           'Ouvir no Spotify',
         ),
+        shareButton({
+          title: `${album.title} · ${album.artist}`,
+          text: `Olha esse disco no Disk Discovery: ${album.title}, de ${album.artist} (${stars(rarity.stars)} ${rarity.label}, #${album.rank} dos 500)`,
+          url: `${SITE_URL}disco/${album.id}/?espiar`,
+          contentType: 'album',
+          itemId: album.id,
+        }),
         h(
           'dl',
           { class: 'detail__meta clip' },
