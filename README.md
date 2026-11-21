@@ -13,7 +13,7 @@ Todo disco tem a mesma chance de sair. A raridade vem só do tamanho de cada fai
 | ★★ Incomum | 101–200 | 100 | 20% |
 | ★ Comum | 201–500 | 300 | 60% |
 
-No MVP (1 disco por raridade) cada disco tem 20% de chance.
+Hoje há 25 discos, 5 por raridade, então cada raridade sai em 20% dos pacotes. As chances acima valem quando a lista estiver completa.
 
 ## Som
 
@@ -37,18 +37,29 @@ Ative uma vez em **Settings → Pages → Source: GitHub Actions**.
 
 ## Adicionar discos
 
-Inclua uma entrada em `src/data/albums.ts`. Campos opcionais:
-
-- `mbid`: ID do *release group* no MusicBrainz. Sem ele, a capa é resolvida em tempo de execução pela API do MusicBrainz (no máximo 1 req/s) e fica em cache no `localStorage`.
-- `spotifyId`: ID do álbum no Spotify. Sem ele, o botão abre uma busca no Spotify.
+1. Inclua a entrada no arquivo da raridade em `src/data/albums/` (`legendary.ts`, `epic.ts`, `rare.ts`, `uncommon.ts`, `common.ts`).
+2. `previewTrack` precisa ser o título de uma faixa de `tracks`. É ela que toca na revelação.
+3. Opcionais: `mbid` (MusicBrainz) e `spotifyId`. Sem `spotifyId`, o botão abre uma busca no Spotify.
 
 `id` é a chave da coleção salva no navegador: não altere depois de publicado.
+
+## Capas e prévias
+
+`npm run media` resolve, para cada disco, a capa (iTunes, ou Cover Art Archive como alternativa) e a URL da prévia, e grava em `src/data/media.generated.json`. O arquivo não é versionado: o CI roda o script antes do build e guarda o resultado em cache, então só discos novos consultam as APIs. Se as APIs estiverem fora do ar, o build segue e o site busca no navegador.
+
+No navegador, a ordem é:
+
+1. URLs resolvidas no build (sem nenhuma consulta).
+2. URLs já resolvidas antes neste navegador (`localStorage`).
+3. Consulta ao iTunes e depois ao MusicBrainz, com fila de prioridade: a carta sendo aberta passa na frente da galeria.
+
+O próximo disco é sorteado quando o pacote aparece na tela. A capa (baixada e decodificada) e a prévia começam a carregar com prioridade alta enquanto o usuário rasga o pacote. Na galeria, as capas só carregam quando entram na tela.
 
 ## Arquitetura
 
 - `src/rarity.ts`, `src/draw.ts`: faixas de raridade e sorteio uniforme. Funções puras, testadas.
 - `src/collection.ts`: coleção no `localStorage`, versionada e tolerante a storage indisponível ou corrompido.
 - `src/audio/`: `sfx.ts` (efeitos sintetizados), `preview.ts` (busca e player de prévias, um único `<audio>` compartilhado), `settings.ts` (mudo).
-- `src/cover.ts`: capas pelo Cover Art Archive (hotlink, nenhuma imagem no repositório) e links do Spotify.
+- `src/cover.ts`: pipeline de capas (fontes, cache, pré-carregamento). `src/net/`: JSONP, fila com prioridade e regras de correspondência compartilhadas com o script de build.
 - `src/ui/*`: views sem framework. Rotas por hash (`#/`, `#/galeria`, `#/disco/:id`), então não é preciso o truque do `404.html` no Pages.
 - `src/styles/card.css`: o JS só escreve `--mx/--my/--rx/--ry`. Cada raridade interpreta essas variáveis do seu jeito (foil na arte, reverse holo, moldura dourada).

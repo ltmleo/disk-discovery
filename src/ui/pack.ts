@@ -7,6 +7,7 @@ import { renderCard, attachTilt } from './card';
 import { h, prefersReducedMotion, ransom, wait } from './dom';
 import * as sfx from '../audio/sfx';
 import { playPreview, prefetchPreview, stopPreview } from '../audio/preview';
+import { preloadArt } from '../cover';
 
 type Phase = 'sealed' | 'tearing' | 'facedown' | 'revealed';
 
@@ -53,6 +54,15 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
   );
 
   let phase: Phase = 'sealed';
+  // The next pull is drawn as soon as the pack is shown, so its artwork and preview
+  // download while the user is still looking at / tearing the pack.
+  let next: { album: Album; art: Promise<string | null> } | null = null;
+
+  const prepareNext = () => {
+    const album = drawAlbum(ALBUMS);
+    next = { album, art: preloadArt(album, 600, 'high') };
+    prefetchPreview(album, album.previewTrack);
+  };
 
   const setPhase = (p: Phase) => {
     phase = p;
@@ -61,6 +71,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
 
   function mountPack() {
     setPhase('sealed');
+    prepareNext();
     stage.removeAttribute('data-rarity');
     stage.replaceChildren(buildPack(tear));
     status.textContent = 'Arraste pela linha pontilhada para rasgar o pacote.';
@@ -77,9 +88,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     sfx.tear();
     stopPreview(300);
 
-    const album = drawAlbum(ALBUMS);
-    // Resolve the preview now so it is ready (and playable synchronously) at reveal time.
-    prefetchPreview(album, album.previewTrack);
+    const { album, art } = next!;
     const { isNew, entry } = collection.add(album.id);
     onChange();
 
@@ -90,7 +99,9 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     status.textContent = 'Algo está saindo do pacote…';
 
     const reduced = prefersReducedMotion();
-    await wait(reduced ? 0 : 650);
+    // Let the tear animation play; if the art is still downloading, give it a little
+    // extra time so the card comes out with its cover already painted.
+    await Promise.all([wait(reduced ? 0 : 650), Promise.race([art, wait(1800)])]);
 
     const card = renderCard(album, { faceDown: true, size: 'lg' });
     card.classList.add('is-emerging');

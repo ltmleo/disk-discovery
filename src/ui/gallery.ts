@@ -35,7 +35,7 @@ export function renderGallery(collection: Collection): HTMLElement {
         return h(
           'li',
           { class: 'gallery__item' },
-          h('a', { class: 'gallery__link', href: `#/disco/${album.id}` }, renderCard(album, { size: 'sm', tilt: true })),
+          h('a', { class: 'gallery__link', href: `#/disco/${album.id}` }, renderCard(album, { size: 'sm', tilt: true, lazy: true })),
           entry.count > 1 ? h('span', { class: 'gallery__count' }, `×${entry.count}`) : null,
         );
       }),

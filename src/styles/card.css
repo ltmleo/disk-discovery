@@ -118,6 +118,10 @@
   opacity: 1;
 }
 
+.card__art.is-instant img {
+  transition: none;
+}
+
 .art__fallback {
   position: absolute;
   inset: 0;
@@ -520,4 +524,12 @@
 
 .card--locked .back__label::after {
   font-size: 1.6rem;
+}
+
+.card--sm .card__title,
+.card--md .card__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

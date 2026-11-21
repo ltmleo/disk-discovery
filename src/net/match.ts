@@ -1,0 +1,82 @@
+/**
+ * Pure matching helpers shared by the browser (runtime fallback) and the
+ * build-time resolver script. No DOM, no fetch.
+ */
+export const norm = (s = ''): string =>
+  s
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[’‘`]/g, "'")
+    .replace(/\(.*?\)|\[.*?\]/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+
+export interface ItunesItem {
+  wrapperType?: string;
+  trackName?: string;
+  artistName?: string;
+  collectionName?: string;
+  previewUrl?: string;
+  artworkUrl100?: string;
+}
+
+interface AlbumLike {
+  title: string;
+  artist: string;
+}
+
+const NOISE = /\b(live|remix|demo|edit|karaoke|instrumental|acoustic|tribute|cover)\b/;
+
+/** Artist names on stores vary ("Prince and the Revolution" vs "Prince"); accept either containing the other. */
+function sameArtist(candidate: string | undefined, artist: string): boolean {
+  const a = norm(candidate);
+  const b = norm(artist);
+  return !!a && (a.includes(b) || b.includes(a));
+}
+
+/** Best preview for a track: same artist required, exact title and same album preferred. */
+export function pickPreview(results: ItunesItem[], album: AlbumLike, track: string): string | null {
+  const title = norm(track);
+  const record = norm(album.title);
+  let best: { url: string; score: number } | null = null;
+  for (const r of results) {
+    if (!r.previewUrl || !sameArtist(r.artistName, album.artist)) continue;
+    const name = norm(r.trackName);
+    let score = 0;
+    if (name === title) score += 4;
+    else if (name.startsWith(title) || title.startsWith(name)) score += 2;
+    else continue;
+    if (norm(r.collectionName).includes(record)) score += 2;
+    if (!NOISE.test((r.trackName ?? '').toLowerCase())) score += 1;
+    if (!best || score > best.score) best = { url: r.previewUrl, score };
+  }
+  return best?.url ?? null;
+}
+
+/**
+ * Best album artwork. Returns a template with `{size}` so callers pick the
+ * resolution (the store CDN serves any NxN).
+ */
+export function pickArtwork(results: ItunesItem[], album: AlbumLike): string | null {
+  const record = norm(album.title);
+  let best: { url: string; score: number } | null = null;
+  for (const r of results) {
+    if (!r.artworkUrl100 || !sameArtist(r.artistName, album.artist)) continue;
+    const name = norm(r.collectionName);
+    let score = 0;
+    if (name === record) score += 4;
+    else if (name.startsWith(record) || record.startsWith(name)) score += 2;
+    else continue;
+    // Check the raw name: edition markers usually live in the parentheses norm() strips.
+    const raw = (r.collectionName ?? '').toLowerCase();
+    if (!NOISE.test(raw)) score += 1;
+    if (!/deluxe|anniversary|expanded|edition|remaster/.test(raw)) score += 1;
+    if (!best || score > best.score) best = { url: r.artworkUrl100, score };
+  }
+  return best ? best.url.replace(/\/\d+x\d+(bb)?(\.\w+)$/, '/{size}x{size}bb$2') : null;
+}
+
+export const artworkAt = (template: string, size: number): string =>
+  template.replaceAll('{size}', String(size));

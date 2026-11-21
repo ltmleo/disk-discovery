@@ -1,6 +1,7 @@
 import type { Album } from '../types';
 import { rarityForRank } from '../rarity';
-import { coverUrl, resolveMbid } from '../cover';
+import { artCandidates, isDecoded, resolveArt } from '../cover';
+import type { Priority } from '../net/jsonp';
 import { h, prefersReducedMotion } from './dom';
 
 export interface CardOptions {
@@ -9,13 +10,25 @@ export interface CardOptions {
   /** Render face-down (front still built so a flip can reveal it). */
   faceDown?: boolean;
   size?: 'sm' | 'md' | 'lg';
+  /** Network priority for the artwork. Defaults to high, or low for lazy cards. */
+  priority?: Priority;
+  /** Only fetch artwork once the card scrolls into view (gallery). */
+  lazy?: boolean;
 }
 
 export function stars(n: number): string {
   return '★'.repeat(n);
 }
 
-function coverArt(album: Album): HTMLElement {
+const ART_PX = { sm: 300, md: 400, lg: 600 } as const;
+
+/**
+ * Artwork with three loading modes:
+ *  - already decoded (preloaded while the pack was being opened): painted immediately, no fade;
+ *  - high priority (card being revealed / detail page): starts now;
+ *  - lazy (gallery): resolves only when scrolled into view, at low priority.
+ */
+function coverArt(album: Album, size: 'sm' | 'md' | 'lg', priority: Priority, lazy: boolean): HTMLElement {
   const initials = album.title
     .split(/\s+/)
     .slice(0, 3)
@@ -24,20 +37,43 @@ function coverArt(album: Album): HTMLElement {
   // Placeholder doubles as the permanent fallback if no art is found.
   const fallback = h('div', { class: 'art__fallback', 'aria-hidden': 'true' }, h('span', {}, initials));
   const art = h('div', { class: 'card__art' }, fallback);
+  const px = ART_PX[size];
 
-  void resolveMbid(album).then((mbid) => {
-    if (!mbid) return;
+  const mount = (urls: string[]) => {
+    const [url, ...rest] = urls;
+    if (!url) return;
     const img = h('img', {
       alt: `Capa de ${album.title}, de ${album.artist}`,
-      loading: 'lazy',
       decoding: 'async',
       referrerpolicy: 'no-referrer',
+      fetchpriority: priority,
+      loading: lazy ? 'lazy' : 'eager',
     });
+    if (isDecoded(url)) art.classList.add('is-loaded', 'is-instant');
     img.addEventListener('load', () => art.classList.add('is-loaded'), { once: true });
-    img.addEventListener('error', () => img.remove(), { once: true });
-    img.src = coverUrl(mbid, 500);
+    // Broken source (e.g. expired CDN URL): fall through to the next candidate.
+    img.addEventListener('error', () => {
+      img.remove();
+      mount(rest);
+    }, { once: true });
+    img.src = url;
     art.append(img);
-  });
+  };
+
+  const known = artCandidates(album, px);
+  if (known.length) mount(known);
+  else if (!lazy || typeof IntersectionObserver === 'undefined') void resolveArt(album, px, priority).then(mount);
+  else {
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        void resolveArt(album, px, 'low').then(mount);
+      },
+      { rootMargin: '200px' },
+    );
+    io.observe(art);
+  }
   return art;
 }
 
@@ -61,7 +97,7 @@ export function renderCard(album: Album, opts: CardOptions = {}): HTMLElement {
       h('span', { class: 'card__rank' }, `#${album.rank}`),
       h('span', { class: 'card__stars', 'aria-label': `${rarity.stars} estrelas` }, stars(rarity.stars)),
     ),
-    coverArt(album),
+    coverArt(album, opts.size ?? 'md', opts.priority ?? (opts.lazy ? 'low' : 'high'), !!opts.lazy),
     h(
       'div',
       { class: 'card__body' },

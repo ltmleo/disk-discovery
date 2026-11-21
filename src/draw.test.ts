@@ -23,7 +23,8 @@ describe('drawAlbum', () => {
   });
 
   it('derives tier odds from tier size', () => {
-    expect(tierOdds(ALBUMS, (a) => rarityForRank(a.rank).id === 'legendary')).toBeCloseTo(1 / ALBUMS.length);
+    const legendary = ALBUMS.filter((a) => rarityForRank(a.rank).id === 'legendary').length;
+    expect(tierOdds(ALBUMS, (a) => rarityForRank(a.rank).id === 'legendary')).toBeCloseTo(legendary / ALBUMS.length);
     expect(tierOdds([], () => true)).toBe(0);
   });
 
@@ -43,8 +44,12 @@ describe('dataset', () => {
     }
   });
 
-  it('MVP: exactly one album per rarity', () => {
-    const tiers = ALBUMS.map((a) => rarityForRank(a.rank).id).sort();
-    expect(tiers).toEqual(RARITIES.map((r) => r.id).sort());
+  it('every rarity tier has albums', () => {
+    const tiers = new Set(ALBUMS.map((a) => rarityForRank(a.rank).id));
+    for (const r of RARITIES) expect(tiers.has(r.id)).toBe(true);
+  });
+
+  it('albums are sorted by rank', () => {
+    expect(ALBUMS.map((a) => a.rank)).toEqual([...ALBUMS.map((a) => a.rank)].sort((x, y) => x - y));
   });
 });
