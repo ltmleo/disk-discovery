@@ -52,18 +52,22 @@ Ative uma vez em **Settings → Pages → Source: GitHub Actions**.
 
 ## Adicionar discos
 
+A lista completa da Rolling Stone (posição, artista, título, gravadora e ano) está em `scripts/data/rs2020.json`. Os 500 discos já estão no jogo.
+
 Cada disco tem duas partes:
 
-1. **Carta** (vai no pacote principal): uma entrada no arquivo da raridade em `src/data/albums/` (`legendary.ts`, `epic.ts`, `rare.ts`, `uncommon.ts`, `common.ts`), com `id`, `rank`, `title`, `artist`, `year`, `label`, `genre`, `tagline` e `previewTrack`. Opcionais: `mbid` (MusicBrainz) e `spotifyId`.
-2. **Conteúdo** (carregado sob demanda): `src/data/content/<id>.json` com `history`, `trivia` e `tracks`. Cada arquivo vira um pedaço separado do build, baixado só quando a página do disco é aberta. Ele também é pré-carregado quando a carta é revelada ou quando o ponteiro passa sobre ela na galeria.
+1. **Carta** (vai no pacote principal): uma entrada no arquivo da raridade em `src/data/albums/` (`legendary.ts` … `common.ts`). Obrigatórios: `id`, `rank`, `title`, `artist`, `year` e `label`. Opcionais: `genre`, `tagline` (texto editorial da carta), `previewTrack`, `mbid` e `spotifyId`.
+2. **Conteúdo** (carregado sob demanda): `src/data/content/<id>.json`, com `tracks` sempre e `history` e `trivia` quando já escritos. Sem `history`, a página mostra "Resenha em breve".
 
-Os testes garantem que todo disco tem conteúdo, que não sobra conteúdo sem disco e que `previewTrack` está em `tracks`.
+`npm run import` adiciona os discos da lista que ainda não estão no jogo. Os dados de loja (gênero, faixas, capa e prévia) vêm da discografia do artista no iTunes, e a música da prévia é a faixa do álbum mais popular na loja. O script é idempotente e pode ser retomado. Nunca sobrescreve discos existentes.
 
-`id` é a chave da coleção salva no navegador: não altere depois de publicado.
+**Escrever a resenha de um disco:** adicione `tagline` na carta e `history` e `trivia` no JSON. Notas por faixa entram em `tracks[].note`.
+
+Os testes garantem que todo disco tem conteúdo, que não sobra conteúdo sem disco e que `previewTrack` está em `tracks`. `id` é a chave da coleção salva no navegador: não altere depois de publicado.
 
 ## Capas e prévias
 
-`npm run media` resolve, para cada disco, a capa e a prévia. A fonte principal é a discografia completa do artista no iTunes (`lookup`), que acerta o álbum original e lê a lista de faixas dele. Quando ela falha, o script usa a busca comum do iTunes e, por último, o MusicBrainz e o Cover Art Archive. O resultado é gravado em `src/data/media.generated.json`. Atrás do proxy dos ambientes Claude Code, rode com `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt npm run media`. O arquivo não é versionado: o CI roda o script antes do build e guarda o resultado em cache, então só discos novos consultam as APIs. Se as APIs estiverem fora do ar, o build segue e o site busca no navegador.
+`npm run media` resolve, para cada disco, a capa e a prévia. A fonte principal é a discografia completa do artista no iTunes (`lookup`), que acerta o álbum original e lê a lista de faixas dele. Quando ela falha, o script usa a busca comum do iTunes e, por último, o MusicBrainz e o Cover Art Archive. O resultado é gravado em `src/data/media.generated.json`. Atrás do proxy dos ambientes Claude Code, rode com `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt npm run media`. O arquivo é versionado. O CI roda o script antes do build apenas para completar entradas que faltem. Se as APIs estiverem fora do ar, o build segue e o site busca no navegador.
 
 No navegador, a ordem é:
 

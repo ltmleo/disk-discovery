@@ -74,7 +74,7 @@ async function itunesSearch(entity: 'album' | 'song', term: string): Promise<Itu
 async function lookupItunes(album: Album): Promise<string | null> {
   return (
     pickArtwork(await itunesSearch('album', `${album.artist} ${album.title}`), album) ??
-    pickArtwork(await itunesSearch('song', `${album.artist} ${album.previewTrack}`), album)
+    (album.previewTrack ? pickArtwork(await itunesSearch('song', `${album.artist} ${album.previewTrack}`), album) : null)
   );
 }
 

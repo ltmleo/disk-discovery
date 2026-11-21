@@ -74,7 +74,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
   const prepareNext = () => {
     const album = drawAlbum(ALBUMS);
     next = { album, art: preloadArt(album, 600, 'high') };
-    prefetchPreview(album, album.previewTrack);
+    if (album.previewTrack) prefetchPreview(album, album.previewTrack);
   };
 
   const setPhase = (p: Phase) => {
@@ -159,7 +159,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     sfx.reveal(rarity.id);
     enableGyro(); // iOS asks for motion permission, which needs this click gesture
     recalibrateGyro();
-    playPreview(album, album.previewTrack, { delayMs: FANFARE_MS[rarity.id], maxMs: 20_000 });
+    if (album.previewTrack) playPreview(album, album.previewTrack, { delayMs: FANFARE_MS[rarity.id], maxMs: 20_000 });
     card.classList.remove('is-facedown', 'is-emerging');
     card.classList.add('is-flipping');
     if (!prefersReducedMotion()) burst(stage, rarity.id);

@@ -15,15 +15,16 @@ export interface Album {
   artist: string;
   year: number;
   label: string;
-  genre: string;
+  /** From the store when imported; absent if the album was not found there. */
+  genre?: string;
   /** MusicBrainz release-group MBID. When absent, resolved at runtime and cached. */
   mbid?: string;
   /** Spotify album ID. When absent, the link falls back to a Spotify search. */
   spotifyId?: string;
-  /** Track whose preview plays on reveal. Must match a title in `tracks`. */
-  previewTrack: string;
-  /** One-line hook shown on the card. */
-  tagline: string;
+  /** Track whose preview plays on reveal. Must match a title in the content's `tracks`. */
+  previewTrack?: string;
+  /** One-line hook shown on the card. Editorial: absent until someone writes it. */
+  tagline?: string;
 }
 
 /**
@@ -31,8 +32,8 @@ export interface Album {
  * src/data/content/, fetched only when its detail page (or a likely visit) needs it.
  */
 export interface AlbumContent {
-  /** Paragraphs. */
-  history: string[];
-  trivia: string[];
+  /** Paragraphs. Editorial: absent until the album's story is written. */
+  history?: string[];
+  trivia?: string[];
   tracks: Track[];
 }

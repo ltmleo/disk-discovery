@@ -65,9 +65,9 @@ export function renderDetail(id: string, collection: Collection, spy = false): H
       h(
         'article',
         { class: 'detail__story' },
-        h('p', { class: 'kicker' }, `${album.artist} · ${album.year} · ${album.genre}`),
+        h('p', { class: 'kicker' }, [album.artist, album.year, album.genre].filter(Boolean).join(' · ')),
         h('h1', { class: 'detail__title' }, album.title),
-        h('p', { class: 'detail__dek' }, album.tagline),
+        album.tagline ? h('p', { class: 'detail__dek' }, album.tagline) : null,
         storyBody(album),
         h('p', { class: 'source' }, 'Ranking: Rolling Stone, “The 500 Greatest Albums of All Time” (2020). Capas: iTunes / Cover Art Archive.'),
       ),
@@ -87,14 +87,30 @@ function storyBody(album: Album): HTMLElement {
     loadContent(album.id).then(
       (content) => {
         body.removeAttribute('aria-busy');
-        body.replaceChildren(
-          h('h2', { class: 'section-label' }, 'A história'),
-          h('div', { class: 'prose' }, content.history.map((p) => h('p', {}, p))),
-          h('h2', { class: 'section-label' }, 'Curiosidades'),
-          h('ul', { class: 'notes', role: 'list' }, content.trivia.map((t) => h('li', { class: 'note' }, t))),
+        const story = content.history?.length
+          ? [
+              h('h2', { class: 'section-label' }, 'A história'),
+              h('div', { class: 'prose' }, content.history.map((p) => h('p', {}, p))),
+            ]
+          : [
+              h(
+                'p',
+                { class: 'clip clip--note story__soon' },
+                '✂ Resenha em breve: a história deste disco ainda está sendo recortada. Enquanto isso, ouça as faixas.',
+              ),
+            ];
+        const sections: (HTMLElement | null)[] = [
+          ...story,
+          content.trivia?.length ? h('h2', { class: 'section-label' }, 'Curiosidades') : null,
+          content.trivia?.length
+            ? h('ul', { class: 'notes', role: 'list' }, content.trivia.map((t) => h('li', { class: 'note' }, t)))
+            : null,
           h('h2', { class: 'section-label' }, 'Faixas'),
-          trackList(album, content),
-        );
+          content.tracks.length
+            ? trackList(album, content)
+            : h('p', { class: 'track__note' }, 'Lista de faixas indisponível.'),
+        ];
+        body.replaceChildren(...sections.filter((n): n is HTMLElement => n !== null));
       },
       () => {
         body.removeAttribute('aria-busy');

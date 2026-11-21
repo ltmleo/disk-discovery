@@ -18,6 +18,9 @@ export interface ItunesItem {
   kind?: string;
   artistId?: number;
   collectionId?: number;
+  trackNumber?: number;
+  discNumber?: number;
+  primaryGenreName?: string;
   trackName?: string;
   artistName?: string;
   collectionName?: string;

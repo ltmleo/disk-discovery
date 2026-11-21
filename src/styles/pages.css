@@ -594,3 +594,14 @@ html.is-inspecting {
 @keyframes skeleton {
   to { background-position: -300% 0; }
 }
+
+/* 500 cards: let the browser skip layout/paint for cards far off-screen. */
+.gallery__item {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
+}
+
+.story__soon {
+  display: block;
+  margin: 28px 0 4px;
+}

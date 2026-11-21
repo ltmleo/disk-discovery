@@ -1,0 +1,3502 @@
+[
+ {
+  "rank": 1,
+  "artist": "Marvin Gaye",
+  "title": "What's Going On",
+  "label": "Tamla/Motown",
+  "year": 1971
+ },
+ {
+  "rank": 2,
+  "artist": "The Beach Boys",
+  "title": "Pet Sounds",
+  "label": "Capitol",
+  "year": 1966
+ },
+ {
+  "rank": 3,
+  "artist": "Joni Mitchell",
+  "title": "Blue",
+  "label": "Reprise",
+  "year": 1971
+ },
+ {
+  "rank": 4,
+  "artist": "Stevie Wonder",
+  "title": "Songs in the Key of Life",
+  "label": "Tamla/Motown",
+  "year": 1976
+ },
+ {
+  "rank": 5,
+  "artist": "The Beatles",
+  "title": "Abbey Road",
+  "label": "Apple",
+  "year": 1969
+ },
+ {
+  "rank": 6,
+  "artist": "Nirvana",
+  "title": "Nevermind",
+  "label": "Geffen",
+  "year": 1991
+ },
+ {
+  "rank": 7,
+  "artist": "Fleetwood Mac",
+  "title": "Rumours",
+  "label": "Warner Bros.",
+  "year": 1977
+ },
+ {
+  "rank": 8,
+  "artist": "Prince and the Revolution",
+  "title": "Purple Rain",
+  "label": "Warner Bros.",
+  "year": 1984
+ },
+ {
+  "rank": 9,
+  "artist": "Bob Dylan",
+  "title": "Blood on the Tracks",
+  "label": "Columbia",
+  "year": 1975
+ },
+ {
+  "rank": 10,
+  "artist": "Lauryn Hill",
+  "title": "The Miseducation of Lauryn Hill",
+  "label": "Ruffhouse/Columbia",
+  "year": 1998
+ },
+ {
+  "rank": 11,
+  "artist": "The Beatles",
+  "title": "Revolver",
+  "label": "Apple",
+  "year": 1966
+ },
+ {
+  "rank": 12,
+  "artist": "Michael Jackson",
+  "title": "Thriller",
+  "label": "Epic",
+  "year": 1982
+ },
+ {
+  "rank": 13,
+  "artist": "Aretha Franklin",
+  "title": "I Never Loved a Man the Way I Love You",
+  "label": "Atlantic",
+  "year": 1967
+ },
+ {
+  "rank": 14,
+  "artist": "The Rolling Stones",
+  "title": "Exile on Main Street",
+  "label": "Rolling Stones Records",
+  "year": 1972
+ },
+ {
+  "rank": 15,
+  "artist": "Public Enemy",
+  "title": "It Takes a Nation of Millions to Hold Us Back",
+  "label": "Def Jam",
+  "year": 1988
+ },
+ {
+  "rank": 16,
+  "artist": "The Clash",
+  "title": "London Calling",
+  "label": "CBS",
+  "year": 1979
+ },
+ {
+  "rank": 17,
+  "artist": "Kanye West",
+  "title": "My Beautiful Dark Twisted Fantasy",
+  "label": "Roc-A-Fella",
+  "year": 2010
+ },
+ {
+  "rank": 18,
+  "artist": "Bob Dylan",
+  "title": "Highway 61 Revisited",
+  "label": "Columbia",
+  "year": 1965
+ },
+ {
+  "rank": 19,
+  "artist": "Kendrick Lamar",
+  "title": "To Pimp a Butterfly",
+  "label": "TDE",
+  "year": 2015
+ },
+ {
+  "rank": 20,
+  "artist": "Radiohead",
+  "title": "Kid A",
+  "label": "Parlophone",
+  "year": 2000
+ },
+ {
+  "rank": 21,
+  "artist": "Bruce Springsteen",
+  "title": "Born to Run",
+  "label": "Columbia",
+  "year": 1975
+ },
+ {
+  "rank": 22,
+  "artist": "The Notorious B.I.G.",
+  "title": "Ready to Die",
+  "label": "Bad Boy",
+  "year": 1994
+ },
+ {
+  "rank": 23,
+  "artist": "The Velvet Underground",
+  "title": "The Velvet Underground and Nico",
+  "label": "Verve",
+  "year": 1967
+ },
+ {
+  "rank": 24,
+  "artist": "The Beatles",
+  "title": "Sgt. Pepper’s Lonely Hearts Club Band",
+  "label": "Capitol",
+  "year": 1967
+ },
+ {
+  "rank": 25,
+  "artist": "Carole King",
+  "title": "Tapestry",
+  "label": "Sony",
+  "year": 1971
+ },
+ {
+  "rank": 26,
+  "artist": "Patti Smith",
+  "title": "Horses",
+  "label": "Arista",
+  "year": 1975
+ },
+ {
+  "rank": 27,
+  "artist": "Wu-Tang Clan",
+  "title": "Enter the Wu-Tang(36 Chambers)",
+  "label": "Loud",
+  "year": 1993
+ },
+ {
+  "rank": 28,
+  "artist": "D’Angelo",
+  "title": "Voodoo",
+  "label": "EMI",
+  "year": 2000
+ },
+ {
+  "rank": 29,
+  "artist": "The Beatles",
+  "title": "White Album",
+  "label": "Apple",
+  "year": 1968
+ },
+ {
+  "rank": 30,
+  "artist": "Jimi Hendrix",
+  "title": "Are You Experienced",
+  "label": "Track",
+  "year": 1967
+ },
+ {
+  "rank": 31,
+  "artist": "Miles Davis",
+  "title": "Kind of Blue",
+  "label": "Columbia",
+  "year": 1959
+ },
+ {
+  "rank": 32,
+  "artist": "Beyoncé",
+  "title": "Lemonade",
+  "label": "Parkwood/Columbia",
+  "year": 2016
+ },
+ {
+  "rank": 33,
+  "artist": "Amy Winehouse",
+  "title": "Back to Black",
+  "label": "Island",
+  "year": 2006
+ },
+ {
+  "rank": 34,
+  "artist": "Stevie Wonder",
+  "title": "Innervisions",
+  "label": "Tamla/Motown",
+  "year": 1973
+ },
+ {
+  "rank": 35,
+  "artist": "The Beatles",
+  "title": "Rubber Soul",
+  "label": "Parlophone",
+  "year": 1965
+ },
+ {
+  "rank": 36,
+  "artist": "Michael Jackson",
+  "title": "Off the Wall",
+  "label": "Epic",
+  "year": 1979
+ },
+ {
+  "rank": 37,
+  "artist": "Dr. Dre",
+  "title": "The Chronic",
+  "label": "Deathrow",
+  "year": 1992
+ },
+ {
+  "rank": 38,
+  "artist": "Bob Dylan",
+  "title": "Blonde on Blonde",
+  "label": "Columbia",
+  "year": 1966
+ },
+ {
+  "rank": 39,
+  "artist": "Talking Heads",
+  "title": "Remain in Light",
+  "label": "Sire",
+  "year": 1980
+ },
+ {
+  "rank": 40,
+  "artist": "David Bowie",
+  "title": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
+  "label": "RCA",
+  "year": 1972
+ },
+ {
+  "rank": 41,
+  "artist": "The Rolling Stones",
+  "title": "Let It Bleed",
+  "label": "ABKCO",
+  "year": 1969
+ },
+ {
+  "rank": 42,
+  "artist": "Radiohead",
+  "title": "OK Computer",
+  "label": "Capitol",
+  "year": 1997
+ },
+ {
+  "rank": 43,
+  "artist": "A Tribe Called Quest",
+  "title": "The Low End Theory",
+  "label": "Jive",
+  "year": 1991
+ },
+ {
+  "rank": 44,
+  "artist": "Nas",
+  "title": "Illmatic",
+  "label": "Columbia",
+  "year": 1994
+ },
+ {
+  "rank": 45,
+  "artist": "Prince",
+  "title": "Sign O' the Times",
+  "label": "Paisley Park/Warner Bros.",
+  "year": 1987
+ },
+ {
+  "rank": 46,
+  "artist": "Paul Simon",
+  "title": "Graceland",
+  "label": "Columbia",
+  "year": 1986
+ },
+ {
+  "rank": 47,
+  "artist": "Ramones",
+  "title": "Ramones",
+  "label": "Sire",
+  "year": 1976
+ },
+ {
+  "rank": 48,
+  "artist": "Bob Marley and the Wailers",
+  "title": "Legend",
+  "label": "Island",
+  "year": 1984
+ },
+ {
+  "rank": 49,
+  "artist": "OutKast",
+  "title": "Aquemini",
+  "label": "LaFace",
+  "year": 1998
+ },
+ {
+  "rank": 50,
+  "artist": "Jay-Z",
+  "title": "The Blueprint",
+  "label": "Roc-A-Fella",
+  "year": 2001
+ },
+ {
+  "rank": 51,
+  "artist": "Chuck Berry",
+  "title": "The Great Twenty-Eight",
+  "label": "Chess",
+  "year": 1982
+ },
+ {
+  "rank": 52,
+  "artist": "David Bowie",
+  "title": "Station to Station",
+  "label": "RCA",
+  "year": 1976
+ },
+ {
+  "rank": 53,
+  "artist": "Jimi Hendrix",
+  "title": "Electric Ladyland",
+  "label": "Reprise",
+  "year": 1968
+ },
+ {
+  "rank": 54,
+  "artist": "James Brown",
+  "title": "Star Time",
+  "label": "Polydor",
+  "year": 1991
+ },
+ {
+  "rank": 55,
+  "artist": "Pink Floyd",
+  "title": "The Dark Side of the Moon",
+  "label": "EMI",
+  "year": 1973
+ },
+ {
+  "rank": 56,
+  "artist": "Liz Phair",
+  "title": "Exile in Guyville",
+  "label": "Matador",
+  "year": 1993
+ },
+ {
+  "rank": 57,
+  "artist": "The Band",
+  "title": "The Band",
+  "label": "Capitol",
+  "year": 1969
+ },
+ {
+  "rank": 58,
+  "artist": "Led Zeppelin",
+  "title": "Led Zeppelin IV",
+  "label": "Atlantic",
+  "year": 1971
+ },
+ {
+  "rank": 59,
+  "artist": "Stevie Wonder",
+  "title": "Talking Book",
+  "label": "Tamla/Motown",
+  "year": 1972
+ },
+ {
+  "rank": 60,
+  "artist": "Van Morrison",
+  "title": "Astral Weeks",
+  "label": "Warner Bros.",
+  "year": 1968
+ },
+ {
+  "rank": 61,
+  "artist": "Eric B. and Rakim",
+  "title": "Paid in Full",
+  "label": "4th & B’way",
+  "year": 1987
+ },
+ {
+  "rank": 62,
+  "artist": "Guns N’ Roses",
+  "title": "Appetite for Destruction",
+  "label": "Geffen",
+  "year": 1987
+ },
+ {
+  "rank": 63,
+  "artist": "Steely Dan",
+  "title": "Aja",
+  "label": "ABC",
+  "year": 1977
+ },
+ {
+  "rank": 64,
+  "artist": "OutKast",
+  "title": "Stankonia",
+  "label": "LaFace",
+  "year": 2000
+ },
+ {
+  "rank": 65,
+  "artist": "James Brown",
+  "title": "Live at the Apollo",
+  "label": "King",
+  "year": 1963
+ },
+ {
+  "rank": 66,
+  "artist": "John Coltrane",
+  "title": "A Love Supreme",
+  "label": "Impulse!",
+  "year": 1965
+ },
+ {
+  "rank": 67,
+  "artist": "Jay-Z",
+  "title": "Reasonable Doubt",
+  "label": "Roc-A-Fella",
+  "year": 1996
+ },
+ {
+  "rank": 68,
+  "artist": "Kate Bush",
+  "title": "Hounds of Love",
+  "label": "EMI",
+  "year": 1985
+ },
+ {
+  "rank": 69,
+  "artist": "Alanis Morissette",
+  "title": "Jagged Little Pill",
+  "label": "Maverick",
+  "year": 1995
+ },
+ {
+  "rank": 70,
+  "artist": "N.W.A",
+  "title": "Straight Outta Compton",
+  "label": "Ruthless",
+  "year": 1988
+ },
+ {
+  "rank": 71,
+  "artist": "Bob Marley and the Wailers",
+  "title": "Exodus",
+  "label": "Island",
+  "year": 1977
+ },
+ {
+  "rank": 72,
+  "artist": "Neil Young",
+  "title": "Harvest",
+  "label": "Reprise",
+  "year": 1972
+ },
+ {
+  "rank": 73,
+  "artist": "My Bloody Valentine",
+  "title": "Loveless",
+  "label": "Sire",
+  "year": 1991
+ },
+ {
+  "rank": 74,
+  "artist": "Kanye West",
+  "title": "The College Dropout",
+  "label": "Roc-A-Fella",
+  "year": 2004
+ },
+ {
+  "rank": 75,
+  "artist": "Aretha Franklin",
+  "title": "Lady Soul",
+  "label": "Atlantic",
+  "year": 1968
+ },
+ {
+  "rank": 76,
+  "artist": "Curtis Mayfield",
+  "title": "Superfly",
+  "label": "Curtom",
+  "year": 1972
+ },
+ {
+  "rank": 77,
+  "artist": "The Who",
+  "title": "Who's Next",
+  "label": "Decca",
+  "year": 1971
+ },
+ {
+  "rank": 78,
+  "artist": "Elvis Presley",
+  "title": "The Sun Sessions",
+  "label": "RCA",
+  "year": 1976
+ },
+ {
+  "rank": 79,
+  "artist": "Frank Ocean",
+  "title": "Blond",
+  "label": "Boys Don’t Cry",
+  "year": 2016
+ },
+ {
+  "rank": 80,
+  "artist": "The Sex Pistols",
+  "title": "Never Mind the Bollocks Here’s the Sex Pistols",
+  "label": "Warner Bros.",
+  "year": 1977
+ },
+ {
+  "rank": 81,
+  "artist": "Beyoncé",
+  "title": "Beyoncé",
+  "label": "Parkwood/Columbia",
+  "year": 2013
+ },
+ {
+  "rank": 82,
+  "artist": "Sly and the Family Stone",
+  "title": "There’s a Riot Goin’ On",
+  "label": "Epic",
+  "year": 1971
+ },
+ {
+  "rank": 83,
+  "artist": "Dusty Springfield",
+  "title": "Dusty in Memphis",
+  "label": "Atlantic",
+  "year": 1969
+ },
+ {
+  "rank": 84,
+  "artist": "AC/DC",
+  "title": "Back in Black",
+  "label": "Atlantic",
+  "year": 1980
+ },
+ {
+  "rank": 85,
+  "artist": "John Lennon",
+  "title": "Plastic Ono Band",
+  "label": "Apple",
+  "year": 1970
+ },
+ {
+  "rank": 86,
+  "artist": "The Doors",
+  "title": "The Doors",
+  "label": "Elektra",
+  "year": 1967
+ },
+ {
+  "rank": 87,
+  "artist": "Miles Davis",
+  "title": "Bitches Brew",
+  "label": "Columbia",
+  "year": 1970
+ },
+ {
+  "rank": 88,
+  "artist": "David Bowie",
+  "title": "Hunky Dory",
+  "label": "RCA",
+  "year": 1971
+ },
+ {
+  "rank": 89,
+  "artist": "Erykah Badu",
+  "title": "Baduizm",
+  "label": "Kedar",
+  "year": 1997
+ },
+ {
+  "rank": 90,
+  "artist": "Neil Young",
+  "title": "After the Gold Rush",
+  "label": "Reprise",
+  "year": 1970
+ },
+ {
+  "rank": 91,
+  "artist": "Bruce Springsteen",
+  "title": "Darkness on the Edge of Town",
+  "label": "Columbia",
+  "year": 1978
+ },
+ {
+  "rank": 92,
+  "artist": "The Jimi Hendrix Experience",
+  "title": "Axis: Bold as Love",
+  "label": "Track",
+  "year": 1967
+ },
+ {
+  "rank": 93,
+  "artist": "Missy “Misdemeanor” Elliott",
+  "title": "Supa Dupa Fly",
+  "label": "Goldmind",
+  "year": 1997
+ },
+ {
+  "rank": 94,
+  "artist": "The Stooges",
+  "title": "Fun House",
+  "label": "Elektra",
+  "year": 1970
+ },
+ {
+  "rank": 95,
+  "artist": "Drake",
+  "title": "Take Care",
+  "label": "Cash Money",
+  "year": 2011
+ },
+ {
+  "rank": 96,
+  "artist": "R.E.M.",
+  "title": "Automatic for the People",
+  "label": "Warner Bros.",
+  "year": 1992
+ },
+ {
+  "rank": 97,
+  "artist": "Metallica",
+  "title": "Master of Puppets",
+  "label": "Elektra",
+  "year": 1986
+ },
+ {
+  "rank": 98,
+  "artist": "Lucinda Williams",
+  "title": "Car Wheels on a Gravel Road",
+  "label": "Mercury",
+  "year": 1998
+ },
+ {
+  "rank": 99,
+  "artist": "Taylor Swift",
+  "title": "Red",
+  "label": "Big Machine",
+  "year": 2012
+ },
+ {
+  "rank": 100,
+  "artist": "The Band",
+  "title": "Music From Big Pink",
+  "label": "Capitol",
+  "year": 1968
+ },
+ {
+  "rank": 101,
+  "artist": "Led Zeppelin",
+  "title": "Led Zeppelin",
+  "label": "Atlantic",
+  "year": 1969
+ },
+ {
+  "rank": 102,
+  "artist": "The Clash",
+  "title": "The Clash",
+  "label": "CBS",
+  "year": 1977
+ },
+ {
+  "rank": 103,
+  "artist": "De La Soul",
+  "title": "Three Feet High And Rising",
+  "label": "Tommy Boy",
+  "year": 1989
+ },
+ {
+  "rank": 104,
+  "artist": "The Rolling Stones",
+  "title": "Sticky Fingers",
+  "label": "Rolling Stones",
+  "year": 1971
+ },
+ {
+  "rank": 105,
+  "artist": "The Allman Brothers",
+  "title": "At Fillmore East",
+  "label": "Capricorn",
+  "year": 1971
+ },
+ {
+  "rank": 106,
+  "artist": "Hole",
+  "title": "Live Through This",
+  "label": "Geffen",
+  "year": 1994
+ },
+ {
+  "rank": 107,
+  "artist": "Television",
+  "title": "Marquee Moon",
+  "label": "Elektra",
+  "year": 1977
+ },
+ {
+  "rank": 108,
+  "artist": "Fiona Apple",
+  "title": "When the Pawn ...",
+  "label": "Epic",
+  "year": 1999
+ },
+ {
+  "rank": 109,
+  "artist": "Lou Reed",
+  "title": "Transformer",
+  "label": "RCA",
+  "year": 1972
+ },
+ {
+  "rank": 110,
+  "artist": "Joni Mitchell",
+  "title": "Court and Spark",
+  "label": "Asylum",
+  "year": 1974
+ },
+ {
+  "rank": 111,
+  "artist": "Janet Jackson",
+  "title": "Control",
+  "label": "A&M",
+  "year": 1986
+ },
+ {
+  "rank": 112,
+  "artist": "Elton John",
+  "title": "Goodbye Yellow Brick Road",
+  "label": "MCA",
+  "year": 1973
+ },
+ {
+  "rank": 113,
+  "artist": "The Smiths",
+  "title": "The Queen Is Dead",
+  "label": "Sire",
+  "year": 1986
+ },
+ {
+  "rank": 114,
+  "artist": "The Strokes",
+  "title": "Is This It",
+  "label": "RCA",
+  "year": 2001
+ },
+ {
+  "rank": 115,
+  "artist": "Kendrick Lamar",
+  "title": "good kid, m.A.A.d city",
+  "label": "TDE",
+  "year": 2012
+ },
+ {
+  "rank": 116,
+  "artist": "The Cure",
+  "title": "Disintegration",
+  "label": "Fiction",
+  "year": 1989
+ },
+ {
+  "rank": 117,
+  "artist": "Kanye West",
+  "title": "Late Registration",
+  "label": "Roc-A-Fella",
+  "year": 2005
+ },
+ {
+  "rank": 118,
+  "artist": "The Eagles",
+  "title": "Hotel California",
+  "label": "Asylum",
+  "year": 1976
+ },
+ {
+  "rank": 119,
+  "artist": "Sly and the Family Stone",
+  "title": "Stand!",
+  "label": "Epic",
+  "year": 1969
+ },
+ {
+  "rank": 120,
+  "artist": "Van Morrison",
+  "title": "Moondance",
+  "label": "Warner Bros.",
+  "year": 1970
+ },
+ {
+  "rank": 121,
+  "artist": "Elvis Costello",
+  "title": "This Year’s Model",
+  "label": "Columbia",
+  "year": 1978
+ },
+ {
+  "rank": 122,
+  "artist": "Nine Inch Nails",
+  "title": "The Downward Spiral",
+  "label": "Nothing/Interscope",
+  "year": 1994
+ },
+ {
+  "rank": 123,
+  "artist": "Led Zeppelin",
+  "title": "Led Zeppelin II",
+  "label": "Atlantic",
+  "year": 1969
+ },
+ {
+  "rank": 124,
+  "artist": "U2",
+  "title": "Achtung Baby",
+  "label": "Island",
+  "year": 1991
+ },
+ {
+  "rank": 125,
+  "artist": "Beastie Boys",
+  "title": "Paul's Boutique",
+  "label": "Capitol",
+  "year": 1989
+ },
+ {
+  "rank": 126,
+  "artist": "Mary J. Blige",
+  "title": "My Life",
+  "label": "Uptown",
+  "year": 1994
+ },
+ {
+  "rank": 127,
+  "artist": "Ray Charles",
+  "title": "Modern Sounds in Country and Western Music",
+  "label": "ABC-Paramount",
+  "year": 1962
+ },
+ {
+  "rank": 128,
+  "artist": "Queen",
+  "title": "A Night at the Opera",
+  "label": "Elektra",
+  "year": 1975
+ },
+ {
+  "rank": 129,
+  "artist": "Pink Floyd",
+  "title": "The Wall",
+  "label": "Columbia",
+  "year": 1979
+ },
+ {
+  "rank": 130,
+  "artist": "Prince",
+  "title": "1999",
+  "label": "Warner Bros.",
+  "year": 1982
+ },
+ {
+  "rank": 131,
+  "artist": "Portishead",
+  "title": "Dummy",
+  "label": "Go! Beat",
+  "year": 1994
+ },
+ {
+  "rank": 132,
+  "artist": "Hank Williams",
+  "title": "40 Greatest Hits",
+  "label": "Polydor",
+  "year": 1978
+ },
+ {
+  "rank": 133,
+  "artist": "Joni Mitchell",
+  "title": "Hejira",
+  "label": "Asylum",
+  "year": 1976
+ },
+ {
+  "rank": 134,
+  "artist": "Fugees",
+  "title": "The Score",
+  "label": "Columbia",
+  "year": 1996
+ },
+ {
+  "rank": 135,
+  "artist": "U2",
+  "title": "The Joshua Tree",
+  "label": "Island",
+  "year": 1987
+ },
+ {
+  "rank": 136,
+  "artist": "Funkadelic",
+  "title": "Maggot Brain",
+  "label": "Westbound",
+  "year": 1971
+ },
+ {
+  "rank": 137,
+  "artist": "Adele",
+  "title": "21",
+  "label": "Columbia",
+  "year": 2011
+ },
+ {
+  "rank": 138,
+  "artist": "Madonna",
+  "title": "The Immaculate Collection",
+  "label": "Sire",
+  "year": 1990
+ },
+ {
+  "rank": 139,
+  "artist": "Black Sabbath",
+  "title": "Paranoid",
+  "label": "Vertigo",
+  "year": 1970
+ },
+ {
+  "rank": 140,
+  "artist": "Bob Marley and the Wailers",
+  "title": "Catch a Fire",
+  "label": "Island",
+  "year": 1973
+ },
+ {
+  "rank": 141,
+  "artist": "Pixies",
+  "title": "Doolittle",
+  "label": "4AD/Elektra",
+  "year": 1989
+ },
+ {
+  "rank": 142,
+  "artist": "Bruce Springsteen",
+  "title": "Born in the U.S.A.",
+  "label": "Columbia",
+  "year": 1984
+ },
+ {
+  "rank": 143,
+  "artist": "The Velvet Underground",
+  "title": "The Velvet Underground",
+  "label": "MGM",
+  "year": 1969
+ },
+ {
+  "rank": 144,
+  "artist": "Led Zeppelin",
+  "title": "Physical Graffiti",
+  "label": "Swan Song",
+  "year": 1975
+ },
+ {
+  "rank": 145,
+  "artist": "Eminem",
+  "title": "The Marshall Mathers LP",
+  "label": "Interscope",
+  "year": 2000
+ },
+ {
+  "rank": 146,
+  "artist": "Blondie",
+  "title": "Parallel Lines",
+  "label": "Chrysalis",
+  "year": 1978
+ },
+ {
+  "rank": 147,
+  "artist": "Jeff Buckley",
+  "title": "Grace",
+  "label": "Columbia",
+  "year": 1994
+ },
+ {
+  "rank": 148,
+  "artist": "Frank Ocean",
+  "title": "Channel Orange",
+  "label": "Def Jam",
+  "year": 2012
+ },
+ {
+  "rank": 149,
+  "artist": "John Prine",
+  "title": "John Prine",
+  "label": "Atlantic",
+  "year": 1971
+ },
+ {
+  "rank": 150,
+  "artist": "Bruce Springsteen",
+  "title": "Nebraska",
+  "label": "Columbia",
+  "year": 1982
+ },
+ {
+  "rank": 151,
+  "artist": "George Michael",
+  "title": "Faith",
+  "label": "Columbia",
+  "year": 1987
+ },
+ {
+  "rank": 152,
+  "artist": "The Pretenders",
+  "title": "Pretenders",
+  "label": "Sire",
+  "year": 1980
+ },
+ {
+  "rank": 153,
+  "artist": "PJ Harvey",
+  "title": "Rid of Me",
+  "label": "Island",
+  "year": 1993
+ },
+ {
+  "rank": 154,
+  "artist": "Aretha Franklin",
+  "title": "Amazing Grace",
+  "label": "Atlantic",
+  "year": 1972
+ },
+ {
+  "rank": 155,
+  "artist": "Jay-Z",
+  "title": "The Black Album",
+  "label": "Roc-A-Fella",
+  "year": 2003
+ },
+ {
+  "rank": 156,
+  "artist": "The Replacements",
+  "title": "Let It Be",
+  "label": "Twin/Tone",
+  "year": 1984
+ },
+ {
+  "rank": 157,
+  "artist": "Oasis",
+  "title": "(What's the Story) Morning Glory?",
+  "label": "Epic",
+  "year": 1995
+ },
+ {
+  "rank": 158,
+  "artist": "Erykah Badu",
+  "title": "Mama's Gun",
+  "label": "Motown",
+  "year": 2000
+ },
+ {
+  "rank": 159,
+  "artist": "The Police",
+  "title": "Synchronicity",
+  "label": "A&M",
+  "year": 1983
+ },
+ {
+  "rank": 160,
+  "artist": "Pearl Jam",
+  "title": "Ten",
+  "label": "Epic",
+  "year": 1991
+ },
+ {
+  "rank": 161,
+  "artist": "Crosby, Stills & Nash",
+  "title": "Crosby, Stills & Nash",
+  "label": "Atlantic",
+  "year": 1969
+ },
+ {
+  "rank": 162,
+  "artist": "Pulp",
+  "title": "Different Class",
+  "label": "Island",
+  "year": 1995
+ },
+ {
+  "rank": 163,
+  "artist": "Various Artists",
+  "title": "Saturday Night Fever",
+  "label": "RSO",
+  "year": 1977
+ },
+ {
+  "rank": 164,
+  "artist": "Johnny Cash",
+  "title": "At Folsom Prison",
+  "label": "Columbia",
+  "year": 1968
+ },
+ {
+  "rank": 165,
+  "artist": "R.E.M.",
+  "title": "Murmur",
+  "label": "I.R.S.",
+  "year": 1983
+ },
+ {
+  "rank": 166,
+  "artist": "Buddy Holly",
+  "title": "20 Golden Greats",
+  "label": "MCA",
+  "year": 1978
+ },
+ {
+  "rank": 167,
+  "artist": "Depeche Mode",
+  "title": "Violator",
+  "label": "Sire",
+  "year": 1990
+ },
+ {
+  "rank": 168,
+  "artist": "Steely Dan",
+  "title": "Can’t Buy a Thrill",
+  "label": "ABC",
+  "year": 1972
+ },
+ {
+  "rank": 169,
+  "artist": "Billy Joel",
+  "title": "The Stranger",
+  "label": "Columbia",
+  "year": 1977
+ },
+ {
+  "rank": 170,
+  "artist": "Cream",
+  "title": "Disraeli Gears",
+  "label": "Reaction",
+  "year": 1967
+ },
+ {
+  "rank": 171,
+  "artist": "Sonic Youth",
+  "title": "Daydream Nation",
+  "label": "Enigma",
+  "year": 1988
+ },
+ {
+  "rank": 172,
+  "artist": "Simon and Garfunkel",
+  "title": "Bridge Over Troubled Water",
+  "label": "Columbia",
+  "year": 1970
+ },
+ {
+  "rank": 173,
+  "artist": "Nirvana",
+  "title": "In Utero",
+  "label": "Geffen",
+  "year": 1993
+ },
+ {
+  "rank": 174,
+  "artist": "Jimmy Cliff and Various Artists",
+  "title": "The Harder They Come: Original Soundtrack",
+  "label": "Mango",
+  "year": 1972
+ },
+ {
+  "rank": 175,
+  "artist": "Kendrick Lamar",
+  "title": "DAMN.",
+  "label": "TDE",
+  "year": 2017
+ },
+ {
+  "rank": 176,
+  "artist": "Public Enemy",
+  "title": "Fear of a Black Planet",
+  "label": "Def Jam/Columbia",
+  "year": 1990
+ },
+ {
+  "rank": 177,
+  "artist": "Rod Stewart",
+  "title": "Every Picture Tells a Story",
+  "label": "Mercury",
+  "year": 1971
+ },
+ {
+  "rank": 178,
+  "artist": "Otis Redding",
+  "title": "Otis Blue",
+  "label": "Volt",
+  "year": 1965
+ },
+ {
+  "rank": 179,
+  "artist": "Notorious B.I.G.",
+  "title": "Life After Death",
+  "label": "Bad Boy",
+  "year": 1997
+ },
+ {
+  "rank": 180,
+  "artist": "Love",
+  "title": "Forever Changes",
+  "label": "Elektra",
+  "year": 1967
+ },
+ {
+  "rank": 181,
+  "artist": "Bob Dylan",
+  "title": "Bringing It All Back Home",
+  "label": "Columbia",
+  "year": 1965
+ },
+ {
+  "rank": 182,
+  "artist": "James Taylor",
+  "title": "Sweet Baby James",
+  "label": "Warner Bros.",
+  "year": 1970
+ },
+ {
+  "rank": 183,
+  "artist": "D'Angelo",
+  "title": "Brown Sugar",
+  "label": "EMI",
+  "year": 1995
+ },
+ {
+  "rank": 184,
+  "artist": "Cyndi Lauper",
+  "title": "She’s So Unusual",
+  "label": "Portrait",
+  "year": 1983
+ },
+ {
+  "rank": 185,
+  "artist": "The Rolling Stones",
+  "title": "Beggars Banquet",
+  "label": "Decca",
+  "year": 1968
+ },
+ {
+  "rank": 186,
+  "artist": "Red Hot Chili Peppers",
+  "title": "Blood Sugar Sex Magik",
+  "label": "Warner Bros.",
+  "year": 1991
+ },
+ {
+  "rank": 187,
+  "artist": "Ice Cube",
+  "title": "AmeriKKKa’s Most Wanted",
+  "label": "Priority",
+  "year": 1990
+ },
+ {
+  "rank": 188,
+  "artist": "T. Rex",
+  "title": "Electric Warrior",
+  "label": "Reprise",
+  "year": 1971
+ },
+ {
+  "rank": 189,
+  "artist": "Sleater-Kinney",
+  "title": "Dig Me Out",
+  "label": "Kill Rock Stars",
+  "year": 1997
+ },
+ {
+  "rank": 190,
+  "artist": "The Who",
+  "title": "Tommy",
+  "label": "Decca",
+  "year": 1969
+ },
+ {
+  "rank": 191,
+  "artist": "Etta James",
+  "title": "At Last!",
+  "label": "Argo",
+  "year": 1961
+ },
+ {
+  "rank": 192,
+  "artist": "Beastie Boys",
+  "title": "Licensed to Ill",
+  "label": "Def Jam/Columbia",
+  "year": 1986
+ },
+ {
+  "rank": 193,
+  "artist": "Creedence Clearwater Revival",
+  "title": "Willy and the Poor Boys",
+  "label": "Fantasy",
+  "year": 1969
+ },
+ {
+  "rank": 194,
+  "artist": "Michael Jackson",
+  "title": "Bad",
+  "label": "Epic",
+  "year": 1987
+ },
+ {
+  "rank": 195,
+  "artist": "Leonard Cohen",
+  "title": "Songs of Leonard Cohen",
+  "label": "Columbia",
+  "year": 1967
+ },
+ {
+  "rank": 196,
+  "artist": "Robyn",
+  "title": "Body Talk",
+  "label": "Konichiwa",
+  "year": 2010
+ },
+ {
+  "rank": 197,
+  "artist": "The Beatles",
+  "title": "Meet the Beatles!",
+  "label": "Capitol",
+  "year": 1964
+ },
+ {
+  "rank": 198,
+  "artist": "The B-52's",
+  "title": "The B-52's",
+  "label": "Warner Bros.",
+  "year": 1979
+ },
+ {
+  "rank": 199,
+  "artist": "Pavement",
+  "title": "Slanted and Enchanted",
+  "label": "Matador",
+  "year": 1993
+ },
+ {
+  "rank": 200,
+  "artist": "Sade",
+  "title": "Diamond Life",
+  "label": "Epic",
+  "year": 1984
+ },
+ {
+  "rank": 201,
+  "artist": "A Tribe Called Quest",
+  "title": "Midnight Marauders",
+  "label": "Jive",
+  "year": 1993
+ },
+ {
+  "rank": 202,
+  "artist": "Björk",
+  "title": "Homogenic",
+  "label": "Elektra",
+  "year": 1997
+ },
+ {
+  "rank": 203,
+  "artist": "Nick Drake",
+  "title": "Pink Moon",
+  "label": "Island",
+  "year": 1979
+ },
+ {
+  "rank": 204,
+  "artist": "Kanye West",
+  "title": "Graduation",
+  "label": "Roc-A-Fella",
+  "year": 2007
+ },
+ {
+  "rank": 205,
+  "artist": "Cat Stevens",
+  "title": "Tea for the Tillerman",
+  "label": "A&M",
+  "year": 1970
+ },
+ {
+  "rank": 206,
+  "artist": "David Bowie",
+  "title": "Low",
+  "label": "RCA",
+  "year": 1977
+ },
+ {
+  "rank": 207,
+  "artist": "Eagles",
+  "title": "Eagles",
+  "label": "Asylum",
+  "year": 1972
+ },
+ {
+  "rank": 208,
+  "artist": "Lil Wayne",
+  "title": "Tha Carter III",
+  "label": "Cash Money/Universal Motown",
+  "year": 2008
+ },
+ {
+  "rank": 209,
+  "artist": "Run-DMC",
+  "title": "Raising Hell",
+  "label": "Profile",
+  "year": 1986
+ },
+ {
+  "rank": 210,
+  "artist": "Ray Charles",
+  "title": "The Birth of Soul",
+  "label": "Atlantic",
+  "year": 1991
+ },
+ {
+  "rank": 211,
+  "artist": "Joy Divison",
+  "title": "Unknown Pleasures",
+  "label": "Factory",
+  "year": 1980
+ },
+ {
+  "rank": 212,
+  "artist": "Nina Simone",
+  "title": "Wild Is the Wind",
+  "label": "Philips",
+  "year": 1966
+ },
+ {
+  "rank": 213,
+  "artist": "Fiona Apple",
+  "title": "The Idler Wheel",
+  "label": "Epic",
+  "year": 2012
+ },
+ {
+  "rank": 214,
+  "artist": "Tom Petty",
+  "title": "Wildflowers",
+  "label": "Warner Bros.",
+  "year": 1994
+ },
+ {
+  "rank": 215,
+  "artist": "Grateful Dead",
+  "title": "American Beauty",
+  "label": "Warner Bros.",
+  "year": 1970
+ },
+ {
+  "rank": 216,
+  "artist": "Elliott Smith",
+  "title": "Either/Or",
+  "label": "Kill Rock Stars",
+  "year": 1997
+ },
+ {
+  "rank": 217,
+  "artist": "Oasis",
+  "title": "Definitely Maybe",
+  "label": "Epic",
+  "year": 1994
+ },
+ {
+  "rank": 218,
+  "artist": "TLC",
+  "title": "CrazySexyCool",
+  "label": "LaFace",
+  "year": 1994
+ },
+ {
+  "rank": 219,
+  "artist": "Raekwon",
+  "title": "Only Built 4 Cuban Linx",
+  "label": "Loud/RCA",
+  "year": 1995
+ },
+ {
+  "rank": 220,
+  "artist": "Crosby, Stills, Nash, and Young",
+  "title": "Déjà Vu",
+  "label": "Epic",
+  "year": 1970
+ },
+ {
+  "rank": 221,
+  "artist": "Rage Against the Machine",
+  "title": "Rage Against the Machine",
+  "label": "Epic",
+  "year": 1992
+ },
+ {
+  "rank": 222,
+  "artist": "Madonna",
+  "title": "Ray of Light",
+  "label": "Maverick",
+  "year": 1998
+ },
+ {
+  "rank": 223,
+  "artist": "John Lennon",
+  "title": "Imagine",
+  "label": "Apple",
+  "year": 1971
+ },
+ {
+  "rank": 224,
+  "artist": "Dixie Chicks",
+  "title": "Fly",
+  "label": "Monument",
+  "year": 1999
+ },
+ {
+  "rank": 225,
+  "artist": "Wilco",
+  "title": "Yankee Hotel Foxtrot",
+  "label": "Nonesuch",
+  "year": 2001
+ },
+ {
+  "rank": 226,
+  "artist": "Derek and the Dominos",
+  "title": "Layla and Other Assorted Love Songs",
+  "label": "Atco",
+  "year": 1970
+ },
+ {
+  "rank": 227,
+  "artist": "Little Richard",
+  "title": "Here’s Little Richard",
+  "label": "Specialty",
+  "year": 1957
+ },
+ {
+  "rank": 228,
+  "artist": "De La Soul",
+  "title": "De La Soul Is Dead",
+  "label": "Tommy Boy",
+  "year": 1991
+ },
+ {
+  "rank": 229,
+  "artist": "Patsy Cline",
+  "title": "The Ultimate Collection",
+  "label": "Universal",
+  "year": 2000
+ },
+ {
+  "rank": 230,
+  "artist": "Rihanna",
+  "title": "Anti",
+  "label": "Roc Nation",
+  "year": 2016
+ },
+ {
+  "rank": 231,
+  "artist": "Tom Petty and the Heartbreakers",
+  "title": "Damn the Torpedoes",
+  "label": "Backstreet",
+  "year": 1979
+ },
+ {
+  "rank": 232,
+  "artist": "John Coltrane",
+  "title": "Giant Steps",
+  "label": "Atlantic",
+  "year": 1960
+ },
+ {
+  "rank": 233,
+  "artist": "Tori Amos",
+  "title": "Little Earthquakes",
+  "label": "Atlantic",
+  "year": 1992
+ },
+ {
+  "rank": 234,
+  "artist": "Black Sabbath",
+  "title": "Master of Reality",
+  "label": "Veritgo",
+  "year": 1971
+ },
+ {
+  "rank": 235,
+  "artist": "Metallica",
+  "title": "Metallica (The Black Album)",
+  "label": "Elektra",
+  "year": 1991
+ },
+ {
+  "rank": 236,
+  "artist": "Daft Punk",
+  "title": "Discovery",
+  "label": "Virgin",
+  "year": 2001
+ },
+ {
+  "rank": 237,
+  "artist": "Willie Nelson",
+  "title": "Red Headed Stranger",
+  "label": "Columbia",
+  "year": 1975
+ },
+ {
+  "rank": 238,
+  "artist": "Kraftwerk",
+  "title": "Trans Europe Express",
+  "label": "Kling Klang",
+  "year": 1977
+ },
+ {
+  "rank": 239,
+  "artist": "Boogie Down Productions",
+  "title": "Criminal Minded",
+  "label": "B-Boy",
+  "year": 1987
+ },
+ {
+  "rank": 240,
+  "artist": "Sam Cooke",
+  "title": "Live at the Harlem Square Club, 1963",
+  "label": "RCA",
+  "year": 1985
+ },
+ {
+  "rank": 241,
+  "artist": "Massive Attack",
+  "title": "Blue Lines",
+  "label": "Wildbunch/Virgin",
+  "year": 1991
+ },
+ {
+  "rank": 242,
+  "artist": "The Velvet Underground",
+  "title": "Loaded",
+  "label": "Cotillion",
+  "year": 1970
+ },
+ {
+  "rank": 243,
+  "artist": "The Zombies",
+  "title": "Odessey and Oracle",
+  "label": "Date",
+  "year": 1968
+ },
+ {
+  "rank": 244,
+  "artist": "Kanye West",
+  "title": "808s & Heartbreak",
+  "label": "Roc-A-Fella",
+  "year": 2008
+ },
+ {
+  "rank": 245,
+  "artist": "Cocteau Twins",
+  "title": "Heaven or Las Vegas",
+  "label": "4AD",
+  "year": 1990
+ },
+ {
+  "rank": 246,
+  "artist": "LL Cool J",
+  "title": "Mama Said Knock You Out",
+  "label": "Def Jam/Columbia",
+  "year": 1991
+ },
+ {
+  "rank": 247,
+  "artist": "Sade",
+  "title": "Love Deluxe",
+  "label": "Epic",
+  "year": 1992
+ },
+ {
+  "rank": 248,
+  "artist": "Green Day",
+  "title": "American Idiot",
+  "label": "Reprise",
+  "year": 2004
+ },
+ {
+  "rank": 249,
+  "artist": "Whitney Houston",
+  "title": "Whitney Houston",
+  "label": "Arista",
+  "year": 1985
+ },
+ {
+  "rank": 250,
+  "artist": "Buzzcocks",
+  "title": "Singles Going Steady",
+  "label": "I.R.S.",
+  "year": 1979
+ },
+ {
+  "rank": 251,
+  "artist": "Elton John",
+  "title": "Honky Château",
+  "label": "Uni",
+  "year": 1972
+ },
+ {
+  "rank": 252,
+  "artist": "Devo",
+  "title": "Q: Are We Not Men? A: We Are Devo!",
+  "label": "Warner Bros.",
+  "year": 1978
+ },
+ {
+  "rank": 253,
+  "artist": "Pink Floyd",
+  "title": "The Piper at the Gates of Dawn",
+  "label": "EMI/Columbia",
+  "year": 1967
+ },
+ {
+  "rank": 254,
+  "artist": "Herbie Hancock",
+  "title": "Head Hunters",
+  "label": "Columbia",
+  "year": 1973
+ },
+ {
+  "rank": 255,
+  "artist": "Bob Dylan",
+  "title": "The Freewheelin' Bob Dylan",
+  "label": "Columbia",
+  "year": 1963
+ },
+ {
+  "rank": 256,
+  "artist": "Tracy Chapman",
+  "title": "Tracy Chapman",
+  "label": "Elektra",
+  "year": 1988
+ },
+ {
+  "rank": 257,
+  "artist": "Dolly Parton",
+  "title": "Coat of Many Colors",
+  "label": "RCA",
+  "year": 1971
+ },
+ {
+  "rank": 258,
+  "artist": "Joni Mitchell",
+  "title": "The Hissing of Summer Lawns",
+  "label": "Asylum",
+  "year": 1975
+ },
+ {
+  "rank": 259,
+  "artist": "Janis Joplin",
+  "title": "Pearl",
+  "label": "Columbia",
+  "year": 1971
+ },
+ {
+  "rank": 260,
+  "artist": "The Slits",
+  "title": "Cut",
+  "label": "Antilles",
+  "year": 1979
+ },
+ {
+  "rank": 261,
+  "artist": "Beastie Boys",
+  "title": "Check Your Head",
+  "label": "Capitol",
+  "year": 1992
+ },
+ {
+  "rank": 262,
+  "artist": "New Order",
+  "title": "Power, Corruption & Lies",
+  "label": "Factory",
+  "year": 1983
+ },
+ {
+  "rank": 263,
+  "artist": "The Beatles",
+  "title": "Hard Day's Night",
+  "label": "United Artists",
+  "year": 1964
+ },
+ {
+  "rank": 264,
+  "artist": "Pink Floyd",
+  "title": "Wish You Were Here",
+  "label": "Columbia",
+  "year": 1975
+ },
+ {
+  "rank": 265,
+  "artist": "Pavement",
+  "title": "Wowee Zowee",
+  "label": "Matador",
+  "year": 1995
+ },
+ {
+  "rank": 266,
+  "artist": "The Beatles",
+  "title": "Help!",
+  "label": "Capitol",
+  "year": 1965
+ },
+ {
+  "rank": 267,
+  "artist": "Minutemen",
+  "title": "Double Nickels on the Dime",
+  "label": "SST",
+  "year": 1984
+ },
+ {
+  "rank": 268,
+  "artist": "Randy Newman",
+  "title": "Sail Away",
+  "label": "Reprise",
+  "year": 1972
+ },
+ {
+  "rank": 269,
+  "artist": "Kanye West",
+  "title": "Yeezus",
+  "label": "Roc-A-Fella",
+  "year": 2013
+ },
+ {
+  "rank": 270,
+  "artist": "Kacey Musgraves",
+  "title": "Golden Hour",
+  "label": "MCA Nashville",
+  "year": 2018
+ },
+ {
+  "rank": 271,
+  "artist": "Mary J. Blige",
+  "title": "What’s the 411?",
+  "label": "Uptown/MCA",
+  "year": 1992
+ },
+ {
+  "rank": 272,
+  "artist": "The Velvet Underground",
+  "title": "White Light/White Heat",
+  "label": "Verve",
+  "year": 1968
+ },
+ {
+  "rank": 273,
+  "artist": "Gang of Four",
+  "title": "Entertainment!",
+  "label": "Warner Bros.",
+  "year": 1979
+ },
+ {
+  "rank": 274,
+  "artist": "The Byrds",
+  "title": "Sweetheart of the Rodeo",
+  "label": "Columbia",
+  "year": 1968
+ },
+ {
+  "rank": 275,
+  "artist": "Curtis Mayfield",
+  "title": "Curtis",
+  "label": "Curtom",
+  "year": 1970
+ },
+ {
+  "rank": 276,
+  "artist": "Radiohead",
+  "title": "The Bends",
+  "label": "Capitol",
+  "year": 1995
+ },
+ {
+  "rank": 277,
+  "artist": "Alicia Keys",
+  "title": "The Diary of Alicia Keys",
+  "label": "J Records",
+  "year": 2003
+ },
+ {
+  "rank": 278,
+  "artist": "Led Zeppelin",
+  "title": "Houses of the Holy",
+  "label": "Atlantic",
+  "year": 1973
+ },
+ {
+  "rank": 279,
+  "artist": "Nirvana",
+  "title": "MTV Unplugged in New York",
+  "label": "Geffen",
+  "year": 1994
+ },
+ {
+  "rank": 280,
+  "artist": "50 Cent",
+  "title": "Get Rich or Die Tryin'",
+  "label": "Interscope",
+  "year": 2002
+ },
+ {
+  "rank": 281,
+  "artist": "Harry Nilsson",
+  "title": "Nilsson Schmilsson",
+  "label": "RCA",
+  "year": 1971
+ },
+ {
+  "rank": 282,
+  "artist": "Frank Sinatra",
+  "title": "In the Wee Small Hours",
+  "label": "Capitol",
+  "year": 1955
+ },
+ {
+  "rank": 283,
+  "artist": "Donna Summer",
+  "title": "Bad Girls",
+  "label": "Casablanca",
+  "year": 1975
+ },
+ {
+  "rank": 284,
+  "artist": "Merle Haggard",
+  "title": "Down Every Road 1962-1994",
+  "label": "Capitol",
+  "year": 1996
+ },
+ {
+  "rank": 285,
+  "artist": "Big Star",
+  "title": "Third/Sister Lovers",
+  "label": "PVC",
+  "year": 1978
+ },
+ {
+  "rank": 286,
+  "artist": "Red Hot Chili Peppers",
+  "title": "Californication",
+  "label": "Warner Bros.",
+  "year": 1999
+ },
+ {
+  "rank": 287,
+  "artist": "The Byrds",
+  "title": "Mr. Tambourine Man",
+  "label": "Columbia",
+  "year": 1965
+ },
+ {
+  "rank": 288,
+  "artist": "The Modern Lovers",
+  "title": "The Modern Lovers",
+  "label": "Beserkley",
+  "year": 1976
+ },
+ {
+  "rank": 289,
+  "artist": "Björk",
+  "title": "Post",
+  "label": "Elektra",
+  "year": 1995
+ },
+ {
+  "rank": 290,
+  "artist": "OutKast",
+  "title": "Speakerboxxx/The Love Below",
+  "label": "LaFace",
+  "year": 2003
+ },
+ {
+  "rank": 291,
+  "artist": "Destiny's Child",
+  "title": "The Writing’s on the Wall",
+  "label": "Columbia",
+  "year": 1999
+ },
+ {
+  "rank": 292,
+  "artist": "Van Halen",
+  "title": "Van Halen",
+  "label": "Warner Bros.",
+  "year": 1978
+ },
+ {
+  "rank": 293,
+  "artist": "The Breeders",
+  "title": "Last Splash",
+  "label": "Elektra",
+  "year": 1993
+ },
+ {
+  "rank": 294,
+  "artist": "Weezer",
+  "title": "Weezer (The Blue Album)",
+  "label": "Geffen",
+  "year": 1994
+ },
+ {
+  "rank": 295,
+  "artist": "Daft Punk",
+  "title": "Random Access Memories",
+  "label": "Columbia",
+  "year": 2013
+ },
+ {
+  "rank": 296,
+  "artist": "Neil Young",
+  "title": "Rust Never Sleeps",
+  "label": "Reprise",
+  "year": 1979
+ },
+ {
+  "rank": 297,
+  "artist": "Peter Gabriel",
+  "title": "So",
+  "label": "Geffen",
+  "year": 1986
+ },
+ {
+  "rank": 298,
+  "artist": "Tom Petty",
+  "title": "Full Moon Fever",
+  "label": "MCA",
+  "year": 1989
+ },
+ {
+  "rank": 299,
+  "artist": "B.B. King",
+  "title": "Live at the Regal",
+  "label": "ABC-Paramount",
+  "year": 1965
+ },
+ {
+  "rank": 300,
+  "artist": "Shania Twain",
+  "title": "Come on Over",
+  "label": "Mercury",
+  "year": 1997
+ },
+ {
+  "rank": 301,
+  "artist": "New York Dolls",
+  "title": "New York Dolls",
+  "label": "Mercury",
+  "year": 1973
+ },
+ {
+  "rank": 302,
+  "artist": "Neil Young",
+  "title": "Tonight's the Night",
+  "label": "Reprise",
+  "year": 1975
+ },
+ {
+  "rank": 303,
+  "artist": "ABBA",
+  "title": "The Definitive Collection",
+  "label": "Universal",
+  "year": 2001
+ },
+ {
+  "rank": 304,
+  "artist": "Bill Withers",
+  "title": "Just As I Am",
+  "label": "Sussex",
+  "year": 1971
+ },
+ {
+  "rank": 305,
+  "artist": "Kiss",
+  "title": "Alive!",
+  "label": "Casablanca",
+  "year": 1975
+ },
+ {
+  "rank": 306,
+  "artist": "Al Green",
+  "title": "I'm Still in Love With You",
+  "label": "Hi",
+  "year": 1972
+ },
+ {
+  "rank": 307,
+  "artist": "Sam Cooke",
+  "title": "Portrait of a Legend",
+  "label": "ABKCO",
+  "year": 2003
+ },
+ {
+  "rank": 308,
+  "artist": "Brian Eno",
+  "title": "Here Come the Warm Jets",
+  "label": "Island",
+  "year": 1974
+ },
+ {
+  "rank": 309,
+  "artist": "Joy Divison",
+  "title": "Closer",
+  "label": "Factory",
+  "year": 1980
+ },
+ {
+  "rank": 310,
+  "artist": "Wire",
+  "title": "Pink Flag",
+  "label": "Harvest",
+  "year": 1977
+ },
+ {
+  "rank": 311,
+  "artist": "Neil Young",
+  "title": "On the Beach",
+  "label": "Reprise",
+  "year": 1974
+ },
+ {
+  "rank": 312,
+  "artist": "Solange",
+  "title": "A Seat at the Table",
+  "label": "Saint/Columbia",
+  "year": 2016
+ },
+ {
+  "rank": 313,
+  "artist": "PJ Harvey",
+  "title": "Stories From the City, Stories From the Sea",
+  "label": "Island",
+  "year": 2000
+ },
+ {
+  "rank": 314,
+  "artist": "Aaliyah",
+  "title": "One in a Million",
+  "label": "Blackground/Atlantic",
+  "year": 1996
+ },
+ {
+  "rank": 315,
+  "artist": "Rosalía",
+  "title": "El Mal Querer",
+  "label": "Sony",
+  "year": 2018
+ },
+ {
+  "rank": 316,
+  "artist": "The Who",
+  "title": "The Who Sell Out",
+  "label": "Decca",
+  "year": 1967
+ },
+ {
+  "rank": 317,
+  "artist": "Billie Holiday",
+  "title": "Lady in Satin",
+  "label": "Columbia",
+  "year": 1958
+ },
+ {
+  "rank": 318,
+  "artist": "Janet Jackson",
+  "title": "The Velvet Rope",
+  "label": "Virgin",
+  "year": 1997
+ },
+ {
+  "rank": 319,
+  "artist": "The Stone Roses",
+  "title": "The Stone Roses",
+  "label": "Silvertone",
+  "year": 1989
+ },
+ {
+  "rank": 320,
+  "artist": "X",
+  "title": "Los Angeles",
+  "label": "Slash",
+  "year": 1980
+ },
+ {
+  "rank": 321,
+  "artist": "Lana Del Rey",
+  "title": "Norman Fucking Rockwell!",
+  "label": "Polydor/Interscope",
+  "year": 2019
+ },
+ {
+  "rank": 322,
+  "artist": "Elvis Presley",
+  "title": "From Elvis in Memphis",
+  "label": "RCA",
+  "year": 1969
+ },
+ {
+  "rank": 323,
+  "artist": "The Clash",
+  "title": "Sandinista!",
+  "label": "Epic",
+  "year": 1980
+ },
+ {
+  "rank": 324,
+  "artist": "Coldplay",
+  "title": "A Rush of Blood to the Head",
+  "label": "Capitol",
+  "year": 2002
+ },
+ {
+  "rank": 325,
+  "artist": "Jerry Lee Lewis",
+  "title": "All Killer No Filler!",
+  "label": "Rhino",
+  "year": 1993
+ },
+ {
+  "rank": 326,
+  "artist": "Prince",
+  "title": "Dirty Mind",
+  "label": "Warner Bros.",
+  "year": 1980
+ },
+ {
+  "rank": 327,
+  "artist": "The Who",
+  "title": "Live at Leeds",
+  "label": "Decca",
+  "year": 1970
+ },
+ {
+  "rank": 328,
+  "artist": "Vampire Weekend",
+  "title": "Modern Vampires of the City",
+  "label": "XL",
+  "year": 2013
+ },
+ {
+  "rank": 329,
+  "artist": "DJ Shadow",
+  "title": "Endtroducing.....",
+  "label": "Mo’ Wax",
+  "year": 1996
+ },
+ {
+  "rank": 330,
+  "artist": "The Rolling Stones",
+  "title": "Aftermath",
+  "label": "London",
+  "year": 1966
+ },
+ {
+  "rank": 331,
+  "artist": "Madonna",
+  "title": "Like a Prayer",
+  "label": "Sire",
+  "year": 1989
+ },
+ {
+  "rank": 332,
+  "artist": "Elvis Presley",
+  "title": "Elvis Presley",
+  "label": "RCA",
+  "year": 1956
+ },
+ {
+  "rank": 333,
+  "artist": "Bill Withers",
+  "title": "Still Bill",
+  "label": "Sussex",
+  "year": 1972
+ },
+ {
+  "rank": 334,
+  "artist": "Santana",
+  "title": "Abraxas",
+  "label": "Columbia",
+  "year": 1970
+ },
+ {
+  "rank": 335,
+  "artist": "Bob Dylan and the Band",
+  "title": "The Basement Tapes",
+  "label": "Columbia",
+  "year": 1975
+ },
+ {
+  "rank": 336,
+  "artist": "Roxy Music",
+  "title": "Avalon",
+  "label": "E.G./Warner Bros.",
+  "year": 1982
+ },
+ {
+  "rank": 337,
+  "artist": "Bob Dylan",
+  "title": "John Wesley Harding",
+  "label": "Columbia",
+  "year": 1967
+ },
+ {
+  "rank": 338,
+  "artist": "Brian Eno",
+  "title": "Another Green World",
+  "label": "Island, 19755",
+  "year": 1975
+ },
+ {
+  "rank": 339,
+  "artist": "Janet Jackson",
+  "title": "Rhythm Nation 1814",
+  "label": "A&M",
+  "year": 1989
+ },
+ {
+  "rank": 340,
+  "artist": "Snoop Doggy Dogg",
+  "title": "Doggystyle",
+  "label": "Death Row/Interscope",
+  "year": 1993
+ },
+ {
+  "rank": 341,
+  "artist": "The Smashing Pumpkins",
+  "title": "Siamese Dream",
+  "label": "Virgin",
+  "year": 1993
+ },
+ {
+  "rank": 342,
+  "artist": "The Beatles",
+  "title": "Let It Be",
+  "label": "Apple",
+  "year": 1970
+ },
+ {
+  "rank": 343,
+  "artist": "Sly and the Family Stone",
+  "title": "Greatest Hits",
+  "label": "Epic",
+  "year": 1970
+ },
+ {
+  "rank": 344,
+  "artist": "Toots and the Maytals",
+  "title": "Funky Kingston",
+  "label": "Island",
+  "year": 1973
+ },
+ {
+  "rank": 345,
+  "artist": "Bruce Springsteen",
+  "title": "The Wild, the Innocent & the E Street Shuffle",
+  "label": "Columbia",
+  "year": 1973
+ },
+ {
+  "rank": 346,
+  "artist": "Arctic Monkeys",
+  "title": "AM",
+  "label": "Domino",
+  "year": 2013
+ },
+ {
+  "rank": 347,
+  "artist": "GZA",
+  "title": "Liquid Swords",
+  "label": "Geffen",
+  "year": 1995
+ },
+ {
+  "rank": 348,
+  "artist": "Gillian Welch",
+  "title": "Time (The Revelator)",
+  "label": "Acony",
+  "year": 2001
+ },
+ {
+  "rank": 349,
+  "artist": "MC5",
+  "title": "Kick Out the Jams",
+  "label": "Elektra",
+  "year": 1969
+ },
+ {
+  "rank": 350,
+  "artist": "Stevie Wonder",
+  "title": "Music of My Mind",
+  "label": "Tamla/Motown",
+  "year": 1972
+ },
+ {
+  "rank": 351,
+  "artist": "Roxy Music",
+  "title": "For Your Pleasure",
+  "label": "Warner Bros.",
+  "year": 1973
+ },
+ {
+  "rank": 352,
+  "artist": "Eminem",
+  "title": "The Slim Shady LP",
+  "label": "Interscope",
+  "year": 1999
+ },
+ {
+  "rank": 353,
+  "artist": "The Cars",
+  "title": "The Cars",
+  "label": "Elektra",
+  "year": 1978
+ },
+ {
+  "rank": 354,
+  "artist": "X-Ray Spex",
+  "title": "Germfree Adolescents",
+  "label": "EMI",
+  "year": 1978
+ },
+ {
+  "rank": 355,
+  "artist": "Black Sabbath",
+  "title": "Black Sabbath",
+  "label": "Warner Bros.",
+  "year": 1970
+ },
+ {
+  "rank": 356,
+  "artist": "Dr. John",
+  "title": "Gris-Gris",
+  "label": "Atco",
+  "year": 1968
+ },
+ {
+  "rank": 357,
+  "artist": "Tom Waits",
+  "title": "Rain Dogs",
+  "label": "Island",
+  "year": 1985
+ },
+ {
+  "rank": 358,
+  "artist": "Sonic Youth",
+  "title": "Goo",
+  "label": "Geffen",
+  "year": 1990
+ },
+ {
+  "rank": 359,
+  "artist": "Big Star",
+  "title": "Radio City",
+  "label": "Ardent",
+  "year": 1974
+ },
+ {
+  "rank": 360,
+  "artist": "Funkadelic",
+  "title": "One Nation Under a Groove",
+  "label": "Warner Bros.",
+  "year": 1978
+ },
+ {
+  "rank": 361,
+  "artist": "My Chemical Romance",
+  "title": "The Black Parade",
+  "label": "Reprise",
+  "year": 2006
+ },
+ {
+  "rank": 362,
+  "artist": "Luther Vandross",
+  "title": "Never Too Much",
+  "label": "Epic",
+  "year": 1981
+ },
+ {
+  "rank": 363,
+  "artist": "Parliament",
+  "title": "The Mothership Connection",
+  "label": "Casablanca",
+  "year": 1975
+ },
+ {
+  "rank": 364,
+  "artist": "Talking Heads",
+  "title": "More Songs About Buildings and Food",
+  "label": "Sire",
+  "year": 1978
+ },
+ {
+  "rank": 365,
+  "artist": "Madvillain",
+  "title": "Madvillainy",
+  "label": "Stones Throw",
+  "year": 2004
+ },
+ {
+  "rank": 366,
+  "artist": "Aerosmith",
+  "title": "Rocks",
+  "label": "Columbia",
+  "year": 1976
+ },
+ {
+  "rank": 367,
+  "artist": "Drake",
+  "title": "If You're Reading This It's Too Late",
+  "label": "Cash Money",
+  "year": 2015
+ },
+ {
+  "rank": 368,
+  "artist": "George Harrison",
+  "title": "All Things Must Pass",
+  "label": "Apple",
+  "year": 1970
+ },
+ {
+  "rank": 369,
+  "artist": "Mobb Deep",
+  "title": "The Infamous",
+  "label": "Loud",
+  "year": 1995
+ },
+ {
+  "rank": 370,
+  "artist": "Lil Wayne",
+  "title": "Tha Carter II",
+  "label": "Cash Money/Universal",
+  "year": 2005
+ },
+ {
+  "rank": 371,
+  "artist": "The Temptations",
+  "title": "Anthology",
+  "label": "Tamla/Motown",
+  "year": 1973
+ },
+ {
+  "rank": 372,
+  "artist": "Big Brother and the Holding Company",
+  "title": "Cheap Thrills",
+  "label": "Columbia",
+  "year": 1968
+ },
+ {
+  "rank": 373,
+  "artist": "Isaac Hayes",
+  "title": "Hot Buttered Soul",
+  "label": "Enterprise",
+  "year": 1969
+ },
+ {
+  "rank": 374,
+  "artist": "Robert Johnson",
+  "title": "King of the Delta Blues Singers",
+  "label": "Columbia",
+  "year": 1961
+ },
+ {
+  "rank": 375,
+  "artist": "Green Day",
+  "title": "Dookie",
+  "label": "Reprise",
+  "year": 1994
+ },
+ {
+  "rank": 376,
+  "artist": "Neutral Milk Hotel",
+  "title": "In the Aeroplane Over the Sea",
+  "label": "Merge",
+  "year": 1998
+ },
+ {
+  "rank": 377,
+  "artist": "Yeah Yeah Yeahs",
+  "title": "Fever to Tell",
+  "label": "Interscope",
+  "year": 2003
+ },
+ {
+  "rank": 378,
+  "artist": "Run-DMC",
+  "title": "Run-D.M.C.",
+  "label": "Profile",
+  "year": 1983
+ },
+ {
+  "rank": 379,
+  "artist": "Rush",
+  "title": "Moving Pictures",
+  "label": "Anthem",
+  "year": 1981
+ },
+ {
+  "rank": 380,
+  "artist": "Charles Mingus",
+  "title": "Mingus Ah Um",
+  "label": "Columbia",
+  "year": 1959
+ },
+ {
+  "rank": 381,
+  "artist": "Lynyrd Skynyrd",
+  "title": "(Pronounced 'Lĕh-'nérd 'Skin-'nérd)",
+  "label": "MCA",
+  "year": 1973
+ },
+ {
+  "rank": 382,
+  "artist": "Tame Impala",
+  "title": "Currents",
+  "label": "Interscope",
+  "year": 2015
+ },
+ {
+  "rank": 383,
+  "artist": "Massive Attack",
+  "title": "Mezzanine",
+  "label": "Circa/Virgin",
+  "year": 1998
+ },
+ {
+  "rank": 384,
+  "artist": "The Kinks",
+  "title": "The Kinks Are the Village Green Preservation Society",
+  "label": "Reprise",
+  "year": 1969
+ },
+ {
+  "rank": 385,
+  "artist": "Ramones",
+  "title": "Rocket to Russia",
+  "label": "Sire",
+  "year": 1977
+ },
+ {
+  "rank": 386,
+  "artist": "J Dilla",
+  "title": "Donuts",
+  "label": "Stones Throw",
+  "year": 2006
+ },
+ {
+  "rank": 387,
+  "artist": "Radiohead",
+  "title": "In Rainbows",
+  "label": "XL",
+  "year": 2007
+ },
+ {
+  "rank": 388,
+  "artist": "Aretha Franklin",
+  "title": "Young, Gifted and Black",
+  "label": "Atlantic",
+  "year": 1972
+ },
+ {
+  "rank": 389,
+  "artist": "Mariah Carey",
+  "title": "The Emancipation of Mimi",
+  "label": "Island",
+  "year": 2005
+ },
+ {
+  "rank": 390,
+  "artist": "Pixies",
+  "title": "Surfer Rosa",
+  "label": "4AD",
+  "year": 1988
+ },
+ {
+  "rank": 391,
+  "artist": "Kelis",
+  "title": "Kaleidoscope",
+  "label": "Virgin",
+  "year": 1999
+ },
+ {
+  "rank": 392,
+  "artist": "Ike and Tina Turner",
+  "title": "Proud Mary: The Best of Ike and Tina Turner",
+  "label": "EMI",
+  "year": 1991
+ },
+ {
+  "rank": 393,
+  "artist": "Taylor Swift",
+  "title": "1989",
+  "label": "Big Machine",
+  "year": 2014
+ },
+ {
+  "rank": 394,
+  "artist": "Diana Ross",
+  "title": "Diana",
+  "label": "Motown",
+  "year": 1980
+ },
+ {
+  "rank": 395,
+  "artist": "D’Angelo and the Vanguard",
+  "title": "Black Messiah",
+  "label": "RCA",
+  "year": 2014
+ },
+ {
+  "rank": 396,
+  "artist": "Todd Rundgren",
+  "title": "Something/Anything?",
+  "label": "Bearsville",
+  "year": 1972
+ },
+ {
+  "rank": 397,
+  "artist": "Billie Eilish",
+  "title": "When We All Fall Asleep, Where Do We Go?",
+  "label": "Interscope",
+  "year": 2019
+ },
+ {
+  "rank": 398,
+  "artist": "The Raincoats",
+  "title": "The Raincoats",
+  "label": "Rough Trade",
+  "year": 1979
+ },
+ {
+  "rank": 399,
+  "artist": "Brian Wilson",
+  "title": "Smile",
+  "label": "Nonesuch",
+  "year": 2004
+ },
+ {
+  "rank": 400,
+  "artist": "The Go-Go’s",
+  "title": "Beauty and the Beat",
+  "label": "I.R.S.",
+  "year": 1981
+ },
+ {
+  "rank": 401,
+  "artist": "Blondie",
+  "title": "Blondie",
+  "label": "Private Stock",
+  "year": 1977
+ },
+ {
+  "rank": 402,
+  "artist": "Fela Kuti and Africa 70",
+  "title": "Expensive Shit",
+  "label": "Sounds Workshop",
+  "year": 1975
+ },
+ {
+  "rank": 403,
+  "artist": "Ghostface Killah",
+  "title": "Supreme Clientele",
+  "label": "Epic",
+  "year": 2000
+ },
+ {
+  "rank": 404,
+  "artist": "Anita Baker",
+  "title": "Rapture",
+  "label": "Elektra",
+  "year": 1986
+ },
+ {
+  "rank": 405,
+  "artist": "Various",
+  "title": "Nuggets: Original Artyfacts from the First Psychedelic Era",
+  "label": "Elektra",
+  "year": 1972
+ },
+ {
+  "rank": 406,
+  "artist": "Magnetic Fields",
+  "title": "69 Love Songs",
+  "label": "Merge",
+  "year": 1999
+ },
+ {
+  "rank": 407,
+  "artist": "Neil Young",
+  "title": "Everybody Knows This Is Nowhere",
+  "label": "Reprise",
+  "year": 1969
+ },
+ {
+  "rank": 408,
+  "artist": "Motörhead",
+  "title": "Ace of Spades",
+  "label": "Bronze",
+  "year": 1980
+ },
+ {
+  "rank": 409,
+  "artist": "Grateful Dead",
+  "title": "Workingman’s Dead",
+  "label": "Warner Bros.",
+  "year": 1970
+ },
+ {
+  "rank": 410,
+  "artist": "The Beach Boys",
+  "title": "Wild Honey",
+  "label": "Capitol",
+  "year": 1967
+ },
+ {
+  "rank": 411,
+  "artist": "Bob Dylan",
+  "title": "Love and Theft",
+  "label": "Columbia",
+  "year": 2001
+ },
+ {
+  "rank": 412,
+  "artist": "Smokey Robinson and the Miracles",
+  "title": "Going to a Go Go",
+  "label": "Tamla/Motown",
+  "year": 1965
+ },
+ {
+  "rank": 413,
+  "artist": "Creedence Clearwater Revival",
+  "title": "Cosmo's Factory",
+  "label": "Fantasy",
+  "year": 1970
+ },
+ {
+  "rank": 414,
+  "artist": "Chic",
+  "title": "Risqué",
+  "label": "Atlantic",
+  "year": 1979
+ },
+ {
+  "rank": 415,
+  "artist": "The Meters",
+  "title": "Looka Py Py",
+  "label": "Josie",
+  "year": 1969
+ },
+ {
+  "rank": 416,
+  "artist": "The Roots",
+  "title": "Things Fall Apart",
+  "label": "MCA",
+  "year": 1999
+ },
+ {
+  "rank": 417,
+  "artist": "Ornette Coleman",
+  "title": "The Shape of Jazz to Come",
+  "label": "Atlantic",
+  "year": 1959
+ },
+ {
+  "rank": 418,
+  "artist": "Dire Straits",
+  "title": "Brothers in Arms",
+  "label": "Warner Bros.",
+  "year": 1985
+ },
+ {
+  "rank": 419,
+  "artist": "Eric Church",
+  "title": "Chief",
+  "label": "EMI Nashville",
+  "year": 2011
+ },
+ {
+  "rank": 420,
+  "artist": "Earth, Wind and Fire",
+  "title": "That’s the Way of the World",
+  "label": "Columbia",
+  "year": 1975
+ },
+ {
+  "rank": 421,
+  "artist": "M.I.A.",
+  "title": "Arular",
+  "label": "Interscope",
+  "year": 2005
+ },
+ {
+  "rank": 422,
+  "artist": "Marvin Gaye",
+  "title": "Let's Get It On",
+  "label": "Tamla/Motown",
+  "year": 1973
+ },
+ {
+  "rank": 423,
+  "artist": "Yo La Tengo",
+  "title": "I Can Hear the Heart Beating As One",
+  "label": "Matador",
+  "year": 1997
+ },
+ {
+  "rank": 424,
+  "artist": "Beck",
+  "title": "Odelay",
+  "label": "Geffen",
+  "year": 1996
+ },
+ {
+  "rank": 425,
+  "artist": "Paul Simon",
+  "title": "Paul Simon",
+  "label": "Columbia",
+  "year": 1972
+ },
+ {
+  "rank": 426,
+  "artist": "Lucinda Williams",
+  "title": "Lucinda Williams",
+  "label": "Rough Trade",
+  "year": 1988
+ },
+ {
+  "rank": 427,
+  "artist": "Al Green",
+  "title": "Call Me",
+  "label": "Hi",
+  "year": 1973
+ },
+ {
+  "rank": 428,
+  "artist": "Hüsker Dü",
+  "title": "New Day Rising",
+  "label": "SST",
+  "year": 1985
+ },
+ {
+  "rank": 429,
+  "artist": "The Four Tops",
+  "title": "Reach Out",
+  "label": "Tamla/Motown",
+  "year": 1967
+ },
+ {
+  "rank": 430,
+  "artist": "Elvis Costello",
+  "title": "My Aim Is True",
+  "label": "Columbia",
+  "year": 1977
+ },
+ {
+  "rank": 431,
+  "artist": "Los Lobos",
+  "title": "How Will the Wolf Survive?",
+  "label": "Slash/Warner Bros.",
+  "year": 1984
+ },
+ {
+  "rank": 432,
+  "artist": "Usher",
+  "title": "Confessions",
+  "label": "Arista",
+  "year": 2004
+ },
+ {
+  "rank": 433,
+  "artist": "LCD Soundsystem",
+  "title": "Sound of Silver",
+  "label": "DFA/Capitol",
+  "year": 2007
+ },
+ {
+  "rank": 434,
+  "artist": "Pavement",
+  "title": "Crooked Rain, Crooked Rain",
+  "label": "Matador",
+  "year": 1994
+ },
+ {
+  "rank": 435,
+  "artist": "Pet Shop Boys",
+  "title": "Actually",
+  "label": "EMI Manhattan,",
+  "year": 1987
+ },
+ {
+  "rank": 436,
+  "artist": "2Pac",
+  "title": "All Eyez on Me",
+  "label": "Death Row",
+  "year": 1996
+ },
+ {
+  "rank": 437,
+  "artist": "Primal Scream",
+  "title": "Screamadelica",
+  "label": "Sire",
+  "year": 1991
+ },
+ {
+  "rank": 438,
+  "artist": "Blur",
+  "title": "Parklife",
+  "label": "Food",
+  "year": 1994
+ },
+ {
+  "rank": 439,
+  "artist": "James Brown",
+  "title": "Sex Machine",
+  "label": "King",
+  "year": 1970
+ },
+ {
+  "rank": 440,
+  "artist": "Loretta Lynn",
+  "title": "Coal Miner's Daughter",
+  "label": "Decca",
+  "year": 1971
+ },
+ {
+  "rank": 441,
+  "artist": "Britney Spears",
+  "title": "Blackout",
+  "label": "Jive",
+  "year": 2007
+ },
+ {
+  "rank": 442,
+  "artist": "The Weeknd",
+  "title": "Beauty Behind the Madness",
+  "label": "XO",
+  "year": 2015
+ },
+ {
+  "rank": 443,
+  "artist": "David Bowie",
+  "title": "Scary Monsters",
+  "label": "RCA",
+  "year": 1980
+ },
+ {
+  "rank": 444,
+  "artist": "Fiona Apple",
+  "title": "Extraordinary Machine",
+  "label": "Epic",
+  "year": 2005
+ },
+ {
+  "rank": 445,
+  "artist": "Yes",
+  "title": "Close to the Edge",
+  "label": "Atlantic",
+  "year": 1972
+ },
+ {
+  "rank": 446,
+  "artist": "Alice Coltrane",
+  "title": "Journey in Satchidanada",
+  "label": "Impulse!",
+  "year": 1971
+ },
+ {
+  "rank": 447,
+  "artist": "Bad Bunny",
+  "title": "X 100pre",
+  "label": "Rimas",
+  "year": 2018
+ },
+ {
+  "rank": 448,
+  "artist": "Otis Redding",
+  "title": "Dictionary of Soul",
+  "label": "Volt",
+  "year": 1966
+ },
+ {
+  "rank": 449,
+  "artist": "The White Stripes",
+  "title": "Elephant",
+  "label": "V2/XL/Third Man",
+  "year": 2003
+ },
+ {
+  "rank": 450,
+  "artist": "Paul and Linda McCartney",
+  "title": "Ram",
+  "label": "Apple",
+  "year": 1971
+ },
+ {
+  "rank": 451,
+  "artist": "Roberta Flack",
+  "title": "First Take",
+  "label": "Atlantic",
+  "year": 1969
+ },
+ {
+  "rank": 452,
+  "artist": "Diana Ross and the Supremes",
+  "title": "Anthology",
+  "label": "Tamla/Motown",
+  "year": 1974
+ },
+ {
+  "rank": 453,
+  "artist": "Nine Inch Nails",
+  "title": "Pretty Hate Machine",
+  "label": "TVT",
+  "year": 1989
+ },
+ {
+  "rank": 454,
+  "artist": "Can",
+  "title": "Ege Bamyasi",
+  "label": "United Artists",
+  "year": 1972
+ },
+ {
+  "rank": 455,
+  "artist": "Bo Diddley",
+  "title": "Bo Diddley/Go Bo Diddley",
+  "label": "Chess",
+  "year": 1958
+ },
+ {
+  "rank": 456,
+  "artist": "Al Green",
+  "title": "Greatest Hits",
+  "label": "Hi/EMI",
+  "year": 1975
+ },
+ {
+  "rank": 457,
+  "artist": "Sinéad O’Connor",
+  "title": "I Do Not Want What I Haven’t Got",
+  "label": "Ensign/Chrysalis",
+  "year": 1990
+ },
+ {
+  "rank": 458,
+  "artist": "Jason Isbell",
+  "title": "Southeastern",
+  "label": "Southeastern",
+  "year": 2013
+ },
+ {
+  "rank": 459,
+  "artist": "Kid Cudi",
+  "title": "Man on the Moon: The End of the Day",
+  "label": "Dream On",
+  "year": 2009
+ },
+ {
+  "rank": 460,
+  "artist": "Lorde",
+  "title": "Melodrama",
+  "label": "Universal",
+  "year": 2017
+ },
+ {
+  "rank": 461,
+  "artist": "Bon Iver",
+  "title": "For Emma",
+  "label": "Jagjaguwar",
+  "year": 2008
+ },
+ {
+  "rank": 462,
+  "artist": "The Flying Burrito Brothers",
+  "title": "The Gilded Palace of Sin",
+  "label": "A&M",
+  "year": 1969
+ },
+ {
+  "rank": 463,
+  "artist": "Laura Nyro",
+  "title": "Eli & the 13th Confession",
+  "label": "Columbia",
+  "year": 1968
+ },
+ {
+  "rank": 464,
+  "artist": "The Isley Brothers",
+  "title": "3 + 3",
+  "label": "T-Neck",
+  "year": 1973
+ },
+ {
+  "rank": 465,
+  "artist": "King Sunny Adé",
+  "title": "The Best of the Classic Years",
+  "label": "Shanachie",
+  "year": 2003
+ },
+ {
+  "rank": 466,
+  "artist": "The Beach Boys",
+  "title": "The Beach  Boys Today!",
+  "label": "Capitol",
+  "year": 1965
+ },
+ {
+  "rank": 467,
+  "artist": "Maxwell",
+  "title": "BLACKsummers’night",
+  "label": "Columbia",
+  "year": 2009
+ },
+ {
+  "rank": 468,
+  "artist": "The Rolling Stones",
+  "title": "Some Girls",
+  "label": "Rolling Stones",
+  "year": 1978
+ },
+ {
+  "rank": 469,
+  "artist": "Manu Chao",
+  "title": "Clandestino",
+  "label": "Virgin",
+  "year": 1998
+ },
+ {
+  "rank": 470,
+  "artist": "Juvenile",
+  "title": "400 Degreez",
+  "label": "Cash Money",
+  "year": 1998
+ },
+ {
+  "rank": 471,
+  "artist": "Jefferson Airplane",
+  "title": "Surrealistic Pillow",
+  "label": "RCA",
+  "year": 1967
+ },
+ {
+  "rank": 472,
+  "artist": "SZA",
+  "title": "Ctrl",
+  "label": "RCA",
+  "year": 2017
+ },
+ {
+  "rank": 473,
+  "artist": "Daddy Yankee",
+  "title": "Barrio Fino",
+  "label": "V.I. Music",
+  "year": 2004
+ },
+ {
+  "rank": 474,
+  "artist": "Big Star",
+  "title": "#1 Record",
+  "label": "Ardent",
+  "year": 1972
+ },
+ {
+  "rank": 475,
+  "artist": "Sheryl Crow",
+  "title": "Sheryl Crow",
+  "label": "A&M",
+  "year": 1996
+ },
+ {
+  "rank": 476,
+  "artist": "Sparks",
+  "title": "Kimono My House",
+  "label": "Island",
+  "year": 1974
+ },
+ {
+  "rank": 477,
+  "artist": "Howlin’ Wolf",
+  "title": "Moanin' in the Moonlight",
+  "label": "Chess",
+  "year": 1959
+ },
+ {
+  "rank": 478,
+  "artist": "The Kinks",
+  "title": "Something Else by the Kinks",
+  "label": "Pye",
+  "year": 1968
+ },
+ {
+  "rank": 479,
+  "artist": "Selena",
+  "title": "Amor Prohibido",
+  "label": "EMA Latin",
+  "year": 1994
+ },
+ {
+  "rank": 480,
+  "artist": "Miranda Lambert",
+  "title": "The Weight of These Wings",
+  "label": "eRCA Nashville",
+  "year": 2016
+ },
+ {
+  "rank": 481,
+  "artist": "Belle and Sebastian",
+  "title": "If You’re Feeling Sinister",
+  "label": "Jeepster",
+  "year": 1996
+ },
+ {
+  "rank": 482,
+  "artist": "The Pharcyde",
+  "title": "Bizarre Ride II the Pharcyde",
+  "label": "Delicious Vinyl",
+  "year": 1992
+ },
+ {
+  "rank": 483,
+  "artist": "Muddy Waters",
+  "title": "The Anthology",
+  "label": "MCA",
+  "year": 2001
+ },
+ {
+  "rank": 484,
+  "artist": "Lady Gaga",
+  "title": "Born This Way",
+  "label": "Interscope",
+  "year": 2011
+ },
+ {
+  "rank": 485,
+  "artist": "Richard and Linda Thompson",
+  "title": "I Want to See the Bright Lights Tonight",
+  "label": "Island",
+  "year": 1974
+ },
+ {
+  "rank": 486,
+  "artist": "John Mayer",
+  "title": "Continuum",
+  "label": "Columbia",
+  "year": 2006
+ },
+ {
+  "rank": 487,
+  "artist": "Black Flag",
+  "title": "Damaged",
+  "label": "SST",
+  "year": 1981
+ },
+ {
+  "rank": 488,
+  "artist": "The Stooges",
+  "title": "The Stooges",
+  "label": "Elektra",
+  "year": 1969
+ },
+ {
+  "rank": 489,
+  "artist": "Phil Spector and Various Artists",
+  "title": "Back to Mono (1958-1969)",
+  "label": "ABKCO",
+  "year": 1991
+ },
+ {
+  "rank": 490,
+  "artist": "Linda Ronstadt",
+  "title": "Heart Like a Wheel",
+  "label": "Capitol",
+  "year": 1975
+ },
+ {
+  "rank": 491,
+  "artist": "Harry Styles",
+  "title": "Fine Line",
+  "label": "Columbia",
+  "year": 2019
+ },
+ {
+  "rank": 492,
+  "artist": "Bonnie Raitt",
+  "title": "Nick of Time",
+  "label": "Capitol",
+  "year": 1989
+ },
+ {
+  "rank": 493,
+  "artist": "Marvin Gaye",
+  "title": "Here, My Dear",
+  "label": "Tamla/Motown",
+  "year": 1978
+ },
+ {
+  "rank": 494,
+  "artist": "The Ronettes",
+  "title": "Presenting the Fabulous Ronettes",
+  "label": "Philles",
+  "year": 1964
+ },
+ {
+  "rank": 495,
+  "artist": "Boyz II Men",
+  "title": "II",
+  "label": "Motown",
+  "year": 1991
+ },
+ {
+  "rank": 496,
+  "artist": "Shakira",
+  "title": "Dónde Están los Ladrones",
+  "label": "Columbia",
+  "year": 1998
+ },
+ {
+  "rank": 497,
+  "artist": "Various Artists",
+  "title": "The Indestructible Beat of Soweto",
+  "label": "Earthworks",
+  "year": 1985
+ },
+ {
+  "rank": 498,
+  "artist": "Suicide",
+  "title": "Suicide",
+  "label": "Red Star",
+  "year": 1977
+ },
+ {
+  "rank": 499,
+  "artist": "Rufus, Chaka Khan",
+  "title": "Ask Rufus",
+  "label": "ABC",
+  "year": 1977
+ },
+ {
+  "rank": 500,
+  "artist": "Arcade Fire",
+  "title": "Funeral",
+  "label": "Merge",
+  "year": 2004
+ }
+]
