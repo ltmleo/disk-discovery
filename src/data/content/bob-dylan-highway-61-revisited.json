@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em 1965, Bob Dylan trocou o folk acústico pela banda elétrica. Semanas depois de gravar \"Like a Rolling Stone\", foi vaiado ao tocar com banda elétrica no Newport Folk Festival, em julho.",
+    "O título vem da Highway 61, estrada que vai de Minnesota, onde Dylan cresceu, até Nova Orleans, passando pelas cidades do blues.",
+    "As letras longas e surreais, com blues elétrico e órgão, abriram espaço para canções de rock mais ambiciosas."
+  ],
+  "trivia": [
+    "Al Kooper, que nem era organista, improvisou a parte de órgão de \"Like a Rolling Stone\" e acabou criando uma marca da música.",
+    "\"Like a Rolling Stone\" tem mais de 6 minutos e mesmo assim chegou ao 2º lugar nos EUA.",
+    "\"Desolation Row\", com mais de 11 minutos, é a única faixa acústica do disco."
+  ],
   "tracks": [
     {
-      "title": "Like a Rolling Stone"
+      "title": "Like a Rolling Stone",
+      "note": "Seis minutos de desprezo e liberdade. Mudou o tamanho possível de um single."
     },
     {
       "title": "Tombstone Blues"
@@ -13,7 +24,8 @@
       "title": "From a Buick 6"
     },
     {
-      "title": "Ballad of a Thin Man"
+      "title": "Ballad of a Thin Man",
+      "note": "\"Something is happening here and you don't know what it is, do you, Mr. Jones?\""
     },
     {
       "title": "Queen Jane Approximately"
@@ -25,7 +37,8 @@
       "title": "Just Like Tom Thumb's Blues"
     },
     {
-      "title": "Desolation Row"
+      "title": "Desolation Row",
+      "note": "Mais de 11 minutos de personagens históricos e literários num cenário de pesadelo."
     }
   ]
 }

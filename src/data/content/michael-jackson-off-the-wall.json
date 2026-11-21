@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Michael Jackson conheceu Quincy Jones nas filmagens do musical \"O Mágico Inesquecível\" (\"The Wiz\"), em 1978, e o chamou para produzir seu primeiro disco solo adulto.",
+    "\"Off the Wall\" (1979) mistura disco, funk, soul e baladas, com arranjos de metais impecáveis. Michael compôs alguns dos maiores sucessos.",
+    "Foi o primeiro disco de um artista solo com quatro singles no top 10 dos EUA. Ganhar só um Grammy deixou Michael frustrado e motivou a ambição de \"Thriller\"."
+  ],
+  "trivia": [
+    "\"Don't Stop 'Til You Get Enough\" foi o primeiro grande sucesso composto pelo próprio Michael.",
+    "\"Rock with You\" é de Rod Temperton, do grupo Heatwave, que depois escreveria \"Thriller\".",
+    "Michael chorava ao final de várias tomadas de \"She's Out of My Life\"; a gravação mantém isso."
+  ],
   "tracks": [
     {
-      "title": "Don't Stop 'Til You Get Enough"
+      "title": "Don't Stop 'Til You Get Enough",
+      "note": "Abre com Michael falando baixinho e explode em disco."
     },
     {
-      "title": "Rock with You"
+      "title": "Rock with You",
+      "note": "Composta por Rod Temperton, chegou ao 1º lugar."
     },
     {
       "title": "Workin' Day and Night"
@@ -13,13 +25,15 @@
       "title": "Get on the Floor"
     },
     {
-      "title": "Off the Wall"
+      "title": "Off the Wall",
+      "note": "Outra de Temperton, sobre deixar os problemas de lado e dançar."
     },
     {
       "title": "Girlfriend"
     },
     {
-      "title": "She's Out of My Life"
+      "title": "She's Out of My Life",
+      "note": "Termina com a voz de Michael embargada."
     },
     {
       "title": "I Can't Help It"

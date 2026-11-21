@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Depois de \"good kid, m.A.A.d city\", Kendrick Lamar voltou de uma viagem à África do Sul, onde visitou a cela de Nelson Mandela na Robben Island, e fez um disco sobre fama, culpa, racismo e identidade negra.",
+    "Musicalmente, mergulhou no jazz, no funk e no spoken word, com Thundercat, Kamasi Washington, Terrace Martin, Flying Lotus e George Clinton.",
+    "Ao longo do disco, Kendrick recita um poema que cresce verso a verso, até ser lido inteiro para Tupac no final."
+  ],
+  "trivia": [
+    "O título provisório era \"Tu Pimp a Caterpillar\", cujas iniciais formam \"Tupac\".",
+    "\"Alright\" virou canto de protestos do movimento Black Lives Matter.",
+    "A conversa com Tupac no fim usa trechos de uma entrevista real de 1994."
+  ],
   "tracks": [
     {
-      "title": "Wesley's Theory (feat. George Clinton & Thundercat)"
+      "title": "Wesley's Theory (feat. George Clinton & Thundercat)",
+      "note": "Abre com George Clinton e o baixo de Thundercat."
     },
     {
       "title": "For Free? (Interlude)"
     },
     {
-      "title": "King Kunta"
+      "title": "King Kunta",
+      "note": "Um funk sobre poder, inspirado no escravizado do livro \"Raízes\"."
     },
     {
       "title": "Institutionalized (feat. Bilal, Anna Wise & Snoop Dogg)"
@@ -19,7 +31,8 @@
       "title": "u"
     },
     {
-      "title": "Alright"
+      "title": "Alright",
+      "note": "\"We gon' be alright\": virou canto de rua."
     },
     {
       "title": "For Sale? (Interlude)"
@@ -46,7 +59,8 @@
       "title": "i"
     },
     {
-      "title": "Mortal Man"
+      "title": "Mortal Man",
+      "note": "Termina com a conversa imaginada com Tupac."
     }
   ]
 }

@@ -1,10 +1,22 @@
 {
+  "history": [
+    "\"Let It Bleed\" foi gravado em 1969, quando Brian Jones saiu da banda e morreu, afogado, em julho. Ele aparece em só duas faixas, e Mick Taylor, o substituto, em outras duas.",
+    "O disco mistura blues, country, gospel e rock pesado, num clima de violência e fim de uma era, lançado na véspera do desastroso show de Altamont.",
+    "O título soa como uma resposta a \"Let It Be\", dos Beatles, que ainda não tinha saído."
+  ],
+  "trivia": [
+    "A cantora Merry Clayton gravou os vocais de \"Gimme Shelter\" de madrugada, chamada às pressas. Sua voz chega a falhar no trecho mais alto.",
+    "\"You Can't Always Get What You Want\" tem o Coral Bach de Londres.",
+    "O bolo da capa foi feito por Delia Smith, que depois virou uma famosa apresentadora de culinária britânica."
+  ],
   "tracks": [
     {
-      "title": "Gimme Shelter"
+      "title": "Gimme Shelter",
+      "note": "Abre o disco com guitarras sombrias e a voz de Merry Clayton."
     },
     {
-      "title": "Love In Vain"
+      "title": "Love In Vain",
+      "note": "Um blues de Robert Johnson, com bandolim de Ry Cooder."
     },
     {
       "title": "Country Honk"
@@ -16,7 +28,8 @@
       "title": "Let It Bleed"
     },
     {
-      "title": "Midnight Rambler"
+      "title": "Midnight Rambler",
+      "note": "Inspirada no assassino conhecido como Estrangulador de Boston."
     },
     {
       "title": "You Got the Silver"
@@ -25,7 +38,8 @@
       "title": "Monkey Man"
     },
     {
-      "title": "You Can't Always Get What You Want"
+      "title": "You Can't Always Get What You Want",
+      "note": "Termina o disco com coral, trompa e piano."
     }
   ]
 }

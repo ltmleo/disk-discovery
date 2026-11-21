@@ -1,16 +1,28 @@
 {
+  "history": [
+    "\"Rubber Soul\" foi gravado em cerca de quatro semanas, no fim de 1965, para sair a tempo do Natal. Mesmo com pressa, os Beatles trocaram as canções de amor simples por letras mais pessoais e arranjos com sitar, harmônio e cravo.",
+    "Foi o primeiro disco deles pensado como um conjunto, e não como um punhado de singles. Brian Wilson disse que ele o inspirou a fazer \"Pet Sounds\".",
+    "O título é uma piada com a expressão \"plastic soul\", usada para criticar brancos tentando cantar soul."
+  ],
+  "trivia": [
+    "\"Norwegian Wood\" tem um dos primeiros usos do sitar num disco de pop ocidental, tocado por George Harrison.",
+    "O \"cravo\" de \"In My Life\" é um piano tocado por George Martin em velocidade reduzida e depois acelerado.",
+    "A foto da capa ficou esticada por acidente, e a banda gostou do efeito."
+  ],
   "tracks": [
     {
       "title": "Drive My Car"
     },
     {
-      "title": "Norwegian Wood (This Bird Has Flown)"
+      "title": "Norwegian Wood (This Bird Has Flown)",
+      "note": "Um caso de John contado de forma cifrada, com o sitar de George."
     },
     {
       "title": "You Won't See Me"
     },
     {
-      "title": "Nowhere Man"
+      "title": "Nowhere Man",
+      "note": "Uma das primeiras canções dos Beatles que não fala de amor."
     },
     {
       "title": "Think For Yourself"
@@ -19,7 +31,8 @@
       "title": "The Word"
     },
     {
-      "title": "Michelle"
+      "title": "Michelle",
+      "note": "Paul canta trechos em francês."
     },
     {
       "title": "What Goes On"
@@ -31,7 +44,8 @@
       "title": "I'm Looking Through You"
     },
     {
-      "title": "In My Life"
+      "title": "In My Life",
+      "note": "John olhando para o passado, com o solo de George Martin."
     },
     {
       "title": "Wait"

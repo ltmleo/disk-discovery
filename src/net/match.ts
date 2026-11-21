@@ -21,6 +21,8 @@ export interface ItunesItem {
   trackNumber?: number;
   discNumber?: number;
   primaryGenreName?: string;
+  trackCount?: number;
+  collectionExplicitness?: string;
   trackName?: string;
   artistName?: string;
   collectionName?: string;
@@ -81,6 +83,9 @@ export function rankCollections(results: ItunesItem[], album: AlbumLike): Itunes
     if (!NOISE.test(raw)) score += 1;
     if (!/deluxe|anniversary|expanded|edition|remaster/.test(raw)) score += 1;
     if (/ - (single|ep)$/.test(raw) && !/ - (single|ep)$/i.test(album.title)) continue;
+    // Censored editions and 1–3 track releases lose to a full edition when one exists.
+    if (r.collectionExplicitness === 'cleaned') score -= 2;
+    if ((r.trackCount ?? 99) <= 3) score -= 2;
     scored.push({ item: r, score });
   }
   // Stable sort: equal scores keep the store's order.

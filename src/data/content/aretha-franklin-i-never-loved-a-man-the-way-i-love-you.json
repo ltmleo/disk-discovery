@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Aretha passou seis anos na Columbia sem encontrar seu som. Em 1967, Jerry Wexler a levou para a Atlantic e para o FAME Studios, em Muscle Shoals, no Alabama, onde uma banda de músicos brancos do Sul tocava soul como poucos.",
+    "A sessão no Alabama durou só um dia, interrompida por uma briga entre o marido de Aretha, Ted White, e um dos músicos. O resto do disco foi terminado em Nova York, com parte da mesma banda.",
+    "Aretha tocava piano e arranjava os vocais com as irmãs. O resultado transformou uma cantora de clubes de jazz numa estrela mundial."
+  ],
+  "trivia": [
+    "\"Respect\" era de Otis Redding. Aretha acrescentou o soletrado \"R-E-S-P-E-C-T\" e o \"sock it to me\".",
+    "Otis brincou depois que \"aquela garota roubou minha música\".",
+    "\"Respect\" chegou ao 1º lugar e virou hino dos movimentos pelos direitos civis e feministas."
+  ],
   "tracks": [
     {
-      "title": "Respect"
+      "title": "Respect",
+      "note": "A versão de Aretha transformou o pedido de um homem numa exigência de uma mulher."
     },
     {
       "title": "Drown In My Own Tears"
     },
     {
-      "title": "I Never Loved a Man (The Way I Love You)"
+      "title": "I Never Loved a Man (The Way I Love You)",
+      "note": "A faixa gravada naquele único dia no Alabama, com o piano de Aretha conduzindo a banda."
     },
     {
       "title": "Soul Seranade"
@@ -25,7 +37,8 @@
       "title": "Good Times"
     },
     {
-      "title": "Do Right Woman, Do Right Man"
+      "title": "Do Right Woman, Do Right Man",
+      "note": "Começou no Alabama e foi terminada em Nova York."
     },
     {
       "title": "Save Me"

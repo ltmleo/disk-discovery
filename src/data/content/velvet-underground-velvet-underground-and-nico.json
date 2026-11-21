@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Apadrinhados por Andy Warhol, que pagou as sessões e aparece como produtor, Lou Reed, John Cale, Sterling Morrison e Maureen Tucker gravaram em 1966 canções sobre drogas, sadomasoquismo e a vida noturna de Nova York.",
+    "Warhol colocou na banda a cantora alemã Nico, que canta três faixas. A viola elétrica de John Cale criava zumbidos e microfonia que ninguém fazia no rock.",
+    "O disco vendeu pouco em 1967. Mesmo assim, virou referência do punk, do indie e do rock alternativo."
+  ],
+  "trivia": [
+    "A capa original tinha uma banana adesiva com a frase \"Peel slowly and see\" (\"descasque devagar e veja\").",
+    "Brian Eno disse que poucas pessoas compraram o disco, mas que todas elas montaram uma banda.",
+    "Maureen Tucker tocava em pé, com bateria mínima e baquetas de feltro."
+  ],
   "tracks": [
     {
-      "title": "Sunday Morning"
+      "title": "Sunday Morning",
+      "note": "Gravada por último, a pedido da gravadora, para ter uma faixa mais suave."
     },
     {
-      "title": "I'm Waiting for the Man"
+      "title": "I'm Waiting for the Man",
+      "note": "Sobre comprar heroína no Harlem."
     },
     {
       "title": "Femme Fatale"
     },
     {
-      "title": "Venus In Furs"
+      "title": "Venus In Furs",
+      "note": "Inspirada no romance de Sacher-Masoch, com a viola de Cale."
     },
     {
       "title": "Run Run Run"
@@ -19,7 +32,8 @@
       "title": "All Tomorrow's Parties"
     },
     {
-      "title": "Heroin"
+      "title": "Heroin",
+      "note": "Acelera e desacelera como o efeito da droga."
     },
     {
       "title": "There She Goes Again"

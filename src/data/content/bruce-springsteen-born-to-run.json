@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Depois de dois discos que venderam pouco, Bruce Springsteen sabia que podia perder o contrato. Passou meses no estúdio tentando um som tão grande quanto o \"muro de som\" de Phil Spector.",
+    "A faixa-título levou cerca de seis meses para ficar pronta. Jon Landau, crítico que tinha escrito que viu \"o futuro do rock'n'roll\" num show de Bruce, virou coprodutor.",
+    "Lançado em 1975, o disco fez de Springsteen um astro: ele apareceu nas capas da Time e da Newsweek na mesma semana."
+  ],
+  "trivia": [
+    "A foto da capa, de Eric Meola, mostra Bruce apoiado no ombro do saxofonista Clarence Clemons.",
+    "O solo de sax de \"Jungleland\" foi montado ao longo de muitas horas de estúdio.",
+    "As canções falam de carros, estradas e jovens tentando fugir de cidades pequenas de Nova Jersey."
+  ],
   "tracks": [
     {
-      "title": "Thunder Road"
+      "title": "Thunder Road",
+      "note": "Abre com uma gaita e um piano e termina com a banda inteira em fuga."
     },
     {
       "title": "Tenth Avenue Freeze-Out"
@@ -13,7 +24,8 @@
       "title": "Backstreets"
     },
     {
-      "title": "Born to Run"
+      "title": "Born to Run",
+      "note": "Meses de trabalho para soar como um hit dos anos 60 levado ao extremo."
     },
     {
       "title": "She's the One"
@@ -22,7 +34,8 @@
       "title": "Meeting Across the River"
     },
     {
-      "title": "Jungleland"
+      "title": "Jungleland",
+      "note": "Mais de 9 minutos, com um dos solos de sax mais famosos do rock."
     }
   ]
 }

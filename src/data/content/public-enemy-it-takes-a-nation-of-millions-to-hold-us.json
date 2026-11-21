@@ -1,13 +1,26 @@
 {
+  "history": [
+    "No segundo disco, o Public Enemy apontou o rap para a política. Chuck D escreveu letras sobre racismo, mídia e prisão, e Flavor Flav fazia o contraponto caótico.",
+    "A produção do Bomb Squad (Hank e Keith Shocklee e Eric Sadler) empilhava dezenas de samples, sirenes e guinchos de saxofone por música, algo que ficaria caro demais depois que as leis de autorização de samples apertaram.",
+    "Lançado pela Def Jam em 1988, o disco mudou o som e a ambição do hip-hop e é citado por artistas de rock, rap e eletrônica."
+  ],
+  "trivia": [
+    "O disco abre com uma gravação ao vivo de um show em Londres.",
+    "O som agudo de \"Rebel Without a Pause\" é um saxofone de um disco dos JB's, acelerado e repetido.",
+    "Flavor Flav usava um relógio gigante no pescoço para mostrar que sabia que horas eram na luta política."
+  ],
   "tracks": [
     {
-      "title": "Countdown to Armageddon"
+      "title": "Countdown to Armageddon",
+      "note": "A introdução ao vivo, gravada num show em Londres."
     },
     {
-      "title": "Bring the Noise"
+      "title": "Bring the Noise",
+      "note": "Depois regravada com a banda de metal Anthrax."
     },
     {
-      "title": "Don't Believe the Hype"
+      "title": "Don't Believe the Hype",
+      "note": "Um ataque à forma como a imprensa tratava o grupo."
     },
     {
       "title": "Cold Lampin' with Flavor"
@@ -40,7 +53,8 @@
       "title": "Security of the First World"
     },
     {
-      "title": "Rebel Without a Pause"
+      "title": "Rebel Without a Pause",
+      "note": "Construída sobre o sax guinchante dos JB's e a bateria de \"Funky Drummer\"."
     },
     {
       "title": "Prophets of Rage"

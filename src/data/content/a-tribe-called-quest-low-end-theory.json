@@ -1,10 +1,21 @@
 {
+  "history": [
+    "No segundo disco, Q-Tip, Phife Dawg e Ali Shaheed Muhammad aproximaram o rap do jazz: batidas secas, samples de discos de jazz e graves profundos de contrabaixo acústico.",
+    "Phife ganhou muito mais espaço, criando o contraponto perfeito para a voz calma de Q-Tip.",
+    "Lançado em 1991, o disco influenciou uma geração de produtores e virou referência do rap alternativo."
+  ],
+  "trivia": [
+    "O lendário baixista de jazz Ron Carter toca em \"Verses from the Abstract\".",
+    "\"Scenario\" tem o verso que lançou Busta Rhymes, então do Leaders of the New School.",
+    "As letras falam de indústria musical, estupro, consumo e amizade com humor e leveza."
+  ],
   "tracks": [
     {
       "title": "Excursions"
     },
     {
-      "title": "Buggin' Out"
+      "title": "Buggin' Out",
+      "note": "Phife abre com um dos versos mais citados do grupo."
     },
     {
       "title": "Rap Promoter"
@@ -13,7 +24,8 @@
       "title": "Butter"
     },
     {
-      "title": "Verses from the Abstract (feat. Vinia Mojica & Ron Carter)"
+      "title": "Verses from the Abstract (feat. Vinia Mojica & Ron Carter)",
+      "note": "Com Ron Carter no contrabaixo."
     },
     {
       "title": "Show Business (feat. Diamond D, Lord Jamar & Sadat X)"
@@ -25,7 +37,8 @@
       "title": "Infamous Date Rape"
     },
     {
-      "title": "Check the Rhime"
+      "title": "Check the Rhime",
+      "note": "Q-Tip e Phife lembram da infância em Linden Boulevard, no Queens."
     },
     {
       "title": "Everything Is Fair"
@@ -40,7 +53,8 @@
       "title": "What?"
     },
     {
-      "title": "Scenario (feat. Busta Rhymes, Dinco D & Charlie Brown) [LP Mix]"
+      "title": "Scenario (feat. Busta Rhymes, Dinco D & Charlie Brown) [LP Mix]",
+      "note": "Posse cut com o Leaders of the New School e Busta Rhymes."
     }
   ]
 }

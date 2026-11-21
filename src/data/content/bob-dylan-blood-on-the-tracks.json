@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Em setembro de 1974, Bob Dylan gravou o disco em poucos dias em Nova York, quase só com violão, baixo e órgão. Já com as cópias de teste prontas, ele ouviu o irmão, David, e regravou cinco canções em dezembro, em Minneapolis, com músicos locais e arranjos mais cheios.",
+    "Muita gente ouviu o álbum como o retrato do fim do casamento com Sara Lowndes. Dylan sempre negou e disse que as letras vinham dos contos de Tchékhov. Mesmo assim, o filho Jakob afirmou que, para ele, as canções eram os pais conversando.",
+    "Depois de anos de discos irregulares, \"Blood on the Tracks\" chegou ao 1º lugar nos EUA e é visto como o grande disco de Dylan nos anos 70."
+  ],
+  "trivia": [
+    "As versões gravadas em Nova York e descartadas circularam por décadas em discos piratas antes de saírem oficialmente.",
+    "Das dez faixas, cinco foram refeitas em Minneapolis, incluindo \"Tangled Up in Blue\" e \"Idiot Wind\".",
+    "A capa usa uma pintura de Paul Stinson sobre uma foto de Dylan."
+  ],
   "tracks": [
     {
-      "title": "Tangled Up In Blue"
+      "title": "Tangled Up In Blue",
+      "note": "Dylan mudou a letra várias vezes ao vivo, trocando até quem narra a história."
     },
     {
-      "title": "Simple Twist of Fate"
+      "title": "Simple Twist of Fate",
+      "note": "Um encontro de uma noite contado na terceira pessoa, como um conto."
     },
     {
       "title": "You're a Big Girl Now"
     },
     {
-      "title": "Idiot Wind"
+      "title": "Idiot Wind",
+      "note": "Uma das letras mais amargas da carreira de Dylan."
     },
     {
       "title": "You're Gonna Make Me Lonesome When You Go"
@@ -25,7 +38,8 @@
       "title": "If You See Her, Say Hello"
     },
     {
-      "title": "Shelter from the Storm"
+      "title": "Shelter from the Storm",
+      "note": "Gravada numa das sessões de Nova York, só com violão e baixo."
     },
     {
       "title": "Buckets of Rain"

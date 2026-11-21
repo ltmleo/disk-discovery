@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Depois do sucesso dos Fugees com \"The Score\" (1996), Lauryn Hill lançou seu primeiro disco solo em 1998, misturando rap, soul dos anos 60, doo-wop e reggae. Parte foi gravada no Tuff Gong, o estúdio de Bob Marley na Jamaica.",
+    "Entre as faixas, interlúdios mostram uma sala de aula em que crianças conversam sobre o amor com um professor, o que dá ao disco o tom de um caderno de lições aprendidas.",
+    "Ganhou cinco Grammys, incluindo Álbum do Ano: foi o primeiro disco de hip-hop a levar o prêmio. Lauryn nunca lançou outro álbum de estúdio."
+  ],
+  "trivia": [
+    "O professor dos interlúdios é Ras Baraka, que depois se tornou prefeito de Newark.",
+    "\"Ex-Factor\" foi sampleada por Drake em \"Nice for What\" (2018).",
+    "Um jovem John Legend toca piano em \"Everything Is Everything\"."
+  ],
   "tracks": [
     {
       "title": "Intro"
@@ -7,13 +17,16 @@
       "title": "Lost Ones"
     },
     {
-      "title": "Ex-Factor"
+      "title": "Ex-Factor",
+      "note": "Uma balada sobre um amor que machuca, depois sampleada por Drake."
     },
     {
-      "title": "To Zion (feat. Carlos Santana)"
+      "title": "To Zion (feat. Carlos Santana)",
+      "note": "Para o filho Zion, com o violão de Carlos Santana."
     },
     {
-      "title": "Doo Wop (That Thing)"
+      "title": "Doo Wop (That Thing)",
+      "note": "Chegou ao 1º lugar da Billboard Hot 100, coisa rara para uma estreia solo de rap."
     },
     {
       "title": "Superstar"
@@ -34,7 +47,8 @@
       "title": "Every Ghetto, Every City"
     },
     {
-      "title": "Nothing Even Matters (feat. D'Angelo)"
+      "title": "Nothing Even Matters (feat. D'Angelo)",
+      "note": "Dueto com D'Angelo."
     },
     {
       "title": "Everything Is Everything"

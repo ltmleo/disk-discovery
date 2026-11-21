@@ -1,31 +1,54 @@
 {
+  "history": [
+    "O Wu-Tang Clan reuniu nove rappers de Staten Island, que eles chamavam de \"Shaolin\". O produtor RZA gravou tudo com equipamento barato, misturando batidas ásperas, pianos de soul e diálogos de filmes de kung fu.",
+    "O primeiro single, \"Protect Ya Neck\", foi prensado de forma independente antes do contrato com a Loud Records.",
+    "O acordo com a gravadora deixava cada integrante livre para assinar contratos solo com outros selos. Isso gerou uma série de discos clássicos nos anos seguintes."
+  ],
+  "trivia": [
+    "Os diálogos vêm de filmes como \"Shaolin and Wu Tang\" (1983).",
+    "\"C.R.E.A.M.\" quer dizer \"Cash Rules Everything Around Me\".",
+    "Method Man, Ghostface Killah, GZA e Ol' Dirty Bastard tiveram carreiras solo de sucesso."
+  ],
   "tracks": [
     {
-      "title": "Shame On a Nuh (feat. Raekwon, Ol' Dirty Bastard & Method Man)"
+      "title": "Bring Da Ruckus",
+      "note": "Abre o disco com quatro MCs em sequência."
     },
     {
-      "title": "Clan In Da Front (feat. RZA & GZA)"
+      "title": "Shame On a N***a"
     },
     {
-      "title": "Can It Be All So Simple (Radio Edit)"
+      "title": "Clan In Da Front"
     },
     {
-      "title": "Method Man (feat. Method Man, Raekwon, GZA, RZA & Ghostface Killah)"
+      "title": "Wu-Tang: 7th Chamber"
     },
     {
-      "title": "Da Mystery of Chessboxin' (feat. Method Man, U-God, Inspectah Deck, Raekwon, Ol' Dirty Bastard, Ghostface Killah & Masta Killa) [Radio Edit]"
+      "title": "Can It Be All So Simple / Intermission"
     },
     {
-      "title": "Wu-Tang Clan Ain't Nuthing Ta F' Wit (feat. RZA, Inspectah Deck & Method Man)"
+      "title": "Da Mystery of Chessboxin'"
     },
     {
-      "title": "C.R.E.A.M. (feat. Method Man, Raekwon, Inspectah Deck & Buddha Monk)"
+      "title": "Wu-Tang Clan Ain't Nuthing ta F' Wit"
     },
     {
-      "title": "Protect Ya Neck (feat. RZA, Method Man, Inspectah Deck, Raekwon, U-God, Ol' Dirty Bastard, Ghostface Killah & GZA)"
+      "title": "C.R.E.A.M. (Cash Rules Everything Around Me)",
+      "note": "Sobre dinheiro e sobrevivência, com um piano melancólico."
     },
     {
-      "title": "Tearz (feat. RZA & Ghostface Killah)"
+      "title": "Method Man",
+      "note": "A faixa-solo que lançou Method Man."
+    },
+    {
+      "title": "Protect Ya Neck",
+      "note": "O primeiro single, lançado de forma independente."
+    },
+    {
+      "title": "Tearz"
+    },
+    {
+      "title": "Wu-Tang: 7th Chamber - Part II (Conclusion)"
     }
   ]
 }

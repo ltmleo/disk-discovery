@@ -1,16 +1,30 @@
 {
+  "history": [
+    "Quatro garotos do Queens adotaram o sobrenome Ramone e tocavam músicas curtas, rápidas e simples, em oposição ao rock progressivo da época.",
+    "O primeiro disco foi gravado em cerca de uma semana, com orçamento de uns 6 mil dólares. Em 29 minutos, traz 14 músicas sobre tédio, cola, garotas e filmes B.",
+    "Vendeu pouco, mas a visita da banda a Londres em julho de 1976 animou a cena que formaria Clash, Sex Pistols e Damned."
+  ],
+  "trivia": [
+    "\"Hey! Ho! Let's go!\", de \"Blitzkrieg Bop\", virou um dos refrões mais conhecidos do rock.",
+    "A foto da capa, de Roberta Bayley, custou 125 dólares.",
+    "Nenhum dos integrantes se chamava Ramone de verdade."
+  ],
   "tracks": [
     {
-      "title": "Blitzkrieg Bop"
+      "title": "Blitzkrieg Bop",
+      "note": "Abre o disco e virou hino de estádio."
     },
     {
-      "title": "Beat On the Brat"
+      "title": "Beat On the Brat",
+      "note": "Humor e violência em menos de três minutos."
     },
     {
-      "title": "Judy Is a Punk"
+      "title": "Judy Is a Punk",
+      "note": "Uma das músicas mais curtas do disco."
     },
     {
-      "title": "I Wanna Be Your Boyfriend"
+      "title": "I Wanna Be Your Boyfriend",
+      "note": "Uma canção de amor no estilo dos girl groups dos anos 60."
     },
     {
       "title": "Chain Saw"

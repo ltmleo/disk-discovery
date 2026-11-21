@@ -36,3 +36,19 @@ describe('compact artwork', () => {
     expect(compactArt('https://example.com/a.png')).toBe('https://example.com/a.png');
   });
 });
+
+describe('rankCollections', () => {
+  it('prefers the explicit full album over clean and 1-track editions', async () => {
+    const { rankCollections } = await import('./match');
+    const base = { artistName: 'Wu-Tang Clan', collectionName: 'Enter the Wu-Tang (36 Chambers)', artworkUrl100: 'x/100x100bb.jpg' };
+    const ranked = rankCollections(
+      [
+        { ...base, collectionId: 1, collectionExplicitness: 'cleaned', trackCount: 9 },
+        { ...base, collectionId: 2, trackCount: 1 },
+        { ...base, collectionId: 3, collectionExplicitness: 'explicit', trackCount: 13 },
+      ],
+      { title: 'Enter the Wu-Tang (36 Chambers)', artist: 'Wu-Tang Clan' },
+    );
+    expect(ranked[0]!.collectionId).toBe(3);
+  });
+});

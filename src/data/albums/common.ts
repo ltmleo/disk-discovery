@@ -593,7 +593,6 @@ export const COMMON: Album[] = [
     year: 1991,
     label: "Def Jam/Columbia",
     genre: "Hip-hop",
-    previewTrack: "Mama Said Knock You Out (Undefeated Remix)",
   },
   {
     id: "sade-love-deluxe",

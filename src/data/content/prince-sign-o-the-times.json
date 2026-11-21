@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em 1986, Prince desfez a Revolution e trabalhou em vários projetos ao mesmo tempo, entre eles \"Dream Factory\", \"Crystal Ball\" e \"Camille\", um disco com voz acelerada de um alter ego.",
+    "A Warner pediu um disco menor, e \"Sign O' the Times\" (1987) virou um álbum duplo com o melhor desses projetos: funk, rock, soul, pop e gospel.",
+    "A faixa-título fala de AIDS, drogas, gangues e guerra, num funk minimalista. O disco também virou filme-concerto."
+  ],
+  "trivia": [
+    "Em \"If I Was Your Girlfriend\", Prince canta como Camille, com a voz acelerada para soar feminina.",
+    "Prince tocou quase todos os instrumentos em muitas faixas.",
+    "Muitas gravações das sessões só foram lançadas na edição comemorativa de 2020."
+  ],
   "tracks": [
     {
-      "title": "Sign O' The Times"
+      "title": "Sign O' The Times",
+      "note": "Um noticiário cantado sobre o fim dos anos 80."
     },
     {
       "title": "Play In The Sunshine"
@@ -31,7 +42,8 @@
       "title": "U Got The Look"
     },
     {
-      "title": "If I Was Your Girlfriend"
+      "title": "If I Was Your Girlfriend",
+      "note": "Cantada pela voz alterada de \"Camille\"."
     },
     {
       "title": "Strange Relationship"
@@ -40,13 +52,15 @@
       "title": "I Could Never Take The Place Of Your Man"
     },
     {
-      "title": "The Cross"
+      "title": "The Cross",
+      "note": "Começa como balada e cresce para rock com cítara."
     },
     {
       "title": "It's Gonna Be A Beautiful Night"
     },
     {
-      "title": "Adore"
+      "title": "Adore",
+      "note": "Fecha o disco com uma balada em falsete."
     }
   ]
 }

@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Depois de interromper Taylor Swift no VMA de 2009 e virar alvo de críticas, Kanye West se isolou no Havaí. Lá montou sessões abertas, com dezenas de produtores e convidados trabalhando ao mesmo tempo em vários estúdios.",
+    "Antes do disco, Kanye lançou músicas de graça toda sexta-feira, o projeto \"GOOD Fridays\". O álbum saiu em 2010 com orquestrações enormes, rock progressivo e soul, falando de fama, culpa e autodestruição.",
+    "Ganhou o Grammy de melhor álbum de rap e é considerado um dos grandes discos de hip-hop da década."
+  ],
+  "trivia": [
+    "\"Power\" sampleia \"21st Century Schizoid Man\", do King Crimson.",
+    "As capas são pinturas de George Condo. Uma delas foi barrada em algumas lojas.",
+    "\"Runaway\" virou um curta-metragem de mais de 30 minutos dirigido por Kanye."
+  ],
   "tracks": [
     {
       "title": "Dark Fantasy"
@@ -7,7 +17,8 @@
       "title": "Gorgeous (feat. Kid Cudi & Raekwon)"
     },
     {
-      "title": "Power"
+      "title": "Power",
+      "note": "Sobre um sample do King Crimson, com coros e batida pesada."
     },
     {
       "title": "All of the Lights (Interlude)"
@@ -16,7 +27,8 @@
       "title": "All of the Lights"
     },
     {
-      "title": "Monster (feat. JAŸ-Z, Rick Ross, Nicki Minaj & Bon Iver)"
+      "title": "Monster (feat. JAŸ-Z, Rick Ross, Nicki Minaj & Bon Iver)",
+      "note": "Famosa pelo verso de Nicki Minaj, que roubou a faixa."
     },
     {
       "title": "So Appalled (feat. JAŸ-Z, Pusha T, Prynce Cy Hi, Swizz Beatz & RZA)"
@@ -25,7 +37,8 @@
       "title": "Devil In a New Dress (feat. Rick Ross)"
     },
     {
-      "title": "Runaway (feat. Pusha T)"
+      "title": "Runaway (feat. Pusha T)",
+      "note": "Mais de 9 minutos, terminando com um solo de voz distorcida."
     },
     {
       "title": "Hell of a Life"
@@ -34,7 +47,8 @@
       "title": "Blame Game (feat. John Legend)"
     },
     {
-      "title": "Lost In the World (feat. Bon Iver)"
+      "title": "Lost In the World (feat. Bon Iver)",
+      "note": "Construída sobre \"Woods\", do Bon Iver, com Justin Vernon."
     },
     {
       "title": "Who Will Survive In America"

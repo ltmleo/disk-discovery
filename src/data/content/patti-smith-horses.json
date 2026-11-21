@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Patti Smith era poeta antes de ser cantora. No começo dos anos 70, passou a ler poemas com o guitarrista Lenny Kaye no circuito do CBGB, em Nova York, e a banda cresceu a partir daí.",
+    "Produzido por John Cale, do Velvet Underground, \"Horses\" (1975) mistura poesia improvisada, rock de garagem e longas faixas que crescem como transe.",
+    "O disco abriu caminho para o punk e para muitas mulheres no rock."
+  ],
+  "trivia": [
+    "A foto da capa, com Patti de camisa branca e paletó no ombro, é de Robert Mapplethorpe.",
+    "O disco abre com a frase \"Jesus died for somebody's sins but not mine\".",
+    "\"Land\" incorpora \"Land of a Thousand Dances\" no meio de um longo poema."
+  ],
   "tracks": [
     {
-      "title": "Gloria"
+      "title": "Gloria",
+      "note": "Começa com um poema de Patti e explode na \"Gloria\" do Them."
     },
     {
       "title": "Redondo Beach"
     },
     {
-      "title": "Birdland"
+      "title": "Birdland",
+      "note": "Nove minutos de improviso inspirados nas memórias do filho de Wilhelm Reich."
     },
     {
-      "title": "Free Money"
+      "title": "Free Money",
+      "note": "Sobre a mãe de Patti sonhando em ganhar na loteria."
     },
     {
       "title": "Kimberly"
@@ -19,7 +32,8 @@
       "title": "Break It Up"
     },
     {
-      "title": "Land"
+      "title": "Land",
+      "note": "Uma suíte de três partes com um cavalo, uma dança e muita imaginação."
     },
     {
       "title": "Elegie"

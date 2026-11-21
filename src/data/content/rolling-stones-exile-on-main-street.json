@@ -1,7 +1,17 @@
 {
+  "history": [
+    "Em 1971, devendo impostos altíssimos na Inglaterra, os Rolling Stones se mudaram para a França. Keith Richards alugou a Villa Nellcôte, uma mansão em Villefranche-sur-Mer, e a banda gravou no porão, com o estúdio móvel estacionado no jardim.",
+    "As sessões eram caóticas: calor, umidade, cabos derretendo, visitas a qualquer hora e muita droga. O disco foi terminado em Los Angeles.",
+    "O álbum duplo mistura rock, blues, country e gospel numa mixagem suja e densa. Dividiu a crítica no lançamento e depois virou o disco favorito de muitos fãs da banda."
+  ],
+  "trivia": [
+    "A colagem de fotos da capa é de Robert Frank, autor do livro \"The Americans\".",
+    "Mick Taylor, que tinha entrado no lugar de Brian Jones, toca em quase todo o disco."
+  ],
   "tracks": [
     {
-      "title": "Rocks Off"
+      "title": "Rocks Off",
+      "note": "Abre o disco com o som abafado e caótico das sessões no porão."
     },
     {
       "title": "Rip This Joint"
@@ -13,7 +23,8 @@
       "title": "Casino Boogie"
     },
     {
-      "title": "Tumbling Dice"
+      "title": "Tumbling Dice",
+      "note": "O single do disco, sobre jogo e amor."
     },
     {
       "title": "Sweet Virginia"
@@ -28,7 +39,8 @@
       "title": "Loving Cup"
     },
     {
-      "title": "Happy"
+      "title": "Happy",
+      "note": "Cantada por Keith Richards, gravada numa tarde com pouca gente no porão."
     },
     {
       "title": "Turd On The Run"
@@ -49,7 +61,8 @@
       "title": "Stop Breaking Down"
     },
     {
-      "title": "Shine A Light"
+      "title": "Shine A Light",
+      "note": "Um gospel com coro, com influência de Billy Preston."
     },
     {
       "title": "Soul Survivor"

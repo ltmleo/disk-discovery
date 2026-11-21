@@ -1,13 +1,26 @@
 {
+  "history": [
+    "Jay-Z gravou \"The Blueprint\" em cerca de duas semanas, com produção baseada em samples de soul dos anos 60 e 70. Kanye West e Just Blaze assinam várias das bases, e o disco lançou Kanye como produtor de ponta.",
+    "Em \"Takeover\", Jay-Z atacou Nas e Mobb Deep, numa das rivalidades mais famosas do rap.",
+    "O álbum saiu em 11 de setembro de 2001, no dia dos atentados, e mesmo assim estreou em 1º lugar nos EUA."
+  ],
+  "trivia": [
+    "Eminem é o único rapper convidado, em \"Renegade\", que ele também produziu.",
+    "\"Izzo (H.O.V.A.)\" usa \"I Want You Back\", do Jackson 5.",
+    "\"Song Cry\" sampleia \"Sounds Like a Love Song\", de Bobby Glenn."
+  ],
   "tracks": [
     {
-      "title": "The Ruler's Back"
+      "title": "The Ruler's Back",
+      "note": "Abre com metais de soul, produção de Bink!."
     },
     {
-      "title": "Takeover"
+      "title": "Takeover",
+      "note": "O ataque a Nas, sobre um riff de The Doors."
     },
     {
-      "title": "Izzo (H.O.V.A.)"
+      "title": "Izzo (H.O.V.A.)",
+      "note": "O sample do Jackson 5 virou hit."
     },
     {
       "title": "Girls, Girls, Girls"
@@ -28,7 +41,8 @@
       "title": "Never Change"
     },
     {
-      "title": "Song Cry"
+      "title": "Song Cry",
+      "note": "Uma confissão sobre um relacionamento que acabou."
     },
     {
       "title": "All I Need"

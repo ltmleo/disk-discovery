@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Em 1985, Paul Simon foi a Joanesburgo e gravou com músicos sul-africanos, como o guitarrista Ray Phiri e o grupo vocal Ladysmith Black Mambazo. Depois escreveu as letras em cima dessas bases.",
+    "A viagem quebrava o boicote cultural da ONU ao regime do apartheid, e Simon foi muito criticado, embora pagasse e creditasse os músicos.",
+    "O disco ganhou o Grammy de Álbum do Ano e apresentou o mbaqanga e outros estilos sul-africanos a um público enorme."
+  ],
+  "trivia": [
+    "O clipe de \"You Can Call Me Al\" tem o ator Chevy Chase dublando a voz de Simon.",
+    "O baixista Bakithi Kumalo toca uma frase de baixo famosa em \"You Can Call Me Al\", que depois foi invertida e montada no estúdio.",
+    "\"Graceland\" fala de uma viagem de Simon com o filho à casa de Elvis Presley."
+  ],
   "tracks": [
     {
-      "title": "The Boy In the Bubble"
+      "title": "The Boy In the Bubble",
+      "note": "Abre com o acordeão de Forere Motloheloa."
     },
     {
-      "title": "Graceland"
+      "title": "Graceland",
+      "note": "Uma viagem até Memphis depois de um divórcio."
     },
     {
       "title": "I Know What I Know (with General M.D. Shirinda & the Gaza Sisters)"
@@ -13,10 +25,12 @@
       "title": "Gumboots (with the Boyoyo Boys)"
     },
     {
-      "title": "Diamonds On the Soles of Her Shoes"
+      "title": "Diamonds On the Soles of Her Shoes",
+      "note": "Com Ladysmith Black Mambazo."
     },
     {
-      "title": "You Can Call Me Al"
+      "title": "You Can Call Me Al",
+      "note": "O maior sucesso do disco, com o solo de baixo de Bakithi Kumalo."
     },
     {
       "title": "Under African Skies"

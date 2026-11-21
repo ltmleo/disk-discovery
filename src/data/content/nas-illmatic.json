@@ -1,22 +1,36 @@
 {
+  "history": [
+    "Nasir Jones tinha 20 anos quando lançou \"Illmatic\" (1994). As letras descrevem a vida no conjunto habitacional de Queensbridge, no Queens, com rimas densas e cheias de imagens.",
+    "A produção reuniu um time dos sonhos do rap de Nova York: DJ Premier, Pete Rock, Large Professor, Q-Tip e L.E.S.",
+    "Curto e sem excessos, o disco é frequentemente citado como o melhor álbum de rap já feito."
+  ],
+  "trivia": [
+    "A revista The Source deu nota máxima, \"5 microfones\", algo raríssimo.",
+    "A capa sobrepõe uma foto de Nas criança às ruas de Queensbridge.",
+    "O pai de Nas, o trompetista Olu Dara, toca no fim de \"Life's a Bitch\"."
+  ],
   "tracks": [
     {
       "title": "The Genesis"
     },
     {
-      "title": "N.Y. State of Mind"
+      "title": "N.Y. State of Mind",
+      "note": "Produção de DJ Premier e um dos versos mais citados do rap."
     },
     {
-      "title": "Life's a Bitch (feat. AZ & Olu Dara)"
+      "title": "Life's a Bitch (feat. AZ & Olu Dara)",
+      "note": "Com AZ e o trompete de Olu Dara, pai de Nas."
     },
     {
-      "title": "The World Is Yours"
+      "title": "The World Is Yours",
+      "note": "Produzida por Pete Rock sobre um piano de jazz."
     },
     {
       "title": "Halftime"
     },
     {
-      "title": "Memory Lane (Sittin' in da Park)"
+      "title": "Memory Lane (Sittin' in da Park)",
+      "note": "Nas lembra de Queensbridge, sobre batida de DJ Premier."
     },
     {
       "title": "One Love (feat. Q-Tip)"

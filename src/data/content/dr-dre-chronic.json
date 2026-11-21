@@ -1,19 +1,32 @@
 {
+  "history": [
+    "Depois de sair do N.W.A, Dr. Dre fundou a Death Row Records e gravou \"The Chronic\" (1992). Criou o G-funk: batidas lentas, baixos gordos, samples de Parliament-Funkadelic e um sintetizador agudo e choroso.",
+    "O disco apresentou Snoop Doggy Dogg, que canta em quase todas as faixas, e fez do rap da Costa Oeste o som dominante nos EUA no começo dos anos 90.",
+    "\"Let Me Ride\" ganhou o Grammy de melhor performance solo de rap."
+  ],
+  "trivia": [
+    "A capa imita a embalagem do papel de enrolar Zig-Zag.",
+    "\"Nuthin' But a 'G' Thang\" usa \"I Want'a Do Something Freaky to You\", de Leon Haywood.",
+    "Músicos tocavam por cima dos samples, o que dava ao disco um som mais limpo que o de outros discos de rap."
+  ],
   "tracks": [
     {
       "title": "The Chronic (Intro)"
     },
     {
-      "title": "F**k Wit Dre Day (And Everybody's Celebratin')"
+      "title": "F**k Wit Dre Day (And Everybody's Celebratin')",
+      "note": "Ataques a ex-parceiros, num funk lento."
     },
     {
-      "title": "Let Me Ride (feat. Jewell)"
+      "title": "Let Me Ride (feat. Jewell)",
+      "note": "Ganhou o Grammy e usa trechos de Parliament."
     },
     {
       "title": "The Day The N****z Took Over (feat. Daz, Snoop Dogg & RBX)"
     },
     {
-      "title": "Nuthin' But A \"G\" Thang"
+      "title": "Nuthin' But A \"G\" Thang",
+      "note": "O primeiro single, com Snoop dividindo os versos com Dre."
     },
     {
       "title": "Deeez Nuuuts"

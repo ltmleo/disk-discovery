@@ -1,19 +1,32 @@
 {
+  "history": [
+    "Em \"Innervisions\" (1973), Stevie Wonder toca a maior parte dos instrumentos em várias faixas, com a ajuda de Malcolm Cecil e Robert Margouleff e do enorme sintetizador TONTO.",
+    "As letras falam de drogas, racismo, política e fé, com uma sonoridade que mistura funk, soul, jazz e música latina.",
+    "Dias depois do lançamento, Stevie sofreu um grave acidente de carro e ficou em coma. Ele se recuperou e, em 1974, \"Innervisions\" ganhou o Grammy de Álbum do Ano."
+  ],
+  "trivia": [
+    "\"Living for the City\" tem um trecho falado que encena a prisão injusta de um jovem recém-chegado a Nova York.",
+    "\"Higher Ground\" foi gravada em poucas horas.",
+    "O TONTO era um sintetizador do tamanho de uma sala, montado a partir de vários módulos."
+  ],
   "tracks": [
     {
-      "title": "Too High"
+      "title": "Too High",
+      "note": "Abre o disco com um alerta sobre as drogas."
     },
     {
       "title": "Visions"
     },
     {
-      "title": "Living For the City"
+      "title": "Living For the City",
+      "note": "Sete minutos sobre uma família do Mississippi tentando a vida em Nova York."
     },
     {
       "title": "Golden Lady"
     },
     {
-      "title": "Higher Ground"
+      "title": "Higher Ground",
+      "note": "Funk sobre renascimento, gravado antes do acidente."
     },
     {
       "title": "Jesus Children of America"
@@ -22,7 +35,8 @@
       "title": "All In Love Is Fair"
     },
     {
-      "title": "Don't You Worry 'Bout a Thing"
+      "title": "Don't You Worry 'Bout a Thing",
+      "note": "Com piano latino e um começo em espanhol."
     },
     {
       "title": "He's Misstra Know-It-All"

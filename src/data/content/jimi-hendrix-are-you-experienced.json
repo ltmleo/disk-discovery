@@ -1,19 +1,51 @@
 {
+  "history": [
+    "Jimi Hendrix tocava como músico de apoio nos EUA quando Chas Chandler, ex-baixista dos Animals, o levou para Londres em 1966. Lá, formou o Jimi Hendrix Experience com Noel Redding e Mitch Mitchell.",
+    "Em poucos meses, os guitarristas da cena inglesa, de Clapton a Pete Townshend, iam vê-lo tocar. O primeiro disco, de 1967, usa microfonia, distorção e efeitos como parte da composição.",
+    "A edição americana trocou parte do repertório e incluiu os singles \"Purple Haze\", \"Hey Joe\" e \"The Wind Cries Mary\"."
+  ],
+  "trivia": [
+    "O som de \"Purple Haze\" usa o Octavia, um pedal criado pelo engenheiro Roger Mayer.",
+    "\"'Scuse me while I kiss the sky\" é um dos versos mais mal ouvidos do rock: muita gente entendia \"kiss this guy\".",
+    "Hendrix tocava guitarra de destro virada ao contrário, por ser canhoto."
+  ],
   "tracks": [
     {
-      "title": "Purple Haze"
+      "title": "Purple Haze",
+      "note": "O acorde de abertura virou o \"acorde Hendrix\"."
     },
     {
       "title": "Manic Depression"
     },
     {
-      "title": "Hey Joe"
+      "title": "Hey Joe",
+      "note": "Uma releitura de um standard do rock dos anos 60, foi o primeiro single."
     },
     {
       "title": "Love or Confusion"
     },
     {
       "title": "May This Be Love"
+    },
+    {
+      "title": "I Don't Live Today"
+    },
+    {
+      "title": "The Wind Cries Mary",
+      "note": "Escrita depois de uma briga com a namorada, Kathy Etchingham."
+    },
+    {
+      "title": "Fire"
+    },
+    {
+      "title": "Third Stone from the Sun",
+      "note": "Instrumental psicodélico com vozes em velocidade alterada."
+    },
+    {
+      "title": "Foxey Lady"
+    },
+    {
+      "title": "Are You Experienced?"
     }
   ]
 }

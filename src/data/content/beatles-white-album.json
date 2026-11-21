@@ -1,7 +1,18 @@
 {
+  "history": [
+    "No começo de 1968, os Beatles passaram semanas em Rishikesh, na Índia, num retiro de meditação com o Maharishi Mahesh Yogi. Longe das drogas e dos instrumentos elétricos, compuseram dezenas de músicas no violão.",
+    "De volta a Londres, as sessões foram tensas: cada Beatle gravava muitas vezes sozinho com o produtor George Martin, e Ringo chegou a sair da banda por duas semanas.",
+    "O resultado é um álbum duplo chamado só \"The Beatles\", com a capa toda branca. Mistura folk, hard rock, music hall, blues e uma colagem sonora experimental."
+  ],
+  "trivia": [
+    "A capa branca, ideia do artista Richard Hamilton, trazia um número de série em cada cópia.",
+    "Eric Clapton toca o solo de \"While My Guitar Gently Weeps\", sem crédito no disco.",
+    "\"Blackbird\" foi inspirada numa peça de Bach e na luta pelos direitos civis nos EUA."
+  ],
   "tracks": [
     {
-      "title": "Back In the U.S.S.R."
+      "title": "Back In the U.S.S.R.",
+      "note": "Gravada enquanto Ringo estava fora da banda; Paul tocou a bateria."
     },
     {
       "title": "Dear Prudence"
@@ -19,7 +30,8 @@
       "title": "The Continuing Story of Bungalow Bill"
     },
     {
-      "title": "While My Guitar Gently Weeps"
+      "title": "While My Guitar Gently Weeps",
+      "note": "De George Harrison, com o solo de Eric Clapton."
     },
     {
       "title": "Happiness Is a Warm Gun"
@@ -31,7 +43,8 @@
       "title": "I'm So Tired"
     },
     {
-      "title": "Blackbird"
+      "title": "Blackbird",
+      "note": "Só voz, violão e o som dos pés de Paul marcando o tempo."
     },
     {
       "title": "Piggies"
@@ -67,7 +80,8 @@
       "title": "Sexy Sadie"
     },
     {
-      "title": "Helter Skelter"
+      "title": "Helter Skelter",
+      "note": "Paul tentando fazer a música mais barulhenta possível."
     },
     {
       "title": "Long, Long, Long"
@@ -85,7 +99,8 @@
       "title": "Cry Baby Cry"
     },
     {
-      "title": "Revolution 9"
+      "title": "Revolution 9",
+      "note": "Oito minutos de colagem de fitas, ideia de John e Yoko."
     },
     {
       "title": "Good Night"

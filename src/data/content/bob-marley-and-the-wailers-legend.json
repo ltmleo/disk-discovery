@@ -1,13 +1,25 @@
 {
+  "history": [
+    "\"Legend\" saiu em 1984, três anos depois da morte de Bob Marley, de câncer, aos 36 anos. Reúne os maiores sucessos dele com os Wailers, escolhidos pela Island Records para apresentar Marley a um público amplo.",
+    "A seleção privilegia canções de amor e de esperança, mais que as faixas mais políticas.",
+    "Virou o disco de reggae mais vendido da história e um dos que mais tempo passaram na parada americana."
+  ],
+  "trivia": [
+    "\"Redemption Song\" é só voz e violão, uma das últimas gravações de Marley.",
+    "\"One Love\" incorpora trechos de \"People Get Ready\", de Curtis Mayfield.",
+    "O produtor Chris Blackwell, da Island, foi decisivo para lançar Marley fora da Jamaica."
+  ],
   "tracks": [
     {
-      "title": "Is This Love"
+      "title": "Is This Love",
+      "note": "Uma das canções de amor mais conhecidas de Marley."
     },
     {
       "title": "No Woman, No Cry"
     },
     {
-      "title": "Could You Be Loved"
+      "title": "Could You Be Loved",
+      "note": "Reggae com toque de disco, de 1980."
     },
     {
       "title": "Three Little Birds"
@@ -25,7 +37,8 @@
       "title": "Easy Skanking"
     },
     {
-      "title": "One Love / People Get Ready"
+      "title": "One Love / People Get Ready",
+      "note": "Com trechos de \"People Get Ready\", de Curtis Mayfield."
     },
     {
       "title": "I Shot The Sheriff"
@@ -34,7 +47,8 @@
       "title": "Waiting In Vain"
     },
     {
-      "title": "Redemption Song"
+      "title": "Redemption Song",
+      "note": "Só voz e violão: \"Emancipate yourselves from mental slavery\"."
     },
     {
       "title": "Satisfy My Soul"

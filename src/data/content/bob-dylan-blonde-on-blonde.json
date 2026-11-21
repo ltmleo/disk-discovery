@@ -1,19 +1,32 @@
 {
+  "history": [
+    "Depois de sessões frustradas em Nova York, Bob Dylan levou o disco para Nashville em 1966. Lá gravou com músicos de estúdio do country e com Al Kooper e Robbie Robertson, que vieram com ele.",
+    "As gravações viravam a madrugada: Dylan terminava letras no estúdio enquanto a banda esperava, jogando cartas.",
+    "O resultado é um dos primeiros álbuns duplos do rock, com o \"som fino e selvagem de mercúrio\" que Dylan dizia procurar."
+  ],
+  "trivia": [
+    "\"Sad Eyed Lady of the Lowlands\" ocupa um lado inteiro do LP, com cerca de 11 minutos.",
+    "Em \"Rainy Day Women #12 & 35\", a banda grava rindo, gritando e tocando como uma fanfarra de rua.",
+    "A foto da capa saiu tremida, e Dylan escolheu justamente essa."
+  ],
   "tracks": [
     {
-      "title": "Rainy Day Women #12 & 35"
+      "title": "Rainy Day Women #12 & 35",
+      "note": "\"Everybody must get stoned\", com fanfarra e risadas."
     },
     {
       "title": "Pledging My Time"
     },
     {
-      "title": "Visions of Johanna"
+      "title": "Visions of Johanna",
+      "note": "Uma das letras mais celebradas de Dylan."
     },
     {
       "title": "One of Us Must Know (Sooner or Later)"
     },
     {
-      "title": "I Want You"
+      "title": "I Want You",
+      "note": "Um dos singles, com guitarra e órgão saltitantes."
     },
     {
       "title": "Stuck Inside of Mobile with the Memphis Blues Again"
@@ -40,7 +53,8 @@
       "title": "Obviously Five Believers"
     },
     {
-      "title": "Sad-Eyed Lady of the Lowlands"
+      "title": "Sad-Eyed Lady of the Lowlands",
+      "note": "Gravada de madrugada, para a esposa, Sara."
     }
   ]
 }

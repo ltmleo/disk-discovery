@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Carole King escreveu hits para outros artistas nos anos 60, com o parceiro e ex-marido Gerry Goffin. Em 1971, gravou \"Tapestry\" em Los Angeles, num tom íntimo, com piano e amigos como James Taylor e Joni Mitchell nos vocais.",
+    "O disco ficou 15 semanas em 1º lugar nos EUA e ganhou quatro Grammys, incluindo Álbum do Ano.",
+    "Ela foi a primeira mulher a ganhar o Grammy de Canção do Ano, com \"You've Got a Friend\"."
+  ],
+  "trivia": [
+    "O disco traz versões de Carole para canções que ela tinha escrito para outros, como \"Will You Love Me Tomorrow?\" (das Shirelles) e \"(You Make Me Feel Like) A Natural Woman\" (de Aretha Franklin).",
+    "A foto da capa foi tirada na casa dela em Laurel Canyon, com o gato Telemachus.",
+    "James Taylor gravou \"You've Got a Friend\" na mesma época, e a versão dele chegou ao 1º lugar."
+  ],
   "tracks": [
     {
-      "title": "I Feel the Earth Move"
+      "title": "I Feel the Earth Move",
+      "note": "Abre o disco com o piano de Carole em alta energia."
     },
     {
       "title": "So Far Away"
     },
     {
-      "title": "It's Too Late"
+      "title": "It's Too Late",
+      "note": "Um fim de namoro sem drama, que chegou ao 1º lugar."
     },
     {
       "title": "Home Again"
@@ -19,7 +31,8 @@
       "title": "Way Over Yonder"
     },
     {
-      "title": "You've Got a Friend"
+      "title": "You've Got a Friend",
+      "note": "Ganhou o Grammy de Canção do Ano."
     },
     {
       "title": "Where You Lead"
@@ -34,7 +47,8 @@
       "title": "Tapestry"
     },
     {
-      "title": "(You Make Me Feel Like) A Natural Woman"
+      "title": "(You Make Me Feel Like) A Natural Woman",
+      "note": "A versão da própria autora para o hit de Aretha."
     }
   ]
 }

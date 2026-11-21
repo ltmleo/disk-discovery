@@ -1,19 +1,32 @@
 {
+  "history": [
+    "O título junta os signos de Big Boi (Aquário) e André 3000 (Gêmeos). Em 1998, a dupla de Atlanta tocava muito mais instrumentos de verdade, com a equipe Organized Noize, e misturava funk, soul, blues e ficção científica.",
+    "Em 1995, André tinha sido vaiado num prêmio em Nova York e respondeu: \"The South got something to say\" (\"o Sul tem algo a dizer\"). \"Aquemini\" foi a prova.",
+    "O disco recebeu nota máxima da revista The Source e abriu caminho para o rap do Sul dominar os anos 2000."
+  ],
+  "trivia": [
+    "Rosa Parks processou o duo pelo uso do nome dela na música \"Rosa Parks\"; o caso terminou em acordo anos depois.",
+    "George Clinton aparece em \"Synthesizer\".",
+    "Raekwon, do Wu-Tang Clan, participa de \"Skew It on the Bar-B\"."
+  ],
   "tracks": [
     {
-      "title": "Hold On Be Strong"
+      "title": "Hold On Be Strong",
+      "note": "Uma vinheta curta com coro e piano."
     },
     {
       "title": "Return of the \"G\""
     },
     {
-      "title": "Rosa Parks"
+      "title": "Rosa Parks",
+      "note": "Gaita e palmas num rap que virou clássico."
     },
     {
       "title": "Skew It On the Bar-B (feat. Raekwon)"
     },
     {
-      "title": "Aquemini"
+      "title": "Aquemini",
+      "note": "A faixa-título junta as duas personalidades da dupla."
     },
     {
       "title": "Synthesizer (feat. George Clinton)"
@@ -25,7 +38,8 @@
       "title": "West Savannah"
     },
     {
-      "title": "Da Art of Storytellin' (Pt. 1)"
+      "title": "Da Art of Storytellin' (Pt. 1)",
+      "note": "Duas histórias que mostram o talento narrativo da dupla."
     },
     {
       "title": "Da Art of Storytellin' (Pt. 2)"

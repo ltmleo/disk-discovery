@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Cinco anos depois de \"Brown Sugar\", D'Angelo se trancou no Electric Lady Studios, em Nova York, o estúdio construído por Jimi Hendrix. Gravou com Questlove, Pino Palladino, James Poyser e Roy Hargrove, num coletivo que ficou conhecido como Soulquarians.",
+    "O som é solto e sensual, com a bateria tocada de propósito um pouco atrás do tempo, influência do produtor J Dilla. Muitas faixas nasceram de longas jams tocando discos de Prince, Al Green e Funkadelic.",
+    "O disco ganhou o Grammy de melhor álbum de R&B. O sucesso do clipe de \"Untitled\" trouxe uma fama que D'Angelo não queria, e ele ficou quase 15 anos sem lançar outro disco."
+  ],
+  "trivia": [
+    "O clipe de \"Untitled (How Does It Feel)\" é um plano único de D'Angelo sem camisa, olhando para a câmera.",
+    "O baixista Pino Palladino também tocou com The Who e John Mayer.",
+    "O sucessor, \"Black Messiah\", só saiu em 2014."
+  ],
   "tracks": [
     {
       "title": "Playa Playa"
     },
     {
-      "title": "Devil's Pie"
+      "title": "Devil's Pie",
+      "note": "Produção de DJ Premier sobre as tentações da fama."
     },
     {
-      "title": "Left and Right (feat. Redman & Method Man)"
+      "title": "Left and Right (feat. Redman & Method Man)",
+      "note": "Com Method Man e Redman."
     },
     {
       "title": "The Line"
@@ -34,10 +46,12 @@
       "title": "Medley: Greatdayndamornin' / Booty"
     },
     {
-      "title": "Untitled (How Does It Feel)"
+      "title": "Untitled (How Does It Feel)",
+      "note": "Uma homenagem a Prince, gravada quase ao vivo."
     },
     {
-      "title": "Africa"
+      "title": "Africa",
+      "note": "Fecha o disco com uma canção para o filho."
     }
   ]
 }

@@ -93,7 +93,9 @@ export function cleanTitle(name: string): string {
 }
 
 /** Deluxe editions append demos/live takes after the original album; keep the original running order. */
-const EXTRA = /\b(demo|live|bonus|alternate|outtake|rehearsal|instrumental|session|take \d|early version|rough mix)\b/i;
+// "live" only as a recording marker: "(Live)", "Live at/in/from" (not "I Don't Live Today").
+const EXTRA =
+  /\b(demo|bonus|alternate|outtake|rehearsal|instrumental|session|take \d|early version|rough mix)\b|\(live\b|\blive (at|in|from)\b|- live\b/i;
 
 function tsEntry(a: Album): string {
   const keys = ['id', 'rank', 'title', 'artist', 'year', 'label', 'genre', 'tagline', 'previewTrack'] as const;

@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Christopher Wallace, o Notorious B.I.G., gravou sua estreia com o selo Bad Boy, de Sean \"Puffy\" Combs. O disco conta a história de um jovem do Brooklyn: do nascimento à vida no crime e à fama, terminando em \"Suicidal Thoughts\".",
+    "As letras misturam detalhes de rua, piadas e um fluxo de rima relaxado e preciso. A produção de Puffy colocou samples de R&B e soul que levaram o rap de Nova York às rádios.",
+    "Biggie foi assassinado em 1997, aos 24 anos, e \"Ready to Die\" virou referência de narrativa no hip-hop."
+  ],
+  "trivia": [
+    "\"Juicy\" usa \"Juicy Fruit\", do Mtume.",
+    "\"Big Poppa\" sampleia \"Between the Sheets\", dos Isley Brothers.",
+    "O bebê da capa não é Biggie: é um modelo escolhido para a foto."
+  ],
   "tracks": [
     {
       "title": "Intro"
@@ -7,7 +17,8 @@
       "title": "Things Done Changed"
     },
     {
-      "title": "Gimme the Loot"
+      "title": "Gimme the Loot",
+      "note": "Biggie faz as vozes de dois personagens diferentes."
     },
     {
       "title": "Machine Gun Funk"
@@ -28,7 +39,8 @@
       "title": "The What"
     },
     {
-      "title": "Juicy"
+      "title": "Juicy",
+      "note": "\"It was all a dream\": a história de quem saiu da pobreza pelo rap."
     },
     {
       "title": "Everyday Struggle"
@@ -37,7 +49,8 @@
       "title": "Me and My Bitch"
     },
     {
-      "title": "Big Poppa"
+      "title": "Big Poppa",
+      "note": "Um dos maiores hits do disco, sobre o sample dos Isley Brothers."
     },
     {
       "title": "Respect"
@@ -49,7 +62,8 @@
       "title": "Unbelievable"
     },
     {
-      "title": "Suicidal Thoughts"
+      "title": "Suicidal Thoughts",
+      "note": "Fecha o disco num telefonema sombrio."
     },
     {
       "title": "Who Shot Ya?"

@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Beyoncé lançou \"Lemonade\" em abril de 2016 como álbum visual, estreando o filme na HBO. A narrativa passa por intuição, negação, raiva, perdão e reconciliação num casamento abalado por traição.",
+    "O disco vai do rock com Jack White ao country, do blues ao R&B, e coloca no centro a experiência de mulheres negras do Sul dos EUA, com poemas da escritora Warsan Shire no filme.",
+    "Ganhou o Grammy de melhor álbum de urban contemporary e virou um dos discos mais comentados da década."
+  ],
+  "trivia": [
+    "A frase \"Becky with the good hair\", de \"Sorry\", virou meme e motivo de especulação.",
+    "Beyoncé apresentou \"Daddy Lessons\" com as Dixie Chicks no prêmio da música country (CMA) em 2016.",
+    "\"Formation\" foi lançada um dia antes da apresentação de Beyoncé no intervalo do Super Bowl de 2016."
+  ],
   "tracks": [
     {
       "title": "Pray You Catch Me"
@@ -7,7 +17,8 @@
       "title": "Hold Up"
     },
     {
-      "title": "Don't Hurt Yourself (feat. Jack White)"
+      "title": "Don't Hurt Yourself (feat. Jack White)",
+      "note": "Rock pesado com Jack White."
     },
     {
       "title": "Sorry"
@@ -16,7 +27,8 @@
       "title": "6 Inch (feat. The Weeknd)"
     },
     {
-      "title": "Daddy Lessons"
+      "title": "Daddy Lessons",
+      "note": "Country do Texas sobre o pai, com metais de Nova Orleans."
     },
     {
       "title": "Love Drought"
@@ -28,13 +40,15 @@
       "title": "Forward (feat. James Blake)"
     },
     {
-      "title": "Freedom (feat. Kendrick Lamar)"
+      "title": "Freedom (feat. Kendrick Lamar)",
+      "note": "Com Kendrick Lamar, virou hino de protestos."
     },
     {
       "title": "All Night"
     },
     {
-      "title": "Formation"
+      "title": "Formation",
+      "note": "Lançada antes do disco, celebra a herança negra do Sul."
     },
     {
       "title": "Sorry (Original Demo)"
