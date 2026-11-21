@@ -7,8 +7,16 @@ import { h, ransom } from './dom';
 
 type Filter = RarityId | 'all';
 
-export function renderGallery(collection: Collection): HTMLElement {
+export const SPY_PARAM = 'espiar';
+
+/**
+ * @param initialSpy spy mode shows every album, including ones not pulled yet.
+ * It is read-only: it never touches the collection, and the state lives in the URL
+ * (`#/galeria?espiar`) so back/forward and the detail page keep it.
+ */
+export function renderGallery(collection: Collection, initialSpy = false): HTMLElement {
   let filter: Filter = 'all';
+  let spy = initialSpy;
   const grid = h('ul', { class: 'gallery', role: 'list' });
   const chips = h('div', { class: 'chips', role: 'toolbar', 'aria-label': 'Filtrar por raridade' });
 
@@ -20,6 +28,18 @@ export function renderGallery(collection: Collection): HTMLElement {
       ...items.map((album) => {
         const entry = collection.get(album.id);
         const rarity = rarityForRank(album.rank);
+        if (!entry && spy) {
+          return h(
+            'li',
+            { class: 'gallery__item is-spied' },
+            h(
+              'a',
+              { class: 'gallery__link', href: `#/disco/${album.id}?${SPY_PARAM}`, 'aria-label': `${album.title} (espiando, ainda não descoberto)` },
+              renderCard(album, { size: 'sm', lazy: true }),
+            ),
+            h('span', { class: 'gallery__spy-tape', 'aria-hidden': 'true' }, 'ESPIANDO'),
+          );
+        }
         if (!entry) {
           return h(
             'li',
@@ -40,10 +60,30 @@ export function renderGallery(collection: Collection): HTMLElement {
         );
       }),
     );
-    for (const btn of chips.querySelectorAll<HTMLButtonElement>('button')) {
+    for (const btn of chips.querySelectorAll<HTMLButtonElement>('button[data-filter]')) {
       btn.setAttribute('aria-pressed', String(btn.dataset.filter === filter));
     }
+    spyBtn.setAttribute('aria-pressed', String(spy));
+    spyBtn.textContent = spy ? '🙈 Parar de espiar' : '👀 Espiar';
+    view.classList.toggle('is-spying', spy);
+    spyNote.hidden = !spy;
   }
+
+  const spyBtn = h('button', {
+    class: 'chip chip--spy',
+    type: 'button',
+    onclick: () => {
+      spy = !spy;
+      // replaceState: keeps the URL shareable without firing hashchange (no full re-render).
+      history.replaceState(null, '', spy ? `#/galeria?${SPY_PARAM}` : '#/galeria');
+      draw();
+    },
+  });
+  const spyNote = h(
+    'p',
+    { class: 'clip clip--note gallery__spy-note', hidden: true },
+    'Modo espiar: você está vendo todos os discos. Os desbotados ainda não são seus, e espiar não muda sua coleção.',
+  );
 
   const chip = (id: Filter, label: string) =>
     h(
@@ -59,7 +99,7 @@ export function renderGallery(collection: Collection): HTMLElement {
       },
       label,
     );
-  chips.append(chip('all', 'Todos'), ...RARITIES.map((r) => chip(r.id, `${stars(r.stars)} ${r.label}`)));
+  chips.append(chip('all', 'Todos'), ...RARITIES.map((r) => chip(r.id, `${stars(r.stars)} ${r.label}`)), spyBtn);
 
   const found = ALBUMS.filter((a) => collection.has(a.id)).length;
   const view = h(
@@ -73,6 +113,7 @@ export function renderGallery(collection: Collection): HTMLElement {
       h('span', { class: 'clip clip--stat clip--alt' }, h('b', {}, String(collection.pulls)), ' pacotes abertos'),
     ),
     chips,
+    spyNote,
     grid,
   );
   draw();

@@ -6,7 +6,7 @@ import { Collection } from './collection';
 import { ALBUMS } from './data/albums';
 import { h, ransom } from './ui/dom';
 import { renderPackView } from './ui/pack';
-import { renderGallery } from './ui/gallery';
+import { renderGallery, SPY_PARAM } from './ui/gallery';
 import { renderDetail } from './ui/detail';
 import { isMuted, onMuteChange, setMuted } from './audio/settings';
 import { onPlayer, stopPreview } from './audio/preview';
@@ -85,15 +85,16 @@ app.replaceChildren(header, main, nowPlayingBar());
 
 /** Hash routing: works on GitHub Pages without a 404.html redirect hack. */
 function route() {
-  const path = location.hash.replace(/^#/, '') || '/';
+  const [path = '/', query = ''] = (location.hash.replace(/^#/, '') || '/').split('?');
   const [, section, param] = path.split('/');
+  const spy = new URLSearchParams(query).has(SPY_PARAM);
   let view: HTMLElement;
   let active = 'pack';
   if (section === 'galeria') {
-    view = renderGallery(collection);
+    view = renderGallery(collection, spy);
     active = 'gallery';
   } else if (section === 'disco' && param) {
-    view = renderDetail(decodeURIComponent(param), collection);
+    view = renderDetail(decodeURIComponent(param), collection, spy);
     active = 'gallery';
   } else {
     view = renderPackView(collection, updateCounter);

@@ -21,6 +21,10 @@ Hoje há 25 discos, 5 por raridade, então cada raridade sai em 20% dos pacotes.
 - Na revelação toca um trecho de 30s de `previewTrack`, vindo da API de busca do iTunes (JSONP). Na página do disco cada faixa tem ▶.
 - O botão 🔊/🔇 no topo silencia tudo, e a escolha fica salva no navegador.
 
+## Modo espiar
+
+Na galeria, o botão **👀 Espiar** mostra todos os discos, inclusive os que ainda não foram tirados (desbotados e com uma fita "ESPIANDO"). O modo só lê os dados: a coleção e os contadores não mudam. O estado fica na URL (`#/galeria?espiar`, `#/disco/<id>?espiar`). Sem o parâmetro, discos não tirados continuam bloqueados.
+
 ## Desenvolvimento
 
 ```bash

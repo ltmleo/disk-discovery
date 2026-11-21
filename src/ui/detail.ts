@@ -10,12 +10,12 @@ import type { Album } from '../types';
 
 const dateFmt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' });
 
-export function renderDetail(id: string, collection: Collection): HTMLElement {
+export function renderDetail(id: string, collection: Collection, spy = false): HTMLElement {
   const album = ALBUM_BY_ID.get(id);
   const entry = album && collection.get(album.id);
 
-  // Locked or unknown: don't spoil the card. It has to be pulled first.
-  if (!album || !entry) {
+  // Locked or unknown: don't spoil the card unless the user chose to spy.
+  if (!album || (!entry && !spy)) {
     return h(
       'section',
       { class: 'view view--locked' },
@@ -28,8 +28,11 @@ export function renderDetail(id: string, collection: Collection): HTMLElement {
   const rarity = rarityForRank(album.rank);
   return h(
     'section',
-    { class: `view view--detail detail--${rarity.id}` },
-    h('a', { class: 'back-link', href: '#/galeria' }, '← Galeria'),
+    { class: `view view--detail detail--${rarity.id}${entry ? '' : ' is-spied'}` },
+    h('a', { class: 'back-link', href: spy ? '#/galeria?espiar' : '#/galeria' }, '← Galeria'),
+    entry
+      ? null
+      : h('p', { class: 'clip clip--note detail__spy' }, '👀 Espiando: você ainda não tirou este disco. Abra pacotes para tê-lo na coleção.'),
     h(
       'div',
       { class: 'detail' },
@@ -52,10 +55,10 @@ export function renderDetail(id: string, collection: Collection): HTMLElement {
           h('dd', {}, `#${album.rank} de 500`),
           h('dt', {}, 'Gravadora'),
           h('dd', {}, album.label),
-          h('dt', {}, 'Descoberto em'),
-          h('dd', {}, dateFmt.format(new Date(entry.firstAt))),
+          entry ? h('dt', {}, 'Descoberto em') : null,
+          entry ? h('dd', {}, dateFmt.format(new Date(entry.firstAt))) : null,
           h('dt', {}, 'Cópias'),
-          h('dd', {}, String(entry.count)),
+          h('dd', {}, entry ? String(entry.count) : '0 (espiando)'),
         ),
       ),
       h(
