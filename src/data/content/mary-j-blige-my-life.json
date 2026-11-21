@@ -1,4 +1,14 @@
 {
+  "history": [
+    "No segundo disco, de 1994, Mary J. Blige escreveu sobre depressão, vício e um relacionamento abusivo, com uma franqueza rara no R&B da época.",
+    "A produção de Sean \"Puffy\" Combs e Chucky Thompson usava samples de soul dos anos 70.",
+    "O disco virou referência para fãs que encontravam nas letras a própria história."
+  ],
+  "trivia": [
+    "\"My Life\" usa \"Everybody Loves the Sunshine\", de Roy Ayers.",
+    "\"I'm Goin' Down\" é uma regravação do Rose Royce.",
+    "Mary é chamada de \"Queen of Hip-Hop Soul\"."
+  ],
   "tracks": [
     {
       "title": "Intro"
@@ -19,7 +29,8 @@
       "title": "K. Murray Interlude"
     },
     {
-      "title": "My Life"
+      "title": "My Life",
+      "note": "Sobre \"Everybody Loves the Sunshine\", de Roy Ayers."
     },
     {
       "title": "You Gotta Believe"
@@ -28,7 +39,8 @@
       "title": "I Never Wanna Live Without You"
     },
     {
-      "title": "I'm Goin' Down"
+      "title": "I'm Goin' Down",
+      "note": "Uma regravação do Rose Royce."
     },
     {
       "title": "My Life Interlude"
@@ -49,7 +61,8 @@
       "title": "No One Else"
     },
     {
-      "title": "Be Happy"
+      "title": "Be Happy",
+      "note": "Um pedido de felicidade sobre um sample de Curtis Mayfield."
     }
   ]
 }

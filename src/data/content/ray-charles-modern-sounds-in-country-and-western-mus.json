@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Em 1962, Ray Charles gravou clássicos do country com orquestra e coro, algo que poucos esperavam de um astro do R&B negro.",
+    "A gravadora, ABC-Paramount, temia perder o público, mas Ray tinha liberdade criativa garantida em contrato.",
+    "O disco ficou 14 semanas em 1º lugar nos EUA e mostrou como a música negra e o country se misturavam."
+  ],
+  "trivia": [
+    "\"I Can't Stop Loving You\", de Don Gibson, ficou cinco semanas em 1º lugar.",
+    "O disco traz canções de Hank Williams, como \"You Win Again\".",
+    "Ray tinha um contrato raro para a época, que incluía a posse das gravações originais."
+  ],
   "tracks": [
     {
-      "title": "Bye Bye Love"
+      "title": "Bye Bye Love",
+      "note": "Abre com um clássico dos Everly Brothers."
     },
     {
-      "title": "You Don’t Know Me"
+      "title": "You Don’t Know Me",
+      "note": "Uma balada que virou standard."
     },
     {
       "title": "Half As Much"
@@ -31,7 +43,8 @@
       "title": "Careless Love"
     },
     {
-      "title": "I Can't Stop Loving You"
+      "title": "I Can't Stop Loving You",
+      "note": "Cinco semanas em 1º lugar."
     },
     {
       "title": "Hey, Good Lookin'"

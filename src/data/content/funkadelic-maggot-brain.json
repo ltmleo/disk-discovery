@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Em 1971, George Clinton pediu ao guitarrista Eddie Hazel que tocasse como se tivesse acabado de saber que a mãe morreu, e que depois descobrisse que ela estava viva.",
+    "O resultado é o solo de dez minutos da faixa-título, que abre o disco. O resto mistura funk, rock pesado e gospel.",
+    "\"Maggot Brain\" é um dos discos mais celebrados do P-Funk."
+  ],
+  "trivia": [
+    "A capa mostra uma mulher gritando com a cabeça saindo da terra.",
+    "Eddie Hazel tinha 21 anos na gravação.",
+    "\"Can You Get to That\" usa um coro gospel."
+  ],
   "tracks": [
     {
-      "title": "Maggot Brain"
+      "title": "Maggot Brain",
+      "note": "O solo de Eddie Hazel, quase sem banda."
     },
     {
-      "title": "Can You Get To That"
+      "title": "Can You Get To That",
+      "note": "Um gospel funk com coro."
     },
     {
       "title": "Hit It and Quit It"
@@ -13,7 +25,8 @@
       "title": "You and Your Folks, Me and My Folks"
     },
     {
-      "title": "Super Stupid"
+      "title": "Super Stupid",
+      "note": "Hard rock pesado, quase metal."
     },
     {
       "title": "Back In Our Minds"

@@ -1,4 +1,14 @@
 {
+  "history": [
+    "O segundo disco dos Fugees, de 1996, juntou o rap de Wyclef Jean, Pras Michel e Lauryn Hill com reggae, soul e humor.",
+    "Vendeu mais de 20 milhões de cópias e ganhou o Grammy de melhor álbum de rap.",
+    "O grupo se separou pouco depois, e Lauryn lançou \"The Miseducation\" em 1998."
+  ],
+  "trivia": [
+    "\"Killing Me Softly\" é uma regravação de Roberta Flack.",
+    "\"Ready or Not\" sampleia \"Boadicea\", da cantora Enya, sem crédito no início; o caso terminou em acordo.",
+    "\"No Woman, No Cry\" é uma regravação de Bob Marley."
+  ],
   "tracks": [
     {
       "title": "Red Intro"
@@ -7,7 +17,8 @@
       "title": "How Many Mics"
     },
     {
-      "title": "Ready or Not"
+      "title": "Ready or Not",
+      "note": "Sobre um sample de Enya."
     },
     {
       "title": "Zealots"
@@ -16,13 +27,15 @@
       "title": "The Beast"
     },
     {
-      "title": "Fu-Gee-La"
+      "title": "Fu-Gee-La",
+      "note": "O primeiro single do disco."
     },
     {
       "title": "Family Business"
     },
     {
-      "title": "Killing Me Softly with His Song"
+      "title": "Killing Me Softly with His Song",
+      "note": "A versão de Lauryn para Roberta Flack."
     },
     {
       "title": "The Score"
@@ -34,7 +47,8 @@
       "title": "Cowboys"
     },
     {
-      "title": "No Woman, No Cry"
+      "title": "No Woman, No Cry",
+      "note": "Wyclef canta Bob Marley."
     },
     {
       "title": "Manifest/Outro"

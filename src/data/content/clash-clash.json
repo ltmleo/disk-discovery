@@ -1,7 +1,18 @@
 {
+  "history": [
+    "O primeiro disco do Clash foi gravado em três fins de semana, com um orçamento de cerca de 4 mil libras. As letras falam de desemprego, racismo, tédio e violência policial na Londres de 1977.",
+    "Além do punk rápido, a banda já incluía reggae, como a versão de \"Police and Thieves\", de Junior Murvin.",
+    "Nos EUA, a gravadora achou o disco cru demais e só o lançou em 1979, com outra seleção de faixas."
+  ],
+  "trivia": [
+    "\"White Riot\" foi escrita depois do tumulto no Carnaval de Notting Hill, em 1976.",
+    "\"Career Opportunities\" ironiza os empregos oferecidos aos jovens da época.",
+    "Diz a lenda que a edição importada vendeu mais de 100 mil cópias nos EUA antes do lançamento oficial."
+  ],
   "tracks": [
     {
-      "title": "Janie Jones"
+      "title": "Janie Jones",
+      "note": "Abre o disco com a bateria de Terry Chimes."
     },
     {
       "title": "Remote Control"
@@ -10,7 +21,8 @@
       "title": "I'm so Bored with the U.S.A."
     },
     {
-      "title": "White Riot"
+      "title": "White Riot",
+      "note": "Inspirada no tumulto de Notting Hill."
     },
     {
       "title": "Hate & War"
@@ -22,7 +34,8 @@
       "title": "Deny"
     },
     {
-      "title": "London's Burning"
+      "title": "London's Burning",
+      "note": "Tédio e trânsito numa Londres em chamas."
     },
     {
       "title": "Career Opportunities"
@@ -34,7 +47,8 @@
       "title": "Protex Blue"
     },
     {
-      "title": "Police & Thieves"
+      "title": "Police & Thieves",
+      "note": "A versão punk de um reggae de Junior Murvin."
     },
     {
       "title": "48 Hours"

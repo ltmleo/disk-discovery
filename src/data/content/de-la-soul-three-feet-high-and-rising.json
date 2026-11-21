@@ -1,10 +1,21 @@
 {
+  "history": [
+    "O trio De La Soul e o produtor Prince Paul fizeram em 1989 um disco cheio de humor, com samples de Hall & Oates, Steely Dan, Johnny Cash e discos infantis, costurados por vinhetas de um programa de perguntas.",
+    "A imagem colorida e as flores fizeram a imprensa chamá-los de \"hippies do hip-hop\", rótulo que eles odiavam.",
+    "Por causa da dificuldade de liberar tantos samples, o catálogo do grupo ficou fora do streaming até 2023."
+  ],
+  "trivia": [
+    "A banda The Turtles processou o grupo pelo uso de \"You Showed Me\" numa vinheta. O caso terminou em acordo.",
+    "\"D.A.I.S.Y. Age\" quer dizer \"Da Inner Sound, Y'all\".",
+    "\"Me Myself and I\" usa \"(Not Just) Knee Deep\", do Funkadelic."
+  ],
   "tracks": [
     {
       "title": "Intro (3 Feet High and Rising)"
     },
     {
-      "title": "The Magic Number"
+      "title": "The Magic Number",
+      "note": "Sobre um sample de \"Schoolhouse Rock!\"."
     },
     {
       "title": "Change In Speak"
@@ -25,7 +36,8 @@
       "title": "Transmitting Live from Mars"
     },
     {
-      "title": "Eye Know (feat. Otis Redding)"
+      "title": "Eye Know (feat. Otis Redding)",
+      "note": "Com assobio de Otis Redding e guitarra de Steely Dan."
     },
     {
       "title": "Take It Off"
@@ -58,7 +70,8 @@
       "title": "Description"
     },
     {
-      "title": "Me Myself and I"
+      "title": "Me Myself and I",
+      "note": "O maior hit, contra quem esperava rappers durões."
     },
     {
       "title": "This Is a Recording 4 Living In a Fulltime Era (L.I.F.E.)"

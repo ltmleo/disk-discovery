@@ -1,10 +1,21 @@
 {
+  "history": [
+    "Depois do sucesso de \"Licensed to Ill\", os Beastie Boys foram para Los Angeles e fizeram com os Dust Brothers um disco com centenas de samples por faixa, como uma colagem.",
+    "\"Paul's Boutique\" (1989) vendeu muito menos que o anterior e foi considerado um fracasso.",
+    "Com o tempo, virou referência do hip-hop e da arte de samplear, antes que as leis de autorização encarecessem esse tipo de disco."
+  ],
+  "trivia": [
+    "A capa é uma foto panorâmica de uma loja na Ludlow Street, em Nova York.",
+    "\"B-Boy Bouillabaisse\" é um medley de mais de 12 minutos.",
+    "Estima-se que o disco tenha mais de 100 samples."
+  ],
   "tracks": [
     {
       "title": "To All the Girls"
     },
     {
-      "title": "Shake Your Rump"
+      "title": "Shake Your Rump",
+      "note": "Uma colagem de funk e humor."
     },
     {
       "title": "Johnny Ryall"
@@ -22,7 +33,8 @@
       "title": "3-Minute Rule"
     },
     {
-      "title": "Hey Ladies"
+      "title": "Hey Ladies",
+      "note": "O primeiro single, um funk cheio de piadas."
     },
     {
       "title": "5-Piece Chicken Dinner"
@@ -43,7 +55,8 @@
       "title": "Ask for Janice"
     },
     {
-      "title": "B-Boy Bouillabaisse: 59 Chrystie Street / Get On the Mic / Stop That Train / A Year and a Day / Hello Brooklyn / Dropping Names / Lay It On Me / Mike On the Mic / A.W.O.L."
+      "title": "B-Boy Bouillabaisse: 59 Chrystie Street / Get On the Mic / Stop That Train / A Year and a Day / Hello Brooklyn / Dropping Names / Lay It On Me / Mike On the Mic / A.W.O.L.",
+      "note": "Um medley de mais de 12 minutos."
     }
   ]
 }

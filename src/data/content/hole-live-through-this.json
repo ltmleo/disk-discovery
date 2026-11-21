@@ -1,10 +1,22 @@
 {
+  "history": [
+    "O segundo disco do Hole, liderado por Courtney Love, saiu em abril de 1994, poucos dias depois de Kurt Cobain ser encontrado morto. Em junho, a baixista Kristen Pfaff morreu de overdose.",
+    "As canções falam de maternidade, beleza, violência e fama, em rock alternativo melódico e furioso.",
+    "Com o tempo, o disco passou a ser julgado pelo que é, e não pela tragédia em volta, e entrou em listas de melhores dos anos 90."
+  ],
+  "trivia": [
+    "Rumores diziam que Kurt teria escrito o disco; nunca houve prova, e a banda sempre negou.",
+    "A capa mostra uma rainha da beleza com a maquiagem borrada.",
+    "\"Doll Parts\" é uma das canções mais conhecidas de Courtney Love."
+  ],
   "tracks": [
     {
-      "title": "Violet"
+      "title": "Violet",
+      "note": "Abre o disco quase sussurrada e explode no refrão."
     },
     {
-      "title": "Miss World"
+      "title": "Miss World",
+      "note": "Uma rainha da beleza em crise."
     },
     {
       "title": "Plump"
@@ -16,7 +28,8 @@
       "title": "Jennifer's Body"
     },
     {
-      "title": "Doll Parts"
+      "title": "Doll Parts",
+      "note": "\"Someday you will ache like I ache.\""
     },
     {
       "title": "Credit In the Straight World"

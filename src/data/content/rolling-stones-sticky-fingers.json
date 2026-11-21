@@ -1,16 +1,29 @@
 {
+  "history": [
+    "\"Sticky Fingers\" (1971) foi o primeiro disco no selo da própria banda, com o logo da língua desenhado por John Pasche. Também foi o primeiro disco inteiro com Mick Taylor na guitarra.",
+    "Parte foi gravada em 1969 no Muscle Shoals Sound Studio, no Alabama, em três dias. O disco mistura rock, country, blues e soul, com letras sobre drogas e desejo.",
+    "\"Brown Sugar\" chegou ao 1º lugar nos EUA."
+  ],
+  "trivia": [
+    "A ideia da capa com zíper de verdade foi de Andy Warhol. O zíper amassava o vinil nas lojas.",
+    "\"Sister Morphine\" foi composta com Marianne Faithfull.",
+    "A longa jam no fim de \"Can't You Hear Me Knocking\" continuou porque a fita ficou rodando."
+  ],
   "tracks": [
     {
-      "title": "Brown Sugar"
+      "title": "Brown Sugar",
+      "note": "Gravada no Alabama, chegou ao 1º lugar."
     },
     {
       "title": "Sway"
     },
     {
-      "title": "Wild Horses"
+      "title": "Wild Horses",
+      "note": "Uma balada country gravada em Muscle Shoals."
     },
     {
-      "title": "Can't You Hear Me Knocking"
+      "title": "Can't You Hear Me Knocking",
+      "note": "Uma jam com sax de Bobby Keys e solo de Mick Taylor."
     },
     {
       "title": "You Gotta Move"
@@ -22,7 +35,8 @@
       "title": "I Got the Blues"
     },
     {
-      "title": "Sister Morphine"
+      "title": "Sister Morphine",
+      "note": "Escrita com Marianne Faithfull."
     },
     {
       "title": "Dead Flowers"

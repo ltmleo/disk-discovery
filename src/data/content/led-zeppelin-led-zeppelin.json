@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Jimmy Page montou o Led Zeppelin a partir do fim dos Yardbirds, com Robert Plant, John Paul Jones e John Bonham. Em outubro de 1968, a banda gravou a estreia em cerca de 36 horas no Olympic Studios, em Londres, paga por Page e pelo empresário Peter Grant.",
+    "O disco pega o blues americano e o deixa mais pesado, mais alto e mais dramático, com espaço para violões folk.",
+    "Com a gravação pronta, a banda conseguiu um contrato generoso com a Atlantic e virou uma das maiores do mundo em poucos anos."
+  ],
+  "trivia": [
+    "O nome vem de uma piada de Keith Moon e John Entwistle, do The Who: a banda ia afundar \"como um balão de chumbo\".",
+    "Em \"Dazed and Confused\", Page toca a guitarra com um arco de violino.",
+    "\"Babe I'm Gonna Leave You\" é uma canção folk; o crédito à autora, Anne Bredon, só foi acrescentado anos depois."
+  ],
   "tracks": [
     {
-      "title": "Good Times Bad Times"
+      "title": "Good Times Bad Times",
+      "note": "Abre o disco com o bumbo duplo de John Bonham."
     },
     {
-      "title": "Babe I'm Gonna Leave You"
+      "title": "Babe I'm Gonna Leave You",
+      "note": "Violão folk que explode em rock."
     },
     {
       "title": "You Shook Me"
     },
     {
-      "title": "Dazed and Confused"
+      "title": "Dazed and Confused",
+      "note": "O arco de violino de Jimmy Page na guitarra."
     },
     {
       "title": "Your Time Is Gonna Come"
@@ -19,7 +32,8 @@
       "title": "Black Mountain Side"
     },
     {
-      "title": "Communication Breakdown"
+      "title": "Communication Breakdown",
+      "note": "Dois minutos e meio de riff rápido, quase punk."
     },
     {
       "title": "I Can't Quit You Baby"

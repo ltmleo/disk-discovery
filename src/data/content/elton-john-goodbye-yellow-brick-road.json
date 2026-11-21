@@ -1,16 +1,30 @@
 {
+  "history": [
+    "Elton John e o letrista Bernie Taupin tentaram gravar na Jamaica, mas desistiram e foram para o Château d'Hérouville, na França. Lá, em poucas semanas, fizeram um álbum duplo de 1973.",
+    "O disco vai do rock ao glam, das baladas ao pastiche de Hollywood, com o tema de fama e ilusão.",
+    "Ficou oito semanas em 1º lugar nos EUA e é o disco mais vendido de Elton."
+  ],
+  "trivia": [
+    "\"Candle in the Wind\" foi escrita sobre Marilyn Monroe e regravada em 1997 para a princesa Diana.",
+    "Os aplausos de \"Bennie and the Jets\" foram tirados de outros discos ao vivo.",
+    "\"Funeral for a Friend/Love Lies Bleeding\" abre o disco com mais de 11 minutos."
+  ],
   "tracks": [
     {
-      "title": "Funeral for a Friend / Love Lies Bleeding"
+      "title": "Funeral for a Friend / Love Lies Bleeding",
+      "note": "Mais de 11 minutos de abertura instrumental e rock."
     },
     {
-      "title": "Candle In the Wind"
+      "title": "Candle In the Wind",
+      "note": "Sobre Marilyn Monroe."
     },
     {
-      "title": "Bennie and the Jets"
+      "title": "Bennie and the Jets",
+      "note": "Uma banda inventada, com aplausos falsos."
     },
     {
-      "title": "Goodbye Yellow Brick Road"
+      "title": "Goodbye Yellow Brick Road",
+      "note": "A faixa-título usa o caminho de \"O Mágico de Oz\" como metáfora."
     },
     {
       "title": "This Song Has No Title"

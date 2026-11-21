@@ -1,25 +1,39 @@
 {
+  "history": [
+    "Depois do Velvet Underground, Lou Reed foi para Londres gravar \"Transformer\" (1972) com David Bowie e Mick Ronson na produção. O disco tem um som mais polido, com glam e cabaré.",
+    "As letras retratam a Nova York noturna e as pessoas da Factory de Andy Warhol.",
+    "\"Walk on the Wild Side\" virou o único grande hit de Reed."
+  ],
+  "trivia": [
+    "\"Walk on the Wild Side\" cita frequentadores da Factory, como Holly Woodlawn e Candy Darling.",
+    "O baixista Herbie Flowers gravou a linha de baixo da música em contrabaixo e baixo elétrico, e disse ter ganho 17 libras pela sessão.",
+    "O solo de sax é de Ronnie Ross, que tinha sido professor de sax de Bowie."
+  ],
   "tracks": [
     {
-      "title": "Vicious"
+      "title": "Vicious",
+      "note": "Abre o disco, inspirada numa frase de Warhol."
     },
     {
       "title": "Andy's Chest"
     },
     {
-      "title": "Perfect Day"
+      "title": "Perfect Day",
+      "note": "Uma balada sobre um dia simples, ambígua e melancólica."
     },
     {
       "title": "Hangin' 'Round"
     },
     {
-      "title": "Walk on the Wild Side"
+      "title": "Walk on the Wild Side",
+      "note": "Retratos da Factory sobre um baixo inesquecível."
     },
     {
       "title": "Make Up"
     },
     {
-      "title": "Satellite of Love"
+      "title": "Satellite of Love",
+      "note": "Com Bowie nos vocais de apoio."
     },
     {
       "title": "Wagon Wheel"

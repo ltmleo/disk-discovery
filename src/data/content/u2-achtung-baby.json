@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Em 1990, o U2 foi a Berlim, logo após a queda do Muro, gravar no estúdio Hansa. A banda estava dividida e perto de acabar, até que a criação de \"One\" destravou as sessões.",
+    "Com Brian Eno e Daniel Lanois, o disco trocou a seriedade dos anos 80 por eletrônica, industrial e ironia.",
+    "Saiu em 1991 e abriu a era da turnê Zoo TV, com Bono no personagem \"The Fly\"."
+  ],
+  "trivia": [
+    "\"One\" foi composta a partir de pedaços de outras músicas, num dia de sessão.",
+    "O título vem de uma expressão que o engenheiro de som Joe O'Herlihy repetia.",
+    "\"The Fly\" foi o primeiro single e assustou fãs antigos."
+  ],
   "tracks": [
     {
-      "title": "Zoo Station"
+      "title": "Zoo Station",
+      "note": "Abre o disco com guitarras distorcidas."
     },
     {
       "title": "Even Better Than the Real Thing"
     },
     {
-      "title": "One"
+      "title": "One",
+      "note": "Nasceu em Berlim e salvou a banda."
     },
     {
       "title": "Until the End of the World"
@@ -19,10 +31,12 @@
       "title": "So Cruel"
     },
     {
-      "title": "The Fly"
+      "title": "The Fly",
+      "note": "O personagem de Bono para a nova fase."
     },
     {
-      "title": "Mysterious Ways"
+      "title": "Mysterious Ways",
+      "note": "Um groove dançante com guitarra wah-wah."
     },
     {
       "title": "Tryin' to Throw Your Arms Around the World"

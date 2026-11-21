@@ -1,7 +1,18 @@
 {
+  "history": [
+    "O Led Zeppelin gravou o segundo disco em 1969, no meio de turnês, em estúdios de Londres, Nova York, Los Angeles e até Vancouver.",
+    "O som ficou mais pesado e mais direto, com riffs que viraram base do hard rock e do heavy metal.",
+    "O disco tirou \"Abbey Road\", dos Beatles, do 1º lugar nos EUA."
+  ],
+  "trivia": [
+    "Os créditos de \"Whole Lotta Love\" foram contestados por Willie Dixon, por causa de \"You Need Love\"; o caso terminou em acordo em 1985.",
+    "\"Moby Dick\" tem um solo de bateria de John Bonham.",
+    "\"Ramble On\" faz referências a \"O Senhor dos Anéis\"."
+  ],
   "tracks": [
     {
-      "title": "Whole Lotta Love"
+      "title": "Whole Lotta Love",
+      "note": "O riff e o trecho psicodélico no meio."
     },
     {
       "title": "What Is and What Should Never Be"
@@ -13,16 +24,19 @@
       "title": "Thank You"
     },
     {
-      "title": "Heartbreaker"
+      "title": "Heartbreaker",
+      "note": "Um solo de guitarra sem banda, no meio da música."
     },
     {
       "title": "Living Loving Maid (She's Just a Woman)"
     },
     {
-      "title": "Ramble On"
+      "title": "Ramble On",
+      "note": "Referências a Tolkien entre violões e riffs."
     },
     {
-      "title": "Moby Dick"
+      "title": "Moby Dick",
+      "note": "O solo de bateria de Bonham."
     },
     {
       "title": "Bring It On Home"

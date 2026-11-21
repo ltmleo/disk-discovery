@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Em 1974, Joni Mitchell gravou com a banda de jazz L.A. Express, de Tom Scott, e criou um pop sofisticado, com harmonias de jazz.",
+    "Foi o disco mais vendido da carreira dela e o que mais tocou no rádio.",
+    "As letras falam de amor, liberdade e da indústria da música em Los Angeles."
+  ],
+  "trivia": [
+    "\"Help Me\" foi o único single de Joni no top 10 dos EUA.",
+    "\"Free Man in Paris\" é sobre o empresário David Geffen.",
+    "\"Twisted\", uma canção de jazz vocal de Annie Ross, tem participação da dupla de comediantes Cheech & Chong."
+  ],
   "tracks": [
     {
       "title": "Court and Spark"
     },
     {
-      "title": "Help Me"
+      "title": "Help Me",
+      "note": "O maior sucesso de Joni nas paradas."
     },
     {
-      "title": "Free Man In Paris"
+      "title": "Free Man In Paris",
+      "note": "Um retrato de David Geffen."
     },
     {
       "title": "People's Parties"
@@ -25,7 +37,8 @@
       "title": "Just Like This Train"
     },
     {
-      "title": "Raised On Robbery"
+      "title": "Raised On Robbery",
+      "note": "Rock com Robbie Robertson na guitarra."
     },
     {
       "title": "Trouble Child"

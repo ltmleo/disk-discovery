@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em março de 1971, os Allman Brothers gravaram dois shows no Fillmore East, de Bill Graham, em Nova York. O disco duplo, produzido por Tom Dowd, captura longas jams entre o slide de Duane Allman e a guitarra de Dickey Betts.",
+    "A banda tinha dois bateristas e misturava blues, jazz e country em improvisos longos.",
+    "Duane Allman morreu num acidente de moto em outubro de 1971, poucos meses depois do lançamento."
+  ],
+  "trivia": [
+    "\"Whipping Post\" passa dos 20 minutos.",
+    "\"Statesboro Blues\" é de Blind Willie McTell.",
+    "Duane também tocou o slide de \"Layla\", com Eric Clapton."
+  ],
   "tracks": [
     {
-      "title": "Statesboro Blues"
+      "title": "Statesboro Blues",
+      "note": "Abre com o slide de Duane Allman."
     },
     {
       "title": "Done Somebody Wrong"
@@ -16,10 +27,12 @@
       "title": "Hot 'Lanta"
     },
     {
-      "title": "In Memory of Elizabeth Reed"
+      "title": "In Memory of Elizabeth Reed",
+      "note": "Instrumental de Dickey Betts, com clima de jazz."
     },
     {
-      "title": "Whipping Post"
+      "title": "Whipping Post",
+      "note": "Mais de 20 minutos de blues-rock."
     }
   ]
 }

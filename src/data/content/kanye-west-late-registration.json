@@ -1,4 +1,14 @@
 {
+  "history": [
+    "No segundo disco, de 2005, Kanye West chamou o produtor e compositor de trilhas Jon Brion, conhecido pelo trabalho com Fiona Apple, e acrescentou cordas, metais e arranjos de cinema aos samples de soul.",
+    "As letras falam de consumo, racismo, família e fama, com humor e crítica.",
+    "Ganhou o Grammy de melhor álbum de rap e consolidou Kanye entre os grandes do gênero."
+  ],
+  "trivia": [
+    "\"Gold Digger\" usa \"I Got a Woman\", de Ray Charles, cantada por Jamie Foxx, que tinha acabado de interpretar Ray no cinema.",
+    "\"Diamonds from Sierra Leone\" fala de diamantes de zonas de conflito e sampleia Shirley Bassey.",
+    "\"Hey Mama\" é uma homenagem à mãe de Kanye, Donda West."
+  ],
   "tracks": [
     {
       "title": "Wake Up Mr. West"
@@ -7,10 +17,12 @@
       "title": "Heard 'Em Say (feat. Adam Levine)"
     },
     {
-      "title": "Touch the Sky (feat. Lupe Fiasco)"
+      "title": "Touch the Sky (feat. Lupe Fiasco)",
+      "note": "Metais de Curtis Mayfield e Lupe Fiasco."
     },
     {
-      "title": "Gold Digger (feat. Jamie Foxx)"
+      "title": "Gold Digger (feat. Jamie Foxx)",
+      "note": "Com Jamie Foxx cantando Ray Charles; ficou dez semanas em 1º lugar."
     },
     {
       "title": "Skit #1 (Kanye West/Late Registration)"
@@ -37,7 +49,8 @@
       "title": "Skit #2 (Kanye West/Late Registration)"
     },
     {
-      "title": "Diamonds From Sierra Leone (feat. JAŸ-Z)"
+      "title": "Diamonds From Sierra Leone (feat. JAŸ-Z)",
+      "note": "Sobre um sample de Shirley Bassey."
     },
     {
       "title": "We Major (feat. Nas & Really Doe)"
@@ -46,7 +59,8 @@
       "title": "Skit #3 (Kanye West/Late Registration)"
     },
     {
-      "title": "Hey Mama"
+      "title": "Hey Mama",
+      "note": "Para a mãe, Donda West."
     },
     {
       "title": "Celebration"

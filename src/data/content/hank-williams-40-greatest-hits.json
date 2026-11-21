@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Hank Williams gravou entre 1947 e 1952 dezenas de canções sobre solidão, amor e fé que definiram o country moderno.",
+    "Morreu aos 29 anos, no banco de trás de um carro, a caminho de um show no Ano-Novo de 1953.",
+    "A coletânea de 1978 reúne os principais sucessos da carreira curta e marcante."
+  ],
+  "trivia": [
+    "Hank também gravava canções religiosas e morais com o pseudônimo de Luke the Drifter.",
+    "\"Lovesick Blues\" o levou ao Grand Ole Opry, onde foi chamado para seis bis na estreia.",
+    "Ray Charles e Norah Jones estão entre os artistas que regravaram as canções dele."
+  ],
   "tracks": [
     {
       "title": "Move It On Over"
@@ -7,7 +17,8 @@
       "title": "A Mansion On the Hill"
     },
     {
-      "title": "Lovesick Blues"
+      "title": "Lovesick Blues",
+      "note": "O primeiro grande sucesso."
     },
     {
       "title": "Wedding Bells"
@@ -25,7 +36,8 @@
       "title": "My Bucket's Got a Hole In It"
     },
     {
-      "title": "I'm So Lonesome I Could Cry"
+      "title": "I'm So Lonesome I Could Cry",
+      "note": "Uma das canções mais tristes do country."
     },
     {
       "title": "I Just Don't Like This Kind of Living"
@@ -64,7 +76,8 @@
       "title": "I Can't Help It (If I'm Still In Love With You)"
     },
     {
-      "title": "Hey, Good Lookin' (feat. The Drifting Cowboys)"
+      "title": "Hey, Good Lookin' (feat. The Drifting Cowboys)",
+      "note": "Uma das canções mais alegres de Hank."
     },
     {
       "title": "Crazy Heart"
@@ -106,7 +119,8 @@
       "title": "Kaw-Liga"
     },
     {
-      "title": "Your Cheatin' Heart (feat. The Drifting Cowboys)"
+      "title": "Your Cheatin' Heart (feat. The Drifting Cowboys)",
+      "note": "Lançada logo depois da morte dele."
     },
     {
       "title": "Take These Chains From My Heart"

@@ -1,7 +1,18 @@
 {
+  "history": [
+    "No segundo disco, de 1978, Elvis Costello estreou com sua banda, os Attractions: Steve Nieve nos teclados, Bruce Thomas no baixo e Pete Thomas na bateria. Nick Lowe produziu.",
+    "As canções falam de ciúme, moda, mídia e política com ironia e raiva.",
+    "O órgão agudo de Nieve virou marca do som da banda."
+  ],
+  "trivia": [
+    "Em dezembro de 1977, Costello trocou de música ao vivo no \"Saturday Night Live\" para tocar \"Radio Radio\", contra a vontade da gravadora, e ficou anos sem voltar ao programa.",
+    "Na capa, Costello aparece atrás de uma câmera fotográfica.",
+    "\"Radio Radio\" critica as rádios comerciais."
+  ],
   "tracks": [
     {
-      "title": "No Action"
+      "title": "No Action",
+      "note": "Abre o disco a toda velocidade."
     },
     {
       "title": "This Year's Girl"
@@ -10,7 +21,8 @@
       "title": "The Beat"
     },
     {
-      "title": "Pump It Up"
+      "title": "Pump It Up",
+      "note": "Inspirada em \"Subterranean Homesick Blues\", de Bob Dylan."
     },
     {
       "title": "Little Triggers"
@@ -40,7 +52,8 @@
       "title": "Big Tears"
     },
     {
-      "title": "Radio, Radio"
+      "title": "Radio, Radio",
+      "note": "Tocada no SNL contra a vontade da gravadora."
     },
     {
       "title": "Crawling To The U.S.A."

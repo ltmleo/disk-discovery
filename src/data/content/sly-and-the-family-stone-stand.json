@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Sly and the Family Stone era uma raridade em 1969: uma banda com integrantes negros e brancos, homens e mulheres, misturando soul, rock e psicodelia.",
+    "\"Stand!\" traz mensagens de união e também canções duras sobre racismo.",
+    "Meses depois, a banda fez um dos shows mais lembrados do festival de Woodstock."
+  ],
+  "trivia": [
+    "\"Everyday People\" popularizou a expressão \"different strokes for different folks\" e chegou ao 1º lugar.",
+    "\"Sex Machine\" é uma jam instrumental de mais de 13 minutos.",
+    "\"I Want to Take You Higher\" virou um dos momentos marcantes de Woodstock."
+  ],
   "tracks": [
     {
-      "title": "Stand!"
+      "title": "Stand!",
+      "note": "Abre o disco com um chamado à resistência."
     },
     {
       "title": "Don't Call Me N****r, Whitey"
     },
     {
-      "title": "I Want to Take You Higher"
+      "title": "I Want to Take You Higher",
+      "note": "Um dos pontos altos de Woodstock."
     },
     {
       "title": "Somebody's Watching You"
@@ -16,10 +28,12 @@
       "title": "Sing a Simple Song"
     },
     {
-      "title": "Everyday People"
+      "title": "Everyday People",
+      "note": "\"Different strokes for different folks\": 1º lugar."
     },
     {
-      "title": "Sex Machine"
+      "title": "Sex Machine",
+      "note": "Mais de 13 minutos de jam instrumental."
     },
     {
       "title": "You Can Make It If You Try"

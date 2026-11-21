@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Depois de um discurso no MTV Video Music Awards de 1997 e das críticas que vieram, Fiona Apple escreveu um poema em resposta a cartas publicadas numa revista. O poema inteiro virou o título do segundo disco, de 1999.",
+    "Produzido por Jon Brion, o disco mistura piano, jazz, pop e arranjos teatrais, com letras sobre relações, orgulho e autodefesa.",
+    "Virou um dos títulos mais longos da história do pop."
+  ],
+  "trivia": [
+    "Jon Brion também produziria \"Late Registration\", de Kanye West.",
+    "\"Paper Bag\" tem um arranjo de metais que lembra musicais antigos.",
+    "O disco costuma aparecer abreviado como \"When the Pawn...\"."
+  ],
   "tracks": [
     {
-      "title": "On the Bound"
+      "title": "On the Bound",
+      "note": "Abre com piano e bateria sincopados."
     },
     {
       "title": "To Your Love"
@@ -13,13 +24,15 @@
       "title": "Love Ridden"
     },
     {
-      "title": "Paper Bag"
+      "title": "Paper Bag",
+      "note": "Uma decepção amorosa com metais de musical."
     },
     {
       "title": "A Mistake"
     },
     {
-      "title": "Fast As You Can"
+      "title": "Fast As You Can",
+      "note": "Muda de andamento várias vezes."
     },
     {
       "title": "The Way Things Are"

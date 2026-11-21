@@ -1,13 +1,26 @@
 {
+  "history": [
+    "Aos 19 anos, Janet Jackson deixou a gestão da família e demitiu o pai, Joseph, como empresário. Foi para Minneapolis gravar com Jimmy Jam e Terry Lewis, ex-integrantes do The Time, banda ligada a Prince.",
+    "O disco junta funk, pop e batidas eletrônicas duras, com letras sobre independência e respeito.",
+    "\"Control\" chegou ao 1º lugar nos EUA e fez de Janet uma estrela própria, fora da sombra dos irmãos."
+  ],
+  "trivia": [
+    "Jimmy Jam e Terry Lewis tinham sido demitidos do The Time por Prince.",
+    "\"When I Think of You\" foi o primeiro 1º lugar de Janet na Billboard Hot 100.",
+    "A famosa fala \"It's Ms. Jackson, if you're nasty\" vem de \"Nasty\"."
+  ],
   "tracks": [
     {
-      "title": "Control"
+      "title": "Control",
+      "note": "Um manifesto de independência na faixa-título."
     },
     {
-      "title": "Nasty"
+      "title": "Nasty",
+      "note": "\"Ms. Jackson, if you're nasty.\""
     },
     {
-      "title": "What Have You Done for Me Lately"
+      "title": "What Have You Done for Me Lately",
+      "note": "O primeiro single, cobrando um namorado."
     },
     {
       "title": "You Can Be Mine"
@@ -16,7 +29,8 @@
       "title": "The Pleasure Principle"
     },
     {
-      "title": "When I Think of You"
+      "title": "When I Think of You",
+      "note": "O primeiro 1º lugar dela nos EUA."
     },
     {
       "title": "He Doesn't Know I'm Alive"

@@ -1,16 +1,29 @@
 {
+  "history": [
+    "O Television saiu da cena do CBGB, em Nova York, como o Ramones e Patti Smith. Mas, em vez de três acordes, Tom Verlaine e Richard Lloyd tocavam guitarras entrelaçadas, com melodias longas e precisas.",
+    "\"Marquee Moon\" (1977) vendeu pouco nos EUA e foi mais bem recebido no Reino Unido.",
+    "Virou uma das grandes influências do pós-punk e do indie."
+  ],
+  "trivia": [
+    "A faixa-título tem mais de 10 minutos e solos improvisados.",
+    "Tom Verlaine tirou o sobrenome do poeta francês Paul Verlaine.",
+    "Richard Hell, que inventou o visual de roupa rasgada do punk, tinha saído da banda antes do disco."
+  ],
   "tracks": [
     {
-      "title": "See No Evil"
+      "title": "See No Evil",
+      "note": "Abre com as duas guitarras em diálogo."
     },
     {
-      "title": "Venus"
+      "title": "Venus",
+      "note": "\"Falling into the arms of Venus de Milo.\""
     },
     {
       "title": "Friction"
     },
     {
-      "title": "Marquee Moon"
+      "title": "Marquee Moon",
+      "note": "Mais de 10 minutos de guitarras cruzadas."
     },
     {
       "title": "Elevation"

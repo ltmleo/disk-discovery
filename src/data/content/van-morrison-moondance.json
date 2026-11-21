@@ -1,19 +1,33 @@
 {
+  "history": [
+    "Depois de \"Astral Weeks\", que vendeu pouco, Van Morrison fez em 1970 um disco mais acessível, com metais, soul e jazz, e ele mesmo na produção.",
+    "As canções falam de amor, natureza e fé, com uma voz cheia de improviso.",
+    "\"Moondance\" virou o disco mais popular de Van e o modelo de muitos que viriam."
+  ],
+  "trivia": [
+    "\"Into the Mystic\" é uma das canções mais regravadas de Van.",
+    "\"Caravan\" virou um dos pontos altos do filme \"The Last Waltz\", da The Band.",
+    "A faixa-título é um jazz em ritmo de swing."
+  ],
   "tracks": [
     {
-      "title": "And It Stoned Me"
+      "title": "And It Stoned Me",
+      "note": "Abre o disco com uma lembrança de infância."
     },
     {
-      "title": "Moondance"
+      "title": "Moondance",
+      "note": "Jazz em swing, com flauta e piano."
     },
     {
       "title": "Crazy Love"
     },
     {
-      "title": "Caravan"
+      "title": "Caravan",
+      "note": "Um rádio tocando no meio de uma caravana cigana."
     },
     {
-      "title": "Into the Mystic"
+      "title": "Into the Mystic",
+      "note": "Uma das canções mais amadas de Van."
     },
     {
       "title": "Come Running"

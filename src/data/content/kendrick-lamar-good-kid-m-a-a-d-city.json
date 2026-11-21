@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Kendrick Lamar apresentou o disco como \"um curta-metragem\": as faixas contam um dia na vida dele aos 17 anos em Compton, entre amigos, uma garota, gangues e a influência dos pais.",
+    "Mensagens de voz da mãe e do pai ligam as cenas, e Dr. Dre aparece no final.",
+    "O disco o tornou uma das vozes mais importantes do rap."
+  ],
+  "trivia": [
+    "A capa é uma polaroid de Kendrick criança com tios e o avô.",
+    "\"Poetic Justice\" sampleia \"Any Time, Any Place\", de Janet Jackson.",
+    "Macklemore, que ganhou o Grammy de melhor álbum de rap daquele ano, mandou uma mensagem a Kendrick dizendo que ele merecia o prêmio."
+  ],
   "tracks": [
     {
       "title": "Sherane a.k.A Master Splinter’s Daughter"
@@ -16,19 +26,23 @@
       "title": "Money Trees (feat. Jay Rock)"
     },
     {
-      "title": "Poetic Justice (feat. Drake)"
+      "title": "Poetic Justice (feat. Drake)",
+      "note": "Com Drake e um sample de Janet Jackson."
     },
     {
       "title": "Good Kid"
     },
     {
-      "title": "m.A.A.d city (feat. MC Eiht)"
+      "title": "m.A.A.d city (feat. MC Eiht)",
+      "note": "A violência de Compton, com MC Eiht."
     },
     {
-      "title": "Swimming Pools (Drank) [Extended Version]"
+      "title": "Swimming Pools (Drank) [Extended Version]",
+      "note": "Sobre a pressão para beber, em tom de alerta."
     },
     {
-      "title": "Sing About Me, I'm Dying of Thirst"
+      "title": "Sing About Me, I'm Dying of Thirst",
+      "note": "Doze minutos de reflexão no fim da história."
     },
     {
       "title": "Real (feat. Anna Wise)"

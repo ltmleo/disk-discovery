@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Joni Mitchell compôs \"Hejira\" (1976) numa viagem de carro de costa a costa, sozinha. As canções falam de estrada, liberdade e solidão.",
+    "O baixo fretless de Jaco Pastorius, em quatro faixas, cria um som flutuante, quase sem bateria.",
+    "O título vem do árabe e se refere à migração do profeta Maomé."
+  ],
+  "trivia": [
+    "\"Coyote\" é sobre o dramaturgo Sam Shepard, com quem Joni esteve na turnê Rolling Thunder Revue, de Bob Dylan.",
+    "\"Amelia\" fala da aviadora Amelia Earhart.",
+    "Na capa, Joni aparece sobreposta a uma estrada coberta de neve."
+  ],
   "tracks": [
     {
-      "title": "Coyote"
+      "title": "Coyote",
+      "note": "Sobre Sam Shepard, na turnê de Dylan."
     },
     {
-      "title": "Amelia"
+      "title": "Amelia",
+      "note": "Para a aviadora Amelia Earhart."
     },
     {
       "title": "Furry Sings the Blues"
@@ -13,7 +25,8 @@
       "title": "A Strange Boy"
     },
     {
-      "title": "Hejira"
+      "title": "Hejira",
+      "note": "O baixo fretless de Jaco Pastorius."
     },
     {
       "title": "Song for Sharon"

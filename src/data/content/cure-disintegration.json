@@ -1,22 +1,36 @@
 {
+  "history": [
+    "Perto dos 30 anos e deprimido com a fama, Robert Smith compôs \"Disintegration\" (1989) sozinho e voltou a um som lento, denso e cheio de teclados.",
+    "A gravadora temia um \"suicídio comercial\", mas o disco virou um dos maiores sucessos da banda.",
+    "Durante as sessões, o tecladista e cofundador Lol Tolhurst foi afastado."
+  ],
+  "trivia": [
+    "\"Lovesong\" foi um presente de casamento para Mary Poole e chegou ao 2º lugar nos EUA.",
+    "Várias faixas passam dos 7 minutos.",
+    "\"Pictures of You\" teria sido inspirada em fotos encontradas depois de um incêndio na casa de Smith."
+  ],
   "tracks": [
     {
-      "title": "Plainsong"
+      "title": "Plainsong",
+      "note": "Abre com sinos e teclados monumentais."
     },
     {
-      "title": "Pictures of You"
+      "title": "Pictures of You",
+      "note": "Uma das canções mais tristes e bonitas da banda."
     },
     {
       "title": "Closedown"
     },
     {
-      "title": "Lovesong"
+      "title": "Lovesong",
+      "note": "Presente de casamento, 2º lugar nos EUA."
     },
     {
       "title": "Last Dance"
     },
     {
-      "title": "Lullaby"
+      "title": "Lullaby",
+      "note": "Uma aranha devorando o narrador, numa canção de ninar."
     },
     {
       "title": "Fascination Street"

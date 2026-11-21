@@ -1,7 +1,18 @@
 {
+  "history": [
+    "No terceiro disco, de 1986, Morrissey e Johnny Marr equilibram humor ácido, solidão e ataques à monarquia, com as guitarras melódicas de Marr.",
+    "As sessões foram tensas por brigas com a gravadora, Rough Trade, e pelos problemas do baixista Andy Rourke.",
+    "A banda acabou no ano seguinte, e este é o disco mais celebrado dos Smiths."
+  ],
+  "trivia": [
+    "A capa traz o ator francês Alain Delon numa cena do filme \"L'Insoumis\".",
+    "\"There Is a Light That Never Goes Out\" é uma das canções mais amadas da banda.",
+    "\"Bigmouth Strikes Again\" é uma piada de Morrissey sobre a própria fama de falar demais."
+  ],
   "tracks": [
     {
-      "title": "The Queen Is Dead"
+      "title": "The Queen Is Dead",
+      "note": "Abre com uma canção de music hall e explode em ataque à monarquia."
     },
     {
       "title": "Frankly, Mr. Shankly"
@@ -13,10 +24,12 @@
       "title": "Never Had No One Ever"
     },
     {
-      "title": "Cemetry Gates"
+      "title": "Cemetry Gates",
+      "note": "Dois amigos discutindo poesia num cemitério."
     },
     {
-      "title": "Bigmouth Strikes Again"
+      "title": "Bigmouth Strikes Again",
+      "note": "Morrissey rindo da própria fama."
     },
     {
       "title": "The Boy with the Thorn In His Side"
@@ -25,7 +38,8 @@
       "title": "Vicar In a Tutu"
     },
     {
-      "title": "There Is a Light That Never Goes Out"
+      "title": "There Is a Light That Never Goes Out",
+      "note": "Um passeio de carro romântico e trágico."
     },
     {
       "title": "Some Girls Are Bigger Than Others"

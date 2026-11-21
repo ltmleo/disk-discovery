@@ -1,13 +1,26 @@
 {
+  "history": [
+    "\"1999\" (1982) é um álbum duplo em que Prince toca quase tudo, com a bateria eletrônica Linn LM-1 no centro do som.",
+    "A faixa-título transforma o medo do fim do mundo numa festa, e \"Little Red Corvette\" levou Prince à MTV e ao público pop.",
+    "O disco abriu caminho para \"Purple Rain\"."
+  ],
+  "trivia": [
+    "A capa traz a frase \"and the Revolution\" escrita ao contrário, primeira menção à banda.",
+    "\"Little Red Corvette\" foi um dos primeiros clipes de artista negro na MTV.",
+    "As vozes da faixa-título se alternam entre Prince, Lisa Coleman, Dez Dickerson e Jill Jones."
+  ],
   "tracks": [
     {
-      "title": "1999"
+      "title": "1999",
+      "note": "\"Party like it's 1999\"."
     },
     {
-      "title": "Little Red Corvette"
+      "title": "Little Red Corvette",
+      "note": "O hit que levou Prince à MTV."
     },
     {
-      "title": "Delirious"
+      "title": "Delirious",
+      "note": "Rockabilly eletrônico de dois minutos e meio."
     },
     {
       "title": "Let's Pretend We're Married"

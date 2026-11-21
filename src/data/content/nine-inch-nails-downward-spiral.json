@@ -1,7 +1,17 @@
 {
+  "history": [
+    "Trent Reznor gravou \"The Downward Spiral\" (1994) na casa de Los Angeles onde a atriz Sharon Tate foi assassinada pela seita de Charles Manson em 1969.",
+    "O disco conta a queda de um homem rumo à autodestruição, em industrial, rock e eletrônica, com momentos de silêncio e piano.",
+    "Chegou ao 2º lugar nos EUA e levou o rock industrial ao público grande."
+  ],
+  "trivia": [
+    "Johnny Cash regravou \"Hurt\" em 2002. Reznor disse que, depois daquela versão, a música não era mais dele.",
+    "\"Closer\" virou um dos singles mais conhecidos da banda."
+  ],
   "tracks": [
     {
-      "title": "Mr. Self Destruct"
+      "title": "Mr. Self Destruct",
+      "note": "Abre o disco com barulho e raiva."
     },
     {
       "title": "Piggy"
@@ -13,7 +23,8 @@
       "title": "March of the Pigs"
     },
     {
-      "title": "Closer"
+      "title": "Closer",
+      "note": "O single mais conhecido da banda."
     },
     {
       "title": "Ruiner"
@@ -40,7 +51,8 @@
       "title": "The Downward Spiral"
     },
     {
-      "title": "Hurt"
+      "title": "Hurt",
+      "note": "Fecha o disco; depois regravada por Johnny Cash."
     }
   ]
 }
