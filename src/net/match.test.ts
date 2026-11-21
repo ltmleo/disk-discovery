@@ -18,4 +18,11 @@ describe('pickArtwork', () => {
   it('rejects other artists and other albums', () => {
     expect(pickArtwork([art('Purple Rain', 'Some Tribute Band'), art('1999')], album)).toBeNull();
   });
+
+  it('picks artwork from song results (album search fallback)', () => {
+    const songs = [
+      { trackName: 'Thinkin Bout You', artistName: 'Frank Ocean', collectionName: 'channel ORANGE', artworkUrl100: 'https://x/a/100x100bb.jpg' },
+    ];
+    expect(pickArtwork(songs, { title: 'Channel Orange', artist: 'Frank Ocean' })).toBe('https://x/a/{size}x{size}bb.jpg');
+  });
 });

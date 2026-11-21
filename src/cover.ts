@@ -63,12 +63,19 @@ const itunesQueue = new Scheduler(2, 350);
 const mbQueue = new Scheduler(1, 1100);
 const lookups = new Map<string, Promise<void>>();
 
-async function lookupItunes(album: Album): Promise<string | null> {
-  const term = encodeURIComponent(`${album.artist} ${album.title}`);
+async function itunesSearch(entity: 'album' | 'song', term: string): Promise<ItunesItem[]> {
   const data = await jsonp<{ results?: ItunesItem[] }>(
-    `https://itunes.apple.com/search?term=${term}&media=music&entity=album&limit=10`,
+    `https://itunes.apple.com/search?term=${encodeURIComponent(term)}&media=music&entity=${entity}&limit=15`,
   );
-  return pickArtwork(data.results ?? [], album);
+  return data.results ?? [];
+}
+
+/** Album search first; song results also carry the album cover and catch titles the album search misses. */
+async function lookupItunes(album: Album): Promise<string | null> {
+  return (
+    pickArtwork(await itunesSearch('album', `${album.artist} ${album.title}`), album) ??
+    pickArtwork(await itunesSearch('song', `${album.artist} ${album.previewTrack}`), album)
+  );
 }
 
 async function lookupMusicBrainz(album: Album): Promise<string | null> {

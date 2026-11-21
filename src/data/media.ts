@@ -7,6 +7,8 @@ export interface MediaEntry {
   art?: string | null;
   mbid?: string | null;
   previews?: Record<string, string | null>;
+  /** Resolver version that produced this entry. */
+  v?: number;
 }
 
 const files = import.meta.glob<{ default: Record<string, MediaEntry> }>('./media.generated.json', { eager: true });

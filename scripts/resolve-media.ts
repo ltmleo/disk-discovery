@@ -21,6 +21,8 @@ const UA = 'disk-discovery/1.0';
 const ITUNES_GAP = 3200;
 const MB_GAP = 1100;
 
+/** Bump to re-try entries that came back empty under an older resolver. */
+const MEDIA_VERSION = 2;
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 let lastItunes = 0;
 
@@ -34,14 +36,16 @@ async function itunes(params: Record<string, string>): Promise<ItunesItem[]> {
   return ((await res.json()) as { results?: ItunesItem[] }).results ?? [];
 }
 
-async function musicbrainz(title: string, artist: string): Promise<string | null> {
-  await sleep(MB_GAP);
+/** MusicBrainz answers 503 when busy (shared CI IPs hit this): back off and retry. */
+async function musicbrainz(title: string, artist: string, attempt = 1): Promise<string | null> {
+  await sleep(MB_GAP * attempt * attempt);
   const q = (s: string) => `"${s.replace(/["\\]/g, '\\$&')}"`;
   const query = `releasegroup:${q(title)} AND artist:${q(artist)} AND primarytype:album`;
   const res = await fetch(
     `https://musicbrainz.org/ws/2/release-group/?fmt=json&limit=3&query=${encodeURIComponent(query)}`,
     { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: AbortSignal.timeout(10_000) },
   );
+  if (res.status === 503 && attempt < 4) return musicbrainz(title, artist, attempt + 1);
   if (!res.ok) throw new Error(`MusicBrainz ${res.status}`);
   const best = ((await res.json()) as { 'release-groups'?: { id: string; score: number }[] })['release-groups']?.[0];
   return best && best.score >= 90 ? best.id : null;
@@ -63,20 +67,35 @@ async function main() {
     const entry: MediaEntry = { ...media[album.id] };
     const log: string[] = [];
     try {
-      if (entry.art === undefined) {
-        entry.art = pickArtwork(await itunes({ entity: 'album', term: `${album.artist} ${album.title}` }), album);
-        log.push(`art:${entry.art ? 'ok' : 'none'}`);
+      // Entries written by an older resolver get their misses (null) retried once.
+      const stale = (entry.v ?? 1) < MEDIA_VERSION;
+      const pt = album.previewTrack;
+      entry.previews ??= {};
+
+      // One song search serves two purposes: the preview, and an artwork fallback
+      // (song results carry their album's cover, and the album search misses some catalogue titles).
+      let songs: ItunesItem[] | null = null;
+      const songSearch = async () => (songs ??= await itunes({ entity: 'song', term: `${album.artist} ${pt}` }));
+
+      if (entry.previews[pt] === undefined || (entry.previews[pt] === null && stale)) {
+        entry.previews[pt] = pickPreview(await songSearch(), album, pt);
+        log.push(`preview:${entry.previews[pt] ? 'ok' : 'none'}`);
       }
-      if (!entry.art && entry.mbid === undefined && !album.mbid) {
+      if (entry.art === undefined || (entry.art === null && stale)) {
+        let art = pickArtwork(await itunes({ entity: 'album', term: `${album.artist} ${album.title}` }), album);
+        let via = 'album';
+        if (!art) {
+          art = pickArtwork(await songSearch(), album);
+          via = 'song';
+        }
+        entry.art = art;
+        log.push(`art:${art ? `ok (${via})` : 'none'}`);
+      }
+      if (!entry.art && !album.mbid && (entry.mbid === undefined || (entry.mbid === null && stale))) {
         entry.mbid = await musicbrainz(album.title, album.artist);
         log.push(`mbid:${entry.mbid ? 'ok' : 'none'}`);
       }
-      entry.previews ??= {};
-      if (entry.previews[album.previewTrack] === undefined) {
-        const results = await itunes({ entity: 'song', term: `${album.artist} ${album.previewTrack}` });
-        entry.previews[album.previewTrack] = pickPreview(results, album, album.previewTrack);
-        log.push(`preview:${entry.previews[album.previewTrack] ? 'ok' : 'none'}`);
-      }
+      entry.v = MEDIA_VERSION;
       consecutiveErrors = 0;
     } catch (err) {
       consecutiveErrors++;
