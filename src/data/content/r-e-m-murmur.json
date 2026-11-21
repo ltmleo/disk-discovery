@@ -1,7 +1,18 @@
 {
+  "history": [
+    "A estreia do R.E.M., de Athens, na Geórgia, saiu em 1983. As guitarras Rickenbacker de Peter Buck e a voz murmurada de Michael Stipe criavam um som misterioso.",
+    "Os produtores Mitch Easter e Don Dixon mantiveram o clima, longe do pop eletrônico da época.",
+    "A revista Rolling Stone o escolheu como disco do ano, à frente de \"Thriller\"."
+  ],
+  "trivia": [
+    "As letras de Stipe eram difíceis de entender, e o encarte não as trazia.",
+    "\"Radio Free Europe\" já tinha saído antes, num selo pequeno.",
+    "A capa mostra uma planta trepadeira típica do Sul dos EUA, o kudzu."
+  ],
   "tracks": [
     {
-      "title": "Radio Free Europe"
+      "title": "Radio Free Europe",
+      "note": "O primeiro single, regravado para o disco."
     },
     {
       "title": "Pilgrimage"
@@ -10,13 +21,15 @@
       "title": "Laughing"
     },
     {
-      "title": "Talk About the Passion"
+      "title": "Talk About the Passion",
+      "note": "Uma canção sobre a fome, com cordas."
     },
     {
       "title": "Moral Kiosk"
     },
     {
-      "title": "Perfect Circle"
+      "title": "Perfect Circle",
+      "note": "Uma balada ao piano."
     },
     {
       "title": "Catapult"

@@ -1,40 +1,53 @@
 {
+  "history": [
+    "Chrissie Hynde, de Ohio, se mudou para Londres nos anos 70, escreveu para a revista NME e circulou pela cena punk antes de formar os Pretenders.",
+    "A estreia, de 1980, produzida por Chris Thomas (o mesmo de \"Never Mind the Bollocks\"), mistura punk, pop e reggae.",
+    "\"Brass in Pocket\" chegou ao 1º lugar no Reino Unido."
+  ],
+  "trivia": [
+    "\"Stop Your Sobbing\" é uma regravação dos Kinks; Chrissie depois teve uma filha com Ray Davies.",
+    "O guitarrista James Honeyman-Scott morreu em 1982."
+  ],
   "tracks": [
     {
-      "title": "The Adultress"
+      "title": "Precious",
+      "note": "Abre o disco com atitude punk."
     },
     {
-      "title": "Bad Boys Get Spanked"
+      "title": "The Phone Call"
     },
     {
-      "title": "Message of Love"
+      "title": "Up the Neck"
     },
     {
-      "title": "I Go to Sleep"
+      "title": "Tattooed Love Boys"
     },
     {
-      "title": "Birds of Paradise"
+      "title": "Space Invader"
     },
     {
-      "title": "Talk of the Town"
+      "title": "The Wait"
     },
     {
-      "title": "Pack It Up"
+      "title": "Stop Your Sobbing",
+      "note": "Uma regravação dos Kinks."
     },
     {
-      "title": "Waste Not Want Not"
+      "title": "Kid",
+      "note": "Uma das melodias mais bonitas do disco."
     },
     {
-      "title": "Day After Day"
+      "title": "Private Life"
     },
     {
-      "title": "Jealous Dogs"
+      "title": "Brass in Pocket",
+      "note": "1º lugar no Reino Unido."
     },
     {
-      "title": "The English Roses"
+      "title": "Lovers of Today"
     },
     {
-      "title": "Louie Louie"
+      "title": "Mystery Achievement"
     }
   ]
 }

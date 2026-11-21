@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Com o produtor Flood, o Depeche Mode fez em 1990 um disco mais enxuto e sombrio, misturando sintetizadores, guitarras de blues e letras sobre desejo e fé.",
+    "\"Enjoy the Silence\" e \"Personal Jesus\" levaram a banda ao topo nos EUA.",
+    "Num lançamento numa loja de Los Angeles, cerca de 17 mil fãs apareceram e houve tumulto."
+  ],
+  "trivia": [
+    "\"Enjoy the Silence\" nasceu como balada lenta; Alan Wilder e Flood a transformaram numa faixa dançante.",
+    "\"Personal Jesus\" foi inspirada no livro de Priscilla Presley sobre Elvis.",
+    "Johnny Cash regravou \"Personal Jesus\"."
+  ],
   "tracks": [
     {
       "title": "World In My Eyes"
@@ -7,7 +17,8 @@
       "title": "Sweetest Perfection"
     },
     {
-      "title": "Personal Jesus"
+      "title": "Personal Jesus",
+      "note": "Guitarra de blues e sintetizadores."
     },
     {
       "title": "Halo"
@@ -16,10 +27,12 @@
       "title": "Waiting for the Night"
     },
     {
-      "title": "Enjoy the Silence"
+      "title": "Enjoy the Silence",
+      "note": "De balada lenta a hit de pista."
     },
     {
-      "title": "Policy of Truth"
+      "title": "Policy of Truth",
+      "note": "Sobre mentiras que facilitam a vida."
     },
     {
       "title": "Blue Dress"

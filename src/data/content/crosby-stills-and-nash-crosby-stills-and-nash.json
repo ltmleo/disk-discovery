@@ -1,10 +1,22 @@
 {
+  "history": [
+    "David Crosby (dos Byrds), Stephen Stills (do Buffalo Springfield) e Graham Nash (dos Hollies) descobriram numa sala de Laurel Canyon que suas vozes juntas soavam como uma só.",
+    "No primeiro disco, de 1969, Stills tocou a maioria dos instrumentos. As harmonias vocais viraram marca do folk-rock da Califórnia.",
+    "Meses depois, o trio tocou em Woodstock, no segundo show da carreira."
+  ],
+  "trivia": [
+    "\"Suite: Judy Blue Eyes\" é sobre a cantora Judy Collins, ex-namorada de Stills.",
+    "\"Marrakesh Express\" foi recusada pelos Hollies antes de Nash sair da banda.",
+    "Em Woodstock, Stills disse que era a segunda vez que tocavam para uma plateia."
+  ],
   "tracks": [
     {
-      "title": "Suite: Judy Blue Eyes"
+      "title": "Suite: Judy Blue Eyes",
+      "note": "Sete minutos em quatro partes, para Judy Collins."
     },
     {
-      "title": "Marrakesh Express"
+      "title": "Marrakesh Express",
+      "note": "Uma viagem de trem pelo Marrocos."
     },
     {
       "title": "Guinnevere"
@@ -16,7 +28,8 @@
       "title": "Pre-Road Downs"
     },
     {
-      "title": "Wooden Ships"
+      "title": "Wooden Ships",
+      "note": "Escrita com Paul Kantner, do Jefferson Airplane."
     },
     {
       "title": "Lady of the Island"

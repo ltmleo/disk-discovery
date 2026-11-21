@@ -1,37 +1,65 @@
 {
+  "history": [
+    "A trilha de \"Os Embalos de Sábado à Noite\" (1977), com John Travolta, tem várias canções dos Bee Gees escritas às pressas, num castelo na França, antes de o filme ficar pronto.",
+    "\"Stayin' Alive\", \"Night Fever\" e \"How Deep Is Your Love\" chegaram ao 1º lugar nos EUA.",
+    "Foi a trilha sonora mais vendida da história até \"O Guarda-Costas\" e ganhou o Grammy de Álbum do Ano."
+  ],
+  "trivia": [
+    "As canções dos Bee Gees foram compostas no Château d'Hérouville, o mesmo castelo onde Elton John gravou \"Goodbye Yellow Brick Road\".",
+    "O ritmo de \"Stayin' Alive\" é recomendado em treinamentos de massagem cardíaca.",
+    "A trilha ficou 24 semanas em 1º lugar nos EUA."
+  ],
   "tracks": [
     {
-      "title": "Staying Alive"
+      "title": "Stayin' Alive",
+      "note": "O ritmo da massagem cardíaca."
     },
     {
-      "title": "Boogie Shoes"
+      "title": "How Deep Is Your Love",
+      "note": "A balada da trilha."
+    },
+    {
+      "title": "Night Fever",
+      "note": "Outro 1º lugar dos Bee Gees."
+    },
+    {
+      "title": "More Than a Woman"
     },
     {
       "title": "If I Can't Have You"
     },
     {
-      "title": "It's My Neighbourhood"
+      "title": "A Fifth of Beethoven"
     },
     {
-      "title": "Night Fever"
+      "title": "More Than a Woman"
     },
     {
-      "title": "What Kind of Fool"
+      "title": "Manhattan Skyline"
+    },
+    {
+      "title": "Calypso Breakdown"
+    },
+    {
+      "title": "Night On Disco Mountain"
+    },
+    {
+      "title": "Open Sesame"
     },
     {
       "title": "Jive Talkin'"
     },
     {
-      "title": "Tragedy"
-    },
-    {
-      "title": "Immortality"
-    },
-    {
       "title": "You Should Be Dancing"
     },
     {
-      "title": "How Deep Is Your Love"
+      "title": "Boogie Shoes"
+    },
+    {
+      "title": "Salsation"
+    },
+    {
+      "title": "K-Jee"
     },
     {
       "title": "Disco Inferno"

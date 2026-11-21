@@ -1,10 +1,22 @@
 {
+  "history": [
+    "O Blondie saiu da cena punk do CBGB, em Nova York. No terceiro disco, de 1978, o produtor Mike Chapman deixou o som polido, com melodias pop perfeitas.",
+    "\"Heart of Glass\", com batida disco, chegou ao 1º lugar e irritou parte dos fãs punk.",
+    "Debbie Harry virou uma das imagens mais marcantes do rock."
+  ],
+  "trivia": [
+    "\"Hanging on the Telephone\" é uma regravação da banda The Nerves.",
+    "\"Heart of Glass\" usava uma bateria eletrônica sincronizada, novidade na época.",
+    "O disco vendeu cerca de 20 milhões de cópias."
+  ],
   "tracks": [
     {
-      "title": "Hanging on the Telephone"
+      "title": "Hanging on the Telephone",
+      "note": "Abre com o toque de um telefone."
     },
     {
-      "title": "One Way or Another"
+      "title": "One Way or Another",
+      "note": "Uma perseguição em ritmo de rock."
     },
     {
       "title": "Picture This"
@@ -25,10 +37,12 @@
       "title": "Will Anything Happen"
     },
     {
-      "title": "Sunday Girl"
+      "title": "Sunday Girl",
+      "note": "Pop sessentista, cantado também em francês."
     },
     {
-      "title": "Heart of Glass"
+      "title": "Heart of Glass",
+      "note": "Disco e new wave no mesmo hit."
     },
     {
       "title": "I'm Gonna Love You Too"

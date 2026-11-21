@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Em janeiro de 1982, Bruce Springsteen gravou demos em casa, num gravador de quatro canais. Quando tentou regravá-las com a E Street Band, achou que perdiam a força, e lançou as demos como estavam.",
+    "As canções falam de assassinos, desempregados e famílias desesperadas, com violão, gaita e eco.",
+    "Bruce não fez turnê do disco."
+  ],
+  "trivia": [
+    "A faixa-título é inspirada em Charles Starkweather, autor de uma série de assassinatos em 1958.",
+    "A fita cassete ficou dias no bolso de Bruce, sem estojo.",
+    "Muitas outras canções dessas sessões viraram \"Born in the U.S.A.\"."
+  ],
   "tracks": [
     {
-      "title": "Nebraska"
+      "title": "Nebraska",
+      "note": "Um assassino contando a própria história."
     },
     {
-      "title": "Atlantic City"
+      "title": "Atlantic City",
+      "note": "Um casal tentando escapar com um último trabalho sujo."
     },
     {
       "title": "Mansion On the Hill"
@@ -13,7 +25,8 @@
       "title": "Johnny 99"
     },
     {
-      "title": "Highway Patrolman"
+      "title": "Highway Patrolman",
+      "note": "Um policial dividido entre a lei e o irmão."
     },
     {
       "title": "State Trooper"

@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em \"Doolittle\" (1989), os Pixies, de Boston, levaram ao extremo a dinâmica de versos calmos e refrões explosivos, com Black Francis gritando letras sobre surrealismo, Bíblia e destruição.",
+    "Com o produtor Gil Norton, o som ficou mais limpo que o do disco anterior, sem perder a estranheza.",
+    "A banda virou uma das grandes influências do rock alternativo dos anos 90."
+  ],
+  "trivia": [
+    "Kurt Cobain disse que \"Smells Like Teen Spirit\" era uma tentativa de copiar os Pixies.",
+    "\"Debaser\" faz referência ao filme \"Um Cão Andaluz\", de Luis Buñuel e Salvador Dalí.",
+    "Kim Deal canta em várias faixas e depois formou os Breeders."
+  ],
   "tracks": [
     {
-      "title": "Debaser"
+      "title": "Debaser",
+      "note": "\"Un chien andalusia!\": Buñuel em forma de rock."
     },
     {
       "title": "Tame"
@@ -13,13 +24,15 @@
       "title": "I Bleed"
     },
     {
-      "title": "Here Comes Your Man"
+      "title": "Here Comes Your Man",
+      "note": "Uma canção pop antiga que Black Francis resgatou."
     },
     {
       "title": "Dead"
     },
     {
-      "title": "Monkey Gone to Heaven"
+      "title": "Monkey Gone to Heaven",
+      "note": "Ecologia e numerologia bíblica."
     },
     {
       "title": "Mr. Grieves"

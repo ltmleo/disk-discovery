@@ -1,4 +1,14 @@
 {
+  "history": [
+    "\"The Immaculate Collection\" (1990) reúne os sucessos de Madonna de 1983 a 1990, remixados com a tecnologia QSound, que criava um efeito de som tridimensional.",
+    "O disco traz duas faixas novas: \"Justify My Love\", escrita com Lenny Kravitz, e \"Rescue Me\".",
+    "É uma das coletâneas mais vendidas de uma artista solo."
+  ],
+  "trivia": [
+    "O clipe de \"Justify My Love\" foi banido da MTV.",
+    "O clipe de \"Like a Prayer\" provocou a Igreja e fez a Pepsi cancelar um comercial com Madonna.",
+    "\"Vogue\" foi inspirada na cena de bailes LGBT de Nova York."
+  ],
   "tracks": [
     {
       "title": "Holiday"
@@ -10,7 +20,8 @@
       "title": "Borderline"
     },
     {
-      "title": "Like a Virgin"
+      "title": "Like a Virgin",
+      "note": "O hit que fez Madonna explodir em 1984."
     },
     {
       "title": "Material Girl"
@@ -34,7 +45,8 @@
       "title": "La Isla Bonita (Remix)"
     },
     {
-      "title": "Like a Prayer"
+      "title": "Like a Prayer",
+      "note": "Gospel, polêmica e um comercial cancelado."
     },
     {
       "title": "Express Yourself"
@@ -43,10 +55,12 @@
       "title": "Cherish"
     },
     {
-      "title": "Vogue"
+      "title": "Vogue",
+      "note": "Inspirada nos bailes da cena LGBT de Nova York."
     },
     {
-      "title": "Justify My Love"
+      "title": "Justify My Love",
+      "note": "Faixa nova, escrita com Lenny Kravitz."
     },
     {
       "title": "Rescue Me"

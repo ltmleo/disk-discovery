@@ -1,19 +1,33 @@
 {
+  "history": [
+    "Com o produtor Phil Ramone, Billy Joel gravou \"The Stranger\" (1977) com sua banda de shows, num som mais cheio e sofisticado.",
+    "As canções falam de Nova York, de casais, de ambição e de juventude.",
+    "Foi o grande sucesso da carreira e um dos discos mais vendidos da Columbia."
+  ],
+  "trivia": [
+    "\"Just the Way You Are\" ganhou os Grammys de Gravação e de Canção do Ano, e Billy quase a deixou fora do disco.",
+    "\"Scenes from an Italian Restaurant\" tem mais de 7 minutos e três partes.",
+    "\"Only the Good Die Young\" foi banida de algumas rádios católicas."
+  ],
   "tracks": [
     {
-      "title": "Movin' Out (Anthony's Song)"
+      "title": "Movin' Out (Anthony's Song)",
+      "note": "Sobre trabalhar a vida toda por coisas que não importam."
     },
     {
       "title": "The Stranger"
     },
     {
-      "title": "Just the Way You Are"
+      "title": "Just the Way You Are",
+      "note": "Quase ficou de fora e ganhou dois Grammys."
     },
     {
-      "title": "Scenes from an Italian Restaurant"
+      "title": "Scenes from an Italian Restaurant",
+      "note": "Sete minutos e uma história de casal."
     },
     {
-      "title": "Vienna"
+      "title": "Vienna",
+      "note": "Um conselho para ir com calma."
     },
     {
       "title": "Only the Good Die Young"

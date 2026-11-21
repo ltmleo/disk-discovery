@@ -1,10 +1,22 @@
 {
+  "history": [
+    "No segundo disco, de 2000, Erykah Badu gravou com o coletivo Soulquarians: Questlove, James Poyser, J Dilla e outros músicos que também fizeram \"Voodoo\", de D'Angelo.",
+    "As canções falam de autoestima, ciúme, ancestralidade e da violência policial que matou Amadou Diallo.",
+    "\"Bag Lady\" foi indicada ao Grammy."
+  ],
+  "trivia": [
+    "\"Bag Lady\" usa um trecho de \"Xxplosive\", de Dr. Dre.",
+    "\"Green Eyes\" é uma suíte de 10 minutos sobre ciúme.",
+    "\"Didn't Cha Know\" é uma produção de J Dilla."
+  ],
   "tracks": [
     {
-      "title": "Penitentiary Philosophy"
+      "title": "Penitentiary Philosophy",
+      "note": "Abre com rock e uma letra sobre prisão."
     },
     {
-      "title": "Didn't Cha Know"
+      "title": "Didn't Cha Know",
+      "note": "Produção de J Dilla."
     },
     {
       "title": "My Life"
@@ -34,13 +46,15 @@
       "title": "In Love With You (feat. Stephen Marley)"
     },
     {
-      "title": "Bag Lady"
+      "title": "Bag Lady",
+      "note": "Um conselho para largar o peso do passado."
     },
     {
       "title": "Time's A  Wastin"
     },
     {
-      "title": "Green Eyes"
+      "title": "Green Eyes",
+      "note": "Dez minutos sobre ciúme."
     }
   ]
 }

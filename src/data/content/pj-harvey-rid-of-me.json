@@ -1,7 +1,18 @@
 {
+  "history": [
+    "No segundo disco, de 1993, PJ Harvey gravou com Steve Albini no Pachyderm Studio, em Minnesota, o mesmo estúdio onde o Nirvana faria \"In Utero\" meses depois.",
+    "O som é cru, com mudanças bruscas entre sussurros e gritos, e letras sobre desejo, controle e gênero.",
+    "Polly Jean Harvey tinha só 23 anos."
+  ],
+  "trivia": [
+    "O disco tem uma versão de \"Highway 61 Revisited\", de Bob Dylan.",
+    "Na época, PJ Harvey era também o nome do trio: Polly, Rob Ellis e Steve Vaughan.",
+    "As demos do disco saíram depois como \"4-Track Demos\"."
+  ],
   "tracks": [
     {
-      "title": "Rid of Me"
+      "title": "Rid of Me",
+      "note": "Começa num sussurro e termina em grito."
     },
     {
       "title": "Missed"
@@ -19,10 +30,12 @@
       "title": "Man-Size Sextet"
     },
     {
-      "title": "Highway '61 Revisited"
+      "title": "Highway '61 Revisited",
+      "note": "A versão de PJ Harvey para Bob Dylan."
     },
     {
-      "title": "50ft Queenie"
+      "title": "50ft Queenie",
+      "note": "Uma mulher gigante e debochada."
     },
     {
       "title": "Yuri-G"

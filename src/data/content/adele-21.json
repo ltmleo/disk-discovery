@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Adele tinha 21 anos quando escreveu boa parte do segundo disco, depois do fim de um relacionamento. As canções vão da raiva de \"Rolling in the Deep\" ao luto de \"Someone Like You\".",
+    "Ela gravou com produtores como Paul Epworth e Rick Rubin, misturando soul, gospel e pop.",
+    "\"21\" ganhou seis Grammys, incluindo Álbum do Ano, e é um dos discos mais vendidos do século 21."
+  ],
+  "trivia": [
+    "\"Someone Like You\" foi gravada só com voz e piano, com o compositor Dan Wilson.",
+    "O título é a idade de Adele quando compôs o disco; o anterior se chamava \"19\".",
+    "Parte do disco foi gravada no estúdio Shangri-La, de Rick Rubin, em Malibu."
+  ],
   "tracks": [
     {
-      "title": "Rolling in the Deep"
+      "title": "Rolling in the Deep",
+      "note": "Raiva e gospel, com produção de Paul Epworth."
     },
     {
       "title": "Rumour Has It"
@@ -13,7 +24,8 @@
       "title": "Don't You Remember"
     },
     {
-      "title": "Set Fire to the Rain"
+      "title": "Set Fire to the Rain",
+      "note": "Uma balada épica que virou single."
     },
     {
       "title": "He Won't Go"
@@ -31,7 +43,8 @@
       "title": "Lovesong"
     },
     {
-      "title": "Someone Like You"
+      "title": "Someone Like You",
+      "note": "Só voz e piano."
     },
     {
       "title": "I Found a Boy"

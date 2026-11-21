@@ -1,22 +1,36 @@
 {
+  "history": [
+    "\"Physical Graffiti\" (1975) foi o primeiro lançamento do Led Zeppelin pelo próprio selo, a Swan Song. Para completar um disco duplo, a banda juntou canções novas com sobras de sessões antigas.",
+    "Vai do blues ao funk, do folk ao rock oriental de \"Kashmir\".",
+    "Chegou ao 1º lugar nos EUA e no Reino Unido."
+  ],
+  "trivia": [
+    "\"Kashmir\" foi escrita depois de uma viagem de carro pelo deserto do sul do Marrocos.",
+    "A capa mostra um prédio de Nova York, no St. Mark's Place, com janelas recortadas.",
+    "Parte das sessões aconteceu de novo em Headley Grange."
+  ],
   "tracks": [
     {
-      "title": "Custard Pie"
+      "title": "Custard Pie",
+      "note": "Abre o disco com um blues sujo."
     },
     {
       "title": "The Rover"
     },
     {
-      "title": "In My Time of Dying"
+      "title": "In My Time of Dying",
+      "note": "Mais de 11 minutos de blues com slide."
     },
     {
       "title": "Houses of the Holy"
     },
     {
-      "title": "Trampled Under Foot"
+      "title": "Trampled Under Foot",
+      "note": "Funk inspirado em Robert Johnson."
     },
     {
-      "title": "Kashmir"
+      "title": "Kashmir",
+      "note": "Orquestra, riff hipnótico e o deserto do Marrocos."
     },
     {
       "title": "In the Light"

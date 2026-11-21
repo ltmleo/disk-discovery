@@ -1,10 +1,22 @@
 {
+  "history": [
+    "\"Catch a Fire\" (1973) foi o primeiro disco dos Wailers pela Island. O dono da gravadora, Chris Blackwell, acrescentou em Londres guitarras de rock e teclados às bases gravadas na Jamaica, para atrair o público internacional.",
+    "Na época, os Wailers eram um trio de cantores: Bob Marley, Peter Tosh e Bunny Wailer.",
+    "O disco apresentou o reggae ao público do rock."
+  ],
+  "trivia": [
+    "A capa original era um isqueiro Zippo que se abria de verdade.",
+    "O guitarrista americano Wayne Perkins gravou os solos em Londres.",
+    "Peter Tosh e Bunny Wailer deixaram o grupo pouco depois."
+  ],
   "tracks": [
     {
-      "title": "Concrete Jungle"
+      "title": "Concrete Jungle",
+      "note": "Abre o disco com o solo de Wayne Perkins."
     },
     {
-      "title": "Slave Driver"
+      "title": "Slave Driver",
+      "note": "Sobre a herança da escravidão."
     },
     {
       "title": "400 Years"
@@ -16,7 +28,8 @@
       "title": "Baby We've Got A Date (Rock It Baby)"
     },
     {
-      "title": "Stir It Up"
+      "title": "Stir It Up",
+      "note": "Uma canção de amor que Johnny Nash já tinha transformado em sucesso."
     },
     {
       "title": "Kinky Reggae"

@@ -1,16 +1,29 @@
 {
+  "history": [
+    "O segundo disco do Black Sabbath, de 1970, consolidou o som que viraria o heavy metal: riffs lentos e pesados, letras sobre guerra, drogas e paranoia.",
+    "A faixa-título foi composta em poucos minutos para completar o disco e virou o maior sucesso da banda.",
+    "O álbum chegou ao 1º lugar no Reino Unido."
+  ],
+  "trivia": [
+    "O disco se chamaria \"War Pigs\", mas a gravadora mudou o título com medo da reação à Guerra do Vietnã.",
+    "Tony Iommi perdeu as pontas de dois dedos num acidente numa fábrica; afinava a guitarra mais grave e usava próteses para conseguir tocar.",
+    "O baixista Geezer Butler escrevia a maior parte das letras."
+  ],
   "tracks": [
     {
-      "title": "War Pigs / Luke's Wall"
+      "title": "War Pigs / Luke's Wall",
+      "note": "Um ataque aos políticos que mandam os jovens para a guerra."
     },
     {
-      "title": "Paranoid"
+      "title": "Paranoid",
+      "note": "Feita em minutos para completar o disco."
     },
     {
       "title": "Planet Caravan"
     },
     {
-      "title": "Iron Man"
+      "title": "Iron Man",
+      "note": "Um dos riffs mais famosos do metal."
     },
     {
       "title": "Electric Funeral"

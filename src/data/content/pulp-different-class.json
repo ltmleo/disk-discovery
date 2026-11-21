@@ -1,19 +1,32 @@
 {
+  "history": [
+    "Depois de mais de dez anos de pouco sucesso, o Pulp, de Sheffield, estourou em 1995 com \"Different Class\". Jarvis Cocker escreve sobre classe social, sexo e desejo com humor ácido.",
+    "\"Common People\" virou hino do Britpop.",
+    "O disco ganhou o Mercury Prize de 1996."
+  ],
+  "trivia": [
+    "\"Common People\" fala de uma estudante rica que queria viver \"como as pessoas comuns\".",
+    "No Brit Awards de 1996, Jarvis invadiu o palco durante a apresentação de Michael Jackson.",
+    "A capa original tinha encartes para trocar a imagem da frente."
+  ],
   "tracks": [
     {
-      "title": "Mis-Shapes"
+      "title": "Mis-Shapes",
+      "note": "Um hino para os deslocados."
     },
     {
       "title": "Pencil Skirt"
     },
     {
-      "title": "Common People (Full Length Version)"
+      "title": "Common People (Full Length Version)",
+      "note": "A estudante rica que queria ser \"gente comum\"."
     },
     {
       "title": "I Spy"
     },
     {
-      "title": "Disco 2000"
+      "title": "Disco 2000",
+      "note": "Um amor de infância reencontrado no ano 2000."
     },
     {
       "title": "Live Bed Show"

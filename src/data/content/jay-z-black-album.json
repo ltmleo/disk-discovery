@@ -1,10 +1,21 @@
 {
+  "history": [
+    "Jay-Z anunciou \"The Black Album\" (2003) como seu último disco. Ele chamou um time de produtores: Kanye West, Just Blaze, The Neptunes, Timbaland, Eminem e Rick Rubin, entre outros.",
+    "As letras revisitam a vida dele, do Brooklyn ao topo da indústria.",
+    "Ele voltou a lançar discos três anos depois."
+  ],
+  "trivia": [
+    "\"99 Problems\" foi produzida por Rick Rubin com uma base de rock pesado.",
+    "Jay-Z lançou as vozes sem música para remixes. Danger Mouse as misturou com o \"White Album\", dos Beatles, e criou o famoso \"The Grey Album\".",
+    "\"Encore\" e \"Lucifer\" são produções de Kanye West."
+  ],
   "tracks": [
     {
       "title": "Interlude"
     },
     {
-      "title": "December 4th"
+      "title": "December 4th",
+      "note": "A vida de Jay-Z contada com a voz da mãe."
     },
     {
       "title": "What More Can I Say"
@@ -16,7 +27,8 @@
       "title": "Change Clothes"
     },
     {
-      "title": "Dirt Off Your Shoulder"
+      "title": "Dirt Off Your Shoulder",
+      "note": "Produção de Timbaland, virou gesto de dança."
     },
     {
       "title": "Threat"
@@ -25,7 +37,8 @@
       "title": "Moment of Clarity"
     },
     {
-      "title": "99 Problems"
+      "title": "99 Problems",
+      "note": "Rock pesado de Rick Rubin."
     },
     {
       "title": "Public Service Announcement (Interlude)"

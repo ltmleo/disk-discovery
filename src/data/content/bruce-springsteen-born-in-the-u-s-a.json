@@ -1,7 +1,18 @@
 {
+  "history": [
+    "\"Born in the U.S.A.\" (1984) teve sete singles no top 10 dos EUA, o mesmo recorde de \"Thriller\". Sintetizadores e refrões de arena levaram Springsteen ao público mais amplo da carreira.",
+    "A faixa-título fala de um veterano do Vietnã abandonado pelo país, mas foi entendida como hino patriótico. O presidente Ronald Reagan chegou a citar Springsteen na campanha de 1984.",
+    "Várias músicas nasceram das mesmas sessões de \"Nebraska\"."
+  ],
+  "trivia": [
+    "A capa, de Annie Leibovitz, mostra a calça jeans de Bruce diante da bandeira americana.",
+    "O clipe de \"Dancing in the Dark\" tem a atriz Courteney Cox, então desconhecida.",
+    "O disco vendeu mais de 30 milhões de cópias."
+  ],
   "tracks": [
     {
-      "title": "Born In the U.S.A."
+      "title": "Born In the U.S.A.",
+      "note": "Um veterano do Vietnã esquecido pelo país."
     },
     {
       "title": "Cover Me"
@@ -16,7 +27,8 @@
       "title": "Downbound Train"
     },
     {
-      "title": "I'm On Fire"
+      "title": "I'm On Fire",
+      "note": "Uma balada sussurrada sobre desejo."
     },
     {
       "title": "No Surrender"
@@ -31,7 +43,8 @@
       "title": "Glory Days"
     },
     {
-      "title": "Dancing In the Dark"
+      "title": "Dancing In the Dark",
+      "note": "O clipe com Courteney Cox."
     },
     {
       "title": "My Hometown"

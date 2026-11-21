@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Depois que John Cale saiu, o Velvet Underground gravou em 1969 seu terceiro disco com Doug Yule. O som ficou calmo e íntimo, longe do barulho dos anteriores.",
+    "As canções de Lou Reed falam de amor, culpa, fé e solidão.",
+    "Existem duas mixagens: a do engenheiro de som e a de Lou Reed, apelidada de \"closet mix\"."
+  ],
+  "trivia": [
+    "\"Candy Says\" é cantada por Doug Yule e fala de Candy Darling, que também aparece em \"Walk on the Wild Side\".",
+    "\"After Hours\" é cantada pela baterista Maureen Tucker.",
+    "\"The Murder Mystery\" tem vozes recitando textos diferentes ao mesmo tempo."
+  ],
   "tracks": [
     {
-      "title": "Candy Says"
+      "title": "Candy Says",
+      "note": "Cantada por Doug Yule, sobre Candy Darling."
     },
     {
       "title": "What Goes On"
@@ -10,7 +21,8 @@
       "title": "Some Kinda Love"
     },
     {
-      "title": "Pale Blue Eyes"
+      "title": "Pale Blue Eyes",
+      "note": "Uma das baladas mais bonitas de Lou Reed."
     },
     {
       "title": "Jesus"
@@ -28,7 +40,8 @@
       "title": "The Murder Mystery"
     },
     {
-      "title": "After Hours"
+      "title": "After Hours",
+      "note": "Cantada por Maureen Tucker, a baterista."
     }
   ]
 }

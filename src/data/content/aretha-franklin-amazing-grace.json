@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em janeiro de 1972, no auge da fama, Aretha Franklin gravou dois cultos ao vivo na New Temple Missionary Baptist Church, em Los Angeles, com o reverendo James Cleveland e o Southern California Community Choir.",
+    "Ela voltou à música com que cresceu: o pai, C. L. Franklin, era um pregador famoso e está na plateia do segundo dia.",
+    "\"Amazing Grace\" virou o disco mais vendido da carreira dela e um dos discos de gospel mais vendidos da história."
+  ],
+  "trivia": [
+    "O filme das gravações, dirigido por Sydney Pollack, só estreou em 2018, por problemas de sincronia entre imagem e som.",
+    "Mick Jagger e Charlie Watts, dos Rolling Stones, estavam na plateia.",
+    "Aretha canta \"Wholy Holy\", de \"What's Going On\", de Marvin Gaye."
+  ],
   "tracks": [
     {
-      "title": "Mary, Don't You Weep"
+      "title": "Mary, Don't You Weep",
+      "note": "Um spiritual tradicional com o coro."
     },
     {
       "title": "Medley: Precious Lord, Take My Hand / You've Got A Friend"
@@ -19,7 +30,8 @@
       "title": "What A Friend We Have In Jesus"
     },
     {
-      "title": "Amazing Grace"
+      "title": "Amazing Grace",
+      "note": "Mais de dez minutos de improviso vocal."
     },
     {
       "title": "Precious Memories"
@@ -34,7 +46,8 @@
       "title": "God Will Take Care Of You"
     },
     {
-      "title": "Wholy Holy"
+      "title": "Wholy Holy",
+      "note": "A canção de Marvin Gaye levada à igreja."
     },
     {
       "title": "You'll Never Walk Alone"

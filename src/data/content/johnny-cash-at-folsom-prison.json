@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em janeiro de 1968, Johnny Cash fez dois shows na prisão estadual de Folsom, na Califórnia. Ele vinha de anos de problemas com drogas.",
+    "Os presos vibram com histórias de crime, castigo e redenção. O disco devolveu Cash ao topo e virou um dos discos ao vivo mais famosos.",
+    "June Carter, com quem ele se casaria meses depois, estava no palco."
+  ],
+  "trivia": [
+    "\"Folsom Prison Blues\" (1955) tem o verso \"I shot a man in Reno just to watch him die\".",
+    "\"Greystone Chapel\" foi escrita por um preso de Folsom, Glen Sherley.",
+    "Cash nunca cumpriu pena longa; passou só algumas noites na cadeia."
+  ],
   "tracks": [
     {
-      "title": "Folsom Prison Blues (Live)"
+      "title": "Folsom Prison Blues (Live)",
+      "note": "Os presos vibram no verso de Reno."
     },
     {
       "title": "Dark As the Dungeon (Live)"
@@ -34,7 +45,8 @@
       "title": "Flushed from the Bathroom of Your Heart (Live)"
     },
     {
-      "title": "Jackson (Live)"
+      "title": "Jackson (Live)",
+      "note": "Dueto com June Carter."
     },
     {
       "title": "Give My Love to Rose (Live)"
@@ -46,7 +58,8 @@
       "title": "Green, Green Grass of Home (Live)"
     },
     {
-      "title": "Greystone Chapel (Live)"
+      "title": "Greystone Chapel (Live)",
+      "note": "De Glen Sherley, preso de Folsom."
     }
   ]
 }

@@ -1,4 +1,14 @@
 {
+  "history": [
+    "O segundo disco de Eminem pela Aftermath, de 2000, vendeu cerca de 1,76 milhão de cópias na primeira semana, recorde para o rap na época.",
+    "Eminem alterna humor, raiva e confissões sobre fama, família e violência, através dos personagens Slim Shady e Marshall Mathers.",
+    "O disco foi criticado por letras homofóbicas e misóginas e ganhou o Grammy de melhor álbum de rap."
+  ],
+  "trivia": [
+    "\"Stan\" usa \"Thank You\", de Dido, e a palavra \"stan\" virou gíria para fã obsessivo.",
+    "No Grammy de 2001, Eminem cantou \"Stan\" com Elton John.",
+    "Dr. Dre produziu várias faixas."
+  ],
   "tracks": [
     {
       "title": "Public Service Announcement 2000"
@@ -7,7 +17,8 @@
       "title": "Kill You"
     },
     {
-      "title": "Stan (feat. Dido)"
+      "title": "Stan (feat. Dido)",
+      "note": "Cartas de um fã obsessivo, sobre um sample de Dido."
     },
     {
       "title": "Paul (Skit)"
@@ -19,10 +30,12 @@
       "title": "Steve Berman (Skit)"
     },
     {
-      "title": "The Way I Am"
+      "title": "The Way I Am",
+      "note": "Raiva contra as exigências da fama."
     },
     {
-      "title": "The Real Slim Shady"
+      "title": "The Real Slim Shady",
+      "note": "O primeiro single, cheio de ironia."
     },
     {
       "title": "Remember Me? (feat. RBX & Sticky Fingaz)"

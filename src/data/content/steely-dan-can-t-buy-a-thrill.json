@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Walter Becker e Donald Fagen compunham para outros artistas antes de formar o Steely Dan. A estreia, de 1972, já tinha o pop jazzístico e as letras irônicas da dupla.",
+    "Os dois singles, \"Do It Again\" e \"Reelin' in the Years\", chegaram ao top 20 nos EUA.",
+    "Na época, a dupla ainda era uma banda que fazia shows."
+  ],
+  "trivia": [
+    "O nome Steely Dan vem do livro \"Almoço Nu\", de William S. Burroughs.",
+    "Em \"Do It Again\", Denny Dias toca uma cítara elétrica, e Fagen um órgão Yamaha de plástico.",
+    "O solo de guitarra de \"Reelin' in the Years\" é de Elliott Randall."
+  ],
   "tracks": [
     {
-      "title": "Do It Again"
+      "title": "Do It Again",
+      "note": "Cítara elétrica e um ritmo latino."
     },
     {
-      "title": "Dirty Work"
+      "title": "Dirty Work",
+      "note": "Cantada por David Palmer."
     },
     {
       "title": "Kings"
@@ -16,7 +28,8 @@
       "title": "Only A Fool Would Say That"
     },
     {
-      "title": "Reelin' In The Years"
+      "title": "Reelin' In The Years",
+      "note": "O solo de Elliott Randall."
     },
     {
       "title": "Fire In The Hole"

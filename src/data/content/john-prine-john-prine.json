@@ -1,16 +1,29 @@
 {
+  "history": [
+    "John Prine era carteiro em Chicago e cantava em bares nas horas vagas. Kris Kristofferson o viu tocar e o levou a Nova York, onde ele assinou com a Atlantic.",
+    "A estreia, de 1971, tem canções sobre velhice, guerra, vício e solidão, com humor e compaixão.",
+    "Virou referência para gerações de compositores. Prine morreu em 2020, de complicações da Covid-19."
+  ],
+  "trivia": [
+    "\"Sam Stone\" fala de um veterano viciado em morfina.",
+    "\"Angel from Montgomery\" virou um clássico na voz de Bonnie Raitt.",
+    "Bob Dylan se declarou fã de Prine."
+  ],
   "tracks": [
     {
-      "title": "Illegal Smile"
+      "title": "Illegal Smile",
+      "note": "Abre o disco com humor sobre fugir da realidade."
     },
     {
       "title": "Spanish Pipedream"
     },
     {
-      "title": "Hello In There"
+      "title": "Hello In There",
+      "note": "Sobre a solidão na velhice."
     },
     {
-      "title": "Sam Stone"
+      "title": "Sam Stone",
+      "note": "Um veterano viciado, contado sem melodrama."
     },
     {
       "title": "Paradise"
@@ -25,7 +38,8 @@
       "title": "Far From Me"
     },
     {
-      "title": "Angel From Montgomery"
+      "title": "Angel From Montgomery",
+      "note": "Uma mulher cansada da vida, depois cantada por Bonnie Raitt."
     },
     {
       "title": "Quiet Man"

@@ -1,16 +1,29 @@
 {
+  "history": [
+    "No primeiro disco solo depois do Wham!, George Michael compôs, produziu e tocou boa parte dos instrumentos. \"Faith\" (1987) mistura pop, funk, soul e baladas.",
+    "O disco ganhou o Grammy de Álbum do Ano. George foi o primeiro artista branco solo a chegar ao 1º lugar na parada de álbuns de R&B da Billboard.",
+    "O visual do clipe da faixa-título, com jaqueta de couro, jeans e violão, virou marca da época."
+  ],
+  "trivia": [
+    "\"I Want Your Sex\" foi barrada em várias rádios.",
+    "\"Faith\" abre com um trecho de órgão de \"Freedom\", sucesso do Wham!.",
+    "Seis singles chegaram ao top 5 nos EUA."
+  ],
   "tracks": [
     {
-      "title": "Faith"
+      "title": "Faith",
+      "note": "Começa com o órgão de \"Freedom\"."
     },
     {
-      "title": "Father Figure"
+      "title": "Father Figure",
+      "note": "Uma balada gospel e sensual."
     },
     {
       "title": "I Want Your Sex, Pts. 1 & 2"
     },
     {
-      "title": "One More Try"
+      "title": "One More Try",
+      "note": "Uma balada lenta que chegou ao 1º lugar."
     },
     {
       "title": "Hard Day"

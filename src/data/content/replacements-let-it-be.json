@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Os Replacements, de Minneapolis, eram famosos por shows caóticos e por Paul Westerberg, compositor de canções ao mesmo tempo engraçadas e tristes.",
+    "Em \"Let It Be\" (1984), o punk da banda ganhou baladas, country e rock clássico, sobre adolescência, solidão e desajuste.",
+    "Gravado por um selo independente, virou referência do rock alternativo americano."
+  ],
+  "trivia": [
+    "O título é uma provocação aos Beatles.",
+    "Peter Buck, do R.E.M., toca um solo em \"I Will Dare\".",
+    "O disco tem uma versão de \"Black Diamond\", do Kiss."
+  ],
   "tracks": [
     {
-      "title": "I Will Dare"
+      "title": "I Will Dare",
+      "note": "Com solo de Peter Buck, do R.E.M."
     },
     {
       "title": "Favorite Thing"
@@ -13,13 +24,15 @@
       "title": "Tommy Gets His Tonsils Out"
     },
     {
-      "title": "Androgynous"
+      "title": "Androgynous",
+      "note": "Uma balada ao piano sobre gênero, rara para 1984."
     },
     {
       "title": "Black Diamond"
     },
     {
-      "title": "Unsatisfied"
+      "title": "Unsatisfied",
+      "note": "Um grito de frustração que virou hino."
     },
     {
       "title": "Seen Your Video"
@@ -31,7 +44,8 @@
       "title": "Sixteen Blue"
     },
     {
-      "title": "Answering Machine"
+      "title": "Answering Machine",
+      "note": "Fecha o disco com uma briga contra uma secretária eletrônica."
     }
   ]
 }

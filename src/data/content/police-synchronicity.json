@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em 1983, o The Police gravou \"Synchronicity\" nos estúdios AIR, em Montserrat. As brigas eram tantas que os integrantes gravaram em salas separadas.",
+    "O disco junta pop, jazz, música experimental e reggae, e chegou ao 1º lugar nos EUA.",
+    "Foi o último disco de estúdio da banda."
+  ],
+  "trivia": [
+    "\"Every Breath You Take\" foi escrita por Sting na Jamaica, na casa que tinha sido de Ian Fleming, criador de James Bond.",
+    "Muita gente toma a música por canção de amor, mas ela fala de obsessão e controle.",
+    "O título vem de um conceito do psiquiatra Carl Jung."
+  ],
   "tracks": [
     {
-      "title": "Synchronicity I"
+      "title": "Synchronicity I",
+      "note": "Abre o disco acelerado, falando de Jung."
     },
     {
       "title": "Walking In Your Footsteps"
@@ -19,10 +30,12 @@
       "title": "Synchronicity II"
     },
     {
-      "title": "Every Breath You Take"
+      "title": "Every Breath You Take",
+      "note": "Uma canção de obsessão ouvida como balada romântica."
     },
     {
-      "title": "King Of Pain"
+      "title": "King Of Pain",
+      "note": "Sting enumerando imagens de dor."
     },
     {
       "title": "Wrapped Around Your Finger"

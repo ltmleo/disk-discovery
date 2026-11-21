@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Buddy Holly gravou seus sucessos entre 1956 e 1958, muitos no estúdio de Norman Petty, em Clovis, no Novo México. Ele compunha, cantava e tocava guitarra, algo raro no rock da época.",
+    "Morreu num acidente de avião em 3 de fevereiro de 1959, aos 22 anos, com Ritchie Valens e The Big Bopper: o \"dia em que a música morreu\".",
+    "A coletânea de 1978 reúne as principais gravações com os Crickets e solo."
+  ],
+  "trivia": [
+    "\"That'll Be the Day\" vem de uma fala de John Wayne no filme \"Rastros de Ódio\".",
+    "Os Beatles escolheram o nome pensando nos Crickets, a banda de Holly.",
+    "A bateria de \"Peggy Sue\", de Jerry Allison, é um rufar contínuo."
+  ],
   "tracks": [
     {
-      "title": "That'll Be the Day"
+      "title": "That'll Be the Day",
+      "note": "Uma fala de John Wayne virou hit."
     },
     {
-      "title": "Peggy Sue"
+      "title": "Peggy Sue",
+      "note": "A bateria rufando de Jerry Allison."
     },
     {
       "title": "Words of Love"
     },
     {
-      "title": "Everyday"
+      "title": "Everyday",
+      "note": "Com celesta em vez de guitarra."
     },
     {
       "title": "Not Fade Away"
