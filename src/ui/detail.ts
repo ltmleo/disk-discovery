@@ -39,7 +39,7 @@ export function renderDetail(id: string, collection: Collection, spy = false): H
       h(
         'aside',
         { class: 'detail__card' },
-        renderCard(album, { size: 'lg', tilt: true }),
+        renderCard(album, { size: 'lg', motion: { idle: true, gyro: true, range: 18 } }),
         h(
           'a',
           { class: 'btn btn--spotify', href: spotifyUrl(album), target: '_blank', rel: 'noopener noreferrer' },

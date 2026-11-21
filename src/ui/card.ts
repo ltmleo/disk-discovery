@@ -2,11 +2,12 @@ import type { Album } from '../types';
 import { rarityForRank } from '../rarity';
 import { artCandidates, isDecoded, resolveArt } from '../cover';
 import type { Priority } from '../net/jsonp';
-import { h, prefersReducedMotion } from './dom';
+import { h } from './dom';
+import { CardMotion, type MotionOptions } from './motion';
 
 export interface CardOptions {
-  /** Interactive 3D tilt + holo tracking. */
-  tilt?: boolean;
+  /** Interactive spring tilt + holo tracking. `true` = pointer only. */
+  motion?: boolean | MotionOptions;
   /** Render face-down (front still built so a flip can reveal it). */
   faceDown?: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -122,33 +123,21 @@ export function renderCard(album: Album, opts: CardOptions = {}): HTMLElement {
       'data-rarity': rarity.id,
       'aria-label': `${album.title}, ${album.artist}. Carta ${rarity.label}, posição ${album.rank}.`,
     },
-    h('div', { class: 'card__inner' }, front, cardBack()),
+    // Two transform layers: __tilt (spring-driven, no transition) and __inner (flip, transitioned).
+    h('div', { class: 'card__tilt' }, h('div', { class: 'card__inner' }, front, cardBack())),
   );
 
-  if (opts.tilt && !prefersReducedMotion()) attachTilt(card);
+  if (opts.motion) attachMotion(card, opts.motion === true ? {} : opts.motion);
   return card;
 }
 
-/**
- * Pointer-driven tilt. Writes CSS custom properties only; all visuals live in CSS,
- * so each rarity can interpret --mx/--my (pointer %) and --rx/--ry (rotation) differently.
- */
-export function attachTilt(card: HTMLElement): void {
-  let frame = 0;
-  const set = (x: number, y: number, active: boolean) => {
-    cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(() => {
-      card.style.setProperty('--mx', `${x * 100}%`);
-      card.style.setProperty('--my', `${y * 100}%`);
-      card.style.setProperty('--rx', `${(0.5 - y) * 18}deg`);
-      card.style.setProperty('--ry', `${(x - 0.5) * 22}deg`);
-      card.style.setProperty('--hyp', String(Math.min(1, Math.hypot(x - 0.5, y - 0.5) * 1.6)));
-      card.classList.toggle('is-active', active);
-    });
-  };
-  card.addEventListener('pointermove', (e) => {
-    const r = card.getBoundingClientRect();
-    set((e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height, true);
-  });
-  card.addEventListener('pointerleave', () => set(0.5, 0.5, false));
+const motions = new WeakMap<HTMLElement, CardMotion>();
+
+export function attachMotion(card: HTMLElement, opts: MotionOptions = {}): CardMotion {
+  motions.get(card)?.destroy();
+  const m = new CardMotion(card, opts);
+  motions.set(card, m);
+  return m;
 }
+
+export const motionOf = (card: HTMLElement): CardMotion | undefined => motions.get(card);

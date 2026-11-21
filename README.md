@@ -21,6 +21,17 @@ Hoje há 25 discos, 5 por raridade, então cada raridade sai em 20% dos pacotes.
 - Na revelação toca um trecho de 30s de `previewTrack`, vindo da API de busca do iTunes (JSONP). Na página do disco cada faixa tem ▶.
 - O botão 🔊/🔇 no topo silencia tudo, e a escolha fica salva no navegador.
 
+## Movimento das cartas
+
+`src/ui/motion.ts` move as cartas com física de mola: inclinação, posição do brilho e "levantar" ao tocar.
+
+- **Fontes de movimento, por prioridade:** ponteiro, varredura de brilho após a revelação, giroscópio do celular e balanço automático.
+- **Só JS escreve variáveis CSS** (`--rx/--ry/--mx/--my/--dx/--dy/--hyp/--lift`). Holo, reflexo, paralaxe da capa e sombra são calculados no CSS de cada raridade.
+- **Custo:** o loop de animação só roda enquanto algo se move, então cartas paradas na galeria não gastam processamento.
+- **Giroscópio:** no iPhone a permissão é pedida no toque que revela a carta ou abre o zoom.
+- **Galeria:** tocar numa carta faz ela voar ao centro girando. Esc ou "Fechar" devolvem a carta ao lugar. Ctrl/Cmd+clique abre a página direto.
+- **Movimento reduzido:** quem ativou essa preferência no sistema não recebe nada disso.
+
 ## Modo espiar
 
 Na galeria, o botão **👀 Espiar** mostra todos os discos, inclusive os que ainda não foram tirados (desbotados e com uma fita "ESPIANDO"). O modo só lê os dados: a coleção e os contadores não mudam. O estado fica na URL (`#/galeria?espiar`, `#/disco/<id>?espiar`). Sem o parâmetro, discos não tirados continuam bloqueados.

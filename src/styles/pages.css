@@ -495,3 +495,80 @@
     margin-left: 0;
   }
 }
+
+/* ---------- Inspect overlay (card picked up from the gallery) ---------- */
+html.is-inspecting {
+  overflow: hidden;
+}
+
+.inspect {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  padding: 24px 16px max(24px, env(safe-area-inset-bottom));
+}
+
+.inspect__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 42%, var(--glow, rgba(255, 255, 255, 0.25)), transparent 60%),
+    rgba(20, 18, 16, 0.82);
+  backdrop-filter: blur(3px);
+  animation: inspect-fade 0.35s ease both;
+}
+
+.inspect--rare { --glow: rgba(60, 120, 255, 0.35); }
+.inspect--epic { --glow: rgba(200, 60, 255, 0.4); }
+.inspect--legendary { --glow: rgba(255, 205, 60, 0.45); }
+.inspect--uncommon { --glow: rgba(42, 168, 118, 0.35); }
+
+.inspect__stage {
+  position: relative;
+  perspective: 1400px;
+  display: grid;
+  place-items: center;
+}
+
+.inspect .card--lg {
+  --w: min(360px, 82vw, calc((100dvh - 180px) * 63 / 88));
+}
+
+.inspect.is-spied .card {
+  filter: grayscale(0.6);
+}
+
+.inspect__actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  animation: inspect-fade 0.4s 0.35s ease both;
+}
+
+.inspect__note {
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
+  color: var(--paper-2);
+  font: 0.9rem var(--f-type);
+}
+
+.inspect.is-closing .inspect__backdrop,
+.inspect.is-closing .inspect__actions {
+  animation: inspect-fade 0.3s ease reverse both;
+}
+
+@keyframes inspect-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.gallery__link {
+  cursor: zoom-in;
+}

@@ -3,7 +3,8 @@ import type { Collection } from '../collection';
 import { ALBUMS } from '../data/albums';
 import { drawAlbum } from '../draw';
 import { rarityForRank } from '../rarity';
-import { renderCard, attachTilt } from './card';
+import { renderCard, attachMotion } from './card';
+import { enableGyro, recalibrateGyro } from './motion';
 import { h, prefersReducedMotion, ransom, wait } from './dom';
 import * as sfx from '../audio/sfx';
 import { playPreview, prefetchPreview, stopPreview } from '../audio/preview';
@@ -19,6 +20,17 @@ const SUSPENSE_MS: Record<string, number> = {
   epic: 1100,
   legendary: 1600,
 };
+
+/**
+ * A multi-turn flip ends at -360deg, visually identical to 0. Snap back to 0 with
+ * transitions off, so later tilts start from a clean state.
+ */
+function settleFlip(card: HTMLElement) {
+  card.classList.add('no-flip-transition');
+  card.classList.remove('is-flipping');
+  void card.offsetWidth; // commit the style change before re-enabling transitions
+  requestAnimationFrame(() => card.classList.remove('no-flip-transition'));
+}
 
 /** Lets the reveal sting play out before the music fades in. */
 const FANFARE_MS: Record<string, number> = {
@@ -142,14 +154,19 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     // Everything up to the first await runs inside the click gesture (autoplay rules).
     sfx.flip();
     sfx.reveal(rarity.id);
+    enableGyro(); // iOS asks for motion permission, which needs this click gesture
+    recalibrateGyro();
     playPreview(album, album.previewTrack, { delayMs: FANFARE_MS[rarity.id], maxMs: 20_000 });
     card.classList.remove('is-facedown', 'is-emerging');
     card.classList.add('is-flipping');
     if (!prefersReducedMotion()) burst(stage, rarity.id);
 
-    await wait(prefersReducedMotion() ? 0 : 700);
+    // Legendary cards spin one and a half turns before settling (see .card--legendary.is-flipping).
+    await wait(prefersReducedMotion() ? 0 : rarity.id === 'legendary' ? 1250 : 750);
+    settleFlip(card);
     card.classList.remove('is-flipping');
-    attachTilt(card);
+    // Shine sweep across the freshly revealed card, then idle sway / gyroscope.
+    attachMotion(card, { idle: true, gyro: true, range: 18 }).sweep();
 
     // Replace the button wrapper with a plain container so the revealed card isn't an inert button.
     const holder = h('div', { class: 'reveal-slot is-done' }, card);
