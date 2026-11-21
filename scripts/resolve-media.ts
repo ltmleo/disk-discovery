@@ -12,7 +12,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { ALBUMS } from '../src/data/albums';
 import type { MediaEntry } from '../src/data/media';
-import { pickArtwork, pickPreview, type ItunesItem } from '../src/net/match';
+import { artworkTemplate, pickArtistId, pickArtwork, pickCollection, pickPreview, type ItunesItem } from '../src/net/match';
 
 const OUT = fileURLToPath(new URL('../src/data/media.generated.json', import.meta.url));
 const FORCE = process.argv.includes('--force');
@@ -22,15 +22,16 @@ const ITUNES_GAP = 3200;
 const MB_GAP = 1100;
 
 /** Bump to re-try entries that came back empty under an older resolver. */
-const MEDIA_VERSION = 2;
+const MEDIA_VERSION = 3;
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 let lastItunes = 0;
 
-async function itunes(params: Record<string, string>): Promise<ItunesItem[]> {
+async function itunes(params: Record<string, string>, endpoint: 'search' | 'lookup' = 'search'): Promise<ItunesItem[]> {
   const wait = lastItunes + ITUNES_GAP - Date.now();
   if (wait > 0) await sleep(wait);
   lastItunes = Date.now();
-  const url = `https://itunes.apple.com/search?${new URLSearchParams({ media: 'music', limit: '15', ...params })}`;
+  const query = endpoint === 'search' ? { media: 'music', limit: '15', ...params } : params;
+  const url = `https://itunes.apple.com/${endpoint}?${new URLSearchParams(query)}`;
   const res = await fetch(url, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(10_000) });
   if (!res.ok) throw new Error(`iTunes ${res.status}`);
   return ((await res.json()) as { results?: ItunesItem[] }).results ?? [];
@@ -49,6 +50,24 @@ async function musicbrainz(title: string, artist: string, attempt = 1): Promise<
   if (!res.ok) throw new Error(`MusicBrainz ${res.status}`);
   const best = ((await res.json()) as { 'release-groups'?: { id: string; score: number }[] })['release-groups']?.[0];
   return best && best.score >= 90 ? best.id : null;
+}
+
+/**
+ * Full discography of an artist (cached per artist). Plain search is relevance-noisy:
+ * tributes and singles can push the original album out of the results entirely.
+ */
+const discographies = new Map<string, Promise<ItunesItem[]>>();
+function discography(artist: string): Promise<ItunesItem[]> {
+  let p = discographies.get(artist);
+  if (!p) {
+    p = (async () => {
+      const id = pickArtistId(await itunes({ entity: 'musicArtist', term: artist, limit: '10' }), artist);
+      if (!id) return [];
+      return (await itunes({ id: String(id), entity: 'album', limit: '200' }, 'lookup')).filter((r) => r.wrapperType === 'collection');
+    })();
+    discographies.set(artist, p);
+  }
+  return p;
 }
 
 async function main() {
@@ -72,21 +91,38 @@ async function main() {
       const pt = album.previewTrack;
       entry.previews ??= {};
 
-      // One song search serves two purposes: the preview, and an artwork fallback
-      // (song results carry their album's cover, and the album search misses some catalogue titles).
+      // Primary: find the exact album in the artist's discography, then read its tracklist
+      // for the preview. Fallbacks: plain album search, then song search.
+      const needPreview = entry.previews[pt] === undefined || (entry.previews[pt] === null && stale);
+      const needArt = entry.art === undefined || (entry.art === null && stale);
       let songs: ItunesItem[] | null = null;
       const songSearch = async () => (songs ??= await itunes({ entity: 'song', term: `${album.artist} ${pt}` }));
 
-      if (entry.previews[pt] === undefined || (entry.previews[pt] === null && stale)) {
-        entry.previews[pt] = pickPreview(await songSearch(), album, pt);
-        log.push(`preview:${entry.previews[pt] ? 'ok' : 'none'}`);
+      if (needArt || needPreview) {
+        const coll = pickCollection(await discography(album.artist), album);
+        if (needArt && coll) {
+          entry.art = artworkTemplate(coll);
+          log.push('art:ok (discography)');
+        }
+        if (needPreview && coll?.collectionId) {
+          const tracks = await itunes({ id: String(coll.collectionId), entity: 'song' }, 'lookup');
+          const url = pickPreview(tracks, album, pt);
+          if (url) {
+            entry.previews[pt] = url;
+            log.push('preview:ok (tracklist)');
+          }
+        }
       }
-      if (entry.art === undefined || (entry.art === null && stale)) {
+      if (needPreview && !entry.previews[pt]) {
+        entry.previews[pt] = pickPreview(await songSearch(), album, pt);
+        log.push(`preview:${entry.previews[pt] ? 'ok (search)' : 'none'}`);
+      }
+      if (needArt && !entry.art) {
         let art = pickArtwork(await itunes({ entity: 'album', term: `${album.artist} ${album.title}` }), album);
-        let via = 'album';
+        let via = 'album search';
         if (!art) {
           art = pickArtwork(await songSearch(), album);
-          via = 'song';
+          via = 'song search';
         }
         entry.art = art;
         log.push(`art:${art ? `ok (${via})` : 'none'}`);

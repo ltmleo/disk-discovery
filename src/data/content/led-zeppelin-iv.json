@@ -1,0 +1,45 @@
+{
+  "history": [
+    "Cansado das críticas, o Led Zeppelin decidiu lançar o quarto disco sem título e sem o nome da banda na capa: só uma pintura de um velho carregando gravetos e quatro símbolos, um para cada integrante.",
+    "Grande parte foi gravada em Headley Grange, uma casa de campo antiga no interior da Inglaterra, com o estúdio móvel dos Rolling Stones estacionado do lado de fora. A acústica da casa deu ao disco um som próprio.",
+    "Apesar do anonimato, o álbum virou um dos mais vendidos da história, puxado por \"Stairway to Heaven\", que nunca saiu como single nos EUA."
+  ],
+  "trivia": [
+    "A bateria de \"When the Levee Breaks\" foi gravada com John Bonham na escadaria de Headley Grange, com microfones no andar de cima. É uma das batidas mais sampleadas do hip-hop.",
+    "\"The Battle of Evermore\" tem Sandy Denny, do Fairport Convention: a única cantora convidada num disco do Led Zeppelin.",
+    "Em 2020, a banda venceu definitivamente o processo que acusava \"Stairway to Heaven\" de plagiar \"Taurus\", do Spirit."
+  ],
+  "tracks": [
+    {
+      "title": "Black Dog",
+      "note": "O nome vem de um cachorro preto que rondava Headley Grange."
+    },
+    {
+      "title": "Rock and Roll",
+      "note": "Nasceu de uma jam em que Bonham tocou a introdução de \"Keep A-Knockin'\", de Little Richard."
+    },
+    {
+      "title": "The Battle of Evermore",
+      "note": "Inspirada em \"O Senhor dos Anéis\", com bandolim."
+    },
+    {
+      "title": "Stairway to Heaven",
+      "note": "Oito minutos que vão do violão e das flautas ao solo de guitarra mais votado de várias listas."
+    },
+    {
+      "title": "Misty Mountain Hop"
+    },
+    {
+      "title": "Four Sticks",
+      "note": "Bonham tocou com duas baquetas em cada mão."
+    },
+    {
+      "title": "Going to California",
+      "note": "Inspirada em Joni Mitchell."
+    },
+    {
+      "title": "When the Levee Breaks",
+      "note": "Releitura de um blues de Kansas Joe McCoy e Memphis Minnie sobre a enchente do Mississippi de 1927."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "history": [
+    "Em 1972, David Bowie criou Ziggy Stardust: um rockstar andrógino, mensageiro de alienígenas, que surge quando faltam cinco anos para o fim do mundo e é destruído pela própria fama.",
+    "A banda, os Spiders From Mars, tinha Mick Ronson na guitarra, Trevor Bolder no baixo e Mick \"Woody\" Woodmansey na bateria. Bowie vivia o personagem também no palco, com cabelo vermelho, macacões e maquiagem.",
+    "A performance de \"Starman\" no programa \"Top of the Pops\", com Bowie abraçando Ronson, foi um choque para a Inglaterra e é lembrada por uma geração de músicos como o momento em que decidiram fazer música."
+  ],
+  "trivia": [
+    "A foto da capa foi tirada na Heddon Street, em Londres, numa noite chuvosa. Hoje a rua tem uma placa homenageando a imagem.",
+    "Bowie \"aposentou\" Ziggy no palco do Hammersmith Odeon em julho de 1973, sem avisar boa parte da própria banda.",
+    "\"It Ain't Easy\" é a única canção do disco que não foi composta por Bowie: é de Ron Davies."
+  ],
+  "tracks": [
+    {
+      "title": "Five Years",
+      "note": "Abre com a notícia de que o planeta tem só cinco anos."
+    },
+    {
+      "title": "Soul Love"
+    },
+    {
+      "title": "Moonage Daydream",
+      "note": "Tem um dos solos de guitarra mais lembrados de Mick Ronson."
+    },
+    {
+      "title": "Starman",
+      "note": "O salto de oitava no refrão é uma piscadela para \"Over the Rainbow\"."
+    },
+    {
+      "title": "It Ain't Easy"
+    },
+    {
+      "title": "Lady Stardust"
+    },
+    {
+      "title": "Star"
+    },
+    {
+      "title": "Hang On to Yourself"
+    },
+    {
+      "title": "Ziggy Stardust",
+      "note": "A história do personagem, contada por um dos músicos da banda."
+    },
+    {
+      "title": "Suffragette City",
+      "note": "\"Wham bam, thank you ma'am!\""
+    },
+    {
+      "title": "Rock 'n' Roll Suicide",
+      "note": "Fecha o disco e encerrava os shows: \"You're not alone!\""
+    }
+  ]
+}

@@ -572,3 +572,25 @@ html.is-inspecting {
 .gallery__link {
   cursor: zoom-in;
 }
+
+/* ---------- Lazy story skeleton ---------- */
+.story__skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story__skeleton .section-label {
+  align-self: flex-start;
+  opacity: 0.5;
+}
+
+.skeleton-line {
+  height: 0.95em;
+  background: linear-gradient(90deg, var(--newsprint) 25%, #efe8d8 50%, var(--newsprint) 75%) 0 0 / 300% 100%;
+  animation: skeleton 1.2s linear infinite;
+}
+
+@keyframes skeleton {
+  to { background-position: -300% 0; }
+}

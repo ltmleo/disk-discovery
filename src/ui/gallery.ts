@@ -5,6 +5,7 @@ import { RARITIES, rarityForRank } from '../rarity';
 import { renderCard, cardBack, stars } from './card';
 import { h, ransom } from './dom';
 import { openInspect } from './inspect';
+import { prefetchContent } from '../data/content';
 
 type Filter = RarityId | 'all';
 
@@ -123,6 +124,14 @@ export function renderGallery(collection: Collection, initialSpy = false): HTMLE
     spyNote,
     grid,
   );
+  // Hover/focus on a card is a strong hint the detail page is next: warm its text chunk.
+  const warm = (e: Event) => {
+    const id = (e.target as Element).closest<HTMLElement>('a.gallery__link')?.dataset.album;
+    if (id) prefetchContent(id);
+  };
+  grid.addEventListener('pointerover', warm);
+  grid.addEventListener('focusin', warm);
+
   // Plain clicks pick the card up (inspect overlay); modified clicks keep normal link behaviour.
   grid.addEventListener('click', (e) => {
     const link = (e.target as Element).closest<HTMLAnchorElement>('a.gallery__link');

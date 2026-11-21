@@ -15,6 +15,9 @@ export const norm = (s = ''): string =>
 
 export interface ItunesItem {
   wrapperType?: string;
+  kind?: string;
+  artistId?: number;
+  collectionId?: number;
   trackName?: string;
   artistName?: string;
   collectionName?: string;
@@ -55,27 +58,40 @@ export function pickPreview(results: ItunesItem[], album: AlbumLike, track: stri
   return best?.url ?? null;
 }
 
-/**
- * Best album artwork. Returns a template with `{size}` so callers pick the
- * resolution (the store CDN serves any NxN).
- */
-export function pickArtwork(results: ItunesItem[], album: AlbumLike): string | null {
+/** Best matching album (collection) for a record: same artist, closest title, standard edition preferred. */
+export function pickCollection(results: ItunesItem[], album: AlbumLike): ItunesItem | null {
   const record = norm(album.title);
-  let best: { url: string; score: number } | null = null;
+  let best: { item: ItunesItem; score: number } | null = null;
   for (const r of results) {
-    if (!r.artworkUrl100 || !sameArtist(r.artistName, album.artist)) continue;
+    if (!r.artworkUrl100 || !r.collectionName || !sameArtist(r.artistName, album.artist)) continue;
     const name = norm(r.collectionName);
     let score = 0;
     if (name === record) score += 4;
     else if (name.startsWith(record) || record.startsWith(name)) score += 2;
     else continue;
     // Check the raw name: edition markers usually live in the parentheses norm() strips.
-    const raw = (r.collectionName ?? '').toLowerCase();
+    const raw = r.collectionName.toLowerCase();
     if (!NOISE.test(raw)) score += 1;
     if (!/deluxe|anniversary|expanded|edition|remaster/.test(raw)) score += 1;
-    if (!best || score > best.score) best = { url: r.artworkUrl100, score };
+    if (!best || score > best.score) best = { item: r, score };
   }
-  return best ? best.url.replace(/\/\d+x\d+(bb)?(\.\w+)$/, '/{size}x{size}bb$2') : null;
+  return best?.item ?? null;
+}
+
+/** Artwork template with `{size}`, so callers pick the resolution (the CDN serves any NxN). */
+export function artworkTemplate(item: ItunesItem | null): string | null {
+  return item?.artworkUrl100 ? item.artworkUrl100.replace(/\/\d+x\d+(bb)?(\.\w+)$/, '/{size}x{size}bb$2') : null;
+}
+
+export function pickArtwork(results: ItunesItem[], album: AlbumLike): string | null {
+  return artworkTemplate(pickCollection(results, album));
+}
+
+/** Exact artist id from a musicArtist search (avoids tribute/cover acts with similar names). */
+export function pickArtistId(results: ItunesItem[], artist: string): number | null {
+  const target = norm(artist);
+  const exact = results.find((r) => r.artistId && norm(r.artistName) === target);
+  return exact?.artistId ?? results.find((r) => r.artistId && sameArtist(r.artistName, artist))?.artistId ?? null;
 }
 
 export const artworkAt = (template: string, size: number): string =>

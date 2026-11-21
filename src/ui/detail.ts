@@ -6,7 +6,8 @@ import { renderCard, stars } from './card';
 import { h, ransom } from './dom';
 import { nowPlaying, onPlayer, playPreview, stopPreview } from '../audio/preview';
 import { unlock } from '../audio/sfx';
-import type { Album } from '../types';
+import type { Album, AlbumContent } from '../types';
+import { loadContent } from '../data/content';
 
 const dateFmt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' });
 
@@ -67,20 +68,62 @@ export function renderDetail(id: string, collection: Collection, spy = false): H
         h('p', { class: 'kicker' }, `${album.artist} · ${album.year} · ${album.genre}`),
         h('h1', { class: 'detail__title' }, album.title),
         h('p', { class: 'detail__dek' }, album.tagline),
-        h('h2', { class: 'section-label' }, 'A história'),
-        h('div', { class: 'prose' }, album.history.map((p) => h('p', {}, p))),
-        h('h2', { class: 'section-label' }, 'Curiosidades'),
-        h('ul', { class: 'notes', role: 'list' }, album.trivia.map((t) => h('li', { class: 'note' }, t))),
-        h('h2', { class: 'section-label' }, 'Faixas'),
-        trackList(album),
-        h('p', { class: 'source' }, 'Ranking: Rolling Stone, “The 500 Greatest Albums of All Time” (2020). Capas: Cover Art Archive.'),
+        storyBody(album),
+        h('p', { class: 'source' }, 'Ranking: Rolling Stone, “The 500 Greatest Albums of All Time” (2020). Capas: iTunes / Cover Art Archive.'),
       ),
     ),
   );
 }
 
-function trackList(album: Album): HTMLElement {
-  const rows = album.tracks.map((t) => {
+/**
+ * Story sections render as a skeleton first; the album's content chunk is fetched
+ * (usually already prefetched on reveal / hover) and swapped in when it arrives.
+ */
+function storyBody(album: Album): HTMLElement {
+  const body = h('div', { class: 'story', 'aria-busy': 'true' }, skeleton());
+  const load = () => {
+    body.setAttribute('aria-busy', 'true');
+    body.replaceChildren(skeleton());
+    loadContent(album.id).then(
+      (content) => {
+        body.removeAttribute('aria-busy');
+        body.replaceChildren(
+          h('h2', { class: 'section-label' }, 'A história'),
+          h('div', { class: 'prose' }, content.history.map((p) => h('p', {}, p))),
+          h('h2', { class: 'section-label' }, 'Curiosidades'),
+          h('ul', { class: 'notes', role: 'list' }, content.trivia.map((t) => h('li', { class: 'note' }, t))),
+          h('h2', { class: 'section-label' }, 'Faixas'),
+          trackList(album, content),
+        );
+      },
+      () => {
+        body.removeAttribute('aria-busy');
+        body.replaceChildren(
+          h(
+            'p',
+            { class: 'clip clip--note' },
+            'Não foi possível carregar a história deste disco. ',
+            h('button', { class: 'btn', type: 'button', onclick: load }, 'Tentar de novo'),
+          ),
+        );
+      },
+    );
+  };
+  load();
+  return body;
+}
+
+function skeleton(): HTMLElement {
+  return h(
+    'div',
+    { class: 'story__skeleton', 'aria-label': 'Carregando a história do disco' },
+    h('span', { class: 'section-label' }, 'A história'),
+    ...[92, 100, 84, 96, 60].map((w) => h('span', { class: 'skeleton-line', style: `width:${w}%` })),
+  );
+}
+
+function trackList(album: Album, content: AlbumContent): HTMLElement {
+  const rows = content.tracks.map((t) => {
     const btn = h(
       'button',
       {

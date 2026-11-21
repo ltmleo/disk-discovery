@@ -9,6 +9,7 @@ import { h, prefersReducedMotion, ransom, wait } from './dom';
 import * as sfx from '../audio/sfx';
 import { playPreview, prefetchPreview, stopPreview } from '../audio/preview';
 import { preloadArt } from '../cover';
+import { prefetchContent } from '../data/content';
 
 type Phase = 'sealed' | 'tearing' | 'facedown' | 'revealed';
 
@@ -101,6 +102,8 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     stopPreview(300);
 
     const { album, art } = next!;
+    // Likely next step is "Ler a história": fetch its text while the card is revealed.
+    prefetchContent(album.id);
     const { isNew, entry } = collection.add(album.id);
     onChange();
 

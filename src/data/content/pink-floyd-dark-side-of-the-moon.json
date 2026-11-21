@@ -1,0 +1,50 @@
+{
+  "history": [
+    "O Pink Floyd montou \"The Dark Side of the Moon\" tocando as músicas ao vivo por meses antes de gravar. As letras de Roger Waters tratam das pressões que enlouquecem uma pessoa: tempo, dinheiro, guerra, morte e doença mental, um tema marcado pela lembrança de Syd Barrett, ex-líder da banda.",
+    "Gravado nos estúdios Abbey Road com o engenheiro Alan Parsons, o disco usa loops de fita, sintetizadores, relógios, caixas registradoras e trechos de entrevistas com funcionários do estúdio.",
+    "Ficou mais de 900 semanas na Billboard 200, um recorde, e é um dos álbuns mais vendidos da história."
+  ],
+  "trivia": [
+    "As vozes faladas vêm de perguntas sobre loucura e morte feitas a quem passava pelo estúdio, incluindo o porteiro do Abbey Road. Paul McCartney também respondeu, mas suas falas não foram usadas.",
+    "Clare Torry improvisou os vocais de \"The Great Gig in the Sky\" em poucas tomadas, recebendo um cachê de sessão. Anos depois, ganhou crédito de coautora na Justiça.",
+    "A capa com o prisma é do estúdio Hipgnosis, desenhada por George Hardie."
+  ],
+  "tracks": [
+    {
+      "title": "Speak to Me",
+      "note": "Uma prévia sonora do disco inteiro, com batimentos cardíacos."
+    },
+    {
+      "title": "Breathe"
+    },
+    {
+      "title": "On the Run",
+      "note": "Feita num sintetizador EMS VCS3, com passos e um avião caindo."
+    },
+    {
+      "title": "Time",
+      "note": "Abre com dezenas de relógios gravados numa loja de antiguidades."
+    },
+    {
+      "title": "The Great Gig in the Sky"
+    },
+    {
+      "title": "Money",
+      "note": "Em compasso 7/4, com um loop de caixa registradora e moedas."
+    },
+    {
+      "title": "Us and Them"
+    },
+    {
+      "title": "Any Colour You Like"
+    },
+    {
+      "title": "Brain Damage",
+      "note": "Sobre Syd Barrett: \"the lunatic is in my head\"."
+    },
+    {
+      "title": "Eclipse",
+      "note": "Termina com a frase: \"Não existe lado escuro da Lua. Na verdade, é tudo escuro.\""
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "history": [
+    "Depois de anos sampleando discos dos anos 70 e 80, o Daft Punk decidiu fazer o contrário: chamar os próprios músicos daquela época e gravar tudo ao vivo, em estúdios caros, com fita e instrumentos de verdade.",
+    "Entre os convidados estão Nile Rodgers, Giorgio Moroder, Paul Williams, Julian Casablancas (Strokes), Pharrell Williams e Panda Bear, além de músicos de estúdio como Omar Hakim e Nathan East.",
+    "\"Get Lucky\" foi a música do verão de 2013 no mundo inteiro, e o disco ganhou cinco Grammys, incluindo Álbum do Ano."
+  ],
+  "trivia": [
+    "Em \"Giorgio by Moroder\", a voz de Giorgio foi gravada com microfones de épocas diferentes, um para cada década da vida que ele conta.",
+    "O lançamento foi anunciado com um teaser de 15 segundos num intervalo do \"Saturday Night Live\".",
+    "Foi o último álbum de estúdio da dupla, que se separou em 2021."
+  ],
+  "tracks": [
+    {
+      "title": "Give Life Back to Music"
+    },
+    {
+      "title": "The Game of Love"
+    },
+    {
+      "title": "Giorgio by Moroder",
+      "note": "Nove minutos com Giorgio contando como inventou o som da disco eletrônica."
+    },
+    {
+      "title": "Within"
+    },
+    {
+      "title": "Instant Crush",
+      "note": "Com Julian Casablancas, dos Strokes."
+    },
+    {
+      "title": "Lose Yourself to Dance",
+      "note": "Com Pharrell."
+    },
+    {
+      "title": "Touch",
+      "note": "Com Paul Williams, compositor de \"The Rainbow Connection\"."
+    },
+    {
+      "title": "Get Lucky",
+      "note": "Com Pharrell e a guitarra de Nile Rodgers, do Chic."
+    },
+    {
+      "title": "Beyond"
+    },
+    {
+      "title": "Motherboard"
+    },
+    {
+      "title": "Fragments of Time"
+    },
+    {
+      "title": "Doin' It Right",
+      "note": "Com Panda Bear, do Animal Collective."
+    },
+    {
+      "title": "Contact",
+      "note": "Termina com um sample de áudio de uma missão Apollo."
+    }
+  ]
+}

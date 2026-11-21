@@ -1,0 +1,35 @@
+{
+  "history": [
+    "Em 1959, Miles Davis estava cansado da avalanche de acordes do bebop. Queria improvisar sobre escalas, os modos, que dão ao solista espaço para criar melodia em vez de correr atrás da harmonia.",
+    "Ele reuniu um sexteto absurdo: John Coltrane e Cannonball Adderley nos saxofones, Bill Evans no piano (com Wynton Kelly em uma faixa), Paul Chambers no baixo e Jimmy Cobb na bateria. As sessões foram em 2 de março e 22 de abril de 1959, no estúdio da Columbia na 30th Street, em Nova York.",
+    "Os músicos chegaram com pouco mais que esboços de escalas e melodias. Quase tudo foi gravado de primeira. O resultado é o disco de jazz mais vendido da história e uma porta de entrada para o gênero até hoje."
+  ],
+  "trivia": [
+    "Durante décadas, o lado A circulou um pouco rápido e agudo demais: um dos gravadores da sessão rodava mais devagar. A afinação só foi corrigida em reedições dos anos 90.",
+    "Bill Evans escreveu as notas do encarte comparando a improvisação a uma forma de pintura japonesa, em que o artista não pode corrigir o traço.",
+    "A autoria de \"Blue in Green\" é disputada: o disco credita Miles, mas Bill Evans sempre disse que a composição era dele.",
+    "Em algumas prensagens antigas, os títulos de \"All Blues\" e \"Flamenco Sketches\" apareciam trocados."
+  ],
+  "tracks": [
+    {
+      "title": "So What",
+      "note": "O diálogo de pergunta e resposta entre baixo e sopros virou um dos riffs mais reconhecíveis do jazz. \"So what\" era uma expressão que Miles usava muito."
+    },
+    {
+      "title": "Freddie Freeloader",
+      "note": "Única faixa com Wynton Kelly no piano. O nome homenageia um conhecido de Miles da Filadélfia."
+    },
+    {
+      "title": "Blue in Green",
+      "note": "Uma balada curta e introspectiva, quase toda conduzida pelo piano de Bill Evans."
+    },
+    {
+      "title": "All Blues",
+      "note": "Um blues em compasso 6/8 que soa leve e balançado."
+    },
+    {
+      "title": "Flamenco Sketches",
+      "note": "Cinco escalas em sequência, e cada solista decide quanto tempo fica em cada uma."
+    }
+  ]
+}

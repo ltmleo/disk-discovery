@@ -40,9 +40,3 @@ describe('pickPreview', () => {
     expect(url).toBe('ok');
   });
 });
-
-describe('dataset previews', () => {
-  it('every previewTrack exists in its tracklist', () => {
-    for (const a of ALBUMS) expect(a.tracks.map((t) => t.title)).toContain(a.previewTrack);
-  });
-});

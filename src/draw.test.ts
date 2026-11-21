@@ -39,8 +39,6 @@ describe('dataset', () => {
     expect(new Set(ALBUMS.map((a) => a.rank)).size).toBe(ALBUMS.length);
     for (const a of ALBUMS) {
       expect(() => rarityForRank(a.rank)).not.toThrow();
-      expect(a.history.length).toBeGreaterThan(0);
-      expect(a.tracks.length).toBeGreaterThan(0);
     }
   });
 

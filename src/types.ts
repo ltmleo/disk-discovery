@@ -24,6 +24,13 @@ export interface Album {
   previewTrack: string;
   /** One-line hook shown on the card. */
   tagline: string;
+}
+
+/**
+ * Editorial content, kept out of the main bundle: one JSON per album in
+ * src/data/content/, fetched only when its detail page (or a likely visit) needs it.
+ */
+export interface AlbumContent {
   /** Paragraphs. */
   history: string[];
   trivia: string[];
