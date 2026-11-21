@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "media": "tsx scripts/resolve-media.ts",
     "import": "tsx scripts/import-list.ts",
-    "og": "tsx scripts/og-images.ts"
+    "og": "tsx scripts/og-images.ts",
+    "audit": "tsx scripts/audit-tracks.ts"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",

@@ -3,7 +3,7 @@
  * Adaptive rate limit: starts at ITUNES_GAP ms between calls (default 1500) and backs
  * off when Apple answers 403/429/5xx, which is how it signals throttling.
  */
-import { pickArtistId, type ItunesItem } from '../../src/net/match';
+import { norm, pickArtistId, type ItunesItem } from '../../src/net/match';
 
 const UA = 'disk-discovery/1.0';
 let gap = Number(process.env.ITUNES_GAP ?? 1500);
@@ -50,16 +50,26 @@ export const artistId = memo(async (artist) =>
   pickArtistId(await itunes({ entity: 'musicArtist', term: artist, limit: '10' }), artist),
 );
 
+/** Every store artist id with this exact name: some artists are split ("Pretenders" has three). */
+const artistIds = memo(async (artist) => {
+  const results = await itunes({ entity: 'musicArtist', term: artist, limit: '10' });
+  const key = (s?: string) => norm(s).replace(/^the /, '');
+  const exact = results.filter((r) => r.artistId && key(r.artistName) === key(artist)).map((r) => r.artistId!);
+  const fallback = pickArtistId(results, artist);
+  return [...new Set(exact.length ? exact : fallback ? [fallback] : [])].slice(0, 3);
+});
+
 /**
- * Full discography of an artist. Plain search is relevance-noisy: tributes and singles
- * can push the original album out of the results entirely.
+ * Full discography of an artist (merged across split store pages). Plain search is
+ * relevance-noisy: tributes and singles can push the original album out of the results.
  */
 export const discography = memo(async (artist) => {
-  const id = await artistId(artist);
-  if (!id) return [];
-  return (await itunes({ id: String(id), entity: 'album', limit: '200' }, 'lookup')).filter(
-    (r) => r.wrapperType === 'collection',
-  );
+  const out: ItunesItem[] = [];
+  for (const id of await artistIds(artist)) {
+    const items = await itunes({ id: String(id), entity: 'album', limit: '200' }, 'lookup');
+    out.push(...items.filter((r) => r.wrapperType === 'collection'));
+  }
+  return out;
 });
 
 /** The artist's songs in store relevance order (roughly: most popular first). */

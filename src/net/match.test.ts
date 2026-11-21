@@ -51,4 +51,27 @@ describe('rankCollections', () => {
     );
     expect(ranked[0]!.collectionId).toBe(3);
   });
+
+  it('skips alternate-mix and cast-recording editions and prefers the original year', async () => {
+    const { rankCollections } = await import('./match');
+    const art = { artworkUrl100: 'x/100x100bb.jpg' };
+    const love = rankCollections(
+      [
+        { ...art, artistName: 'Love', collectionId: 1, collectionName: 'Forever Changes (Alternate Mix & Outtakes)', trackCount: 21 },
+        { ...art, artistName: 'Love', collectionId: 2, collectionName: 'Forever Changes (Remastered)', trackCount: 11 },
+      ],
+      { title: 'Forever Changes', artist: 'Love', year: 1967 },
+    );
+    expect(love[0]!.collectionId).toBe(2);
+    const va = { ...art, artistName: 'Various Artists' };
+    const snf = rankCollections(
+      [
+        { ...va, collectionId: 1, collectionName: 'Saturday Night Fever (1998 Original Cast Recording)', releaseDate: '1998-01-01T08:00:00Z' },
+        { ...va, collectionId: 2, collectionName: 'Saturday Night Fever', releaseDate: '2012-05-01T07:00:00Z' },
+        { ...va, collectionId: 3, collectionName: 'Saturday Night Fever (The Original Movie Soundtrack)', releaseDate: '1977-11-15T08:00:00Z' },
+      ],
+      { title: 'Saturday Night Fever', artist: 'Various Artists', year: 1977 },
+    );
+    expect(snf[0]!.collectionId).toBe(3);
+  });
 });

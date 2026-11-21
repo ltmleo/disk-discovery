@@ -28,14 +28,20 @@ export interface ItunesItem {
   collectionName?: string;
   previewUrl?: string;
   artworkUrl100?: string;
+  releaseDate?: string;
 }
 
 interface AlbumLike {
   title: string;
   artist: string;
+  /** Original release year: breaks ties between same-named editions (1977 soundtrack vs 1998 cast). */
+  year?: number;
 }
 
 const NOISE = /\b(live|remix|demo|edit|karaoke|instrumental|acoustic|tribute|cover)\b/;
+/** Collection names that are not the original album, even when the title matches. */
+const NOT_ORIGINAL =
+  /\b(live|remix(es)?|demos?|karaoke|instrumentals?|acoustic|tribute|covers?|alternate|outtakes?|sessions|rarities|cast recording|original score|in the style of)\b/;
 
 /** Artist names on stores vary ("Prince and the Revolution" vs "Prince"); accept either containing the other. */
 function sameArtist(candidate: string | undefined, artist: string): boolean {
@@ -52,6 +58,7 @@ export function pickPreview(results: ItunesItem[], album: AlbumLike, track: stri
   for (const r of results) {
     if (!r.previewUrl || !sameArtist(r.artistName, album.artist)) continue;
     const name = norm(r.trackName);
+    if (!name) continue;
     let score = 0;
     if (name === title) score += 4;
     else if (name.startsWith(title) || title.startsWith(name)) score += 2;
@@ -74,13 +81,17 @@ export function rankCollections(results: ItunesItem[], album: AlbumLike): Itunes
   for (const r of results) {
     if (!r.artworkUrl100 || !r.collectionName || !sameArtist(r.artistName, album.artist)) continue;
     const name = norm(r.collectionName);
+    if (!name) continue; // non-Latin names normalise to '' and would prefix-match anything
     let score = 0;
     if (name === record) score += 4;
     else if (name.startsWith(record) || record.startsWith(name)) score += 2;
     else continue;
     // Check the raw name: edition markers usually live in the parentheses norm() strips.
     const raw = r.collectionName.toLowerCase();
-    if (!NOISE.test(raw)) score += 1;
+    if (NOT_ORIGINAL.test(raw) && !NOT_ORIGINAL.test(album.title.toLowerCase())) score -= 2;
+    else score += 1;
+    const released = Number(r.releaseDate?.slice(0, 4));
+    if (album.year && released && Math.abs(released - album.year) <= 1) score += 1;
     if (!/deluxe|anniversary|expanded|edition|remaster/.test(raw)) score += 1;
     if (/ - (single|ep)$/.test(raw) && !/ - (single|ep)$/i.test(album.title)) continue;
     // Censored editions and 1–3 track releases lose to a full edition when one exists.

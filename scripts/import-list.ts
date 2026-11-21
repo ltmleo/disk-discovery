@@ -95,7 +95,7 @@ export function cleanTitle(name: string): string {
 /** Deluxe editions append demos/live takes after the original album; keep the original running order. */
 // "live" only as a recording marker: "(Live)", "Live at/in/from" (not "I Don't Live Today").
 const EXTRA =
-  /\b(demo|bonus|alternate|outtake|rehearsal|instrumental|session|take \d|early version|rough mix)\b|\(live\b|\blive (at|in|from)\b|- live\b/i;
+  /\b(demo|bonus|alternate|outtake|rehearsal|instrumental|session|take \d|early version|rough mix|remix)\b|\(live\b|\blive (at|in|from)\b|- live\b/i;
 
 function tsEntry(a: Album): string {
   const keys = ['id', 'rank', 'title', 'artist', 'year', 'label', 'genre', 'tagline', 'previewTrack'] as const;
@@ -114,7 +114,7 @@ function appendToTier(a: Album): void {
 
 async function resolve(row: Row) {
   const alias = ALIASES[String(row.rank)] ?? {};
-  const like = { title: alias.title ?? row.title, artist: alias.artist ?? row.artist };
+  const like = { title: alias.title ?? row.title, artist: alias.artist ?? row.artist, year: row.year };
   let candidates = rankCollections(await discography(like.artist), like);
   // Fallback for artists whose store page is split (e.g. "X and the Y" vs "X").
   if (!candidates.length) candidates = rankCollections(await itunes({ entity: 'album', term: `${like.artist} ${like.title}` }), like);
@@ -140,9 +140,10 @@ async function resolve(row: Row) {
     const opener = norm(cleanTitle(tracks[0]?.trackName ?? ''));
     const repeat = tracks.findIndex((t, i) => i > 4 && norm(cleanTitle(t.trackName ?? '')) === opener);
     if (repeat > 0) tracks = tracks.slice(0, repeat);
-    const firstExtra = tracks.findIndex((t) => EXTRA.test(t.trackName ?? ''));
-    if (firstExtra > 4) tracks = tracks.slice(0, firstExtra);
   }
+  // Any edition (remasters too) may append demos/remixes after the album: cut at the first one.
+  const firstExtra = tracks.findIndex((t) => EXTRA.test(t.trackName ?? ''));
+  if (firstExtra > 4) tracks = tracks.slice(0, firstExtra);
 
   // Preview: the album track that ranks highest among the artist's songs in the store
   // (a decent proxy for "the song people know"), else the opening track.
