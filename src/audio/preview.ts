@@ -130,7 +130,7 @@ export interface PlayOptions {
   /** Start silently and fade in after this delay (lets a sound effect finish first). */
   delayMs?: number;
   /** Where the play came from, for analytics. */
-  source?: 'reveal' | 'tracklist';
+  source?: 'reveal' | 'tracklist' | 'inspect';
 }
 
 /**

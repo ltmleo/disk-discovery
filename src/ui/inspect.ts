@@ -4,6 +4,8 @@ import { renderCard, motionOf } from './card';
 import { h, prefersReducedMotion } from './dom';
 import { enableGyro, recalibrateGyro } from './motion';
 import { track } from '../analytics';
+import { playPreview, stopPreview } from '../audio/preview';
+import * as sfx from '../audio/sfx';
 
 /**
  * "Pick up the card": the gallery card flies to the centre spinning (FLIP animation:
@@ -40,6 +42,11 @@ export function openInspect(album: Album, from: HTMLElement, opts: { href: strin
   from.style.visibility = 'hidden';
   enableGyro(); // the click that opened this is a user gesture (iOS permission)
   recalibrateGyro();
+  // Same as a reveal: the album's song fades in once the card lands. Started here, inside the
+  // click, so autoplay rules allow it (the gallery already warmed the preview on hover).
+  sfx.unlock();
+  sfx.whoosh();
+  if (album.previewTrack) playPreview(album, album.previewTrack, { delayMs: 500, maxMs: 25_000, source: 'inspect' });
   close.focus({ preventScroll: true });
 
   const reduced = prefersReducedMotion();
@@ -67,6 +74,7 @@ export function openInspect(album: Album, from: HTMLElement, opts: { href: strin
     closing = true;
     document.removeEventListener('keydown', onKey);
     overlay.classList.add('is-closing');
+    stopPreview(500);
     motionOf(card)?.destroy();
     flight(true).finished.finally(() => {
       overlay.remove();

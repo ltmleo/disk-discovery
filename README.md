@@ -45,12 +45,20 @@ O site faz parte do ecossistema ltmleo.github.io (skill `ltm-novo-site`): GA4 `G
 | `reveal_card` | carta virada | `rarity`, `new_card` |
 | `select_content` | página do disco aberta | `content_type`, `content_id`, `rarity`, `source` (`reveal`, `inspect`, `gallery`, `direct`, `back`) |
 | `inspect_card` | carta ampliada na galeria | `content_id`, `rarity` |
-| `play_preview` | prévia começou a tocar | `content_id`, `rarity`, `source` (`reveal`, `tracklist`) |
+| `play_preview` | prévia começou a tocar | `content_id`, `rarity`, `source` (`reveal`, `inspect`, `tracklist`) |
+| `gallery_search` | busca estabilizada (1,2 s sem digitar) | `has_results` (o texto digitado **não** é enviado) |
 | `toggle_spy` / `toggle_sound` | botões | `enabled` |
 | `unlock_achievement` | 10, 25, 50, 100, 250 e 500 discos; primeiro de cada raridade | `achievement_id` |
 
 - **Perfil do jogador:** propriedade de usuário `collection_tier` (`0`, `1-9`, `10-49`, `50-199`, `200+`).
 - **No painel do GA**, crie as dimensões personalizadas para ver os parâmetros nos relatórios. Com escopo de evento: `rarity`, `new_card`, `source`, `enabled`, `content_id` e `achievement_id`. Com escopo de usuário: `collection_tier`.
+
+## Galeria
+
+- **Busca** por título, artista, ano, gravadora ou posição. Ignora acentos e maiúsculas, e todos os termos precisam bater. `42` busca a posição 42 ou o texto "42"; `#42` busca só a posição. `/` foca a busca e `Esc` limpa.
+- **Sem spoiler:** fora do modo espiar, a busca mostra só os seus discos. Dos não descobertos, ela mostra só a quantidade e oferece um botão "espiar".
+- **Desempenho:** as 500 cartas são montadas uma única vez; busca e filtros só alternam `hidden`.
+- **Música:** abrir uma carta (o zoom) toca a prévia, como na revelação, e fechar para. O áudio começa a carregar quando o ponteiro passa sobre a carta, e o arquivo de prévias é baixado em segundo plano quando a galeria abre. Assim a música toca dentro do próprio clique, como exigem as regras de autoplay.
 
 ## Modo espiar
 

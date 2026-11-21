@@ -24,8 +24,10 @@ export interface Events {
   /** Card picked up in the gallery (zoom view). */
   inspect_card: { content_id: string; rarity: RarityId };
   /** A preview actually started playing (blocked/unavailable previews are not counted). */
-  play_preview: { content_id: string; rarity: RarityId; source: 'reveal' | 'tracklist' };
+  play_preview: { content_id: string; rarity: RarityId; source: 'reveal' | 'tracklist' | 'inspect' };
   toggle_spy: { enabled: YesNo };
+  /** A settled gallery search. The typed text is never sent (free text may contain personal data). */
+  gallery_search: { has_results: YesNo };
   toggle_sound: { enabled: YesNo };
   /** Collection milestones and first card of each rarity. GA recommended event. */
   unlock_achievement: { achievement_id: string };
