@@ -833,5 +833,72 @@
       "Down On the Street": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/de/93/e4de9373-092c-021c-5416-0d056f51dca3/mzaf_16246524010489690759.plus.aac.p.m4a"
     },
     "v": 3
+  },
+  "drake-take-care": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/74/fb/d3/74fbd365-bd52-23b4-604b-7f164407b0a9/00602527899107.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Headlines": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/95/6e/02/956e02ab-976a-fb92-457f-1d7dd08526b9/mzaf_12128800255456045158.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "r-e-m-automatic-for-the-people": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fb/d9/e2/fbd9e203-818c-06cf-405d-8906f2eae6ec/00888072396258.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Man on the Moon": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/6c/1d/3b/6c1d3b82-cedb-0c8e-e090-695db82dd726/mzaf_7368714912863939075.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "metallica-master-of-puppets": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/69/f9/05/69f905ed-ff04-58a2-8de2-1b5338745f19/858978005226.png/{size}x{size}bb.jpg",
+    "previews": {
+      "Master of Puppets": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/33/60/47/33604765-23dd-96bc-9c7a-8cee07a26799/mzaf_13429965221142623245.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "lucinda-williams-car-wheels-on-a-gravel-road": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/7b/3a/55/7b3a5503-e015-2074-7aeb-c93c745b4cb7/06UMGIM05369.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Car Wheels On a Gravel Road": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/18/0b/78180ba7-a0db-58f6-3194-1cc5ad0c8d4e/mzaf_9697885578273340005.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "taylor-swift-red": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e1/b1/04/e1b10422-f39c-a8c7-195b-ebdb8c05489c/21UM1IM25046.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "I Knew You Were Trouble (Taylor's Version)": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/75/6c/b6/756cb611-b074-ca42-a83c-b8121a126f67/mzaf_7834694475109411169.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "band-music-from-big-pink": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/44/eb/9f/44eb9ffc-8e77-9a3d-8be7-8ca579de93cc/13UACIM30926.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "The Weight": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/72/fe/2872fec5-a591-8966-b444-c517db510822/mzaf_7218909187133486494.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "led-zeppelin-led-zeppelin": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/4c/7b/80/4c7b80b4-ed35-4e06-ec80-2f7aaaabb5c5/dj.pjjmtwdc.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Babe I'm Gonna Leave You": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/45/6b/e4456b07-1f2d-9eed-66ec-0f2ef6bdfefd/mzaf_8740498446766306940.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "clash-clash": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/53/8d/7f/538d7f34-71e3-df2d-5221-4df922ab9510/886443520738.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Police & Thieves": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/77/eb/fb/77ebfbdb-89a2-62ab-bc3d-926fea4a8513/mzaf_2754336521848421037.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "de-la-soul-three-feet-high-and-rising": {
+    "previews": {},
+    "v": 3
+  },
+  "rolling-stones-sticky-fingers": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/7f/e0/b4/7fe0b4da-36cd-a1d0-0f19-ef3fec18e3cd/08UMGIM15742.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Can't You Hear Me Knocking": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/b4/93/52b49308-8ed6-61dc-d3a8-f25e404fd1c5/mzaf_8823409699242381422.plus.aac.p.m4a"
+    },
+    "v": 3
   }
 }
