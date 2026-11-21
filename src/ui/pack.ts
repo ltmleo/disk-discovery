@@ -10,6 +10,8 @@ import * as sfx from '../audio/sfx';
 import { playPreview, prefetchPreview, stopPreview } from '../audio/preview';
 import { preloadArt } from '../cover';
 import { prefetchContent } from '../data/content';
+import { href } from '../router';
+import { achievementsFor, setPlayerProfile, track, yesNo } from '../analytics';
 
 type Phase = 'sealed' | 'tearing' | 'facedown' | 'revealed';
 
@@ -104,12 +106,17 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     const { album, art } = next!;
     // Likely next step is "Ler a história": fetch its text while the card is revealed.
     prefetchContent(album.id);
+    const rarity = rarityForRank(album.rank);
+    const uniqueBefore = collection.uniqueCount;
+    const sameRarityBefore = ALBUMS.filter((a) => collection.has(a.id) && rarityForRank(a.rank).id === rarity.id).length;
     const { isNew, entry } = collection.add(album.id);
     onChange();
 
-    const rarity = rarityForRank(album.rank);
-    // Optional call: gtag is absent with ad blockers. Rarity only, no personal data.
-    window.gtag?.('event', 'open_pack', { rarity: rarity.id });
+    track('open_pack', { rarity: rarity.id, new_card: yesNo(isNew) });
+    for (const id of achievementsFor({ isNew, rarity: rarity.id, uniqueBefore, uniqueAfter: collection.uniqueCount, sameRarityBefore })) {
+      track('unlock_achievement', { achievement_id: id });
+    }
+    if (isNew) setPlayerProfile(collection.uniqueCount);
     const pack = stage.querySelector<HTMLElement>('.pack')!;
     pack.classList.add('is-torn');
     stage.dataset.rarity = rarity.id;
@@ -156,12 +163,13 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
   async function reveal(slot: HTMLButtonElement, card: HTMLElement, album: Album, isNew: boolean, count: number) {
     setPhase('revealed');
     const rarity = rarityForRank(album.rank);
+    track('reveal_card', { rarity: rarity.id, new_card: yesNo(isNew) });
     // Everything up to the first await runs inside the click gesture (autoplay rules).
     sfx.flip();
     sfx.reveal(rarity.id);
     enableGyro(); // iOS asks for motion permission, which needs this click gesture
     recalibrateGyro();
-    if (album.previewTrack) playPreview(album, album.previewTrack, { delayMs: FANFARE_MS[rarity.id], maxMs: 20_000 });
+    if (album.previewTrack) playPreview(album, album.previewTrack, { delayMs: FANFARE_MS[rarity.id], maxMs: 20_000, source: 'reveal' });
     card.classList.remove('is-facedown', 'is-emerging');
     card.classList.add('is-flipping');
     if (!prefersReducedMotion()) burst(stage, rarity.id);
@@ -185,7 +193,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
 
     status.textContent = `${rarity.label}! ${album.title}, de ${album.artist} (#${album.rank}).`;
     actions.replaceChildren(
-      h('a', { class: 'btn btn--primary', href: `#/disco/${album.id}` }, 'Ler a história'),
+      h('a', { class: 'btn btn--primary', href: href.album(album.id), 'data-source': 'reveal' }, 'Ler a história'),
       h('button', { class: 'btn', type: 'button', onclick: mountPack }, 'Abrir outro pacote'),
     );
   }

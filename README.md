@@ -32,6 +32,26 @@ Os 500 discos estão no jogo, então as chances acima são as reais.
 - **Galeria:** tocar numa carta faz ela voar ao centro girando. Esc ou "Fechar" devolvem a carta ao lugar. Ctrl/Cmd+clique abre a página direto.
 - **Movimento reduzido:** quem ativou essa preferência no sistema não recebe nada disso.
 
+## Analytics
+
+O site faz parte do ecossistema ltmleo.github.io (skill `ltm-novo-site`): GA4 `G-714QFE3V9G` com `content_group: 'disk-discovery'` e a barra `<ltm-bar>`.
+
+- **Páginas:** cada rota é um caminho real com título próprio. O GA registra o `page_view` sozinho, pela medição otimizada de mudanças de histórico; nenhum `page_view` é enviado manualmente. Discos ainda não tirados têm título neutro ("Disco bloqueado"), para não dar spoiler.
+- **Eventos** (todos em `src/analytics.ts`, tipados):
+
+| Evento | Quando | Parâmetros |
+| --- | --- | --- |
+| `open_pack` | pacote rasgado | `rarity`, `new_card` |
+| `reveal_card` | carta virada | `rarity`, `new_card` |
+| `select_content` | página do disco aberta | `content_type`, `content_id`, `rarity`, `source` (`reveal`, `inspect`, `gallery`, `direct`, `back`) |
+| `inspect_card` | carta ampliada na galeria | `content_id`, `rarity` |
+| `play_preview` | prévia começou a tocar | `content_id`, `rarity`, `source` (`reveal`, `tracklist`) |
+| `toggle_spy` / `toggle_sound` | botões | `enabled` |
+| `unlock_achievement` | 10, 25, 50, 100, 250 e 500 discos; primeiro de cada raridade | `achievement_id` |
+
+- **Perfil do jogador:** propriedade de usuário `collection_tier` (`0`, `1-9`, `10-49`, `50-199`, `200+`).
+- **No painel do GA**, crie as dimensões personalizadas para ver os parâmetros nos relatórios. Com escopo de evento: `rarity`, `new_card`, `source`, `enabled`, `content_id` e `achievement_id`. Com escopo de usuário: `collection_tier`.
+
 ## Modo espiar
 
 Na galeria, o botão **👀 Espiar** mostra todos os discos, inclusive os que ainda não foram tirados (desbotados e com uma fita "ESPIANDO"). O modo só lê os dados: a coleção e os contadores não mudam. O estado fica na URL (`#/galeria?espiar`, `#/disco/<id>?espiar`). Sem o parâmetro, discos não tirados continuam bloqueados.
@@ -83,5 +103,5 @@ O próximo disco é sorteado quando o pacote aparece na tela. A capa (baixada e 
 - `src/collection.ts`: coleção no `localStorage`, versionada e tolerante a storage indisponível ou corrompido.
 - `src/audio/`: `sfx.ts` (efeitos sintetizados), `preview.ts` (busca e player de prévias, um único `<audio>` compartilhado), `settings.ts` (mudo).
 - `src/cover.ts`: pipeline de capas (fontes, cache, pré-carregamento). `src/net/`: JSONP, fila com prioridade e regras de correspondência compartilhadas com o script de build.
-- `src/ui/*`: views sem framework. Rotas por hash (`#/`, `#/galeria`, `#/disco/:id`), então não é preciso o truque do `404.html` no Pages.
+- `src/ui/*`: views sem framework. `src/router.ts`: rotas reais (`/disk-discovery/`, `/galeria`, `/disco/<id>`) com History API. O build copia `index.html` para `404.html`, para que os links diretos funcionem no GitHub Pages. Links antigos com `#/` são convertidos antes do GA carregar.
 - `src/styles/card.css`: o JS só escreve `--mx/--my/--rx/--ry`. Cada raridade interpreta essas variáveis do seu jeito (foil na arte, reverse holo, moldura dourada).

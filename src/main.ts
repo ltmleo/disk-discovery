@@ -3,10 +3,12 @@ import './styles/card.css';
 import './styles/pack.css';
 import './styles/pages.css';
 import { Collection } from './collection';
-import { ALBUMS } from './data/albums';
+import { ALBUMS, ALBUM_BY_ID } from './data/albums';
+import { href, startRouter, type Route } from './router';
+import { setPlayerProfile, track, yesNo } from './analytics';
 import { h, ransom } from './ui/dom';
 import { renderPackView } from './ui/pack';
-import { renderGallery, SPY_PARAM } from './ui/gallery';
+import { renderGallery } from './ui/gallery';
 import { renderDetail } from './ui/detail';
 import { isMuted, onMuteChange, setMuted } from './audio/settings';
 import { onPlayer, stopPreview } from './audio/preview';
@@ -24,12 +26,12 @@ const updateCounter = () => {
 const header = h(
   'header',
   { class: 'masthead' },
-  h('a', { class: 'masthead__logo', href: '#/' }, ransom('DISK DISCOVERY')),
+  h('a', { class: 'masthead__logo', href: href.pack() }, ransom('DISK DISCOVERY')),
   h(
     'nav',
     { class: 'nav', 'aria-label': 'Principal' },
-    h('a', { class: 'nav__link', href: '#/', 'data-route': 'pack' }, 'Abrir pacote'),
-    h('a', { class: 'nav__link', href: '#/galeria', 'data-route': 'gallery' }, 'Galeria ', counter),
+    h('a', { class: 'nav__link', href: href.pack(), 'data-route': 'pack' }, 'Abrir pacote'),
+    h('a', { class: 'nav__link', href: href.gallery(), 'data-route': 'gallery' }, 'Galeria ', counter),
     muteButton(),
   ),
 );
@@ -41,6 +43,7 @@ function muteButton(): HTMLElement {
     onclick: () => {
       unlock();
       setMuted(!isMuted());
+      track('toggle_sound', { enabled: yesNo(!isMuted()) });
     },
   });
   const sync = (m: boolean) => {
@@ -91,18 +94,27 @@ const footer = h(
 );
 app.replaceChildren(header, main, footer, nowPlayingBar());
 
-/** Hash routing: works on GitHub Pages without a 404.html redirect hack. */
-function route() {
-  const [path = '/', query = ''] = (location.hash.replace(/^#/, '') || '/').split('?');
-  const [, section, param] = path.split('/');
-  const spy = new URLSearchParams(query).has(SPY_PARAM);
+const SITE = 'Disk Discovery';
+
+function titleFor(route: Route): string {
+  if (route.name === 'gallery') return `Galeria · ${SITE}`;
+  if (route.name === 'album') {
+    const album = ALBUM_BY_ID.get(route.id);
+    // Not-yet-pulled albums keep a neutral title (no spoilers in tabs/history) unless spying.
+    if (album && (route.spy || collection.has(album.id))) return `${album.title} · ${album.artist} · ${SITE}`;
+    return `Disco bloqueado · ${SITE}`;
+  }
+  return `${SITE} · Abra um pacote`;
+}
+
+function render(route: Route) {
   let view: HTMLElement;
   let active = 'pack';
-  if (section === 'galeria') {
-    view = renderGallery(collection, spy);
+  if (route.name === 'gallery') {
+    view = renderGallery(collection, route.spy);
     active = 'gallery';
-  } else if (section === 'disco' && param) {
-    view = renderDetail(decodeURIComponent(param), collection, spy);
+  } else if (route.name === 'album') {
+    view = renderDetail(route.id, collection, route.spy);
     active = 'gallery';
   } else {
     view = renderPackView(collection, updateCounter);
@@ -115,6 +127,6 @@ function route() {
   window.scrollTo({ top: 0 });
 }
 
-window.addEventListener('hashchange', route);
 updateCounter();
-route();
+setPlayerProfile(collection.uniqueCount);
+startRouter({ render, title: titleFor });

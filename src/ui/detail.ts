@@ -8,6 +8,8 @@ import { nowPlaying, onPlayer, playPreview, stopPreview } from '../audio/preview
 import { unlock } from '../audio/sfx';
 import type { Album, AlbumContent } from '../types';
 import { loadContent } from '../data/content';
+import { href, takeSource } from '../router';
+import { track } from '../analytics';
 
 const dateFmt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' });
 
@@ -22,15 +24,16 @@ export function renderDetail(id: string, collection: Collection, spy = false): H
       { class: 'view view--locked' },
       h('h1', { class: 'headline' }, ransom('???')),
       h('p', { class: 'clip clip--note' }, 'Você ainda não descobriu esse disco. Abra pacotes para encontrá-lo.'),
-      h('a', { class: 'btn btn--primary', href: '#/' }, 'Abrir pacote'),
+      h('a', { class: 'btn btn--primary', href: href.pack() }, 'Abrir pacote'),
     );
   }
 
   const rarity = rarityForRank(album.rank);
+  track('select_content', { content_type: 'album', content_id: album.id, rarity: rarity.id, source: takeSource() ?? 'direct' });
   return h(
     'section',
     { class: `view view--detail detail--${rarity.id}${entry ? '' : ' is-spied'}` },
-    h('a', { class: 'back-link', href: spy ? '#/galeria?espiar' : '#/galeria' }, '← Galeria'),
+    h('a', { class: 'back-link', href: href.gallery(spy) }, '← Galeria'),
     entry
       ? null
       : h('p', { class: 'clip clip--note detail__spy' }, '👀 Espiando: você ainda não tirou este disco. Abra pacotes para tê-lo na coleção.'),
@@ -151,7 +154,7 @@ function trackList(album: Album, content: AlbumContent): HTMLElement {
           const np = nowPlaying();
           const same = np?.album.id === album.id && np.track === t.title;
           if (same && (np.state === 'playing' || np.state === 'loading')) stopPreview();
-          else playPreview(album, t.title);
+          else playPreview(album, t.title, { source: 'tracklist' });
         },
       },
       '▶',

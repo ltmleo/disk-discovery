@@ -5,16 +5,16 @@ import { RARITIES, rarityForRank } from '../rarity';
 import { renderCard, cardBack, stars } from './card';
 import { h, ransom } from './dom';
 import { openInspect } from './inspect';
+import { href } from '../router';
+import { track, yesNo } from '../analytics';
 import { prefetchContent } from '../data/content';
 
 type Filter = RarityId | 'all';
 
-export const SPY_PARAM = 'espiar';
-
 /**
  * @param initialSpy spy mode shows every album, including ones not pulled yet.
  * It is read-only: it never touches the collection, and the state lives in the URL
- * (`#/galeria?espiar`) so back/forward and the detail page keep it.
+ * (`/galeria?espiar`) so back/forward and the detail page keep it.
  */
 export function renderGallery(collection: Collection, initialSpy = false): HTMLElement {
   let filter: Filter = 'all';
@@ -38,7 +38,7 @@ export function renderGallery(collection: Collection, initialSpy = false): HTMLE
               'a',
               {
                 class: 'gallery__link',
-                href: `#/disco/${album.id}?${SPY_PARAM}`,
+                href: href.album(album.id, true),
                 'data-album': album.id,
                 'data-spied': '1',
                 'aria-label': `${album.title} (espiando, ainda não descoberto)`,
@@ -63,7 +63,7 @@ export function renderGallery(collection: Collection, initialSpy = false): HTMLE
         return h(
           'li',
           { class: 'gallery__item' },
-          h('a', { class: 'gallery__link', href: `#/disco/${album.id}`, 'data-album': album.id }, renderCard(album, { size: 'sm', motion: { range: 14 }, lazy: true })),
+          h('a', { class: 'gallery__link', href: href.album(album.id), 'data-album': album.id, 'data-source': 'gallery' }, renderCard(album, { size: 'sm', motion: { range: 14 }, lazy: true })),
           entry.count > 1 ? h('span', { class: 'gallery__count' }, `×${entry.count}`) : null,
         );
       }),
@@ -83,7 +83,8 @@ export function renderGallery(collection: Collection, initialSpy = false): HTMLE
     onclick: () => {
       spy = !spy;
       // replaceState: keeps the URL shareable without firing hashchange (no full re-render).
-      history.replaceState(null, '', spy ? `#/galeria?${SPY_PARAM}` : '#/galeria');
+      history.replaceState(null, '', href.gallery(spy));
+      track('toggle_spy', { enabled: yesNo(spy) });
       draw();
     },
   });

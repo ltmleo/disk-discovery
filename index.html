@@ -6,6 +6,12 @@
     <meta name="description" content="Abra pacotes e descubra os 500 maiores discos de todos os tempos." />
     <meta name="theme-color" content="#efe6d2" />
     <title>Disk Discovery</title>
+    <script>
+      // Old hash links (#/galeria, #/disco/<id>) → real paths, before GA records the page_view.
+      if (location.hash.indexOf('#/') === 0) {
+        history.replaceState(null, '', '/disk-discovery/' + location.hash.slice(2));
+      }
+    </script>
     <!-- Ecossistema ltmleo.github.io (skill ltm-novo-site): GA com content_group + barra compartilhada -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-714QFE3V9G"></script>
     <script>

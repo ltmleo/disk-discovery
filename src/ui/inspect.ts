@@ -3,6 +3,7 @@ import { rarityForRank } from '../rarity';
 import { renderCard, motionOf } from './card';
 import { h, prefersReducedMotion } from './dom';
 import { enableGyro, recalibrateGyro } from './motion';
+import { track } from '../analytics';
 
 /**
  * "Pick up the card": the gallery card flies to the centre spinning (FLIP animation:
@@ -11,6 +12,7 @@ import { enableGyro, recalibrateGyro } from './motion';
  */
 export function openInspect(album: Album, from: HTMLElement, opts: { href: string; spied: boolean }): void {
   const rarity = rarityForRank(album.rank);
+  track('inspect_card', { content_id: album.id, rarity: rarity.id });
   const card = renderCard(album, { size: 'lg', motion: { idle: true, gyro: true, range: 22 } });
   const close = h('button', { class: 'btn inspect__close', type: 'button' }, 'Fechar');
   const overlay = h(
@@ -27,7 +29,7 @@ export function openInspect(album: Album, from: HTMLElement, opts: { href: strin
       'div',
       { class: 'inspect__actions' },
       opts.spied ? h('p', { class: 'inspect__note' }, '👀 Espiando: este disco ainda não é seu.') : null,
-      h('a', { class: 'btn btn--primary', href: opts.href }, 'Ler a história'),
+      h('a', { class: 'btn btn--primary', href: opts.href, 'data-source': 'inspect' }, 'Ler a história'),
       close,
     ),
   );

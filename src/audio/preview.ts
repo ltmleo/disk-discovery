@@ -3,6 +3,8 @@ import { isMuted, onMuteChange } from './settings';
 import { loadPreviews } from '../data/media';
 import { jsonp } from '../net/jsonp';
 import { pickPreview, type ItunesItem } from '../net/match';
+import { track as trackEvent } from '../analytics';
+import { rarityForRank } from '../rarity';
 
 /**
  * 30-second previews from the iTunes Search API. Spotify stopped exposing preview_url
@@ -127,6 +129,8 @@ export interface PlayOptions {
   maxMs?: number;
   /** Start silently and fade in after this delay (lets a sound effect finish first). */
   delayMs?: number;
+  /** Where the play came from, for analytics. */
+  source?: 'reveal' | 'tracklist';
 }
 
 /**
@@ -153,6 +157,9 @@ export function playPreview(album: Album, track: string, opts: PlayOptions = {})
       () => {
         if (my !== token) return;
         set({ album, track, state: 'playing' });
+        if (opts.source) {
+          trackEvent('play_preview', { content_id: album.id, rarity: rarityForRank(album.rank).id, source: opts.source });
+        }
         const delay = opts.delayMs ?? 0;
         window.setTimeout(() => my === token && fadeTo(TARGET_VOL, 900), delay);
         if (opts.maxMs) stopTimer = window.setTimeout(() => stopPreview(1500), delay + opts.maxMs);
