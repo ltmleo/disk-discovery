@@ -11,10 +11,12 @@
   ],
   "tracks": [
     {
-      "title": "So Far Away"
+      "title": "So Far Away",
+      "note": "Abre o disco falando de amor à distância."
     },
     {
-      "title": "Money for Nothing"
+      "title": "Money for Nothing",
+      "note": "Com Sting nos vocais de apoio."
     },
     {
       "title": "Walk of Life",
@@ -36,7 +38,8 @@
       "title": "One World"
     },
     {
-      "title": "Brothers in Arms"
+      "title": "Brothers in Arms",
+      "note": "Fecha o disco com um lamento sobre a guerra."
     }
   ]
 }

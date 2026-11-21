@@ -11,7 +11,8 @@
   ],
   "tracks": [
     {
-      "title": "Politik"
+      "title": "Politik",
+      "note": "Escrita logo depois do 11 de setembro."
     },
     {
       "title": "In My Place"
@@ -20,10 +21,12 @@
       "title": "God Put a Smile upon Your Face"
     },
     {
-      "title": "The Scientist"
+      "title": "The Scientist",
+      "note": "Uma balada ao piano pedindo para voltar ao começo."
     },
     {
-      "title": "Clocks"
+      "title": "Clocks",
+      "note": "O riff de piano que virou marca da banda."
     },
     {
       "title": "Daylight"
