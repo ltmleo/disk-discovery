@@ -8,7 +8,11 @@
  * Idempotent and resumable: albums already present (by rank) are skipped, and every album is
  * written as soon as it is resolved, so an interrupted run just continues where it stopped.
  *
- *   npm run import
+ *   npm run import              # add albums missing from the dataset
+ *   npm run import -- --repair  # re-resolve imported albums that have no tracks yet
+ *
+ * Store names sometimes differ from the list ("White Album" is "The Beatles" in the store);
+ * scripts/data/store-aliases.json maps a rank to the store's { artist?, title? }.
  */
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -39,6 +43,10 @@ const TIER_FILE: Record<RarityId, string> = {
 const CONTENT_DIR = here('../src/data/content/');
 const MEDIA_FILE = here('../src/data/media.generated.json');
 const MEDIA_VERSION = 3;
+const REPAIR = process.argv.includes('--repair');
+const ALIASES: Record<string, { artist?: string; title?: string }> = JSON.parse(
+  readFileSync(here('./data/store-aliases.json'), 'utf8'),
+);
 
 /** Store genres → the labels used on the cards. Unknown genres pass through unchanged. */
 const GENRES: Record<string, string> = {
@@ -97,10 +105,11 @@ function appendToTier(a: Album): void {
 }
 
 async function resolve(row: Row) {
-  const like = { title: row.title, artist: row.artist };
-  let coll: ItunesItem | null = pickCollection(await discography(row.artist), like);
+  const alias = ALIASES[String(row.rank)] ?? {};
+  const like = { title: alias.title ?? row.title, artist: alias.artist ?? row.artist };
+  let coll: ItunesItem | null = pickCollection(await discography(like.artist), like);
   // Fallback for artists whose store page is split (e.g. "X and the Y" vs "X").
-  if (!coll) coll = pickCollection(await itunes({ entity: 'album', term: `${row.artist} ${row.title}` }), like);
+  if (!coll) coll = pickCollection(await itunes({ entity: 'album', term: `${like.artist} ${like.title}` }), like);
   if (!coll?.collectionId) return null;
 
   let tracks = await tracklist(coll.collectionId);
@@ -112,7 +121,7 @@ async function resolve(row: Row) {
 
   // Preview: the album track that ranks highest among the artist's songs in the store
   // (a decent proxy for "the song people know"), else the opening track.
-  const top = await topSongs(row.artist);
+  const top = await topSongs(like.artist);
   const inAlbum = new Set(tracks.map((t) => norm(cleanTitle(t.trackName ?? ''))));
   const hit = top.find((s) => s.previewUrl && inAlbum.has(norm(cleanTitle(s.trackName ?? ''))));
   const featured = hit
@@ -128,10 +137,49 @@ async function resolve(row: Row) {
   };
 }
 
+/** --repair: fill tracks/genre/preview/art for imported albums that came back empty. */
+async function repair(media: Record<string, MediaEntry>) {
+  const empty = ALBUMS.filter((a) => {
+    const file = `${CONTENT_DIR}${a.id}.json`;
+    return existsSync(file) && (JSON.parse(readFileSync(file, 'utf8')) as AlbumContent).tracks.length === 0;
+  });
+  console.log(`repair: ${empty.length} album(s) without tracks`);
+  for (const a of empty) {
+    const row = LIST.find((r) => r.rank === a.rank)!;
+    const info = await resolve(row).catch(() => null);
+    if (!info) {
+      console.log(`#${a.rank} ${a.artist} – ${a.title}: still NOT FOUND`);
+      continue;
+    }
+    const content: AlbumContent = { tracks: info.tracks.map((title) => ({ title })) };
+    writeFileSync(`${CONTENT_DIR}${a.id}.json`, `${JSON.stringify(content, null, 2)}\n`);
+    // Patch the card in place: add genre/previewTrack right after its label line.
+    const file = TIER_FILE[rarityForRank(a.rank).id];
+    const src = readFileSync(file, 'utf8');
+    const marker = `    id: ${JSON.stringify(a.id)},`;
+    const start = src.indexOf(marker);
+    const labelLine = src.indexOf('    label: ', start);
+    const eol = src.indexOf('\n', labelLine) + 1;
+    const extra = [
+      info.genre && !a.genre ? `    genre: ${JSON.stringify(info.genre)},\n` : '',
+      info.previewTrack && !a.previewTrack ? `    previewTrack: ${JSON.stringify(info.previewTrack)},\n` : '',
+    ].join('');
+    if (start >= 0 && labelLine > start) writeFileSync(file, src.slice(0, eol) + extra + src.slice(eol));
+    media[a.id] = {
+      art: info.art ?? undefined,
+      previews: info.previewTrack ? { [info.previewTrack]: info.previewUrl } : {},
+      v: MEDIA_VERSION,
+    };
+    writeFileSync(MEDIA_FILE, `${JSON.stringify(media, null, 2)}\n`);
+    console.log(`#${a.rank} ${a.artist} – ${a.title}: repaired, ${info.tracks.length} tracks, preview "${info.previewTrack ?? '-'}"`);
+  }
+}
+
 async function main() {
   const have = new Set(ALBUMS.map((a) => a.rank));
   const ids = new Set(ALBUMS.map((a) => a.id));
   const media: Record<string, MediaEntry> = existsSync(MEDIA_FILE) ? JSON.parse(readFileSync(MEDIA_FILE, 'utf8')) : {};
+  if (REPAIR) return repair(media);
   const todo = LIST.filter((r) => !have.has(r.rank));
   console.log(`import: ${todo.length} album(s) to add`);
 
