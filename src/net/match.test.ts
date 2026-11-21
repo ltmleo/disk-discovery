@@ -26,3 +26,13 @@ describe('pickArtwork', () => {
     expect(pickArtwork(songs, { title: 'Channel Orange', artist: 'Frank Ocean' })).toBe('https://x/a/{size}x{size}bb.jpg');
   });
 });
+
+describe('compact artwork', () => {
+  it('round-trips store URLs and leaves others alone', async () => {
+    const { compactArt, expandArt } = await import('./match');
+    const url = 'https://is1-ssl.mzstatic.com/image/thumb/Music/v4/ab/cd/x.jpg/{size}x{size}bb.jpg';
+    expect(compactArt(url)).toBe('~Music/v4/ab/cd/x.jpg');
+    expect(expandArt(compactArt(url))).toBe(url);
+    expect(compactArt('https://example.com/a.png')).toBe('https://example.com/a.png');
+  });
+});

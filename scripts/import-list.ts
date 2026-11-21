@@ -20,8 +20,9 @@ import { ALBUMS } from '../src/data/albums';
 import type { MediaEntry } from '../src/data/media';
 import { rarityForRank } from '../src/rarity';
 import type { Album, AlbumContent, RarityId } from '../src/types';
-import { artworkTemplate, norm, pickCollection, type ItunesItem } from '../src/net/match';
+import { artworkTemplate, norm, rankCollections, type ItunesItem } from '../src/net/match';
 import { discography, itunes, topSongs, tracklist } from './lib/itunes';
+import { loadMedia, saveMedia } from './lib/media-store';
 
 interface Row {
   rank: number;
@@ -41,9 +42,9 @@ const TIER_FILE: Record<RarityId, string> = {
   common: here('../src/data/albums/common.ts'),
 };
 const CONTENT_DIR = here('../src/data/content/');
-const MEDIA_FILE = here('../src/data/media.generated.json');
 const MEDIA_VERSION = 3;
 const REPAIR = process.argv.includes('--repair');
+const NORMALIZE = process.argv.includes('--normalize');
 const ALIASES: Record<string, { artist?: string; title?: string }> = JSON.parse(
   readFileSync(here('./data/store-aliases.json'), 'utf8'),
 );
@@ -77,9 +78,14 @@ const slug = (s: string) =>
     .slice(0, 40)
     .replace(/-+$/, '');
 
-/** Store titles carry reissue noise ("- Remastered 2009", "(2011 Mono Mix)"); strip it for display. */
-const REISSUE = /remaster|mono|stereo|deluxe|bonus|expanded|anniversary/i;
-function cleanTitle(name: string): string {
+/**
+ * Store titles carry reissue/packaging noise: "- Remastered 2009", "(2019 Digital Master)",
+ * "(Single Version)", "(1997 Mix)", and live albums repeat "(Live at <venue>, <date>)" on every
+ * track. Strip those; keep meaningful markers like "(Live)", "feat." or "(Taylor's Version)".
+ */
+const REISSUE =
+  /remaster|\bmono\b|\bstereo\b|deluxe|bonus|expanded|anniversary|digital master|single version|\b\d{4} mix\b|from the vault|\blive (at|in|from)\b/i;
+export function cleanTitle(name: string): string {
   return name
     .replace(/\s*[([][^)\]]*[)\]]/g, (m) => (REISSUE.test(m) ? '' : m))
     .replace(/\s+-\s+.*$/, (m) => (REISSUE.test(m) ? '' : m))
@@ -107,14 +113,31 @@ function appendToTier(a: Album): void {
 async function resolve(row: Row) {
   const alias = ALIASES[String(row.rank)] ?? {};
   const like = { title: alias.title ?? row.title, artist: alias.artist ?? row.artist };
-  let coll: ItunesItem | null = pickCollection(await discography(like.artist), like);
+  let candidates = rankCollections(await discography(like.artist), like);
   // Fallback for artists whose store page is split (e.g. "X and the Y" vs "X").
-  if (!coll) coll = pickCollection(await itunes({ entity: 'album', term: `${like.artist} ${like.title}` }), like);
-  if (!coll?.collectionId) return null;
+  if (!candidates.length) candidates = rankCollections(await itunes({ entity: 'album', term: `${like.artist} ${like.title}` }), like);
 
-  let tracks = await tracklist(coll.collectionId);
+  // Some store editions list no purchasable tracks: fall through to the next-best edition.
+  let coll: ItunesItem | null = null;
+  let tracks: ItunesItem[] = [];
+  for (const c of candidates.slice(0, 4)) {
+    if (!c.collectionId) continue;
+    tracks = await tracklist(c.collectionId);
+    if (tracks.length) {
+      coll = c;
+      break;
+    }
+  }
+  if (!coll) return null;
+
   const deluxe = /deluxe|expanded|anniversary|edition|super/i.test(coll.collectionName ?? '');
   if (deluxe) {
+    // Bonus discs (demos, live sets, remixes) come after disc 1: keep the original album.
+    if (tracks.some((t) => (t.discNumber ?? 1) > 1)) tracks = tracks.filter((t) => (t.discNumber ?? 1) === 1);
+    // Single-disc deluxe editions often restart with alternate takes of track 1.
+    const opener = norm(cleanTitle(tracks[0]?.trackName ?? ''));
+    const repeat = tracks.findIndex((t, i) => i > 4 && norm(cleanTitle(t.trackName ?? '')) === opener);
+    if (repeat > 0) tracks = tracks.slice(0, repeat);
     const firstExtra = tracks.findIndex((t) => EXTRA.test(t.trackName ?? ''));
     if (firstExtra > 4) tracks = tracks.slice(0, firstExtra);
   }
@@ -170,15 +193,46 @@ async function repair(media: Record<string, MediaEntry>) {
       previews: info.previewTrack ? { [info.previewTrack]: info.previewUrl } : {},
       v: MEDIA_VERSION,
     };
-    writeFileSync(MEDIA_FILE, `${JSON.stringify(media, null, 2)}\n`);
+    saveMedia(media);
     console.log(`#${a.rank} ${a.artist} – ${a.title}: repaired, ${info.tracks.length} tracks, preview "${info.previewTrack ?? '-'}"`);
   }
+}
+
+/** --normalize: re-apply cleanTitle to every album's tracks, previewTrack and media keys (offline). */
+function normalize(media: Record<string, MediaEntry>) {
+  let changed = 0;
+  for (const a of ALBUMS) {
+    const file = `${CONTENT_DIR}${a.id}.json`;
+    const content = JSON.parse(readFileSync(file, 'utf8')) as AlbumContent;
+    const tracks = content.tracks.map((t) => ({ ...t, title: cleanTitle(t.title) }));
+    if (JSON.stringify(tracks) !== JSON.stringify(content.tracks)) {
+      writeFileSync(file, `${JSON.stringify({ ...content, tracks }, null, 2)}\n`);
+      changed++;
+    }
+    if (a.previewTrack && cleanTitle(a.previewTrack) !== a.previewTrack) {
+      const clean = cleanTitle(a.previewTrack);
+      const tier = TIER_FILE[rarityForRank(a.rank).id];
+      const src = readFileSync(tier, 'utf8');
+      const start = src.indexOf(`    id: ${JSON.stringify(a.id)},`);
+      const line = `    previewTrack: ${JSON.stringify(a.previewTrack)},`;
+      const at = src.indexOf(line, start);
+      if (start >= 0 && at > start) writeFileSync(tier, src.slice(0, at) + `    previewTrack: ${JSON.stringify(clean)},` + src.slice(at + line.length));
+      const previews = media[a.id]?.previews;
+      if (previews && a.previewTrack in previews) {
+        previews[clean] = previews[a.previewTrack] ?? null;
+        delete previews[a.previewTrack];
+      }
+    }
+  }
+  saveMedia(media);
+  console.log(`normalize: ${changed} tracklist(s) cleaned`);
 }
 
 async function main() {
   const have = new Set(ALBUMS.map((a) => a.rank));
   const ids = new Set(ALBUMS.map((a) => a.id));
-  const media: Record<string, MediaEntry> = existsSync(MEDIA_FILE) ? JSON.parse(readFileSync(MEDIA_FILE, 'utf8')) : {};
+  const media: Record<string, MediaEntry> = loadMedia();
+  if (NORMALIZE) return normalize(media);
   if (REPAIR) return repair(media);
   const todo = LIST.filter((r) => !have.has(r.rank));
   console.log(`import: ${todo.length} album(s) to add`);
@@ -217,7 +271,7 @@ async function main() {
       previews: album.previewTrack ? { [album.previewTrack]: info?.previewUrl ?? null } : {},
       v: MEDIA_VERSION,
     };
-    writeFileSync(MEDIA_FILE, `${JSON.stringify(media, null, 2)}\n`);
+    saveMedia(media);
 
     done++;
     console.log(

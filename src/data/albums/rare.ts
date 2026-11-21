@@ -149,6 +149,8 @@ export const RARE: Album[] = [
     artist: "The Beatles",
     year: 1968,
     label: "Apple",
+    genre: "Rock",
+    previewTrack: "Blackbird",
   },
   {
     id: "jimi-hendrix-are-you-experienced",
@@ -198,7 +200,7 @@ export const RARE: Album[] = [
     year: 1979,
     label: "Epic",
     genre: "Pop",
-    previewTrack: "Rock with You (Single Version)",
+    previewTrack: "Rock with You",
   },
   {
     id: "dr-dre-chronic",
@@ -557,6 +559,8 @@ export const RARE: Album[] = [
     artist: "Elvis Presley",
     year: 1976,
     label: "RCA",
+    genre: "Rock",
+    previewTrack: "That's All Right",
   },
   {
     id: "sex-pistols-never-mind-the-bollocks-here-s-the-sex-p",
@@ -605,6 +609,8 @@ export const RARE: Album[] = [
     artist: "John Lennon",
     year: 1970,
     label: "Apple",
+    genre: "Rock",
+    previewTrack: "Mother",
   },
   {
     id: "doors-doors",
@@ -683,6 +689,8 @@ export const RARE: Album[] = [
     artist: "Missy “Misdemeanor” Elliott",
     year: 1997,
     label: "Goldmind",
+    genre: "Hip-hop",
+    previewTrack: "Best Friends (feat. Aaliyah)",
   },
   {
     id: "stooges-fun-house",

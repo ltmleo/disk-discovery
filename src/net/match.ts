@@ -61,10 +61,14 @@ export function pickPreview(results: ItunesItem[], album: AlbumLike, track: stri
   return best?.url ?? null;
 }
 
-/** Best matching album (collection) for a record: same artist, closest title, standard edition preferred. */
-export function pickCollection(results: ItunesItem[], album: AlbumLike): ItunesItem | null {
+/**
+ * Matching albums (collections) for a record, best first: same artist, closest title,
+ * standard edition preferred, singles/EPs excluded. Callers can fall through the list when
+ * the best match turns out to be unavailable (some store editions list no tracks).
+ */
+export function rankCollections(results: ItunesItem[], album: AlbumLike): ItunesItem[] {
   const record = norm(album.title);
-  let best: { item: ItunesItem; score: number } | null = null;
+  const scored: { item: ItunesItem; score: number }[] = [];
   for (const r of results) {
     if (!r.artworkUrl100 || !r.collectionName || !sameArtist(r.artistName, album.artist)) continue;
     const name = norm(r.collectionName);
@@ -76,9 +80,15 @@ export function pickCollection(results: ItunesItem[], album: AlbumLike): ItunesI
     const raw = r.collectionName.toLowerCase();
     if (!NOISE.test(raw)) score += 1;
     if (!/deluxe|anniversary|expanded|edition|remaster/.test(raw)) score += 1;
-    if (!best || score > best.score) best = { item: r, score };
+    if (/ - (single|ep)$/.test(raw) && !/ - (single|ep)$/i.test(album.title)) continue;
+    scored.push({ item: r, score });
   }
-  return best?.item ?? null;
+  // Stable sort: equal scores keep the store's order.
+  return scored.sort((a, b) => b.score - a.score).map((s) => s.item);
+}
+
+export function pickCollection(results: ItunesItem[], album: AlbumLike): ItunesItem | null {
+  return rankCollections(results, album)[0] ?? null;
 }
 
 /** Artwork template with `{size}`, so callers pick the resolution (the CDN serves any NxN). */
@@ -98,4 +108,21 @@ export function pickArtistId(results: ItunesItem[], artist: string): number | nu
 }
 
 export const artworkAt = (template: string, size: number): string =>
-  template.replaceAll('{size}', String(size));
+  expandArt(template).replaceAll('{size}', String(size));
+
+/*
+ * Every store artwork URL shares the same host prefix and size suffix; the committed media file
+ * stores just the middle ("~<path>") to keep the main bundle small.
+ */
+const ART_PREFIX = 'https://is1-ssl.mzstatic.com/image/thumb/';
+const ART_SUFFIX = '/{size}x{size}bb.jpg';
+
+export function compactArt(url: string): string {
+  return url.startsWith(ART_PREFIX) && url.endsWith(ART_SUFFIX)
+    ? `~${url.slice(ART_PREFIX.length, -ART_SUFFIX.length)}`
+    : url;
+}
+
+export function expandArt(stored: string): string {
+  return stored.startsWith('~') ? `${ART_PREFIX}${stored.slice(1)}${ART_SUFFIX}` : stored;
+}

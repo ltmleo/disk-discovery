@@ -1,6 +1,6 @@
 import type { Album } from '../types';
 import { isMuted, onMuteChange } from './settings';
-import { MEDIA } from '../data/media';
+import { loadPreviews } from '../data/media';
 import { jsonp } from '../net/jsonp';
 import { pickPreview, type ItunesItem } from '../net/match';
 
@@ -12,14 +12,9 @@ import { pickPreview, type ItunesItem } from '../net/match';
  * and nothing else is ever loaded this way.
  */
 const cache = new Map<string, Promise<string | null>>();
-/** Synchronously known URLs: build-time media first, then runtime lookups. */
-const resolvedUrls = new Map<string, string | null>(
-  Object.entries(MEDIA).flatMap(([id, m]) =>
-    Object.entries(m.previews ?? {})
-      .filter(([, url]) => url)
-      .map(([track, url]) => [`${id}::${track}`, url] as [string, string]),
-  ),
-);
+/** Synchronously known URLs (so play() can run inside the user's click): filled from the lazy
+ * build-time preview chunk and from runtime lookups. */
+const resolvedUrls = new Map<string, string | null>();
 
 export { pickPreview };
 
@@ -28,22 +23,34 @@ export function resolvePreview(album: Album, track: string): Promise<string | nu
   let p = cache.get(key);
   if (!p && resolvedUrls.has(key)) p = Promise.resolve(resolvedUrls.get(key) ?? null);
   if (!p) {
-    const term = encodeURIComponent(`${album.artist} ${track}`);
-    p = jsonp<{ results?: ItunesItem[] }>(
-      `https://itunes.apple.com/search?term=${term}&media=music&entity=song&limit=15`,
-    )
-      .then((d) => {
-        const url = pickPreview(d.results ?? [], album, track);
-        resolvedUrls.set(key, url);
-        return url;
-      })
-      .catch(() => {
-        cache.delete(key); // allow retry later
-        return null;
+    p = loadPreviews()
+      .catch(() => ({}) as Awaited<ReturnType<typeof loadPreviews>>)
+      .then((all) => {
+        const known = all[album.id]?.[track];
+        if (known) {
+          resolvedUrls.set(key, known);
+          return known;
+        }
+        return searchPreview(album, track, key);
       });
     cache.set(key, p);
   }
   return p;
+}
+
+/** Runtime fallback when the build did not resolve this track. */
+function searchPreview(album: Album, track: string, key: string): Promise<string | null> {
+  const term = encodeURIComponent(`${album.artist} ${track}`);
+  return jsonp<{ results?: ItunesItem[] }>(`https://itunes.apple.com/search?term=${term}&media=music&entity=song&limit=15`)
+    .then((d) => {
+      const url = pickPreview(d.results ?? [], album, track);
+      resolvedUrls.set(key, url);
+      return url;
+    })
+    .catch(() => {
+      cache.delete(key); // allow retry later
+      return null;
+    });
 }
 
 /* ---------------- Player (single shared element) ---------------- */

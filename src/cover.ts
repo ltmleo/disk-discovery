@@ -1,11 +1,11 @@
 import type { Album } from './types';
-import { MEDIA } from './data/media';
+import { ART } from './data/media';
 import { jsonp, Scheduler, type Priority } from './net/jsonp';
 import { artworkAt, pickArtwork, type ItunesItem } from './net/match';
 
 /**
  * Cover art pipeline, fastest source first:
- *   1. URLs resolved at build time (media.generated.json) → no lookup at all.
+ *   1. URLs resolved at build time (media.art.json) → no lookup at all.
  *   2. URLs resolved earlier in this browser (localStorage).
  *   3. Runtime lookup: iTunes Search (Apple CDN, fast) → MusicBrainz + Cover Art Archive.
  * Nothing is hosted in the repo; images are hotlinked.
@@ -42,7 +42,7 @@ const caaUrl = (mbid: string, px: number) => `https://coverartarchive.org/releas
 
 /** All URLs known synchronously, best first. Empty when a lookup is still needed. */
 export function artCandidates(album: Album, px: number): string[] {
-  const media = MEDIA[album.id];
+  const media = ART[album.id];
   const local = cache[album.id];
   const out: string[] = [];
   const art = media?.art ?? local?.art;

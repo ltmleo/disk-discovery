@@ -1,7 +1,10 @@
 /**
- * Build-time resolved media (artwork template, MusicBrainz id, preview URL),
- * produced by `npm run media` into media.generated.json. The file is optional:
- * the glob yields nothing when it doesn't exist and the app resolves at runtime.
+ * Build-time resolved media, produced by `npm run media` / `npm run import`
+ * (see scripts/lib/media-store.ts). Split by when the site needs it:
+ *   - artwork (+ MusicBrainz id) ships in the main bundle: every card shows it immediately;
+ *   - preview URLs live in their own lazy chunk, fetched when a pack is shown, long before
+ *     the reveal needs one.
+ * Both files are optional (glob yields nothing): the app then resolves at runtime.
  */
 export interface MediaEntry {
   art?: string | null;
@@ -11,6 +14,20 @@ export interface MediaEntry {
   v?: number;
 }
 
-const files = import.meta.glob<{ default: Record<string, MediaEntry> }>('./media.generated.json', { eager: true });
+type ArtEntry = Omit<MediaEntry, 'previews'>;
+type PreviewMap = Record<string, Record<string, string | null>>;
 
-export const MEDIA: Record<string, MediaEntry> = Object.values(files)[0]?.default ?? {};
+const artFiles = import.meta.glob<{ default: Record<string, ArtEntry> }>('./media.art.json', { eager: true });
+export const ART: Record<string, ArtEntry> = Object.values(artFiles)[0]?.default ?? {};
+
+const previewFiles = import.meta.glob<{ default: PreviewMap }>('./media.previews.json');
+let previews: Promise<PreviewMap> | null = null;
+
+export function loadPreviews(): Promise<PreviewMap> {
+  if (!previews) {
+    const load = Object.values(previewFiles)[0];
+    previews = load ? load().then((m) => m.default) : Promise.resolve({});
+    previews.catch(() => (previews = null));
+  }
+  return previews;
+}

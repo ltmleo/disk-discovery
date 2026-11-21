@@ -1,6 +1,7 @@
 /**
  * Resolves artwork, MusicBrainz ids and preview URLs for every album at build time
- * and writes src/data/media.generated.json, so the site needs no lookups at runtime.
+ * and writes src/data/media.art.json + media.previews.json (see lib/media-store.ts), so the
+ * site needs no lookups at runtime.
  *
  * Incremental: entries already in the file are kept; only missing ones are fetched.
  * Never fails the build: anything unresolved is left for the runtime fallback.
@@ -8,14 +9,12 @@
  *   npm run media            # resolve missing
  *   npm run media -- --force # re-resolve everything
  */
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 import { ALBUMS } from '../src/data/albums';
 import type { MediaEntry } from '../src/data/media';
 import { artworkTemplate, pickArtwork, pickCollection, pickPreview, type ItunesItem } from '../src/net/match';
 import { discography, itunes, tracklist } from './lib/itunes';
+import { loadMedia, saveMedia } from './lib/media-store';
 
-const OUT = fileURLToPath(new URL('../src/data/media.generated.json', import.meta.url));
 const FORCE = process.argv.includes('--force');
 const UA = 'disk-discovery/1.0';
 // MusicBrainz asks for ≤1 request/s. (iTunes pacing lives in lib/itunes.ts.)
@@ -41,8 +40,7 @@ async function musicbrainz(title: string, artist: string, attempt = 1): Promise<
 }
 
 async function main() {
-  const media: Record<string, MediaEntry> =
-    !FORCE && existsSync(OUT) ? (JSON.parse(readFileSync(OUT, 'utf8')) as Record<string, MediaEntry>) : {};
+  const media: Record<string, MediaEntry> = FORCE ? {} : loadMedia();
   let changed = 0;
   // Circuit breaker: if the APIs are unreachable (offline, blocked), stop early
   // instead of waiting out every rate-limit gap.
@@ -119,8 +117,8 @@ async function main() {
   // Drop albums that no longer exist in the dataset.
   for (const id of Object.keys(media)) if (!ALBUMS.some((a) => a.id === id)) delete media[id];
 
-  writeFileSync(OUT, `${JSON.stringify(media, null, 2)}\n`);
-  console.log(`media: ${changed} album(s) updated, ${ALBUMS.length} total → ${OUT}`);
+  saveMedia(media);
+  console.log(`media: ${changed} album(s) updated, ${ALBUMS.length} total`);
 }
 
 main().catch((err) => {

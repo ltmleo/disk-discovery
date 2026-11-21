@@ -13,7 +13,7 @@ Todo disco tem a mesma chance de sair. A raridade vem só do tamanho de cada fai
 | ★★ Incomum | 101–200 | 100 | 20% |
 | ★ Comum | 201–500 | 300 | 60% |
 
-Hoje há 50 discos (5 lendários, 8 épicos, 10 raros, 12 incomuns e 15 comuns). As chances por pacote são, nessa ordem, 10%, 16%, 20%, 24% e 30%. As chances da tabela valem quando a lista estiver completa. Para manter a raridade coerente, as próximas levas devem continuar trazendo mais comuns do que raros.
+Os 500 discos estão no jogo, então as chances acima são as reais.
 
 ## Som
 
@@ -67,7 +67,7 @@ Os testes garantem que todo disco tem conteúdo, que não sobra conteúdo sem di
 
 ## Capas e prévias
 
-`npm run media` resolve, para cada disco, a capa e a prévia. A fonte principal é a discografia completa do artista no iTunes (`lookup`), que acerta o álbum original e lê a lista de faixas dele. Quando ela falha, o script usa a busca comum do iTunes e, por último, o MusicBrainz e o Cover Art Archive. O resultado é gravado em `src/data/media.generated.json`. Atrás do proxy dos ambientes Claude Code, rode com `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt npm run media`. O arquivo é versionado. O CI roda o script antes do build apenas para completar entradas que faltem. Se as APIs estiverem fora do ar, o build segue e o site busca no navegador.
+`npm run media` resolve, para cada disco, a capa e a prévia, e grava em `src/data/media.art.json` (capas, no pacote principal) e `src/data/media.previews.json` (prévias, baixadas em segundo plano quando o pacote aparece). A fonte principal é a discografia completa do artista no iTunes (`lookup`), que acerta o álbum original e lê a lista de faixas dele. Quando ela falha, o script usa a busca comum do iTunes e, por último, o MusicBrainz e o Cover Art Archive. Atrás do proxy dos ambientes Claude Code, rode com `NODE_USE_ENV_PROXY=1 NODE_EXTRA_CA_CERTS=/root/.ccr/ca-bundle.crt npm run media`. O arquivo é versionado. O CI roda o script antes do build apenas para completar entradas que faltem. Se as APIs estiverem fora do ar, o build segue e o site busca no navegador.
 
 No navegador, a ordem é:
 
