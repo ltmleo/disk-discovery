@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Pete Townshend planejava \"Lifehouse\", uma ópera-rock futurista com filme e shows interativos. O projeto desmoronou, e o melhor das canções virou \"Who's Next\" (1971), produzido com Glyn Johns.",
+    "O disco junta o peso do The Who ao vivo com sintetizadores e órgãos em sequência, raros no rock da época.",
+    "Muitos fãs o consideram o melhor disco da banda."
+  ],
+  "trivia": [
+    "\"Baba O'Riley\" homenageia o guru Meher Baba e o compositor minimalista Terry Riley.",
+    "Na capa, a banda acaba de urinar num monólito de concreto, numa piada com \"2001: Uma Odisseia no Espaço\".",
+    "\"Won't Get Fooled Again\" termina com um dos gritos mais famosos do rock, de Roger Daltrey."
+  ],
   "tracks": [
     {
-      "title": "Baba O'Riley"
+      "title": "Baba O'Riley",
+      "note": "O órgão em sequência e o \"teenage wasteland\"."
     },
     {
       "title": "Bargain"
@@ -22,10 +33,12 @@
       "title": "Going Mobile"
     },
     {
-      "title": "Behind Blue Eyes"
+      "title": "Behind Blue Eyes",
+      "note": "Uma balada que explode no meio."
     },
     {
-      "title": "Won't Get Fooled Again"
+      "title": "Won't Get Fooled Again",
+      "note": "Oito minutos que terminam com o grito de Daltrey."
     },
     {
       "title": "Pure and Easy (New York Record Plant Session)"

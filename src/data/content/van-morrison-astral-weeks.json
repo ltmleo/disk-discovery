@@ -1,22 +1,36 @@
 {
+  "history": [
+    "Depois do sucesso com o Them e de \"Brown Eyed Girl\", Van Morrison gravou \"Astral Weeks\" em Nova York, em 1968, em poucas sessões. Chamou músicos de jazz, como o baixista Richard Davis e o baterista Connie Kay, do Modern Jazz Quartet.",
+    "Os músicos não conheciam as canções: Van cantava e tocava violão, e a banda seguia em tempo real. As letras soltas lembram ruas e amores de Belfast.",
+    "Vendeu pouco no lançamento. Com o tempo, virou um disco cultuado por críticos e músicos."
+  ],
+  "trivia": [
+    "As cordas foram acrescentadas depois, sem Van no estúdio.",
+    "\"Cyprus Avenue\" é o nome de uma rua de Belfast.",
+    "Bruce Springsteen e Elvis Costello estão entre os fãs declarados."
+  ],
   "tracks": [
     {
-      "title": "Astral Weeks"
+      "title": "Astral Weeks",
+      "note": "Abre o disco num fluxo contínuo de violão e baixo acústico."
     },
     {
       "title": "Beside You"
     },
     {
-      "title": "Sweet Thing"
+      "title": "Sweet Thing",
+      "note": "Uma das canções mais luminosas do disco."
     },
     {
-      "title": "Cyprus Avenue"
+      "title": "Cyprus Avenue",
+      "note": "Uma rua de Belfast e um amor adolescente."
     },
     {
       "title": "The Way Young Lovers Do"
     },
     {
-      "title": "Madame George"
+      "title": "Madame George",
+      "note": "Quase 10 minutos sobre uma figura misteriosa de Belfast."
     },
     {
       "title": "Ballerina"

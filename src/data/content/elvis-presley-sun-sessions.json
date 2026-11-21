@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Em julho de 1954, Elvis Presley, então com 19 anos, gravava no Sun Studio, em Memphis, com Sam Phillips, o guitarrista Scotty Moore e o baixista Bill Black. Num intervalo, começou a brincar com \"That's All Right\", um blues de Arthur Crudup, e Phillips gravou.",
+    "As gravações da Sun misturam blues negro e country branco, e por isso são vistas como um dos inícios do rock'n'roll.",
+    "Em 1955, a RCA comprou o contrato de Elvis, e as gravações da Sun foram reunidas depois em coletâneas como esta."
+  ],
+  "trivia": [
+    "O lado B do primeiro single foi \"Blue Moon of Kentucky\", um bluegrass de Bill Monroe tocado em ritmo acelerado.",
+    "A RCA pagou um valor recorde pelo contrato, em torno de 35 mil dólares.",
+    "Neste jogo, as faixas e a prévia vêm de \"Sunrise\", a coletânea com as mesmas gravações vendida na loja."
+  ],
   "tracks": [
     {
-      "title": "That's All Right"
+      "title": "That's All Right",
+      "note": "A brincadeira num intervalo que virou o primeiro single."
     },
     {
-      "title": "Blue Moon of Kentucky"
+      "title": "Blue Moon of Kentucky",
+      "note": "Um bluegrass acelerado no lado B."
     },
     {
       "title": "Good Rockin' Tonight"
@@ -28,7 +40,8 @@
       "title": "I Forgot to Remember to Forget"
     },
     {
-      "title": "Mystery Train"
+      "title": "Mystery Train",
+      "note": "Um blues de Junior Parker, um dos destaques da fase Sun."
     },
     {
       "title": "I Love You Because"

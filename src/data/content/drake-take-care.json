@@ -1,4 +1,14 @@
 {
+  "history": [
+    "O segundo disco de Drake, de 2011, consolidou um rap mais lento e emotivo, com batidas atmosféricas do produtor Noah \"40\" Shebib.",
+    "As letras falam de fama, ex-namoradas, Toronto e solidão, entre rap e canto.",
+    "Ganhou o Grammy de melhor álbum de rap e influenciou muito o som do rap e do R&B da década."
+  ],
+  "trivia": [
+    "A faixa-título com Rihanna usa uma versão de Jamie xx para \"I'll Take Care of U\", de Gil Scott-Heron.",
+    "Kendrick Lamar aparece em \"Buried Alive Interlude\", ainda antes da fama.",
+    "\"Crew Love\" tem The Weeknd, também de Toronto."
+  ],
   "tracks": [
     {
       "title": "Over My Dead Body"
@@ -7,16 +17,20 @@
       "title": "Shot for Me"
     },
     {
-      "title": "Headlines"
+      "title": "Headlines",
+      "note": "O primeiro single, sobre o sucesso recente."
     },
     {
-      "title": "Crew Love (feat. The Weeknd)"
+      "title": "Crew Love (feat. The Weeknd)",
+      "note": "Com The Weeknd."
     },
     {
-      "title": "Take Care (feat. Rihanna)"
+      "title": "Take Care (feat. Rihanna)",
+      "note": "Com Rihanna, sobre a versão de Jamie xx para Gil Scott-Heron."
     },
     {
-      "title": "Marvins Room"
+      "title": "Marvins Room",
+      "note": "Um telefonema de bêbado para uma ex."
     },
     {
       "title": "Buried Alive Interlude (feat. Kendrick Lamar)"

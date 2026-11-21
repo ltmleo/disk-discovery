@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Depois de \"Born to Run\", Bruce Springsteen entrou numa batalha judicial com o ex-empresário Mike Appel e ficou cerca de três anos sem poder gravar. Nesse tempo, compôs dezenas de músicas.",
+    "Em \"Darkness on the Edge of Town\" (1978), trocou os sonhos de fuga por histórias de trabalhadores presos a cidades pequenas, empregos ruins e famílias divididas.",
+    "As canções deixadas de fora saíram em 2010, no álbum duplo \"The Promise\"."
+  ],
+  "trivia": [
+    "Muitas sobras viraram sucessos de outros artistas, como \"Because the Night\", gravada por Patti Smith.",
+    "A foto da capa, de Frank Stefanko, foi tirada na casa do fotógrafo.",
+    "\"Racing in the Street\" é uma das canções preferidas de muitos fãs."
+  ],
   "tracks": [
     {
-      "title": "Badlands"
+      "title": "Badlands",
+      "note": "Abre o disco com raiva e esperança."
     },
     {
       "title": "Adam Raised a Cain"
@@ -13,10 +24,12 @@
       "title": "Candy's Room"
     },
     {
-      "title": "Racing in the Street"
+      "title": "Racing in the Street",
+      "note": "Carros, corridas e um casamento triste."
     },
     {
-      "title": "The Promised Land"
+      "title": "The Promised Land",
+      "note": "Gaita e a promessa de uma vida melhor."
     },
     {
       "title": "Factory"
@@ -28,7 +41,8 @@
       "title": "Prove It All Night"
     },
     {
-      "title": "Darkness on the Edge of Town"
+      "title": "Darkness on the Edge of Town",
+      "note": "Fecha o disco em tom sombrio."
     }
   ]
 }

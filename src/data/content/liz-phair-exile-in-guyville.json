@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Liz Phair gravava canções caseiras em fitas que circulavam em Chicago com o nome de \"Girly-Sound\". Contratada pelo selo Matador, transformou algumas delas na sua estreia, de 1993.",
+    "Ela disse que o disco respondia faixa a faixa a \"Exile on Main St.\", dos Rolling Stones. As letras falam de sexo, desejo e relações na cena indie dominada por homens, a \"Guyville\".",
+    "Com 18 faixas cruas e diretas, o disco foi eleito o melhor de 1993 pela crítica do jornal Village Voice."
+  ],
+  "trivia": [
+    "\"Guyville\" vem de uma canção da banda Urge Overkill.",
+    "O produtor Brad Wood tocou boa parte dos instrumentos junto com Liz.",
+    "Muita gente na cena de Chicago se reconheceu nas letras, o que gerou polêmica local."
+  ],
   "tracks": [
     {
-      "title": "6'1\""
+      "title": "6'1\"",
+      "note": "Abre o disco com guitarras e uma afirmação de independência."
     },
     {
       "title": "Help Me Mary"
@@ -13,7 +24,8 @@
       "title": "Dance of the Seven Veils"
     },
     {
-      "title": "Never Said"
+      "title": "Never Said",
+      "note": "Uma negação insistente com refrão grudento."
     },
     {
       "title": "Soap Star Joe"
@@ -34,7 +46,8 @@
       "title": "Girls! Girls! Girls!"
     },
     {
-      "title": "Divorce Song"
+      "title": "Divorce Song",
+      "note": "Um fim de relação contado como numa viagem de carro."
     },
     {
       "title": "Shatter"

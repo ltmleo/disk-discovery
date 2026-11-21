@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Lucinda Williams levou cerca de seis anos para terminar o disco, regravando-o com diferentes produtores, entre eles Gurf Morlix, Steve Earle e Roy Bittan.",
+    "As canções mostram cidades da Louisiana e do Mississippi, amores difíceis e lembranças de infância, entre country, rock e blues.",
+    "Ganhou o Grammy de melhor álbum de folk contemporâneo e virou referência da Americana."
+  ],
+  "trivia": [
+    "\"Drunken Angel\" homenageia o compositor Blaze Foley, assassinado em 1989.",
+    "A faixa-título lembra a infância de Lucinda no banco de trás do carro.",
+    "O pai dela, Miller Williams, era poeta."
+  ],
   "tracks": [
     {
-      "title": "Right In Time"
+      "title": "Right In Time",
+      "note": "Abre o disco com desejo e lembrança."
     },
     {
-      "title": "Car Wheels On a Gravel Road"
+      "title": "Car Wheels On a Gravel Road",
+      "note": "A infância vista do banco de trás do carro."
     },
     {
       "title": "2 Kool 2 Be 4-Gotten"
     },
     {
-      "title": "Drunken Angel"
+      "title": "Drunken Angel",
+      "note": "Para o compositor Blaze Foley."
     },
     {
       "title": "Concrete and Barbed Wire"

@@ -1,7 +1,18 @@
 {
+  "history": [
+    "\"The Great Twenty-Eight\" reúne os singles que Chuck Berry gravou para a Chess Records, em Chicago, entre 1955 e 1965. Juntos, formam quase um manual do rock'n'roll: introduções de guitarra cortantes, histórias de carros, escola e adolescentes, e um jeito de cantar claro como de um cronista.",
+    "O primeiro sucesso, \"Maybellene\", adaptava uma velha canção country. Daí em diante, Berry misturou blues, country e R&B num som que os Beatles, os Rolling Stones e os Beach Boys copiaram nota por nota.",
+    "Saiu como coletânea em 1982 e virou a forma mais comum de conhecer a obra dele."
+  ],
+  "trivia": [
+    "\"Johnny B. Goode\" está no Disco de Ouro das sondas Voyager, lançadas ao espaço em 1977.",
+    "Os Beatles gravaram \"Roll Over Beethoven\" e \"Rock and Roll Music\"; os Stones estrearam em disco com \"Come On\", de Berry.",
+    "O \"duckwalk\", andar agachado com a guitarra, virou marca dos shows dele."
+  ],
   "tracks": [
     {
-      "title": "Maybellene"
+      "title": "Maybellene",
+      "note": "O primeiro hit, de 1955, uma corrida de carros cantada."
     },
     {
       "title": "Thirty Days"
@@ -16,7 +27,8 @@
       "title": "Brown Eyed Handsome Man"
     },
     {
-      "title": "Roll Over Beethoven"
+      "title": "Roll Over Beethoven",
+      "note": "Um recado para a música clássica sair da frente."
     },
     {
       "title": "Havana Moon"
@@ -37,7 +49,8 @@
       "title": "Sweet Little Sixteen (Demo)"
     },
     {
-      "title": "Johnny B. Goode"
+      "title": "Johnny B. Goode",
+      "note": "Um garoto do interior que toca guitarra como quem toca um sino."
     },
     {
       "title": "Around And Around"

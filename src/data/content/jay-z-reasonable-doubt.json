@@ -1,22 +1,36 @@
 {
+  "history": [
+    "Nenhuma grande gravadora quis contratar Jay-Z no começo dos anos 90. Ele fundou a Roc-A-Fella com Damon Dash e Kareem \"Biggs\" Burke e lançou a estreia em 1996.",
+    "As letras falam da vida no tráfico no conjunto habitacional de Marcy, no Brooklyn, com frieza de empresário e muitas camadas de sentido.",
+    "O disco chegou só ao 23º lugar nos EUA, mas virou um clássico e a base de uma das carreiras mais bem-sucedidas do rap."
+  ],
+  "trivia": [
+    "\"Brooklyn's Finest\" é um dueto com o Notorious B.I.G.",
+    "DJ Premier produziu três faixas, entre elas \"D'Evils\".",
+    "\"Can't Knock the Hustle\" tem Mary J. Blige no refrão."
+  ],
   "tracks": [
     {
-      "title": "Can't Knock the Hustle (feat. Mary J. Blige)"
+      "title": "Can't Knock the Hustle (feat. Mary J. Blige)",
+      "note": "Com Mary J. Blige no refrão."
     },
     {
       "title": "Politics As Usual"
     },
     {
-      "title": "Brooklyn's Finest (feat. The Notorious B.I.G.)"
+      "title": "Brooklyn's Finest (feat. The Notorious B.I.G.)",
+      "note": "Jay-Z e Biggie trocando versos."
     },
     {
-      "title": "Dead Presidents II"
+      "title": "Dead Presidents II",
+      "note": "Sobre um sample de Nas, que depois virou motivo de briga entre os dois."
     },
     {
       "title": "Feelin' It (feat. Mecca)"
     },
     {
-      "title": "D'evils"
+      "title": "D'evils",
+      "note": "Produção de DJ Premier sobre o preço da vida no crime."
     },
     {
       "title": "22 Two's"

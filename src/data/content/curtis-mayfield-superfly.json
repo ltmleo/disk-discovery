@@ -1,13 +1,26 @@
 {
+  "history": [
+    "Curtis Mayfield compôs a trilha de \"Super Fly\" (1972), um filme sobre um traficante do Harlem. Em vez de glamourizar o personagem, as letras mostram o vício e a violência que o tráfico deixava nas comunidades negras.",
+    "Com cordas, metais, wah-wah e percussão, o disco virou um dos marcos do soul e do funk dos anos 70.",
+    "A trilha faturou mais que o próprio filme."
+  ],
+  "trivia": [
+    "\"Freddie's Dead\" e \"Superfly\" chegaram ao top 10 nos EUA.",
+    "O disco ficou quatro semanas em 1º lugar na parada de álbuns americana.",
+    "Curtis lançava os discos pelo próprio selo, a Curtom."
+  ],
   "tracks": [
     {
-      "title": "Little Child Runnin' Wild"
+      "title": "Little Child Runnin' Wild",
+      "note": "Abre o disco com a vida de uma criança nas ruas."
     },
     {
-      "title": "Pusherman"
+      "title": "Pusherman",
+      "note": "O traficante descrito sem glamour."
     },
     {
-      "title": "Freddie's Dead (Theme from \"Superfly\")"
+      "title": "Freddie's Dead (Theme from \"Superfly\")",
+      "note": "A morte de um personagem secundário do filme."
     },
     {
       "title": "Junkie Chase"
@@ -25,7 +38,8 @@
       "title": "Think"
     },
     {
-      "title": "Superfly"
+      "title": "Superfly",
+      "note": "A faixa-título, com metais e um groove irresistível."
     }
   ]
 }

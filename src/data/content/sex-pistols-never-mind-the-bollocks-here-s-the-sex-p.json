@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em 1977, os Sex Pistols já eram o maior escândalo da música britânica. \"God Save the Queen\" saiu na semana do Jubileu de Prata da rainha, foi banida pela BBC e mesmo assim chegou ao 2º lugar, em meio a acusações de que a parada foi manipulada.",
+    "O baixista Glen Matlock tinha saído; o substituto, Sid Vicious, mal sabia tocar, e Steve Jones gravou a maior parte do baixo.",
+    "O disco é curto, rápido e furioso. A banda acabou poucos meses depois."
+  ],
+  "trivia": [
+    "Uma loja de Nottingham foi processada por expor a palavra \"Bollocks\" na vitrine, e venceu o caso.",
+    "A arte de Jamie Reid, com letras recortadas de jornais, inspirou o visual deste site.",
+    "Os produtores Chris Thomas e Bill Price deram ao disco um som pesado e limpo."
+  ],
   "tracks": [
     {
-      "title": "Holidays In the Sun"
+      "title": "Holidays In the Sun",
+      "note": "Abre com o som de botas marchando."
     },
     {
       "title": "Bodies"
@@ -16,19 +27,22 @@
       "title": "Problems"
     },
     {
-      "title": "God Save the Queen"
+      "title": "God Save the Queen",
+      "note": "Lançada na semana do Jubileu, banida pela BBC."
     },
     {
       "title": "Seventeen"
     },
     {
-      "title": "Anarchy In the U.K."
+      "title": "Anarchy In the U.K.",
+      "note": "O primeiro single, um manifesto de raiva."
     },
     {
       "title": "Submission"
     },
     {
-      "title": "Pretty Vacant"
+      "title": "Pretty Vacant",
+      "note": "O riff de guitarra mais conhecido da banda."
     },
     {
       "title": "New York"

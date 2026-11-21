@@ -1,22 +1,35 @@
 {
+  "history": [
+    "Erykah Badu estreou em 1997 com um soul jazzístico e lento, comparado a Billie Holiday. Parte do disco foi gravada com a banda The Roots, na Filadélfia.",
+    "As letras misturam espiritualidade, humor e ensinamentos de vida, e o visual com turbantes virou marca.",
+    "O disco ganhou o Grammy de melhor álbum de R&B e ajudou a definir o neo-soul."
+  ],
+  "trivia": [
+    "O nome do disco brinca com o sobrenome dela e com a ideia de uma filosofia própria.",
+    "\"On & On\" foi o primeiro single e um sucesso imediato.",
+    "\"Otherside of the Game\" foi gravada com The Roots."
+  ],
   "tracks": [
     {
       "title": "Rim Shot (Intro)"
     },
     {
-      "title": "On & On"
+      "title": "On & On",
+      "note": "O primeiro single, sobre conhecimento e paciência."
     },
     {
       "title": "Appletree"
     },
     {
-      "title": "Other Side of the Game"
+      "title": "Other Side of the Game",
+      "note": "Com The Roots, sobre amar alguém envolvido com o crime."
     },
     {
       "title": "Sometimes (Mix #9)"
     },
     {
-      "title": "Next Lifetime"
+      "title": "Next Lifetime",
+      "note": "Um amor que ela deixa para a próxima vida."
     },
     {
       "title": "Afro (Freestyle Skit)"

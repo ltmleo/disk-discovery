@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Depois de acompanhar Bob Dylan, The Band alugou uma casa nas colinas de Hollywood e transformou a casa da piscina em estúdio. Lá gravou, em 1969, o segundo disco, conhecido como \"brown album\".",
+    "As canções de Robbie Robertson soam como histórias do século 19: fazendeiros, soldados, sindicatos e famílias do interior americano. Quatro dos cinco integrantes eram canadenses; Levon Helm era do Arkansas.",
+    "O disco ajudou a criar o que hoje se chama Americana e pôs a banda na capa da revista Time."
+  ],
+  "trivia": [
+    "\"The Night They Drove Old Dixie Down\", sobre um soldado confederado, virou sucesso na voz de Joan Baez.",
+    "Garth Hudson usa um clavinet com pedal wah-wah em \"Up on Cripple Creek\".",
+    "Os cinco cantavam e trocavam de instrumento entre as faixas."
+  ],
   "tracks": [
     {
       "title": "Across the Great Divide"
@@ -7,13 +17,15 @@
       "title": "Rag Mama Rag"
     },
     {
-      "title": "The Night They Drove Old Dixie Down"
+      "title": "The Night They Drove Old Dixie Down",
+      "note": "Cantada por Levon Helm, sobre o fim da Guerra Civil."
     },
     {
       "title": "When You Awake"
     },
     {
-      "title": "Up On Cripple Creek"
+      "title": "Up On Cripple Creek",
+      "note": "Um caminhoneiro, uma namorada e um clavinet com wah-wah."
     },
     {
       "title": "Whispering Pines"

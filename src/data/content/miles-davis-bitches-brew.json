@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Em agosto de 1969, Miles Davis reuniu em três dias um grupo grande com dois bateristas, dois baixistas e vários pianos elétricos. Os músicos tocavam longos improvisos a partir de esboços.",
+    "O produtor Teo Macero editou as fitas pesadamente, cortando e repetindo trechos como num disco de rock.",
+    "O resultado ajudou a criar o jazz fusion e foi o primeiro disco de ouro de Miles."
+  ],
+  "trivia": [
+    "A capa psicodélica é do pintor Mati Klarwein.",
+    "Entre os músicos estavam Wayne Shorter, Chick Corea, Joe Zawinul, John McLaughlin e Jack DeJohnette.",
+    "Vários deles fundaram depois grupos importantes de fusion, como o Weather Report e a Mahavishnu Orchestra."
+  ],
   "tracks": [
     {
-      "title": "Pharaoh's Dance (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)"
+      "title": "Pharaoh's Dance (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)",
+      "note": "Montada por Teo Macero a partir de vários trechos de fita."
     },
     {
-      "title": "Bitches Brew (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)"
+      "title": "Bitches Brew (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)",
+      "note": "Mais de 25 minutos de groove e improviso."
     },
     {
       "title": "Spanish Key (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)"
     },
     {
-      "title": "John McLaughlin (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)"
+      "title": "John McLaughlin (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)",
+      "note": "Uma faixa com o nome do guitarrista inglês."
     },
     {
       "title": "Miles Runs the Voodoo Down (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)"

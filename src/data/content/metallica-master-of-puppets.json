@@ -1,16 +1,29 @@
 {
+  "history": [
+    "O terceiro disco do Metallica foi gravado em Copenhague com o produtor Flemming Rasmussen e saiu em 1986. Músicas longas e complexas falam de vício, guerra e manipulação.",
+    "Em setembro daquele ano, durante a turnê na Suécia, o baixista Cliff Burton morreu num acidente com o ônibus da banda.",
+    "Em 2016, foi o primeiro disco de metal escolhido para o Registro Nacional de Gravações da Biblioteca do Congresso dos EUA."
+  ],
+  "trivia": [
+    "A faixa-título voltou às paradas em 2022 graças a uma cena de \"Stranger Things\".",
+    "\"Orion\" é um instrumental com destaque para o baixo de Cliff Burton.",
+    "A capa mostra cruzes num cemitério militar presas a fios de marionete."
+  ],
   "tracks": [
     {
-      "title": "Battery"
+      "title": "Battery",
+      "note": "Abre com violões e explode em thrash."
     },
     {
-      "title": "Master of Puppets"
+      "title": "Master of Puppets",
+      "note": "Oito minutos sobre o vício."
     },
     {
       "title": "The Thing That Should Not Be"
     },
     {
-      "title": "Welcome Home (Sanitarium)"
+      "title": "Welcome Home (Sanitarium)",
+      "note": "Inspirada em \"Um Estranho no Ninho\"."
     },
     {
       "title": "Disposable Heroes"
@@ -19,7 +32,8 @@
       "title": "Leper Messiah"
     },
     {
-      "title": "Orion"
+      "title": "Orion",
+      "note": "Instrumental com o baixo de Cliff Burton."
     },
     {
       "title": "Damage, Inc."

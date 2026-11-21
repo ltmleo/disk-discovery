@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em 1970, os Stooges de Iggy Pop gravaram \"Fun House\" em Los Angeles com o produtor Don Gallucci, que montou o estúdio como um palco para a banda tocar ao vivo.",
+    "O disco é cru e agressivo, com riffs repetitivos, gritos de Iggy e, no fim, o saxofone free jazz de Steve Mackay.",
+    "Vendeu pouco, mas virou uma das grandes influências do punk e do rock alternativo."
+  ],
+  "trivia": [
+    "Gallucci tinha sido tecladista dos Kingsmen, de \"Louie Louie\".",
+    "Todas as sessões foram lançadas depois numa caixa com dezenas de tomadas.",
+    "\"L.A. Blues\" é quase cinco minutos de puro barulho."
+  ],
   "tracks": [
     {
-      "title": "Down On the Street"
+      "title": "Down On the Street",
+      "note": "Abre com um riff repetido até virar hipnose."
     },
     {
       "title": "Loose"
@@ -13,13 +24,16 @@
       "title": "Dirt"
     },
     {
-      "title": "1970"
+      "title": "1970",
+      "note": "\"I feel alright!\", com o sax de Steve Mackay."
     },
     {
-      "title": "Fun House"
+      "title": "Fun House",
+      "note": "Uma jam longa com o sax de Steve Mackay."
     },
     {
-      "title": "L.A. Blues"
+      "title": "L.A. Blues",
+      "note": "Barulho livre para fechar o disco."
     }
   ]
 }

@@ -1,4 +1,14 @@
 {
+  "history": [
+    "No terceiro e último disco do Experience, Jimi Hendrix assumiu a produção e passou meses no Record Plant, em Nova York, com amigos entrando e saindo do estúdio para jams.",
+    "O álbum duplo vai do blues longo ao rock psicodélico, passando pelo soul e por experimentos com fitas tocadas ao contrário. Steve Winwood e Jack Casady participam da longa \"Voodoo Chile\".",
+    "O sucesso ajudou Hendrix a construir o próprio estúdio em Nova York, o Electric Lady, inaugurado em 1970, pouco antes de sua morte."
+  ],
+  "trivia": [
+    "Bob Dylan passou a tocar \"All Along the Watchtower\" no arranjo de Hendrix.",
+    "Hendrix não gostou da capa britânica, com mulheres nuas; ele queria uma foto da banda tirada por Linda Eastman (depois McCartney).",
+    "A longa \"Voodoo Chile\" nasceu de uma jam depois de uma noite em clubes."
+  ],
   "tracks": [
     {
       "title": "...And the Gods Made Love"
@@ -10,7 +20,8 @@
       "title": "Crosstown Traffic"
     },
     {
-      "title": "Voodoo Chile"
+      "title": "Voodoo Chile",
+      "note": "Mais de 15 minutos de blues com Steve Winwood no órgão."
     },
     {
       "title": "Little Miss Strange"
@@ -43,10 +54,12 @@
       "title": "House Burning Down"
     },
     {
-      "title": "All Along the Watchtower"
+      "title": "All Along the Watchtower",
+      "note": "A versão de Hendrix para Dylan, que virou a definitiva."
     },
     {
-      "title": "Voodoo Child (Slight Return)"
+      "title": "Voodoo Child (Slight Return)",
+      "note": "O riff com wah-wah que fecha o disco."
     }
   ]
 }

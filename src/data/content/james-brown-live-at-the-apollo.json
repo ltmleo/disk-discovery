@@ -1,10 +1,21 @@
 {
+  "history": [
+    "Em 1962, a gravadora King não queria gastar com um disco ao vivo. James Brown pagou a gravação do próprio bolso e registrou um show no Apollo, no Harlem, em 24 de outubro.",
+    "O disco captura a energia de Brown e dos Famous Flames: as músicas emendam umas nas outras, com a plateia gritando o tempo todo.",
+    "Vendeu muito, coisa rara para um LP de R&B, e mostrou que um disco ao vivo podia ser mais forte que o de estúdio."
+  ],
+  "trivia": [
+    "A apresentação de abertura (\"It's star time!\") virou marca registrada de Brown.",
+    "\"Lost Someone\" tem mais de 10 minutos de improviso com a plateia.",
+    "O disco ficou mais de um ano na parada de álbuns dos EUA."
+  ],
   "tracks": [
     {
       "title": "Introduction By Fats Gonder / Opening Fanfare (Live 1962)"
     },
     {
-      "title": "I'll Go Crazy (Live 1962)"
+      "title": "I'll Go Crazy (Live 1962)",
+      "note": "Abre o show depois da apresentação do mestre de cerimônias."
     },
     {
       "title": "Try Me (Live 1962)"
@@ -25,13 +36,15 @@
       "title": "Instrumental Bridge #3 (Live 1962)"
     },
     {
-      "title": "Lost Someone (Live 1962)"
+      "title": "Lost Someone (Live 1962)",
+      "note": "Mais de 10 minutos de conversa com a plateia."
     },
     {
       "title": "Medley: Please Please Please/You've Got The Power/I Found Someone (Live 1962)"
     },
     {
-      "title": "Night Train (Live 1962)"
+      "title": "Night Train (Live 1962)",
+      "note": "Fecha o show com uma lista de cidades."
     }
   ]
 }

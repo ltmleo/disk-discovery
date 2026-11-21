@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Em 13 de dezembro de 2013, Beyoncé lançou o disco sem aviso, de madrugada, no iTunes, com 14 músicas e 17 vídeos.",
+    "O disco fala de sexo, maternidade, feminismo, fama e pressão estética, com produção de Timbaland, Pharrell, Boots e outros.",
+    "O lançamento surpresa virou modelo copiado por muitos artistas nos anos seguintes."
+  ],
+  "trivia": [
+    "\"***Flawless\" usa um trecho da palestra \"We Should All Be Feminists\", da escritora Chimamanda Ngozi Adichie.",
+    "\"Drunk in Love\" é um dueto com Jay-Z.",
+    "\"Blue\" tem a voz da filha, Blue Ivy, ainda bebê."
+  ],
   "tracks": [
     {
-      "title": "Pretty Hurts"
+      "title": "Pretty Hurts",
+      "note": "Abre o disco criticando a pressão estética."
     },
     {
       "title": "Haunted"
     },
     {
-      "title": "Drunk in Love (feat. JAŸ-Z)"
+      "title": "Drunk in Love (feat. JAŸ-Z)",
+      "note": "Dueto com Jay-Z."
     },
     {
       "title": "Blow"
@@ -31,7 +43,8 @@
       "title": "XO"
     },
     {
-      "title": "***Flawless (feat. Chimamanda Ngozi Adichie)"
+      "title": "***Flawless (feat. Chimamanda Ngozi Adichie)",
+      "note": "Com a voz de Chimamanda Ngozi Adichie."
     },
     {
       "title": "Superpower (feat. Frank Ocean)"
@@ -40,7 +53,8 @@
       "title": "Heaven"
     },
     {
-      "title": "Blue (feat. Blue Ivy)"
+      "title": "Blue (feat. Blue Ivy)",
+      "note": "Para a filha, Blue Ivy."
     }
   ]
 }

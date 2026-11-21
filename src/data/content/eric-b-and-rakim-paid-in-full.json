@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em 1987, Rakim apareceu com um estilo calmo, cheio de rimas internas e de palavras longas, bem diferente do rap gritado da época. Muitos MCs dizem que ele mudou as regras da rima.",
+    "Eric B. cuidava das batidas, com samples de James Brown e de funk, e com scratches.",
+    "\"Paid in Full\" virou referência do rap dos anos 80 e de toda a geração que veio depois."
+  ],
+  "trivia": [
+    "O remix britânico \"Seven Minutes of Madness\", do Coldcut, usa a cantora israelense Ofra Haza e fez enorme sucesso na Europa.",
+    "\"I Know You Got Soul\" sampleia Bobby Byrd, cantor da banda de James Brown.",
+    "Rakim tinha apenas 18 anos quando gravou o disco."
+  ],
   "tracks": [
     {
-      "title": "I Ain't No Joke"
+      "title": "I Ain't No Joke",
+      "note": "Rakim apresenta o estilo que mudou o rap."
     },
     {
       "title": "Eric B. Is On the Cut"
@@ -10,13 +21,15 @@
       "title": "My Melody"
     },
     {
-      "title": "I Know You Got Soul"
+      "title": "I Know You Got Soul",
+      "note": "Construída sobre um sample de Bobby Byrd."
     },
     {
       "title": "Move the Crowd"
     },
     {
-      "title": "Paid In Full"
+      "title": "Paid In Full",
+      "note": "Ficou ainda mais famosa no remix do Coldcut."
     },
     {
       "title": "As the Rhyme Goes On"
@@ -25,7 +38,8 @@
       "title": "Chinese Arithmetic"
     },
     {
-      "title": "Eric B. Is President"
+      "title": "Eric B. Is President",
+      "note": "O primeiro single da dupla."
     },
     {
       "title": "Extended Beat"

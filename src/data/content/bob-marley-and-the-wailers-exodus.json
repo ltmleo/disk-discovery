@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Em dezembro de 1976, dias antes de um show pela paz em Kingston, Bob Marley foi baleado em casa. Ele fez o show assim mesmo e depois se mudou para Londres, onde gravou \"Exodus\".",
+    "O lado A é mais político e espiritual; o lado B traz canções de amor e de alegria que viraram clássicos.",
+    "Em 1999, a revista Time escolheu \"Exodus\" como o álbum do século."
+  ],
+  "trivia": [
+    "Marley foi atingido no braço; a esposa, Rita, e o empresário também ficaram feridos.",
+    "\"Three Little Birds\" (\"every little thing gonna be all right\") é uma das canções mais conhecidas dele.",
+    "\"One Love/People Get Ready\" encerra o disco."
+  ],
   "tracks": [
     {
       "title": "Natural Mystic"
@@ -13,19 +23,23 @@
       "title": "The Heathen"
     },
     {
-      "title": "Exodus"
+      "title": "Exodus",
+      "note": "Sete minutos sobre um povo em movimento."
     },
     {
-      "title": "Jamming"
+      "title": "Jamming",
+      "note": "Um convite para dançar junto, sem pressa."
     },
     {
-      "title": "Waiting In Vain"
+      "title": "Waiting In Vain",
+      "note": "Uma das canções de amor mais bonitas de Marley."
     },
     {
       "title": "Turn Your Lights Down Low"
     },
     {
-      "title": "Three Little Birds"
+      "title": "Three Little Birds",
+      "note": "\"Don't worry about a thing.\""
     },
     {
       "title": "One Love / People Get Ready"

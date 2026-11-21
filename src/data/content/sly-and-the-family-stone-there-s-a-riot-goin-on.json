@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Depois do sucesso em Woodstock, Sly Stone se fechou em casa em Los Angeles, consumido por drogas, paranoia e pressões políticas. Gravou boa parte de \"There's a Riot Goin' On\" (1971) sozinho, com uma bateria eletrônica e muitos overdubs.",
+    "As fitas foram regravadas tantas vezes que o som ficou abafado e cansado, o oposto da festa dos discos anteriores.",
+    "O resultado é um funk lento e sombrio, visto como resposta amarga a \"What's Going On\" e ao fim dos ideais dos anos 60."
+  ],
+  "trivia": [
+    "A faixa-título dura 0 segundos: Sly disse que não deveria haver motins.",
+    "\"Family Affair\" foi 1º lugar nos EUA e é uma das primeiras gravações de sucesso com bateria eletrônica.",
+    "A capa usa uma bandeira americana com sóis no lugar das estrelas."
+  ],
   "tracks": [
     {
       "title": "Luv N' Haight"
@@ -10,7 +20,8 @@
       "title": "Poet"
     },
     {
-      "title": "Family Affair"
+      "title": "Family Affair",
+      "note": "Bateria eletrônica e a voz cansada de Sly; chegou ao 1º lugar."
     },
     {
       "title": "Africa Talks to You (\"The Asphalt Jungle\")"
@@ -31,10 +42,12 @@
       "title": "Spaced Cowboy"
     },
     {
-      "title": "Runnin' Away"
+      "title": "Runnin' Away",
+      "note": "Uma melodia alegre com letra amarga."
     },
     {
-      "title": "Thank You for Talkin' to Me, Africa"
+      "title": "Thank You for Talkin' to Me, Africa",
+      "note": "Uma versão lenta e escura de um hit anterior."
     }
   ]
 }

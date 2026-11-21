@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Depois do fim dos Beatles, John Lennon fez a terapia do grito primal com Arthur Janov, que estimulava pacientes a reviver traumas de infância. As canções de \"Plastic Ono Band\" (1970) saíram desse processo.",
+    "O som é mínimo: Lennon no violão ou piano, Ringo Starr na bateria e Klaus Voormann no baixo, com coprodução de Phil Spector.",
+    "As letras falam do abandono pelo pai, da morte da mãe, de classe social e do fim dos mitos, inclusive o dos Beatles."
+  ],
+  "trivia": [
+    "\"Mother\" começa com sinos de igreja tocando lentamente.",
+    "Em \"God\", Lennon lista tudo em que não acredita e termina com \"I don't believe in Beatles\".",
+    "Yoko Ono lançou no mesmo dia um disco com o mesmo nome e capa quase igual."
+  ],
   "tracks": [
     {
-      "title": "Mother"
+      "title": "Mother",
+      "note": "Abre com sinos e termina em gritos sobre os pais que o abandonaram."
     },
     {
       "title": "Hold On"
@@ -10,7 +21,8 @@
       "title": "I Found Out"
     },
     {
-      "title": "Working Class Hero"
+      "title": "Working Class Hero",
+      "note": "Só voz e violão, sobre classe social."
     },
     {
       "title": "Isolation"
@@ -28,7 +40,8 @@
       "title": "Look At Me"
     },
     {
-      "title": "God"
+      "title": "God",
+      "note": "\"I don't believe in Beatles\": o fim dos mitos."
     },
     {
       "title": "My Mummy's Dead"

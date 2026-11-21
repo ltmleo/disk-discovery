@@ -1,16 +1,29 @@
 {
+  "history": [
+    "Walter Becker e Donald Fagen, o Steely Dan, já tinham parado de fazer shows e trabalhavam como compositores de estúdio. Para \"Aja\" (1977), chamaram os melhores músicos de sessão de Los Angeles e Nova York e testaram vários deles em cada parte.",
+    "O resultado mistura jazz, rock e soul com produção impecável e letras irônicas sobre perdedores e sonhos de Los Angeles.",
+    "Foi o primeiro disco de platina da dupla e ganhou o Grammy de melhor engenharia de som."
+  ],
+  "trivia": [
+    "A faixa-título tem solo do saxofonista Wayne Shorter e uma parte de bateria famosa de Steve Gadd.",
+    "Vários guitarristas tentaram o solo de \"Peg\" até Jay Graydon gravar a versão usada.",
+    "Michael McDonald faz os vocais de apoio em \"Peg\"."
+  ],
   "tracks": [
     {
       "title": "Black Cow"
     },
     {
-      "title": "Aja"
+      "title": "Aja",
+      "note": "Oito minutos com Wayne Shorter e Steve Gadd."
     },
     {
-      "title": "Deacon Blues"
+      "title": "Deacon Blues",
+      "note": "Um perdedor que sonha em tocar saxofone."
     },
     {
-      "title": "Peg"
+      "title": "Peg",
+      "note": "O solo de Jay Graydon e as vozes de Michael McDonald."
     },
     {
       "title": "Home At Last"

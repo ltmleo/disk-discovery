@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Em 1975, morando em Los Angeles e mergulhado na cocaína, David Bowie gravou \"Station to Station\" quase sem dormir; depois disse que mal se lembra das sessões. O personagem da vez era o Thin White Duke, frio e elegante.",
+    "O disco faz a ponte entre o soul branco de \"Young Americans\" e a fase eletrônica de Berlim: tem funk, baladas e a longa faixa-título, que começa com o som de um trem.",
+    "São só seis faixas, mas muitos fãs o consideram um dos discos mais completos de Bowie."
+  ],
+  "trivia": [
+    "A faixa-título tem mais de 10 minutos e muda de clima no meio, do transe ao rock.",
+    "\"Wild Is the Wind\" é uma regravação inspirada na versão de Nina Simone.",
+    "Bowie também atuou no filme \"O Homem que Caiu na Terra\" nessa época, e uma imagem do filme está na capa."
+  ],
   "tracks": [
     {
-      "title": "Station to Station"
+      "title": "Station to Station",
+      "note": "Mais de 10 minutos, abrindo com um trem que passa de um canal para o outro."
     },
     {
-      "title": "Golden Years"
+      "title": "Golden Years",
+      "note": "Um single de soul e funk, o maior sucesso do disco."
     },
     {
       "title": "Word on a Wing"
@@ -16,7 +28,8 @@
       "title": "Stay"
     },
     {
-      "title": "Wild Is the Wind"
+      "title": "Wild Is the Wind",
+      "note": "Fecha o disco com uma interpretação delicada."
     }
   ]
 }

@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Aos 22 anos, livre de um contrato que limitava suas escolhas na Motown, Stevie Wonder lançou \"Talking Book\" (1972), produzido por ele com Malcolm Cecil e Robert Margouleff.",
+    "O disco junta funk, baladas e sintetizadores, e abriu uma das sequências de álbuns mais celebradas da música pop.",
+    "\"Superstition\" e \"You Are the Sunshine of My Life\" chegaram ao 1º lugar nos EUA."
+  ],
+  "trivia": [
+    "\"Superstition\" foi feita a partir de uma jam com o guitarrista Jeff Beck, que também a gravaria.",
+    "Jeff Beck toca guitarra em \"Lookin' for Another Pure Love\".",
+    "A capa original tinha o título em braile."
+  ],
   "tracks": [
     {
-      "title": "You Are the Sunshine of My Life"
+      "title": "You Are the Sunshine of My Life",
+      "note": "Começa com outras vozes antes de Stevie entrar."
     },
     {
       "title": "Maybe Your Baby"
@@ -16,7 +27,8 @@
       "title": "You've Got It Bad Girl"
     },
     {
-      "title": "Superstition"
+      "title": "Superstition",
+      "note": "O clavinet mais famoso do funk."
     },
     {
       "title": "Big Brother"
@@ -28,7 +40,8 @@
       "title": "Lookin' for Another Pure Love"
     },
     {
-      "title": "I Believe (When I Fall In Love It Will Be Forever)"
+      "title": "I Believe (When I Fall In Love It Will Be Forever)",
+      "note": "Fecha o disco em tom de hino."
     }
   ]
 }

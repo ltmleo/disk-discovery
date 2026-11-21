@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Depois de acompanhar Bob Dylan, The Band ensaiava numa casa rosa em West Saugerties, Nova York, apelidada de Big Pink. Lá gravaram com Dylan as faixas conhecidas como \"The Basement Tapes\".",
+    "A estreia, de 1968, troca a psicodelia da época por um som de piano, órgão, vozes divididas e histórias do interior.",
+    "Eric Clapton disse que o disco o fez querer sair do Cream, e George Harrison também ficou impressionado."
+  ],
+  "trivia": [
+    "A pintura da capa é de Bob Dylan.",
+    "\"I Shall Be Released\" e \"Tears of Rage\" são parcerias ou canções de Dylan.",
+    "Os integrantes dividiam os vocais e trocavam de instrumento."
+  ],
   "tracks": [
     {
-      "title": "Tears of Rage"
+      "title": "Tears of Rage",
+      "note": "Abre o disco, escrita com Bob Dylan."
     },
     {
       "title": "To Kingdom Come"
@@ -13,7 +24,8 @@
       "title": "Caledonia Mission"
     },
     {
-      "title": "The Weight"
+      "title": "The Weight",
+      "note": "\"Take a load off, Fanny\": o maior clássico da banda."
     },
     {
       "title": "We Can Talk"
@@ -31,7 +43,8 @@
       "title": "This Wheel's On Fire"
     },
     {
-      "title": "I Shall Be Released"
+      "title": "I Shall Be Released",
+      "note": "De Bob Dylan, fecha o disco."
     }
   ]
 }

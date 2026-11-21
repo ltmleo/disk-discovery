@@ -1,7 +1,18 @@
 {
+  "history": [
+    "O The Doors gravou a estreia em cerca de seis dias, no estúdio Sunset Sound, em Los Angeles, em 1966. A banda não tinha baixista: Ray Manzarek tocava as linhas de baixo num teclado com a mão esquerda.",
+    "Jim Morrison trazia letras de poeta e uma presença de palco hipnótica, e o órgão de Manzarek dava ao som uma cara única.",
+    "\"Light My Fire\" chegou ao 1º lugar em 1967 e fez da banda uma das maiores dos EUA."
+  ],
+  "trivia": [
+    "\"Light My Fire\" foi escrita principalmente pelo guitarrista Robby Krieger.",
+    "A versão do disco de \"Light My Fire\" tem 7 minutos; a do single foi cortada para caber no rádio.",
+    "\"The End\" tem mais de 11 minutos e um trecho que chocou a época."
+  ],
   "tracks": [
     {
-      "title": "Break On Through (To The Other Side)"
+      "title": "Break On Through (To The Other Side)",
+      "note": "O primeiro single, com uma batida inspirada na bossa nova."
     },
     {
       "title": "Soul Kitchen"
@@ -16,7 +27,8 @@
       "title": "Alabama Song (Whisky Bar)"
     },
     {
-      "title": "Light My Fire"
+      "title": "Light My Fire",
+      "note": "A introdução de órgão de Manzarek e o 1º lugar."
     },
     {
       "title": "Back Door Man"
@@ -31,7 +43,8 @@
       "title": "Take It As It Comes"
     },
     {
-      "title": "The End"
+      "title": "The End",
+      "note": "Mais de 11 minutos de transe e drama."
     }
   ]
 }

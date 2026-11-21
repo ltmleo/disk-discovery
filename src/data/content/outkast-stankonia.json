@@ -1,4 +1,14 @@
 {
+  "history": [
+    "\"Stankonia\" leva o nome do estúdio que o OutKast comprou em Atlanta. Em 2000, André 3000 e Big Boi foram ainda mais longe: rap, funk, rock, gospel e eletrônica, às vezes na mesma faixa.",
+    "\"B.O.B. (Bombs Over Baghdad)\" tem a velocidade do drum'n'bass, algo inédito no rap americano. \"Ms. Jackson\" foi 1º lugar nos EUA.",
+    "O disco ganhou o Grammy de melhor álbum de rap e pôs a dupla entre os maiores nomes da música pop."
+  ],
+  "trivia": [
+    "\"Ms. Jackson\" é um pedido de desculpas de André à mãe de Erykah Badu, sua ex-companheira.",
+    "\"B.O.B.\" tem um coral gospel e solo de guitarra distorcida.",
+    "O disco também tem \"So Fresh, So Clean\", um dos maiores sucessos da dupla."
+  ],
   "tracks": [
     {
       "title": "Intro"
@@ -10,10 +20,12 @@
       "title": "I'm Cool (Interlude)"
     },
     {
-      "title": "So Fresh, So Clean"
+      "title": "So Fresh, So Clean",
+      "note": "Big Boi e André elegantes sobre um funk lento."
     },
     {
-      "title": "Ms. Jackson"
+      "title": "Ms. Jackson",
+      "note": "\"I'm sorry, Ms. Jackson\": chegou ao 1º lugar."
     },
     {
       "title": "Snappin' & Trappin' (with Killer Mike & J-Sweet)"
@@ -31,7 +43,8 @@
       "title": "I'll Call B4 I Cum (with Gangsta Boo & Eco)"
     },
     {
-      "title": "B.O.B. (Bombs Over Baghdad)"
+      "title": "B.O.B. (Bombs Over Baghdad)",
+      "note": "Batida acelerada de drum'n'bass, coral gospel e guitarra."
     },
     {
       "title": "Xplosion (with B-Real)"

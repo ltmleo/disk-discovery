@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Missy Elliott já compunha para outros artistas quando estreou em 1997, ao lado do produtor Timbaland, amigo de infância.",
+    "As batidas de Timbaland eram cheias de pausas, gaguejos e sons estranhos, e Missy rimava e cantava com humor e ousadia.",
+    "Foi a estreia mais bem colocada de uma rapper mulher na parada americana até então, em 3º lugar."
+  ],
+  "trivia": [
+    "\"The Rain (Supa Dupa Fly)\" sampleia \"I Can't Stand the Rain\", de Ann Peebles.",
+    "No clipe de \"The Rain\", dirigido por Hype Williams, Missy usa uma roupa de plástico inflável e lente olho de peixe.",
+    "Aaliyah, Busta Rhymes e Ginuwine participam do disco."
+  ],
   "tracks": [
     {
       "title": "Busta's Intro (feat. Busta Rhymes)"
@@ -7,10 +17,12 @@
       "title": "Hit 'Em wit da Hee (feat. Lil' Kim & Mocha)"
     },
     {
-      "title": "Sock It 2 Me (feat. Da Brat)"
+      "title": "Sock It 2 Me (feat. Da Brat)",
+      "note": "Com Da Brat."
     },
     {
-      "title": "The Rain (Supa Dupa Fly)"
+      "title": "The Rain (Supa Dupa Fly)",
+      "note": "Sobre \"I Can't Stand the Rain\", com um dos clipes mais famosos dos anos 90."
     },
     {
       "title": "Beep Me 911 (feat. 702 & Magoo)"
@@ -28,7 +40,8 @@
       "title": "Friendly Skies (feat. Ginuwine)"
     },
     {
-      "title": "Best Friends (feat. Aaliyah)"
+      "title": "Best Friends (feat. Aaliyah)",
+      "note": "Dueto com Aaliyah."
     },
     {
       "title": "Don't Be Comin' (In My Face)"

@@ -1,7 +1,18 @@
 {
+  "history": [
+    "No auge do sucesso, depois de \"Out of Time\", o R.E.M. fez em 1992 um disco calmo e melancólico, sobre morte, memória e passagem do tempo.",
+    "John Paul Jones, baixista do Led Zeppelin, fez os arranjos de cordas de várias faixas.",
+    "O disco vendeu milhões mesmo sem turnê, puxado por \"Everybody Hurts\" e \"Man on the Moon\"."
+  ],
+  "trivia": [
+    "\"Man on the Moon\" fala do comediante Andy Kaufman e deu título ao filme sobre ele, de 1999.",
+    "O título vem do slogan de uma lanchonete de Athens, na Geórgia, cidade da banda.",
+    "\"Nightswimming\" tem só piano, cordas e a voz de Michael Stipe."
+  ],
   "tracks": [
     {
-      "title": "Drive"
+      "title": "Drive",
+      "note": "Abre o disco com tensão e cordas."
     },
     {
       "title": "Try Not to Breathe"
@@ -10,7 +21,8 @@
       "title": "The Sidewinder Sleeps Tonite"
     },
     {
-      "title": "Everybody Hurts"
+      "title": "Everybody Hurts",
+      "note": "Uma mensagem direta para quem pensa em desistir."
     },
     {
       "title": "New Orleans Instrumental No. 1"
@@ -28,10 +40,12 @@
       "title": "Star Me Kitten"
     },
     {
-      "title": "Man on the Moon"
+      "title": "Man on the Moon",
+      "note": "Sobre Andy Kaufman e teorias da conspiração."
     },
     {
-      "title": "Nightswimming"
+      "title": "Nightswimming",
+      "note": "Piano, cordas e memórias de juventude."
     },
     {
       "title": "Find the River"

@@ -1,13 +1,26 @@
 {
+  "history": [
+    "O N.W.A juntou Eazy-E, Ice Cube, Dr. Dre, MC Ren e DJ Yella em Compton, na Califórnia. Em 1988, a estreia descreveu violência policial, gangues e drogas sem filtro, num som pesado produzido por Dre e Yella.",
+    "Quase sem tocar no rádio, o disco vendeu milhões e levou o gangsta rap ao centro da cultura pop.",
+    "Em 2015, a história do grupo virou o filme \"Straight Outta Compton\"."
+  ],
+  "trivia": [
+    "Um representante do FBI mandou uma carta à gravadora reclamando de \"Fuck tha Police\".",
+    "Eazy-E fundou a gravadora Ruthless Records para lançar o grupo.",
+    "Ice Cube escreveu a maior parte das letras antes de sair do grupo, em 1989."
+  ],
   "tracks": [
     {
-      "title": "Straight Outta Compton"
+      "title": "Straight Outta Compton",
+      "note": "A apresentação do grupo, verso a verso."
     },
     {
-      "title": "F**k tha Police"
+      "title": "F**k tha Police",
+      "note": "Encenada como um julgamento da polícia."
     },
     {
-      "title": "Gangsta Gangsta"
+      "title": "Gangsta Gangsta",
+      "note": "O retrato do dia a dia em Compton."
     },
     {
       "title": "If It Ain't Ruff"
@@ -22,7 +35,8 @@
       "title": "Something Like That"
     },
     {
-      "title": "Express Yourself"
+      "title": "Express Yourself",
+      "note": "Dr. Dre sobre um sample de Charles Wright."
     },
     {
       "title": "Compton's N the House (Remix)"

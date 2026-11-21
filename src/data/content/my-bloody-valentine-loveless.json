@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Kevin Shields levou cerca de dois anos para fazer \"Loveless\" (1991), passando por quase vinte estúdios em busca de um som que ninguém tinha. A demora deixou a gravadora Creation em sérias dificuldades financeiras.",
+    "O som vem de guitarras tocadas com a alavanca de vibrato o tempo todo, criando acordes que parecem dobrar e derreter, com vozes enterradas na mixagem.",
+    "O disco virou o ponto alto do shoegaze. O sucessor só saiu em 2013."
+  ],
+  "trivia": [
+    "Shields contesta o mito de que o disco custou 250 mil libras e quase faliu a Creation sozinho.",
+    "As técnicas de \"glide guitar\" foram imitadas por gerações de bandas.",
+    "Bilinda Butcher e Kevin Shields dividem os vocais, sussurrados."
+  ],
   "tracks": [
     {
-      "title": "only shallow"
+      "title": "only shallow",
+      "note": "Abre com uma guitarra que soa como sirene."
     },
     {
       "title": "loomer"
@@ -10,10 +21,12 @@
       "title": "touched"
     },
     {
-      "title": "to here knows when"
+      "title": "to here knows when",
+      "note": "Quase sem bateria, como um sonho."
     },
     {
-      "title": "when you sleep"
+      "title": "when you sleep",
+      "note": "Uma das faixas mais pop do disco."
     },
     {
       "title": "i only said"
@@ -31,7 +44,8 @@
       "title": "what you want"
     },
     {
-      "title": "soon"
+      "title": "soon",
+      "note": "Fecha com uma batida dançante, influência da cena rave."
     }
   ]
 }

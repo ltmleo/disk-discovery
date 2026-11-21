@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Kanye West já era produtor de sucesso, mas as gravadoras não acreditavam nele como rapper. Em outubro de 2002, depois de um acidente de carro que quebrou sua mandíbula, gravou \"Through the Wire\" com a boca ainda fechada por arames.",
+    "A estreia, de 2004, trouxe samples de soul acelerados, humor, fé e críticas à educação e ao consumo, longe dos estereótipos do gangsta rap.",
+    "Ganhou o Grammy de melhor álbum de rap e mudou o rumo do hip-hop nos anos 2000."
+  ],
+  "trivia": [
+    "\"Through the Wire\" acelera \"Through the Fire\", de Chaka Khan.",
+    "\"Jesus Walks\" levou uma música religiosa ao topo das rádios de rap.",
+    "As vinhetas entre as faixas encenam uma escola e um diretor."
+  ],
   "tracks": [
     {
       "title": "Intro"
@@ -10,7 +20,8 @@
       "title": "Graduation Day"
     },
     {
-      "title": "All Falls Down (feat. Syleena Johnson)"
+      "title": "All Falls Down (feat. Syleena Johnson)",
+      "note": "Sobre consumo e insegurança, com Syleena Johnson."
     },
     {
       "title": "I'll Fly Away"
@@ -19,7 +30,8 @@
       "title": "Spaceship (feat. GLC & Consequence)"
     },
     {
-      "title": "Jesus Walks"
+      "title": "Jesus Walks",
+      "note": "Coro de marcha militar e fé no rádio."
     },
     {
       "title": "Never Let Me Down (feat. JAŸ-Z & J. Ivy)"
@@ -55,7 +67,8 @@
       "title": "Two Words (feat. Mos Def, Freeway & The Boys Choir of Harlem)"
     },
     {
-      "title": "Through The Wire"
+      "title": "Through The Wire",
+      "note": "Gravada com a mandíbula amarrada depois do acidente."
     },
     {
       "title": "Family Business"

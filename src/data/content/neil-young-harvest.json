@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Em 1971, Neil Young machucou as costas e não conseguia ficar de pé com a guitarra elétrica pesada. Voltou ao violão e ao piano e gravou boa parte de \"Harvest\" em Nashville, com a banda Stray Gators.",
+    "O disco mistura country, folk e duas faixas com a Orquestra Sinfônica de Londres. Foi o álbum mais vendido de 1972 nos EUA.",
+    "\"Heart of Gold\" foi o único 1º lugar de Neil Young nos EUA."
+  ],
+  "trivia": [
+    "James Taylor e Linda Ronstadt cantam em \"Heart of Gold\".",
+    "\"Old Man\" foi escrita para o caseiro do rancho que Neil comprou na Califórnia.",
+    "Neil disse depois que o sucesso o colocou \"no meio da estrada\" e que preferiu ir para a valeta, fazendo discos mais estranhos."
+  ],
   "tracks": [
     {
       "title": "Out on the Weekend"
@@ -7,16 +17,19 @@
       "title": "Harvest"
     },
     {
-      "title": "A Man Needs a Maid"
+      "title": "A Man Needs a Maid",
+      "note": "Com a Orquestra Sinfônica de Londres."
     },
     {
-      "title": "Heart of Gold"
+      "title": "Heart of Gold",
+      "note": "O único 1º lugar de Neil, com gaita e vozes de James Taylor e Linda Ronstadt."
     },
     {
       "title": "Are You Ready for the Country"
     },
     {
-      "title": "Old Man"
+      "title": "Old Man",
+      "note": "Para o caseiro do rancho, com James Taylor no banjo."
     },
     {
       "title": "There's a World"
@@ -25,7 +38,8 @@
       "title": "Alabama"
     },
     {
-      "title": "The Needle and the Damage Done"
+      "title": "The Needle and the Damage Done",
+      "note": "Ao vivo, sobre amigos perdidos para a heroína."
     },
     {
       "title": "Words (Between the Lines of Age)"

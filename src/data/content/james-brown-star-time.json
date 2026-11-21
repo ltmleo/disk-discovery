@@ -1,7 +1,18 @@
 {
+  "history": [
+    "\"Star Time\" é uma caixa de 1991 com 71 gravações de James Brown, de \"Please, Please, Please\" (1956) aos anos 80.",
+    "Ela mostra a virada de meados dos anos 60: Brown passou a tratar cada instrumento como percussão, com a ênfase no primeiro tempo do compasso. Essa ideia virou o funk.",
+    "Com discursos como \"Say It Loud – I'm Black and I'm Proud\", ele também virou voz do orgulho negro nos EUA."
+  ],
+  "trivia": [
+    "O nome vem da apresentação dos shows: \"It's star time!\".",
+    "A bateria de Clyde Stubblefield em \"Funky Drummer\" é uma das gravações mais sampleadas da história do hip-hop.",
+    "Bootsy Collins tocava baixo na banda de Brown em 1970, aos 18 anos."
+  ],
   "tracks": [
     {
-      "title": "Please, Please, Please"
+      "title": "Please, Please, Please",
+      "note": "O primeiro sucesso, de 1956, quase só um apelo repetido."
     },
     {
       "title": "Why Do You Do Me"
@@ -70,7 +81,8 @@
       "title": "I Got You (1964 Smash Version)"
     },
     {
-      "title": "Papa's Got A Brand New Bag (Complete Take / Pts. 1, 2 & 3)"
+      "title": "Papa's Got A Brand New Bag (Complete Take / Pts. 1, 2 & 3)",
+      "note": "Considerada a primeira gravação de funk."
     },
     {
       "title": "Papa's Got A Brand New Bag (Pt. 1)"
@@ -97,7 +109,8 @@
       "title": "Let Yourself Go"
     },
     {
-      "title": "Cold Sweat"
+      "title": "Cold Sweat",
+      "note": "Funk cru com metais secos e um solo de bateria."
     },
     {
       "title": "Get It Together (Pt.1 & 2)"
@@ -130,7 +143,8 @@
       "title": "Funky Drummer (Pts.1 & 2 / Edit)"
     },
     {
-      "title": "Get Up I Feel Like Being Like A Sex Machine, Pts. 1 & 2 (feat. The Original J.B.s)"
+      "title": "Get Up I Feel Like Being Like A Sex Machine, Pts. 1 & 2 (feat. The Original J.B.s)",
+      "note": "Com Bootsy Collins no baixo, em 1970."
     },
     {
       "title": "Super Bad"

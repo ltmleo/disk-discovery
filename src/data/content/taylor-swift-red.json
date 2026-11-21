@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em \"Red\" (2012), Taylor Swift misturou o country dos discos anteriores com pop, rock e eletrônica, trabalhando com Max Martin e Shellback em alguns dos singles.",
+    "As letras falam de um amor intenso e do fim dele, com detalhes que os fãs analisam até hoje.",
+    "Em 2021, ela regravou o disco como \"Red (Taylor's Version)\", depois de perder os direitos das gravações originais. As faixas e a prévia deste jogo vêm dessa versão, a disponível na loja."
+  ],
+  "trivia": [
+    "A versão de 10 minutos de \"All Too Well\" chegou ao 1º lugar em 2021 e virou o 1º lugar mais longo da história da Billboard Hot 100.",
+    "\"We Are Never Ever Getting Back Together\" foi seu primeiro 1º lugar nos EUA.",
+    "\"I Knew You Were Trouble\" tem uma quebra eletrônica que surpreendeu os fãs de country."
+  ],
   "tracks": [
     {
-      "title": "State Of Grace (Taylor's Version)"
+      "title": "State Of Grace (Taylor's Version)",
+      "note": "Abre com guitarras grandes, quase rock de arena."
     },
     {
       "title": "Red (Taylor's Version)"
@@ -10,10 +21,12 @@
       "title": "Treacherous (Taylor's Version)"
     },
     {
-      "title": "I Knew You Were Trouble (Taylor's Version)"
+      "title": "I Knew You Were Trouble (Taylor's Version)",
+      "note": "O drop eletrônico que marcou a virada pop."
     },
     {
-      "title": "All Too Well (Taylor's Version)"
+      "title": "All Too Well (Taylor's Version)",
+      "note": "Uma das letras mais celebradas de Taylor."
     },
     {
       "title": "22 (Taylor's Version)"
@@ -22,7 +35,8 @@
       "title": "I Almost Do (Taylor's Version)"
     },
     {
-      "title": "We Are Never Ever Getting Back Together (Taylor's Version)"
+      "title": "We Are Never Ever Getting Back Together (Taylor's Version)",
+      "note": "O primeiro 1º lugar dela nos EUA."
     },
     {
       "title": "Stay Stay Stay (Taylor's Version)"

@@ -1,16 +1,30 @@
 {
+  "history": [
+    "Neil Young gravou boa parte de \"After the Gold Rush\" (1970) no porão de casa, em Topanga Canyon, com membros do Crazy Horse e um Nils Lofgren de 18 anos ao piano.",
+    "O disco alterna baladas frágeis e rock elétrico. A faixa-título nasceu de um roteiro de cinema nunca filmado, do ator Dean Stockwell.",
+    "É um dos discos mais queridos de Neil, entre o folk e o rock."
+  ],
+  "trivia": [
+    "\"Southern Man\" critica o racismo no Sul dos EUA. O Lynyrd Skynyrd respondeu com \"Sweet Home Alabama\".",
+    "Nils Lofgren aprendeu a tocar o piano do disco quase na hora.",
+    "Neil e o Lynyrd Skynyrd eram admiradores mútuos, apesar da briga nas letras."
+  ],
   "tracks": [
     {
-      "title": "Tell Me Why"
+      "title": "Tell Me Why",
+      "note": "Abre o disco só com violões e vozes."
     },
     {
-      "title": "After the Gold Rush"
+      "title": "After the Gold Rush",
+      "note": "Piano, trompa e um futuro pós-apocalíptico."
     },
     {
-      "title": "Only Love Can Break Your Heart"
+      "title": "Only Love Can Break Your Heart",
+      "note": "Uma balada que virou single."
     },
     {
-      "title": "Southern Man"
+      "title": "Southern Man",
+      "note": "A crítica ao racismo que provocou o Lynyrd Skynyrd."
     },
     {
       "title": "Till the Morning Comes"

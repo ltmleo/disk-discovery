@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Kate Bush construiu um estúdio em casa e passou meses fazendo \"Hounds of Love\" (1985) do jeito dela, com o sintetizador e sampler Fairlight e muita percussão.",
+    "O lado A traz canções como \"Running Up That Hill\" e \"Cloudbusting\". O lado B, \"The Ninth Wave\", é uma suíte sobre uma mulher perdida no mar à noite, entre o sono, o medo e o resgate.",
+    "O disco tirou \"Like a Virgin\", de Madonna, do 1º lugar no Reino Unido."
+  ],
+  "trivia": [
+    "\"Running Up That Hill\" voltou ao 1º lugar britânico em 2022, 37 anos depois, graças à série \"Stranger Things\".",
+    "\"Cloudbusting\" se inspira nas memórias de Peter Reich sobre o pai, o psicanalista Wilhelm Reich. O mesmo livro inspirou \"Birdland\", de Patti Smith.",
+    "O ator Donald Sutherland faz o papel de Wilhelm Reich no clipe de \"Cloudbusting\"."
+  ],
   "tracks": [
     {
-      "title": "Running Up That Hill (A Deal With God)"
+      "title": "Running Up That Hill (A Deal With God)",
+      "note": "Um pacto com Deus para trocar de lugar com quem se ama."
     },
     {
-      "title": "Hounds of Love"
+      "title": "Hounds of Love",
+      "note": "Medo de se apaixonar, com cães de caça imaginários."
     },
     {
       "title": "The Big Sky (Special Single Mix)"
@@ -13,10 +25,12 @@
       "title": "Mother Stands For Comfort"
     },
     {
-      "title": "Cloudbusting"
+      "title": "Cloudbusting",
+      "note": "A história de Wilhelm Reich e do filho, Peter."
     },
     {
-      "title": "And Dream of Sheep"
+      "title": "And Dream of Sheep",
+      "note": "Abre a suíte \"The Ninth Wave\", com a narradora à deriva."
     },
     {
       "title": "Under Ice"

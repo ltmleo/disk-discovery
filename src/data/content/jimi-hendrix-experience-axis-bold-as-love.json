@@ -1,4 +1,14 @@
 {
+  "history": [
+    "Lançado em dezembro de 1967, meses depois de \"Are You Experienced\", o segundo disco do Experience é mais sutil, com baladas, soul e ainda mais experimentos de estúdio.",
+    "Hendrix explorou o panorama estéreo, fazendo sons viajarem de um lado para o outro, e o wah-wah em várias faixas.",
+    "\"Little Wing\", com pouco mais de dois minutos, virou uma das baladas mais regravadas do rock."
+  ],
+  "trivia": [
+    "Hendrix esqueceu as fitas master do lado A num táxi, e a banda teve de remixar tudo numa noite.",
+    "A capa imita a arte devocional hindu, com os integrantes no lugar de divindades.",
+    "\"Little Wing\" foi regravada por Eric Clapton (com Derek and the Dominos) e por Stevie Ray Vaughan."
+  ],
   "tracks": [
     {
       "title": "EXP"
@@ -16,16 +26,19 @@
       "title": "Ain't No Telling"
     },
     {
-      "title": "Little Wing"
+      "title": "Little Wing",
+      "note": "Pouco mais de dois minutos e uma das baladas mais regravadas do rock."
     },
     {
-      "title": "If 6 Was 9"
+      "title": "If 6 Was 9",
+      "note": "Uma das faixas mais psicodélicas da banda."
     },
     {
       "title": "You Got Me Floatin'"
     },
     {
-      "title": "Castles Made of Sand"
+      "title": "Castles Made of Sand",
+      "note": "Com guitarra gravada ao contrário."
     },
     {
       "title": "She's So Fine"
@@ -37,7 +50,8 @@
       "title": "Little Miss Lover"
     },
     {
-      "title": "Bold As Love"
+      "title": "Bold As Love",
+      "note": "Fecha o disco com uma das primeiras gravações com efeito de phaser."
     }
   ]
 }

@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Lançado em 1968, menos de um ano depois de \"I Never Loved a Man the Way I Love You\", \"Lady Soul\" confirmou Aretha Franklin como a maior voz do soul.",
+    "Com Jerry Wexler, Arif Mardin e Tom Dowd na produção, ela gravou com a banda de Muscle Shoals e com as irmãs nos vocais de apoio.",
+    "O disco traz \"Chain of Fools\", \"Ain't No Way\" e \"(You Make Me Feel Like) A Natural Woman\"."
+  ],
+  "trivia": [
+    "\"A Natural Woman\" foi composta por Carole King e Gerry Goffin depois que Wexler sugeriu o título.",
+    "\"Ain't No Way\" foi escrita pela irmã de Aretha, Carolyn Franklin, e tem Cissy Houston no agudo.",
+    "Eric Clapton toca guitarra em \"Good to Me as I Am to You\"."
+  ],
   "tracks": [
     {
-      "title": "Chain of Fools"
+      "title": "Chain of Fools",
+      "note": "Escrita por Don Covay, com a guitarra de Joe South."
     },
     {
       "title": "Money Won't Change You"
@@ -13,7 +24,8 @@
       "title": "Niki Hoeky"
     },
     {
-      "title": "(You Make Me Feel Like) A Natural Woman"
+      "title": "(You Make Me Feel Like) A Natural Woman",
+      "note": "De Carole King e Gerry Goffin, a pedido de Jerry Wexler."
     },
     {
       "title": "Sweet Sweet Baby (Since You've Been Gone)"
@@ -28,7 +40,8 @@
       "title": "Groovin'"
     },
     {
-      "title": "Ain't No Way"
+      "title": "Ain't No Way",
+      "note": "Da irmã Carolyn, com Cissy Houston no vocal agudo."
     }
   ]
 }

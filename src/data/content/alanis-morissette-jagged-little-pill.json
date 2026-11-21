@@ -1,16 +1,28 @@
 {
+  "history": [
+    "Alanis Morissette já tinha sido estrela pop adolescente no Canadá quando se mudou para Los Angeles e começou a compor com o produtor Glen Ballard. Muitas canções foram escritas e gravadas no mesmo dia.",
+    "Lançado pelo selo Maverick, de Madonna, em 1995, o disco trouxe letras diretas sobre raiva, religião e relações, num rock alternativo cheio de refrões.",
+    "Vendeu mais de 30 milhões de cópias e ganhou o Grammy de Álbum do Ano."
+  ],
+  "trivia": [
+    "Flea e Dave Navarro, do Red Hot Chili Peppers, tocam em \"You Oughta Know\".",
+    "\"Ironic\" ficou famosa também por discussões sobre se as situações da letra eram de fato irônicas.",
+    "O disco virou um musical da Broadway em 2019."
+  ],
   "tracks": [
     {
       "title": "All I Really Want"
     },
     {
-      "title": "You Oughta Know"
+      "title": "You Oughta Know",
+      "note": "Com Flea e Dave Navarro, uma das canções mais raivosas dos anos 90."
     },
     {
       "title": "Perfect"
     },
     {
-      "title": "Hand in My Pocket"
+      "title": "Hand in My Pocket",
+      "note": "Contradições de uma jovem de 20 anos, com gaita."
     },
     {
       "title": "Right Through You"
@@ -19,7 +31,8 @@
       "title": "Forgiven"
     },
     {
-      "title": "You Learn"
+      "title": "You Learn",
+      "note": "Uma lista de lições de vida, em tom otimista."
     },
     {
       "title": "Head over Feet"
@@ -28,7 +41,8 @@
       "title": "Mary Jane"
     },
     {
-      "title": "Ironic"
+      "title": "Ironic",
+      "note": "A discussão sobre ironia virou parte da fama da música."
     },
     {
       "title": "Not the Doctor"

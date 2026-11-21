@@ -1,7 +1,18 @@
 {
+  "history": [
+    "John Coltrane gravou \"A Love Supreme\" em 9 de dezembro de 1964, numa única sessão, no estúdio de Rudy Van Gelder, em Nova Jersey. Tocou com o seu quarteto clássico: McCoy Tyner, Jimmy Garrison e Elvin Jones.",
+    "A suíte em quatro partes é uma oferenda espiritual: Coltrane tinha largado a heroína anos antes e via o disco como agradecimento a Deus.",
+    "É um dos discos de jazz mais vendidos e influentes, ouvido também por músicos de rock e de soul."
+  ],
+  "trivia": [
+    "Na primeira parte, Coltrane canta \"a love supreme\" em coro com ele mesmo.",
+    "Em \"Psalm\", o saxofone \"recita\" sílaba por sílaba um poema impresso no encarte.",
+    "O motivo de quatro notas da primeira parte é tocado em todos os tons."
+  ],
   "tracks": [
     {
-      "title": "A Love Supreme, Pt. 1: Acknowledgement"
+      "title": "A Love Supreme, Pt. 1: Acknowledgement",
+      "note": "O tema de quatro notas e o canto de Coltrane."
     },
     {
       "title": "A Love Supreme, Pt. 2: Resolution"
@@ -10,7 +21,8 @@
       "title": "A Love Supreme, Pt. 3: Pursuance"
     },
     {
-      "title": "A Love Supreme, Pt. 4: Psalm"
+      "title": "A Love Supreme, Pt. 4: Psalm",
+      "note": "O sax recita o poema do encarte, sílaba por sílaba."
     }
   ]
 }

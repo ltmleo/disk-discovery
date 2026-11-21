@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Em 1971, David Bowie compôs a maior parte de \"Hunky Dory\" ao piano. O disco mistura baladas, rock e homenagens a ídolos como Bob Dylan, Andy Warhol e o Velvet Underground.",
+    "Rick Wakeman, que logo entraria no Yes, toca piano em várias faixas, e Mick Ronson cuidou dos arranjos de cordas.",
+    "Vendeu pouco no lançamento e só ganhou força depois do sucesso de Ziggy Stardust."
+  ],
+  "trivia": [
+    "\"Life on Mars?\" nasceu como resposta a \"My Way\": Bowie tinha escrito uma letra para a mesma melodia francesa, mas a versão de Paul Anka ganhou.",
+    "\"Changes\" virou um dos lemas da carreira de Bowie.",
+    "\"Queen Bitch\" é uma homenagem declarada ao Velvet Underground."
+  ],
   "tracks": [
     {
-      "title": "Changes"
+      "title": "Changes",
+      "note": "\"Turn and face the strange.\""
     },
     {
       "title": "Oh! You Pretty Things"
@@ -10,7 +21,8 @@
       "title": "Eight Line Poem"
     },
     {
-      "title": "Life On Mars?"
+      "title": "Life On Mars?",
+      "note": "Uma das melodias mais grandiosas de Bowie, com piano de Rick Wakeman."
     },
     {
       "title": "Kooks"
@@ -22,13 +34,15 @@
       "title": "Fill Your Heart"
     },
     {
-      "title": "Andy Warhol"
+      "title": "Andy Warhol",
+      "note": "Um retrato do artista, que não gostou muito da homenagem."
     },
     {
       "title": "Song for Bob Dylan"
     },
     {
-      "title": "Queen Bitch"
+      "title": "Queen Bitch",
+      "note": "O lado Velvet Underground de Bowie."
     },
     {
       "title": "The Bewlay Brothers"

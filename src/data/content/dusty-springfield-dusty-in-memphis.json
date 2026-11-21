@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Em 1968, Dusty Springfield, uma das maiores cantoras britânicas, assinou com a Atlantic. Jerry Wexler, Tom Dowd e Arif Mardin gravaram as bases em Memphis com a banda do American Sound Studio.",
+    "Insegura diante daquela banda, Dusty acabou gravando a voz depois, em Nova York.",
+    "Vendeu pouco no lançamento, mas virou um dos discos de soul mais admirados."
+  ],
+  "trivia": [
+    "\"Son of a Preacher Man\" foi oferecida a Aretha Franklin, que recusou e depois gravou a própria versão.",
+    "\"The Windmills of Your Mind\" é do filme \"Crown, o Magnífico\".",
+    "\"Son of a Preacher Man\" voltou às paradas com a trilha de \"Pulp Fiction\", em 1994."
+  ],
   "tracks": [
     {
-      "title": "Just a Little Lovin'"
+      "title": "Just a Little Lovin'",
+      "note": "Abre o disco com uma interpretação contida e sensual."
     },
     {
       "title": "So Much Love"
     },
     {
-      "title": "Son of a Preacher Man"
+      "title": "Son of a Preacher Man",
+      "note": "O maior sucesso, oferecido antes a Aretha."
     },
     {
       "title": "I Don't Want to Hear It Anymore"
@@ -22,7 +34,8 @@
       "title": "Just One Smile"
     },
     {
-      "title": "The Windmills of Your Mind"
+      "title": "The Windmills of Your Mind",
+      "note": "Uma canção de filme cantada como confissão."
     },
     {
       "title": "In the Land of Make Believe"
