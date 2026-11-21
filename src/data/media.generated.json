@@ -773,5 +773,65 @@
   "john-lennon-plastic-ono-band": {
     "previews": {},
     "v": 3
+  },
+  "doors-doors": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/97/e2/ce/97e2ce16-02e1-54f6-3896-dcc55249ff7d/603497838738.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Light My Fire": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dd/61/8b/dd618b9b-c388-7ebc-458e-d2c214f196e5/mzaf_10866651626943461182.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "miles-davis-bitches-brew": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/9b/e1/63/9be1630c-486d-760c-76cf-04282174700a/074646577424.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Pharaoh's Dance (feat. Wayne Shorter, Bennie Maupin, John McLaughlin, Chick Corea, Joe Zawinul, Dave Holland & Harvey Brooks)": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/4f/aa/17/4faa17b1-7a00-ab67-3822-768adfb75701/mzaf_12815167730077931046.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "david-bowie-hunky-dory": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/f0/b9/68/f0b9680e-b028-b3d6-f793-7c268256499a/825646286034.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Changes": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/21/fd/8521fdb8-4a46-2efa-8e9a-7a1e6474c1ae/mzaf_15506151901672267484.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "erykah-badu-baduizm": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/86/ce/c1/86cec101-bf1f-c565-e794-656b108f3ee1/15UMGIM77651.rgb.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Next Lifetime": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/56/d0/52/56d052f5-9ad2-cc87-e9d9-e399e9b704b9/mzaf_13761610854988661180.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "neil-young-after-the-gold-rush": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/88/9f/0a/889f0afc-ca89-5968-ef83-ab07f7184eb6/093624924753.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Southern Man": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/25/4f/96/254f9677-c5d4-723f-a5f4-aa628b9bc2e4/mzaf_5449835972421309900.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "bruce-springsteen-darkness-on-the-edge-of-town": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b3/13/4e/b3134ed3-a05d-d3b2-8f96-8cddd067aa32/884977798753.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Badlands": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/41/7c/5c/417c5cce-ba03-600b-a0bd-a8c62c2d8bf3/mzaf_9216074607155963146.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "jimi-hendrix-experience-axis-bold-as-love": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/93/5d/c5/935dc5d5-a985-333d-0825-879ddb36e461/884977526585.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Little Wing": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/e2/9e/bae29e29-e54b-6061-e59f-6049ccc90cee/mzaf_16107050260222182661.plus.aac.p.m4a"
+    },
+    "v": 3
+  },
+  "missy-misdemeanor-elliott-supa-dupa-fly": {
+    "previews": {},
+    "v": 3
+  },
+  "stooges-fun-house": {
+    "art": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/ea/84/3c/ea843cdb-04ca-63c1-dd30-ddf3a0b94ca9/075596066921.jpg/{size}x{size}bb.jpg",
+    "previews": {
+      "Down On the Street": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e4/de/93/e4de9373-092c-021c-5416-0d056f51dca3/mzaf_16246524010489690759.plus.aac.p.m4a"
+    },
+    "v": 3
   }
 }
