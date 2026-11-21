@@ -20,6 +20,8 @@ export interface Album {
   mbid?: string;
   /** Spotify album ID. When absent, the link falls back to a Spotify search. */
   spotifyId?: string;
+  /** Track whose preview plays on reveal. Must match a title in `tracks`. */
+  previewTrack: string;
   /** One-line hook shown on the card. */
   tagline: string;
   /** Paragraphs. */

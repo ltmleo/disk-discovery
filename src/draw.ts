@@ -1,31 +1,18 @@
 import type { Album } from './types';
-import { RARITIES, rarityForRank } from './rarity';
 
 export type Rng = () => number;
 
 /**
- * Two-stage draw: pick a tier by weight, then an album uniformly inside it.
- * Tiers with no albums in the dataset are dropped and the rest renormalised,
- * so a partial dataset (e.g. the MVP) never yields an empty pull.
+ * Uniform draw: every album is equally likely. Rarity emerges from tier sizes
+ * (5 legendary vs 300 common), so no per-tier weights are needed.
  */
 export function drawAlbum(albums: readonly Album[], rng: Rng = Math.random): Album {
   if (albums.length === 0) throw new Error('No albums to draw from');
+  const idx = Math.min(albums.length - 1, Math.floor(rng() * albums.length));
+  return albums[idx]!;
+}
 
-  const pools = RARITIES.map((tier) => ({
-    tier,
-    albums: albums.filter((a) => rarityForRank(a.rank).id === tier.id),
-  })).filter((p) => p.albums.length > 0);
-
-  const total = pools.reduce((s, p) => s + p.tier.weight, 0);
-  let roll = rng() * total;
-  let pool = pools[pools.length - 1]!;
-  for (const p of pools) {
-    if (roll < p.tier.weight) {
-      pool = p;
-      break;
-    }
-    roll -= p.tier.weight;
-  }
-  const idx = Math.min(pool.albums.length - 1, Math.floor(rng() * pool.albums.length));
-  return pool.albums[idx]!;
+/** Chance of pulling a given tier from a dataset, for display. */
+export function tierOdds(albums: readonly Album[], predicate: (a: Album) => boolean): number {
+  return albums.length ? albums.filter(predicate).length / albums.length : 0;
 }

@@ -317,3 +317,120 @@
     transform: none;
   }
 }
+
+/* ---------- Audio ---------- */
+.nav {
+  align-items: center;
+}
+
+.nav__mute {
+  width: 40px;
+  height: 36px;
+  border: 2px solid var(--ink);
+  background: var(--paper-2);
+  font-size: 1.05rem;
+  cursor: pointer;
+  transform: rotate(2deg);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.np {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100vw - 32px);
+  padding: 8px 10px 8px 12px;
+  background: var(--ink);
+  color: var(--paper-2);
+  font: 0.85rem var(--f-type);
+  transform: translateX(-50%) rotate(-1deg);
+  box-shadow: 4px 4px 0 var(--red);
+}
+
+.np[hidden] {
+  display: none;
+}
+
+.np__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.np__disc {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--paper-2) 0 10%, var(--red) 11% 34%, #111 35%);
+  box-shadow: 0 0 0 1px #444;
+}
+
+.np[data-state='playing'] .np__disc {
+  animation: spin 1.8s linear infinite;
+}
+
+.np__stop {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--paper-2);
+  background: var(--red);
+  color: #fff;
+  cursor: pointer;
+}
+
+.track {
+  grid-template-columns: 2.6rem 2.2rem 1fr;
+}
+
+.track::before {
+  grid-row: span 2;
+}
+
+.track__note {
+  grid-column: 3;
+}
+
+.track__play {
+  grid-row: span 2;
+  align-self: start;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--ink);
+  background: var(--paper-2);
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.track__play:hover {
+  background: var(--yellow);
+}
+
+.track[data-state='playing'] .track__play,
+.track[data-state='loading'] .track__play {
+  background: var(--red);
+  color: #fff;
+}
+
+.track[data-state='playing'] .track__title {
+  background: linear-gradient(transparent 60%, var(--yellow) 60%);
+}
+
+.track--featured .track__title::after {
+  content: '★ toca na revelação';
+  margin-left: 8px;
+  padding: 1px 6px;
+  background: var(--yellow);
+  font: 0.7rem var(--f-type);
+  vertical-align: middle;
+}
+
+.track__title {
+  justify-self: start;
+}

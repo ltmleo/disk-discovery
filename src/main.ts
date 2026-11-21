@@ -8,6 +8,9 @@ import { h, ransom } from './ui/dom';
 import { renderPackView } from './ui/pack';
 import { renderGallery } from './ui/gallery';
 import { renderDetail } from './ui/detail';
+import { isMuted, onMuteChange, setMuted } from './audio/settings';
+import { onPlayer, stopPreview } from './audio/preview';
+import { unlock } from './audio/sfx';
 
 const collection = new Collection();
 const app = document.getElementById('app')!;
@@ -27,10 +30,58 @@ const header = h(
     { class: 'nav', 'aria-label': 'Principal' },
     h('a', { class: 'nav__link', href: '#/', 'data-route': 'pack' }, 'Abrir pacote'),
     h('a', { class: 'nav__link', href: '#/galeria', 'data-route': 'gallery' }, 'Galeria ', counter),
+    muteButton(),
   ),
 );
+
+function muteButton(): HTMLElement {
+  const btn = h('button', {
+    class: 'nav__mute',
+    type: 'button',
+    onclick: () => {
+      unlock();
+      setMuted(!isMuted());
+    },
+  });
+  const sync = (m: boolean) => {
+    btn.textContent = m ? '🔇' : '🔊';
+    btn.setAttribute('aria-label', m ? 'Ativar som' : 'Silenciar');
+    btn.setAttribute('aria-pressed', String(m));
+  };
+  sync(isMuted());
+  onMuteChange(sync);
+  return btn;
+}
+
+/** Global "now playing" strip: one subscription for the whole app, survives route changes. */
+function nowPlayingBar(): HTMLElement {
+  const label = h('span', { class: 'np__label' });
+  const bar = h(
+    'div',
+    { class: 'np', role: 'status', 'aria-live': 'polite', hidden: true },
+    h('span', { class: 'np__disc', 'aria-hidden': 'true' }),
+    label,
+    h('button', { class: 'np__stop', type: 'button', onclick: () => stopPreview(), 'aria-label': 'Parar música' }, '■'),
+  );
+  let hideTimer = 0;
+  onPlayer((np) => {
+    clearTimeout(hideTimer);
+    if (!np || np.state === 'stopped') {
+      bar.hidden = true;
+      return;
+    }
+    bar.hidden = false;
+    bar.dataset.state = np.state;
+    label.textContent =
+      np.state === 'unavailable'
+        ? `Prévia indisponível: ${np.track}`
+        : `${np.state === 'loading' ? 'Carregando' : 'Tocando'}: ${np.track} · ${np.album.artist}`;
+    if (np.state === 'unavailable') hideTimer = window.setTimeout(() => (bar.hidden = true), 3000);
+  });
+  return bar;
+}
 const main = h('main', { id: 'main', tabindex: '-1' });
-app.replaceChildren(header, main);
+app.replaceChildren(header, main, nowPlayingBar());
 
 /** Hash routing: works on GitHub Pages without a 404.html redirect hack. */
 function route() {

@@ -1,36 +1,30 @@
 import { describe, expect, it } from 'vitest';
-import { drawAlbum } from './draw';
+import { drawAlbum, tierOdds } from './draw';
 import { ALBUMS } from './data/albums';
 import { RARITIES, rarityForRank } from './rarity';
 import type { Album } from './types';
 
-const seq = (...values: number[]) => {
-  let i = 0;
-  return () => values[i++ % values.length]!;
-};
-
 describe('drawAlbum', () => {
-  it('picks the tier by cumulative weight (rarest first)', () => {
-    expect(rarityForRank(drawAlbum(ALBUMS, seq(0, 0)).rank).id).toBe('legendary');
-    expect(rarityForRank(drawAlbum(ALBUMS, seq(0.999, 0)).rank).id).toBe('common');
+  it('maps the roll uniformly over albums', () => {
+    expect(drawAlbum(ALBUMS, () => 0).id).toBe(ALBUMS[0]!.id);
+    expect(drawAlbum(ALBUMS, () => 0.999999).id).toBe(ALBUMS.at(-1)!.id);
   });
 
-  it('renormalises when tiers are missing', () => {
-    const onlyCommon = ALBUMS.filter((a) => rarityForRank(a.rank).id === 'common');
-    for (const r of [0, 0.3, 0.999]) expect(drawAlbum(onlyCommon, seq(r, 0)).id).toBe(onlyCommon[0]!.id);
-  });
-
-  it('roughly matches configured odds', () => {
+  it('gives every album the same chance', () => {
     let s = 42;
     const rng = () => ((s = (s * 1664525 + 1013904223) >>> 0) / 2 ** 32);
-    const n = 200_000;
-    const counts: Record<string, number> = {};
+    const n = 100_000;
+    const counts = new Map<string, number>();
     for (let i = 0; i < n; i++) {
-      const id = rarityForRank(drawAlbum(ALBUMS, rng).rank).id;
-      counts[id] = (counts[id] ?? 0) + 1;
+      const id = drawAlbum(ALBUMS, rng).id;
+      counts.set(id, (counts.get(id) ?? 0) + 1);
     }
-    const total = RARITIES.reduce((t, r) => t + r.weight, 0);
-    for (const r of RARITIES) expect((counts[r.id] ?? 0) / n).toBeCloseTo(r.weight / total, 2);
+    for (const a of ALBUMS) expect((counts.get(a.id) ?? 0) / n).toBeCloseTo(1 / ALBUMS.length, 2);
+  });
+
+  it('derives tier odds from tier size', () => {
+    expect(tierOdds(ALBUMS, (a) => rarityForRank(a.rank).id === 'legendary')).toBeCloseTo(1 / ALBUMS.length);
+    expect(tierOdds([], () => true)).toBe(0);
   });
 
   it('throws on empty input', () => {

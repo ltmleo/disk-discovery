@@ -4,6 +4,9 @@ import { rarityForRank } from '../rarity';
 import { spotifyUrl } from '../cover';
 import { renderCard, stars } from './card';
 import { h, ransom } from './dom';
+import { nowPlaying, onPlayer, playPreview, stopPreview } from '../audio/preview';
+import { unlock } from '../audio/sfx';
+import type { Album } from '../types';
 
 const dateFmt = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long' });
 
@@ -66,20 +69,53 @@ export function renderDetail(id: string, collection: Collection): HTMLElement {
         h('h2', { class: 'section-label' }, 'Curiosidades'),
         h('ul', { class: 'notes', role: 'list' }, album.trivia.map((t) => h('li', { class: 'note' }, t))),
         h('h2', { class: 'section-label' }, 'Faixas'),
-        h(
-          'ol',
-          { class: 'tracks' },
-          album.tracks.map((t) =>
-            h(
-              'li',
-              { class: 'track' },
-              h('span', { class: 'track__title' }, t.title),
-              t.note ? h('p', { class: 'track__note' }, t.note) : null,
-            ),
-          ),
-        ),
+        trackList(album),
         h('p', { class: 'source' }, 'Ranking: Rolling Stone, “The 500 Greatest Albums of All Time” (2020). Capas: Cover Art Archive.'),
       ),
     ),
   );
+}
+
+function trackList(album: Album): HTMLElement {
+  const rows = album.tracks.map((t) => {
+    const btn = h(
+      'button',
+      {
+        class: 'track__play',
+        type: 'button',
+        'aria-label': `Ouvir trecho de ${t.title}`,
+        onclick: () => {
+          unlock();
+          const np = nowPlaying();
+          const same = np?.album.id === album.id && np.track === t.title;
+          if (same && (np.state === 'playing' || np.state === 'loading')) stopPreview();
+          else playPreview(album, t.title);
+        },
+      },
+      '▶',
+    );
+    const row = h(
+      'li',
+      { class: `track${t.title === album.previewTrack ? ' track--featured' : ''}`, 'data-track': t.title },
+      btn,
+      h('span', { class: 'track__title' }, t.title),
+      t.note ? h('p', { class: 'track__note' }, t.note) : null,
+    );
+    return { row, btn, title: t.title };
+  });
+  const list = h('ol', { class: 'tracks' }, rows.map((r) => r.row));
+
+  // Reflect the shared player state; unsubscribes itself once the view is gone.
+  const off = onPlayer((np) => {
+    if (!list.isConnected && list.dataset.mounted) return off();
+    list.dataset.mounted = '1';
+    for (const r of rows) {
+      const active = np?.album.id === album.id && np.track === r.title;
+      const state = active ? np!.state : 'stopped';
+      r.row.dataset.state = state;
+      r.btn.textContent = state === 'playing' ? '■' : state === 'loading' ? '…' : '▶';
+      r.btn.setAttribute('aria-label', `${state === 'playing' ? 'Parar' : 'Ouvir'} trecho de ${r.title}`);
+    }
+  });
+  return list;
 }

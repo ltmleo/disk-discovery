@@ -7,6 +7,7 @@ import type { Album } from '../types';
 export const ALBUMS: readonly Album[] = [
   {
     id: 'marvin-gaye-whats-going-on',
+    previewTrack: "What's Going On",
     rank: 1,
     title: "What's Going On",
     artist: 'Marvin Gaye',
@@ -40,6 +41,7 @@ export const ALBUMS: readonly Album[] = [
   },
   {
     id: 'nirvana-nevermind',
+    previewTrack: 'Smells Like Teen Spirit',
     rank: 6,
     title: 'Nevermind',
     artist: 'Nirvana',
@@ -75,6 +77,7 @@ export const ALBUMS: readonly Album[] = [
   },
   {
     id: 'miles-davis-kind-of-blue',
+    previewTrack: 'So What',
     rank: 31,
     title: 'Kind of Blue',
     artist: 'Miles Davis',
@@ -103,6 +106,7 @@ export const ALBUMS: readonly Album[] = [
   },
   {
     id: 'portishead-dummy',
+    previewTrack: 'Glory Box',
     rank: 131,
     title: 'Dummy',
     artist: 'Portishead',
@@ -136,6 +140,7 @@ export const ALBUMS: readonly Album[] = [
   },
   {
     id: 'daft-punk-discovery',
+    previewTrack: 'One More Time',
     rank: 236,
     title: 'Discovery',
     artist: 'Daft Punk',

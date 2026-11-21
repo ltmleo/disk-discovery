@@ -5,6 +5,8 @@ import { drawAlbum } from '../draw';
 import { rarityForRank } from '../rarity';
 import { renderCard, attachTilt } from './card';
 import { h, prefersReducedMotion, ransom, wait } from './dom';
+import * as sfx from '../audio/sfx';
+import { playPreview, prefetchPreview, stopPreview } from '../audio/preview';
 
 type Phase = 'sealed' | 'tearing' | 'facedown' | 'revealed';
 
@@ -14,6 +16,15 @@ const SUSPENSE_MS: Record<string, number> = {
   uncommon: 400,
   rare: 700,
   epic: 1100,
+  legendary: 1600,
+};
+
+/** Lets the reveal sting play out before the music fades in. */
+const FANFARE_MS: Record<string, number> = {
+  common: 300,
+  uncommon: 400,
+  rare: 600,
+  epic: 900,
   legendary: 1600,
 };
 
@@ -62,8 +73,13 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     if (phase !== 'sealed') return;
     setPhase('tearing');
     actions.replaceChildren();
+    sfx.unlock();
+    sfx.tear();
+    stopPreview(300);
 
     const album = drawAlbum(ALBUMS);
+    // Resolve the preview now so it is ready (and playable synchronously) at reveal time.
+    prefetchPreview(album, album.previewTrack);
     const { isNew, entry } = collection.add(album.id);
     onChange();
 
@@ -84,13 +100,16 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
       card,
     );
     stage.append(slot);
+    sfx.whoosh();
     await wait(reduced ? 0 : 500);
     pack.remove();
     setPhase('facedown');
 
     // Anticipation: the card back glows/shakes according to rarity before it can be flipped.
     card.classList.add('is-charging');
-    await wait(reduced ? 0 : SUSPENSE_MS[rarity.id] ?? 300);
+    const suspense = reduced ? 0 : SUSPENSE_MS[rarity.id] ?? 300;
+    sfx.charge(rarity.id, suspense || 200);
+    await wait(suspense);
     card.classList.remove('is-charging');
     slot.disabled = false;
     status.textContent = 'Toque na carta para revelar.';
@@ -109,6 +128,10 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
   async function reveal(slot: HTMLButtonElement, card: HTMLElement, album: Album, isNew: boolean, count: number) {
     setPhase('revealed');
     const rarity = rarityForRank(album.rank);
+    // Everything up to the first await runs inside the click gesture (autoplay rules).
+    sfx.flip();
+    sfx.reveal(rarity.id);
+    playPreview(album, album.previewTrack, { delayMs: FANFARE_MS[rarity.id], maxMs: 20_000 });
     card.classList.remove('is-facedown', 'is-emerging');
     card.classList.add('is-flipping');
     if (!prefersReducedMotion()) burst(stage, rarity.id);
@@ -120,6 +143,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     // Replace the button wrapper with a plain container so the revealed card isn't an inert button.
     const holder = h('div', { class: 'reveal-slot is-done' }, card);
     slot.replaceWith(holder);
+    if (isNew) sfx.stamp();
     holder.append(
       isNew
         ? h('span', { class: 'stamp stamp--new' }, 'NOVO!')
