@@ -6,6 +6,15 @@
     <meta name="description" content="Abra pacotes e descubra os 500 maiores discos de todos os tempos." />
     <meta name="theme-color" content="#efe6d2" />
     <title>Disk Discovery</title>
+    <!-- Ecossistema ltmleo.github.io (skill ltm-novo-site): GA com content_group + barra compartilhada -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-714QFE3V9G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
+      gtag('config', 'G-714QFE3V9G', { content_group: 'disk-discovery' });
+    </script>
+    <script src="https://ltmleo.github.io/shared/ltm-bar.v1.js" defer></script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23111'/><circle cx='50' cy='50' r='16' fill='%23e63b2e'/><circle cx='50' cy='50' r='3' fill='%23efe6d2'/></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,6 +24,7 @@
     />
   </head>
   <body>
+    <ltm-bar site="disk-discovery" theme="light" style="display:block;height:36px"><a href="https://ltmleo.github.io/">← @ltmleo</a></ltm-bar>
     <div id="app"></div>
     <noscript>Este site precisa de JavaScript para abrir os pacotes.</noscript>
     <script type="module" src="/src/main.ts"></script>

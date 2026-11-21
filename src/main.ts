@@ -81,7 +81,15 @@ function nowPlayingBar(): HTMLElement {
   return bar;
 }
 const main = h('main', { id: 'main', tabindex: '-1' });
-app.replaceChildren(header, main, nowPlayingBar());
+const footer = h(
+  'footer',
+  { class: 'site-footer' },
+  // Same-tab link: it is another site of the same ecosystem (skill ltm-novo-site).
+  h('a', { href: 'https://ltmleo.github.io/#sites' }, 'Mais de @ltmleo'),
+  h('span', { 'aria-hidden': 'true' }, ' · '),
+  h('a', { href: 'https://github.com/ltmleo/disk-discovery', target: '_blank', rel: 'noopener' }, 'Código no GitHub'),
+);
+app.replaceChildren(header, main, footer, nowPlayingBar());
 
 /** Hash routing: works on GitHub Pages without a 404.html redirect hack. */
 function route() {

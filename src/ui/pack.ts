@@ -108,6 +108,8 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     onChange();
 
     const rarity = rarityForRank(album.rank);
+    // Optional call: gtag is absent with ad blockers. Rarity only, no personal data.
+    window.gtag?.('event', 'open_pack', { rarity: rarity.id });
     const pack = stage.querySelector<HTMLElement>('.pack')!;
     pack.classList.add('is-torn');
     stage.dataset.rarity = rarity.id;

@@ -63,7 +63,7 @@ img {
 main {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 16px 16px 96px;
+  padding: 16px 16px 40px;
 }
 
 main:focus {
