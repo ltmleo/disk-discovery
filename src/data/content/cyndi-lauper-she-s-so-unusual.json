@@ -1,19 +1,33 @@
 {
+  "history": [
+    "Cyndi Lauper tinha 30 anos e vinha de uma banda que não deu certo quando lançou o primeiro disco solo, em 1983.",
+    "Foi o primeiro disco de estreia de uma cantora com quatro singles no top 5 dos EUA.",
+    "Ela ganhou o Grammy de Artista Revelação."
+  ],
+  "trivia": [
+    "\"Girls Just Want to Have Fun\" foi escrita por Robert Hazard como canção masculina; Cyndi reescreveu a letra.",
+    "\"Time After Time\" foi composta com Rob Hyman, dos Hooters, e o título veio de um guia de TV.",
+    "\"She Bop\" fala de masturbação e entrou na lista de canções censuradas de um grupo de pais americanos."
+  ],
   "tracks": [
     {
-      "title": "Money Changes Everything"
+      "title": "Money Changes Everything",
+      "note": "Abre o disco com uma versão de The Brains."
     },
     {
-      "title": "Girls Just Want to Have Fun"
+      "title": "Girls Just Want to Have Fun",
+      "note": "Uma canção masculina reescrita por Cyndi."
     },
     {
       "title": "When You Were Mine"
     },
     {
-      "title": "Time After Time"
+      "title": "Time After Time",
+      "note": "A balada de maior sucesso dela."
     },
     {
-      "title": "She Bop"
+      "title": "She Bop",
+      "note": "A canção que irritou um grupo de pais."
     },
     {
       "title": "All Through the Night"

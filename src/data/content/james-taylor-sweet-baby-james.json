@@ -1,7 +1,18 @@
 {
+  "history": [
+    "James Taylor gravou \"Sweet Baby James\" em 1969, depois de um disco pela Apple, dos Beatles, e de uma internação psiquiátrica.",
+    "Com o produtor Peter Asher, fez canções simples e confessionais, que abriram caminho para os cantautores da década.",
+    "\"Fire and Rain\" virou seu grande sucesso."
+  ],
+  "trivia": [
+    "\"Fire and Rain\" fala do suicídio de uma amiga, Suzanne, e das internações de James.",
+    "\"Sweet Baby James\" é uma canção de ninar para o sobrinho, que tinha o nome dele.",
+    "Carole King toca piano em \"Fire and Rain\"."
+  ],
   "tracks": [
     {
-      "title": "Sweet Baby James"
+      "title": "Sweet Baby James",
+      "note": "Canção de ninar para o sobrinho."
     },
     {
       "title": "Lo and Behold"
@@ -10,16 +21,19 @@
       "title": "Sunny Skies"
     },
     {
-      "title": "Steamroller"
+      "title": "Steamroller",
+      "note": "Uma paródia de blues."
     },
     {
-      "title": "Country Road"
+      "title": "Country Road",
+      "note": "Uma fuga pela estrada."
     },
     {
       "title": "Oh, Susannah"
     },
     {
-      "title": "Fire and Rain"
+      "title": "Fire and Rain",
+      "note": "Luto e internação, com Carole King ao piano."
     },
     {
       "title": "Blossom"

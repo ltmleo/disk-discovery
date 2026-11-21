@@ -1,19 +1,32 @@
 {
+  "history": [
+    "Em 1990, o Public Enemy e os produtores do Bomb Squad empilharam dezenas de samples por faixa em \"Fear of a Black Planet\".",
+    "Chuck D fala de racismo, mídia, Hollywood e da paranoia de uma América branca, e Flavor Flav dá humor ao disco.",
+    "Entre as faixas está \"Fight the Power\", da trilha de \"Faça a Coisa Certa\", de Spike Lee."
+  ],
+  "trivia": [
+    "\"911 Is a Joke\" critica a demora das ambulâncias em bairros negros.",
+    "\"Welcome to the Terrordome\" responde à polêmica que levou à saída de Professor Griff do grupo.",
+    "Leis de direitos autorais mais rígidas depois tornaram caro fazer um disco com tantos samples."
+  ],
   "tracks": [
     {
       "title": "Contract on the World Love Jam"
     },
     {
-      "title": "Brothers Gonna Work It Out"
+      "title": "Brothers Gonna Work It Out",
+      "note": "Um apelo à união logo depois da introdução."
     },
     {
-      "title": "911 Is a Joke"
+      "title": "911 Is a Joke",
+      "note": "Flavor Flav critica a demora das ambulâncias."
     },
     {
       "title": "Incident at 66.6 FM"
     },
     {
-      "title": "Welcome to the Terrordome"
+      "title": "Welcome to the Terrordome",
+      "note": "Chuck D sob pressão."
     },
     {
       "title": "Meet the G That Killed Me"
@@ -58,7 +71,8 @@
       "title": "Final Count of the Collision Between Us and the Damned"
     },
     {
-      "title": "Fight the Power"
+      "title": "Fight the Power",
+      "note": "Da trilha de \"Faça a Coisa Certa\"."
     }
   ]
 }

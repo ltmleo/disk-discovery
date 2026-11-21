@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Eric Clapton, Jack Bruce e Ginger Baker já eram músicos famosos quando formaram o Cream, em 1966. No segundo disco, gravado em Nova York em 1967, o blues ganhou cores psicodélicas.",
+    "O produtor Felix Pappalardi e o engenheiro Tom Dowd ajudaram a lapidar o som.",
+    "\"Sunshine of Your Love\" virou um dos riffs mais conhecidos do rock."
+  ],
+  "trivia": [
+    "O título vem de uma piada: um roadie trocou \"derailleur gears\" (câmbio de bicicleta) por \"Disraeli\", nome de um primeiro-ministro britânico.",
+    "A capa psicodélica é do artista australiano Martin Sharp, que também escreveu a letra de \"Tales of Brave Ulysses\".",
+    "As brigas entre Bruce e Baker eram famosas; a banda acabou em 1968."
+  ],
   "tracks": [
     {
-      "title": "Strange Brew"
+      "title": "Strange Brew",
+      "note": "Abre o disco com um blues psicodélico."
     },
     {
-      "title": "Sunshine of Your Love"
+      "title": "Sunshine of Your Love",
+      "note": "O riff de baixo de Jack Bruce."
     },
     {
       "title": "World of Pain"
@@ -16,10 +28,12 @@
       "title": "Blue Condition"
     },
     {
-      "title": "Tales of Brave Ulysses"
+      "title": "Tales of Brave Ulysses",
+      "note": "Letra de Martin Sharp e o pedal wah-wah de Clapton."
     },
     {
-      "title": "SWLABR"
+      "title": "SWLABR",
+      "note": "A sigla de \"She Walks Like a Bearded Rainbow\"."
     },
     {
       "title": "We're Going Wrong"

@@ -1,4 +1,14 @@
 {
+  "history": [
+    "No primeiro disco pela Argo, selo da Chess, em 1960, Etta James gravou canções de R&B, blues e clássicos de jazz com arranjos de cordas.",
+    "A voz rouca e potente dela fica entre o blues e a balada.",
+    "\"At Last\", uma canção dos anos 1940, virou a canção de casamento mais famosa dos EUA."
+  ],
+  "trivia": [
+    "\"At Last\" foi composta por Mack Gordon e Harry Warren para o cinema no começo dos anos 1940.",
+    "Beyoncé cantou \"At Last\" no baile de posse de Barack Obama.",
+    "No filme \"Cadillac Records\" (2008), Beyoncé interpretou Etta James."
+  ],
   "tracks": [
     {
       "title": "Anything To Say You're Mine"
@@ -16,31 +26,22 @@
       "title": "Tough Mary"
     },
     {
-      "title": "I Just Want To Make Love To You"
+      "title": "I Just Want To Make Love To You",
+      "note": "Um blues de Willie Dixon."
     },
     {
-      "title": "At Last"
+      "title": "At Last",
+      "note": "Um clássico dos anos 40 que virou trilha de casamento."
     },
     {
       "title": "All I Could Do Was Cry"
     },
     {
-      "title": "Stormy Weather"
+      "title": "Stormy Weather",
+      "note": "Um clássico do jazz com cordas."
     },
     {
       "title": "Girl of My Dreams"
-    },
-    {
-      "title": "My Heart Cries (feat. Harvey Fuqua)"
-    },
-    {
-      "title": "Spoonful"
-    },
-    {
-      "title": "It's a Crying Shame"
-    },
-    {
-      "title": "If I Can't Have You (feat. Harvey Fuqua)"
     }
   ]
 }

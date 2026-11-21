@@ -1,16 +1,29 @@
 {
+  "history": [
+    "O Pavement, da Califórnia, gravou a estreia em 1991 na casa do baterista Gary Young, com pouco dinheiro.",
+    "Stephen Malkmus canta letras enigmáticas sobre guitarras desafinadas, entre The Fall e Sonic Youth.",
+    "Lançado em 1992, virou referência do rock lo-fi e independente."
+  ],
+  "trivia": [
+    "As fitas circularam entre críticos antes do lançamento oficial.",
+    "O baterista Gary Young fazia shows imprevisíveis e saiu da banda em 1993.",
+    "\"Here\" é uma das poucas baladas do disco."
+  ],
   "tracks": [
     {
-      "title": "Summer Babe (Winter Version)"
+      "title": "Summer Babe (Winter Version)",
+      "note": "Abre o disco no seu estilo desleixado."
     },
     {
-      "title": "Trigger Cut/Wounded-Kite At :17"
+      "title": "Trigger Cut/Wounded-Kite At :17",
+      "note": "Um refrão grudento e sem sentido."
     },
     {
       "title": "No Life Singed Her"
     },
     {
-      "title": "In the Mouth a Desert"
+      "title": "In the Mouth a Desert",
+      "note": "Guitarras sujas e tensas."
     },
     {
       "title": "Conduit For Sale!"
@@ -25,7 +38,8 @@
       "title": "Loretta's Scars"
     },
     {
-      "title": "Here"
+      "title": "Here",
+      "note": "Uma balada sobre fracasso."
     },
     {
       "title": "Two States"

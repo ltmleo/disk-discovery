@@ -1,4 +1,14 @@
 {
+  "history": [
+    "The Notorious B.I.G. gravou \"Life After Death\" entre Nova York e Los Angeles, com Puff Daddy e um time de produtores.",
+    "Biggie foi assassinado em 9 de março de 1997, em Los Angeles. O disco saiu 16 dias depois e chegou ao 1º lugar nos EUA.",
+    "Ele alterna histórias de crime, festas e sucesso com a paranoia de quem sabia que estava em perigo."
+  ],
+  "trivia": [
+    "\"Hypnotize\" e \"Mo Money Mo Problems\" chegaram ao 1º lugar depois da morte dele.",
+    "\"Notorious Thugs\" tem o Bone Thugs-n-Harmony, e Biggie imita o estilo rápido deles.",
+    "\"Ten Crack Commandments\" usa a contagem de Chuck D, do Public Enemy."
+  ],
   "tracks": [
     {
       "title": "Life After Death (Intro)"
@@ -7,7 +17,8 @@
       "title": "Somebody's Gotta Die"
     },
     {
-      "title": "Hypnotize"
+      "title": "Hypnotize",
+      "note": "Um 1º lugar depois da morte de Biggie."
     },
     {
       "title": "Kick In the Door"
@@ -28,7 +39,8 @@
       "title": "B.I.G. (Interlude)"
     },
     {
-      "title": "Mo Money Mo Problems (feat. Ma$e & Puff Daddy)"
+      "title": "Mo Money Mo Problems (feat. Ma$e & Puff Daddy)",
+      "note": "Base de \"I'm Coming Out\", de Diana Ross."
     },
     {
       "title": "N****s Bleed"
@@ -37,7 +49,8 @@
       "title": "I Got a Story To Tell"
     },
     {
-      "title": "Notorious Thugs"
+      "title": "Notorious Thugs",
+      "note": "Biggie no ritmo rápido do Bone Thugs."
     },
     {
       "title": "Miss U"
@@ -70,7 +83,8 @@
       "title": "Long Kiss Goodnight"
     },
     {
-      "title": "You're Nobody (Til Somebody Kills You)"
+      "title": "You're Nobody (Til Somebody Kills You)",
+      "note": "Fecha o disco com um título premonitório."
     }
   ]
 }

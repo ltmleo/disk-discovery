@@ -1,10 +1,22 @@
 {
+  "history": [
+    "O Sleater-Kinney, de Olympia, nos EUA, nasceu perto do movimento riot grrrl. Corin Tucker e Carrie Brownstein trocam guitarras e vozes sem baixo.",
+    "\"Dig Me Out\" (1997) foi o primeiro disco com a baterista Janet Weiss.",
+    "As letras falam de amor, ruptura e da vida numa banda de rock."
+  ],
+  "trivia": [
+    "A capa homenageia a do disco \"A Kink Kontroversy\", dos Kinks.",
+    "Carrie Brownstein depois criou e estrelou a série \"Portlandia\".",
+    "\"Words and Guitar\" fala do poder de uma canção de rock."
+  ],
   "tracks": [
     {
-      "title": "Dig Me Out"
+      "title": "Dig Me Out",
+      "note": "Duas guitarras em choque."
     },
     {
-      "title": "One More Hour"
+      "title": "One More Hour",
+      "note": "Sobre o fim de um relacionamento."
     },
     {
       "title": "Turn It On"
@@ -16,7 +28,8 @@
       "title": "Heart Factory"
     },
     {
-      "title": "Words and Guitar"
+      "title": "Words and Guitar",
+      "note": "Um hino ao rock."
     },
     {
       "title": "It's Enough"

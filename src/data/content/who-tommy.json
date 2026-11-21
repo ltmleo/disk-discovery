@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Pete Townshend passou anos pensando numa obra longa. \"Tommy\" (1969) conta a história de um menino que fica surdo, mudo e cego depois de ver um crime.",
+    "Ele vira campeão de pinball e depois líder espiritual.",
+    "O disco duplo virou espetáculo de palco, filme (1975) e musical da Broadway."
+  ],
+  "trivia": [
+    "Townshend escreveu \"Pinball Wizard\" para agradar o crítico Nik Cohn, fã de pinball.",
+    "O The Who tocou boa parte de \"Tommy\" em Woodstock.",
+    "No filme de Ken Russell, Elton John canta \"Pinball Wizard\"."
+  ],
   "tracks": [
     {
-      "title": "Overture"
+      "title": "Overture",
+      "note": "Apresenta os temas da ópera."
     },
     {
       "title": "It's A Boy"
@@ -25,7 +36,8 @@
       "title": "Cousin Kevin"
     },
     {
-      "title": "The Acid Queen"
+      "title": "The Acid Queen",
+      "note": "Tina Turner cantou no filme."
     },
     {
       "title": "Underture"
@@ -37,7 +49,8 @@
       "title": "Fiddle About"
     },
     {
-      "title": "Pinball Wizard"
+      "title": "Pinball Wizard",
+      "note": "Escrita para um crítico fã de pinball."
     },
     {
       "title": "There's A Doctor"
@@ -70,7 +83,8 @@
       "title": "Tommy's Holiday Camp"
     },
     {
-      "title": "We're Not Gonna Take It"
+      "title": "We're Not Gonna Take It",
+      "note": "Fecha com o tema \"See me, feel me\"."
     }
   ]
 }

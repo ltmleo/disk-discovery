@@ -1,16 +1,29 @@
 {
+  "history": [
+    "\"The Harder They Come\" (1972) é um filme jamaicano estrelado por Jimmy Cliff, sobre um cantor que vira fora da lei em Kingston.",
+    "A trilha reúne Cliff, Toots and the Maytals, Desmond Dekker, The Melodians e outros nomes do ska, rocksteady e reggae.",
+    "Para muita gente fora da Jamaica, foi o primeiro contato com o gênero."
+  ],
+  "trivia": [
+    "O filme foi dirigido por Perry Henzell e virou fenômeno nas sessões de meia-noite nos EUA.",
+    "\"Pressure Drop\", de Toots and the Maytals, foi regravada pelo The Clash.",
+    "\"Rivers of Babylon\", dos Melodians, usa versos de um salmo bíblico."
+  ],
   "tracks": [
     {
-      "title": "You Can Get It If You Really Want"
+      "title": "You Can Get It If You Really Want",
+      "note": "Um hino de persistência de Jimmy Cliff."
     },
     {
       "title": "Draw Your Brakes"
     },
     {
-      "title": "Rivers Of Babylon"
+      "title": "Rivers Of Babylon",
+      "note": "Um salmo bíblico em ritmo de rocksteady."
     },
     {
-      "title": "Many Rivers To Cross"
+      "title": "Many Rivers To Cross",
+      "note": "Uma das baladas mais tristes de Cliff."
     },
     {
       "title": "Sweet And Dandy"
@@ -25,7 +38,8 @@
       "title": "007 (Shanty Town)"
     },
     {
-      "title": "Pressure Drop"
+      "title": "Pressure Drop",
+      "note": "Toots and the Maytals, regravados pelo Clash."
     },
     {
       "title": "Sitting In Limbo"

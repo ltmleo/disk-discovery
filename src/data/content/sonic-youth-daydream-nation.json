@@ -1,13 +1,26 @@
 {
+  "history": [
+    "O Sonic Youth, de Nova York, usava afinações inventadas e guitarras preparadas com chaves de fenda e baquetas. Em \"Daydream Nation\" (1988), o barulho virou canções longas e hipnóticas.",
+    "O disco duplo saiu por um selo independente e virou referência do rock alternativo.",
+    "Pouco depois, a banda assinou com uma grande gravadora, abrindo caminho para o Nirvana."
+  ],
+  "trivia": [
+    "A capa é uma pintura de uma vela, do artista alemão Gerhard Richter.",
+    "\"Teen Age Riot\" imagina o músico J Mascis, do Dinosaur Jr., como presidente.",
+    "Em 2006, o disco entrou no registro de gravações históricas da Biblioteca do Congresso dos EUA."
+  ],
   "tracks": [
     {
-      "title": "Teen Age Riot"
+      "title": "Teen Age Riot",
+      "note": "J Mascis, do Dinosaur Jr., como presidente imaginário."
     },
     {
-      "title": "Silver Rocket"
+      "title": "Silver Rocket",
+      "note": "Explode no meio em puro ruído."
     },
     {
-      "title": "The Sprawl"
+      "title": "The Sprawl",
+      "note": "Kim Gordon falando de cidade e consumo."
     },
     {
       "title": "'Cross the Breeze"
@@ -34,7 +47,8 @@
       "title": "Kissability"
     },
     {
-      "title": "Trilogy: a) The Wonder"
+      "title": "Trilogy: a) The Wonder",
+      "note": "Encerra o disco em três partes."
     },
     {
       "title": "Trilogy: b) Hyperstation"

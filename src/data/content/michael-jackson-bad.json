@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Depois de \"Thriller\", Michael Jackson e o produtor Quincy Jones voltaram em 1987 com \"Bad\". Michael escreveu nove das onze faixas.",
+    "Foi o primeiro disco com cinco singles em 1º lugar nos EUA.",
+    "A turnê mundial durou mais de um ano."
+  ],
+  "trivia": [
+    "\"Man in the Mirror\" foi escrita por Siedah Garrett e Glen Ballard.",
+    "O clipe de \"Bad\" foi dirigido por Martin Scorsese, com Wesley Snipes.",
+    "O clipe de \"Smooth Criminal\" tem a famosa inclinação para a frente, feita com sapatos especiais."
+  ],
   "tracks": [
     {
-      "title": "Bad"
+      "title": "Bad",
+      "note": "O clipe de Martin Scorsese."
     },
     {
-      "title": "The Way You Make Me Feel"
+      "title": "The Way You Make Me Feel",
+      "note": "Um dos cinco 1º lugares."
     },
     {
       "title": "Speed Demon"
@@ -19,7 +31,8 @@
       "title": "Another Part of Me"
     },
     {
-      "title": "Man in the Mirror"
+      "title": "Man in the Mirror",
+      "note": "De Siedah Garrett e Glen Ballard."
     },
     {
       "title": "I Just Can't Stop Loving You (feat. Siedah Garrett)"
@@ -28,7 +41,8 @@
       "title": "Dirty Diana"
     },
     {
-      "title": "Smooth Criminal"
+      "title": "Smooth Criminal",
+      "note": "A inclinação que desafiava a gravidade."
     },
     {
       "title": "Leave Me Alone"

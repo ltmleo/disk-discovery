@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Depois de deixar o N.W.A por uma briga de dinheiro, Ice Cube foi a Nova York gravar o primeiro disco solo com o Bomb Squad, do Public Enemy.",
+    "\"AmeriKKKa's Most Wanted\" (1990) junta a violência das ruas de Los Angeles ao som denso da Costa Leste.",
+    "O disco vendeu bem sem tocar no rádio."
+  ],
+  "trivia": [
+    "O título usa as letras KKK, de Ku Klux Klan.",
+    "Chuck D participa de \"Endangered Species\".",
+    "O disco também tem misoginia explícita, que foi muito criticada."
+  ],
   "tracks": [
     {
       "title": "Better Off Dead"
     },
     {
-      "title": "The N***a Ya Love to Hate"
+      "title": "The N***a Ya Love to Hate",
+      "note": "Uma resposta aos críticos."
     },
     {
-      "title": "AmeriKKKa's Most Wanted"
+      "title": "AmeriKKKa's Most Wanted",
+      "note": "Um criminoso que vira alvo da polícia."
     },
     {
       "title": "What They Hittin' Foe?"
@@ -22,7 +34,8 @@
       "title": "Turn Off the Radio"
     },
     {
-      "title": "Endangered Species (Tales From the Darkside) [feat. Chuck D]"
+      "title": "Endangered Species (Tales From the Darkside) [feat. Chuck D]",
+      "note": "Com Chuck D, do Public Enemy."
     },
     {
       "title": "A Gangsta's Fairytale"

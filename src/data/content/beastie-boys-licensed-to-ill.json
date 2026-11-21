@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Os Beastie Boys começaram como banda punk em Nova York. Com o produtor Rick Rubin, juntaram rap, riffs de rock pesado e humor de adolescente.",
+    "\"Licensed to Ill\" (1986) foi o primeiro disco de rap a chegar ao 1º lugar nos EUA.",
+    "Mais tarde, a banda renegou parte das letras machistas do disco."
+  ],
+  "trivia": [
+    "Kerry King, do Slayer, toca guitarra em \"No Sleep Till Brooklyn\".",
+    "\"Fight for Your Right\" era uma paródia de hino festeiro, mas muita gente levou a sério.",
+    "A capa mostra um avião com o logotipo \"3MTA3\", que lido no espelho vira \"EAT ME\"."
+  ],
   "tracks": [
     {
-      "title": "Rhymin' & Stealin'"
+      "title": "Rhymin' & Stealin'",
+      "note": "Abre com a bateria de Led Zeppelin."
     },
     {
       "title": "The New Style"
@@ -19,13 +30,16 @@
       "title": "Girls"
     },
     {
-      "title": "Fight for Your Right"
+      "title": "Fight for Your Right",
+      "note": "Uma paródia levada a sério."
     },
     {
-      "title": "No Sleep Till Brooklyn"
+      "title": "No Sleep Till Brooklyn",
+      "note": "Com Kerry King, do Slayer."
     },
     {
-      "title": "Paul Revere"
+      "title": "Paul Revere",
+      "note": "Uma história inventada de como a banda se conheceu."
     },
     {
       "title": "Hold It Now, Hit It"

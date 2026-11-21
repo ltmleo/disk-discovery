@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Sade Adu nasceu na Nigéria e cresceu na Inglaterra. Com a banda que leva seu nome, lançou \"Diamond Life\" em 1984.",
+    "O som mistura soul, jazz e pop com calma e sofisticação.",
+    "Foi o disco de estreia mais vendido de uma cantora britânica na época."
+  ],
+  "trivia": [
+    "Sade é o nome da banda, não só da cantora.",
+    "\"Smooth Operator\" fala de um sedutor que vive de enganar mulheres ricas.",
+    "\"Why Can't We Live Together\" é uma versão de Timmy Thomas."
+  ],
   "tracks": [
     {
-      "title": "Smooth Operator"
+      "title": "Smooth Operator",
+      "note": "Um sedutor sem escrúpulos."
     },
     {
-      "title": "Your Love Is King"
+      "title": "Your Love Is King",
+      "note": "O primeiro single."
     },
     {
       "title": "Hang On to Your Love"
@@ -25,7 +37,8 @@
       "title": "I Will Be Your Friend"
     },
     {
-      "title": "Why Can't We Live Together"
+      "title": "Why Can't We Live Together",
+      "note": "Versão de Timmy Thomas."
     }
   ]
 }

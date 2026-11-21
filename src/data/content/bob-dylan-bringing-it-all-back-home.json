@@ -1,13 +1,25 @@
 {
+  "history": [
+    "Em 1965, Bob Dylan dividiu o disco em dois: um lado com banda elétrica e outro quase só com violão.",
+    "As letras ficaram mais surreais e longe das canções de protesto.",
+    "Meses depois, ele tocou com banda elétrica no Festival de Newport e foi vaiado por fãs do folk."
+  ],
+  "trivia": [
+    "O clipe de \"Subterranean Homesick Blues\", com Dylan jogando cartazes no chão, é do documentário \"Dont Look Back\".",
+    "Os Byrds transformaram \"Mr. Tambourine Man\" num hit de folk-rock no mesmo ano.",
+    "Em \"Bob Dylan's 115th Dream\", ele começa a rir e a banda para; o erro ficou no disco."
+  ],
   "tracks": [
     {
-      "title": "Subterranean Homesick Blues"
+      "title": "Subterranean Homesick Blues",
+      "note": "Palavras em alta velocidade e um clipe famoso."
     },
     {
       "title": "She Belongs to Me"
     },
     {
-      "title": "Maggie's Farm"
+      "title": "Maggie's Farm",
+      "note": "Uma recusa a trabalhar para os outros."
     },
     {
       "title": "Love Minus Zero / No Limit"
@@ -22,13 +34,15 @@
       "title": "Bob Dylan's 115th Dream"
     },
     {
-      "title": "Mr. Tambourine Man"
+      "title": "Mr. Tambourine Man",
+      "note": "Virou hit com os Byrds."
     },
     {
       "title": "Gates of Eden"
     },
     {
-      "title": "It's Alright, Ma (I'm Only Bleeding)"
+      "title": "It's Alright, Ma (I'm Only Bleeding)",
+      "note": "Uma torrente de versos sobre hipocrisia."
     },
     {
       "title": "It's All Over Now, Baby Blue"

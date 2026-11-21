@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Ainda cantor dos Faces, Rod Stewart gravou o terceiro disco solo, de 1971, com mandolim, violões e uma banda solta de amigos, como Ronnie Wood.",
+    "Ele mistura suas canções com versões de Bob Dylan, Tim Hardin, Elvis e dos Temptations.",
+    "\"Maggie May\" saiu como lado B e virou 1º lugar nos EUA e no Reino Unido ao mesmo tempo que o disco."
+  ],
+  "trivia": [
+    "\"Maggie May\" fala de um garoto e uma mulher mais velha, inspirada numa experiência do próprio Rod.",
+    "O mandolim de \"Maggie May\" é de Ray Jackson, do Lindisfarne.",
+    "\"Tomorrow Is a Long Time\" é de Bob Dylan."
+  ],
   "tracks": [
     {
-      "title": "Every Picture Tells a Story"
+      "title": "Every Picture Tells a Story",
+      "note": "Uma história de viagem pelo mundo."
     },
     {
       "title": "Seems Like a Long Time"
@@ -13,13 +24,16 @@
       "title": "Tomorrow Is a Long Time"
     },
     {
-      "title": "Maggie May"
+      "title": "Maggie May",
+      "note": "O lado B que virou 1º lugar."
     },
     {
-      "title": "Mandolin Wind"
+      "title": "Mandolin Wind",
+      "note": "Uma balada de inverno com mandolim."
     },
     {
-      "title": "(I Know) I'm Losing You"
+      "title": "(I Know) I'm Losing You",
+      "note": "Versão dos Temptations com os Faces."
     },
     {
       "title": "(Find A) Reason To Believe"

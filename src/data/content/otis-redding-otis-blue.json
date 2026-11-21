@@ -1,19 +1,32 @@
 {
+  "history": [
+    "Otis Redding gravou quase todo \"Otis Blue\" em cerca de 24 horas, em julho de 1965, no estúdio da Stax, em Memphis, com Booker T. & the M.G.'s e os Memphis Horns.",
+    "O disco junta canções dele com versões de Sam Cooke, dos Temptations, de B.B. King e dos Rolling Stones.",
+    "Ali está \"Respect\", que Aretha Franklin transformaria em hino dois anos depois."
+  ],
+  "trivia": [
+    "Sam Cooke tinha morrido meses antes; Otis gravou três canções dele.",
+    "A versão de \"Satisfaction\" ganhou metais no lugar do riff de guitarra.",
+    "Otis morreu num acidente de avião em 1967, aos 26 anos."
+  ],
   "tracks": [
     {
       "title": "Ole Man Trouble"
     },
     {
-      "title": "Respect"
+      "title": "Respect",
+      "note": "A versão original, antes de Aretha."
     },
     {
-      "title": "Change Gonna Come"
+      "title": "Change Gonna Come",
+      "note": "Uma homenagem a Sam Cooke."
     },
     {
       "title": "Down In the Valley"
     },
     {
-      "title": "I've Been Loving You Too Long (To Stop Now)"
+      "title": "I've Been Loving You Too Long (To Stop Now)",
+      "note": "Otis no seu momento mais intenso."
     },
     {
       "title": "Shake"
@@ -28,7 +41,8 @@
       "title": "Rock Me Baby"
     },
     {
-      "title": "Satisfaction (I Can't Get No)"
+      "title": "Satisfaction (I Can't Get No)",
+      "note": "O riff dos Stones nos metais."
     },
     {
       "title": "You Don't Miss Your Water"

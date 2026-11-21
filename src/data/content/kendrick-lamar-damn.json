@@ -1,10 +1,21 @@
 {
+  "history": [
+    "Depois de \"To Pimp a Butterfly\", Kendrick Lamar lançou em 2017 um disco mais direto, entre fraqueza e maldade, fé e medo.",
+    "As faixas têm nomes curtos em maiúsculas. Elas fazem sentido em ordem normal e também de trás para frente.",
+    "\"HUMBLE.\" chegou ao 1º lugar nos EUA."
+  ],
+  "trivia": [
+    "Foi o primeiro disco fora do jazz e da música clássica a ganhar o Prêmio Pulitzer de Música, em 2018.",
+    "Kendrick lançou depois uma \"Collector's Edition\" com a ordem das faixas invertida.",
+    "\"DUCKWORTH.\" conta como o pai de Kendrick e o produtor Top Dawg quase se cruzaram de forma violenta antes de ele nascer."
+  ],
   "tracks": [
     {
       "title": "BLOOD."
     },
     {
-      "title": "DNA."
+      "title": "DNA.",
+      "note": "Uma segunda metade frenética sobre herança."
     },
     {
       "title": "YAH."
@@ -16,13 +27,15 @@
       "title": "FEEL."
     },
     {
-      "title": "LOYALTY. (feat. Rihanna)"
+      "title": "LOYALTY. (feat. Rihanna)",
+      "note": "Dueto com Rihanna."
     },
     {
       "title": "PRIDE."
     },
     {
-      "title": "HUMBLE."
+      "title": "HUMBLE.",
+      "note": "Piano simples e 1º lugar nos EUA."
     },
     {
       "title": "LUST."
@@ -40,7 +53,8 @@
       "title": "GOD."
     },
     {
-      "title": "DUCKWORTH."
+      "title": "DUCKWORTH.",
+      "note": "Uma coincidência que mudou a vida de Kendrick."
     }
   ]
 }

@@ -1,7 +1,18 @@
 {
+  "history": [
+    "O Creedence Clearwater Revival lançou três discos em 1969. O último, \"Willy and the Poor Boys\", mistura rock, folk e canções tradicionais.",
+    "John Fogerty escreveu sobre uma banda de rua imaginária e sobre a desigualdade nos EUA.",
+    "\"Fortunate Son\" virou um hino contra a Guerra do Vietnã."
+  ],
+  "trivia": [
+    "\"Fortunate Son\" fala de filhos de ricos e políticos que escapavam do alistamento.",
+    "\"Cotton Fields\" e \"Midnight Special\" são canções tradicionais ligadas a Lead Belly.",
+    "A capa mostra a banda tocando na rua, como a banda imaginária do disco."
+  ],
   "tracks": [
     {
-      "title": "Down On the Corner"
+      "title": "Down On the Corner",
+      "note": "Uma banda de rua imaginária."
     },
     {
       "title": "It Came Out of the Sky"
@@ -16,7 +27,8 @@
       "title": "Feelin' Blue"
     },
     {
-      "title": "Fortunate Son"
+      "title": "Fortunate Son",
+      "note": "Contra os privilégios dos ricos na guerra."
     },
     {
       "title": "Don't Look Now"
@@ -28,7 +40,8 @@
       "title": "Side o' the Road"
     },
     {
-      "title": "Effigy"
+      "title": "Effigy",
+      "note": "Encerra o disco com um tom sombrio."
     }
   ]
 }

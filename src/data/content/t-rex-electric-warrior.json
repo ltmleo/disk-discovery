@@ -1,13 +1,26 @@
 {
+  "history": [
+    "Marc Bolan começou no folk psicodélico com o Tyrannosaurus Rex. Em 1971, encurtou o nome para T. Rex e ligou as guitarras.",
+    "Com o produtor Tony Visconti, fez um rock simples, sensual e cheio de brilho, que ajudou a criar o glam rock.",
+    "O disco chegou ao 1º lugar no Reino Unido."
+  ],
+  "trivia": [
+    "Mark Volman e Howard Kaylan, dos Turtles, fazem vocais de apoio.",
+    "\"Get It On\" foi lançada nos EUA como \"Bang a Gong (Get It On)\" e foi o único grande hit americano de Bolan.",
+    "Bolan morreu num acidente de carro em 1977, aos 29 anos."
+  ],
   "tracks": [
     {
-      "title": "Mambo Sun"
+      "title": "Mambo Sun",
+      "note": "Abre o disco de forma lenta e sensual."
     },
     {
-      "title": "Cosmic Dancer"
+      "title": "Cosmic Dancer",
+      "note": "Uma balada com cordas de Tony Visconti."
     },
     {
-      "title": "Jeepster"
+      "title": "Jeepster",
+      "note": "Um boogie simples e direto."
     },
     {
       "title": "Monolith"
@@ -16,7 +29,8 @@
       "title": "Lean Woman Blues"
     },
     {
-      "title": "Bang a Gong (Get It On)"
+      "title": "Bang a Gong (Get It On)",
+      "note": "O único grande hit de Bolan nos EUA."
     },
     {
       "title": "Planet Queen"
@@ -32,27 +46,6 @@
     },
     {
       "title": "Rip Off"
-    },
-    {
-      "title": "There Was a Time"
-    },
-    {
-      "title": "Raw Ramp"
-    },
-    {
-      "title": "Planet Queen (Acoustic Version)"
-    },
-    {
-      "title": "Hot Love"
-    },
-    {
-      "title": "Woodland Rock"
-    },
-    {
-      "title": "King of the Mountain Cometh"
-    },
-    {
-      "title": "The T. Rex Electric Warrior Interview"
     }
   ]
 }

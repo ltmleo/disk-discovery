@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Depois da psicodelia de \"Their Satanic Majesties Request\", os Rolling Stones voltaram ao blues e ao country em 1968, com o produtor Jimmy Miller.",
+    "Foi o último disco com participação importante de Brian Jones, que morreu em 1969.",
+    "Abre com \"Sympathy for the Devil\", narrada por Lúcifer."
+  ],
+  "trivia": [
+    "A capa original, com uma parede de banheiro grafitada, foi vetada pela gravadora e trocada por um convite branco.",
+    "O cineasta Jean-Luc Godard filmou a gravação de \"Sympathy for the Devil\".",
+    "\"Street Fighting Man\" foi inspirada nos protestos de 1968."
+  ],
   "tracks": [
     {
-      "title": "Sympathy For The Devil"
+      "title": "Sympathy For The Devil",
+      "note": "Lúcifer narra a história com percussão de samba."
     },
     {
-      "title": "No Expectations"
+      "title": "No Expectations",
+      "note": "Slide de Brian Jones, uma das últimas gravações dele."
     },
     {
       "title": "Dear Doctor"
@@ -16,7 +28,8 @@
       "title": "Jigsaw Puzzle"
     },
     {
-      "title": "Street Fighting Man"
+      "title": "Street Fighting Man",
+      "note": "Protestos de 1968, quase só com violões."
     },
     {
       "title": "Prodigal Son"
@@ -28,7 +41,8 @@
       "title": "Factory Girl"
     },
     {
-      "title": "Salt Of The Earth"
+      "title": "Salt Of The Earth",
+      "note": "Um brinde aos trabalhadores, com coral gospel."
     }
   ]
 }

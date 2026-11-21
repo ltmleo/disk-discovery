@@ -1,67 +1,51 @@
 {
+  "history": [
+    "O Love, de Los Angeles, era uma das poucas bandas de rock com integrantes negros e brancos. Liderado por Arthur Lee, gravou \"Forever Changes\" em 1967.",
+    "Violões, cordas e metais cercam letras sombrias, que contrastam com o otimismo do Verão do Amor.",
+    "O disco vendeu pouco nos EUA, mas virou culto e ganhou status de clássico."
+  ],
+  "trivia": [
+    "\"Alone Again Or\" é de Bryan MacLean, o outro compositor da banda.",
+    "Arthur Lee dizia que achava que ia morrer em breve quando escreveu as canções.",
+    "O disco fez mais sucesso no Reino Unido do que nos EUA."
+  ],
   "tracks": [
     {
-      "title": "Alone Again Or (Alternate Mix Version)"
+      "title": "Alone Again Or",
+      "note": "Violões e um trompete mariachi, por Bryan MacLean."
     },
     {
-      "title": "A House Is Not a Motel (Alternate Mix Version)"
+      "title": "A House Is Not a Motel",
+      "note": "Termina com solos de guitarra cruzados."
     },
     {
-      "title": "Andmoreagain (Alternate Mix Version)"
+      "title": "Andmoreagain",
+      "note": "Uma balada delicada de Arthur Lee."
     },
     {
-      "title": "The Daily Planet (Alternate Mix Version)"
+      "title": "The Daily Planet"
     },
     {
-      "title": "Old Man (Alternate Mix Version)"
+      "title": "Old Man"
     },
     {
-      "title": "The Red Telephone (Alternate Mix Version)"
+      "title": "The Red Telephone"
     },
     {
-      "title": "Maybe the People Would Be the Times or Between Clark and Hilldale (Alternate Mix Version)"
+      "title": "Maybe the People Would Be the Times or Between Clark and Hilldale"
     },
     {
-      "title": "Live and Let Live (Alternate Mix Version)"
+      "title": "Live and Let Live"
     },
     {
-      "title": "The Good Humor Man He Sees Everything Like This (Alternate Mix Version)"
+      "title": "The Good Humor Man He Sees Everything Like This"
     },
     {
-      "title": "Bummer In the Summer (Alternate Mix Version)"
+      "title": "Bummer In the Summer"
     },
     {
-      "title": "You Set the Scene (Alternate Mix Version)"
-    },
-    {
-      "title": "Wonder People (I Do Wonder) [Outtake]"
-    },
-    {
-      "title": "Hummingbirds (Demo)"
-    },
-    {
-      "title": "A House Is Not a Motel (Backing Track)"
-    },
-    {
-      "title": "Andmoreagain (Alternate Electric Backing Track)"
-    },
-    {
-      "title": "The Red Telephone (Tracking Session Highlights)"
-    },
-    {
-      "title": "Wooly Bully (Outtake)"
-    },
-    {
-      "title": "Alone Again Or"
-    },
-    {
-      "title": "Your Mind and We Belong Together (Tracking Sessions Highlights Version)"
-    },
-    {
-      "title": "Your Mind and We Belong Together"
-    },
-    {
-      "title": "Laughing Stock"
+      "title": "You Set the Scene",
+      "note": "O fecho orquestral do disco."
     }
   ]
 }

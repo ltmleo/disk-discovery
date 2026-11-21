@@ -1,16 +1,29 @@
 {
+  "history": [
+    "O B-52's, de Athens, na Geórgia, misturava new wave, surf music, rock dos anos 60 e ficção científica B. As cantoras Kate Pierson e Cindy Wilson usavam perucas altas, do tipo \"beehive\".",
+    "A estreia, de 1979, foi gravada nas Bahamas com o produtor Chris Blackwell.",
+    "\"Rock Lobster\" virou clássico das festas."
+  ],
+  "trivia": [
+    "O nome da banda vem de uma gíria para o penteado \"beehive\".",
+    "John Lennon disse que \"Rock Lobster\" o fez querer voltar a gravar.",
+    "O guitarrista Ricky Wilson afinava a guitarra de forma incomum e tirava cordas."
+  ],
   "tracks": [
     {
-      "title": "Planet Claire"
+      "title": "Planet Claire",
+      "note": "Abre com um tema de ficção científica."
     },
     {
       "title": "52 Girls"
     },
     {
-      "title": "Dance This Mess Around"
+      "title": "Dance This Mess Around",
+      "note": "Cindy Wilson soltando a voz."
     },
     {
-      "title": "Rock Lobster"
+      "title": "Rock Lobster",
+      "note": "Lagostas, festa na praia e gritos."
     },
     {
       "title": "Lava"

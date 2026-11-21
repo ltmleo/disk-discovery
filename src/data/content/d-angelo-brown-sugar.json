@@ -1,7 +1,18 @@
 {
+  "history": [
+    "D'Angelo tinha 21 anos quando lançou \"Brown Sugar\" (1995). Ele cantou, tocou e produziu boa parte do disco.",
+    "Com o som de Marvin Gaye, Al Green e Prince, mas também do hip-hop, o disco ajudou a criar o neo-soul.",
+    "Ele só lançaria o segundo disco cinco anos depois."
+  ],
+  "trivia": [
+    "\"Brown Sugar\" fala de maconha, como se fosse uma mulher.",
+    "\"Cruisin'\" é uma versão de Smokey Robinson.",
+    "A faixa-título foi produzida com Ali Shaheed Muhammad, do A Tribe Called Quest."
+  ],
   "tracks": [
     {
-      "title": "Brown Sugar"
+      "title": "Brown Sugar",
+      "note": "Uma ode disfarçada à maconha."
     },
     {
       "title": "Alright"
@@ -19,13 +30,15 @@
       "title": "Smooth"
     },
     {
-      "title": "Cruisin'"
+      "title": "Cruisin'",
+      "note": "Versão de Smokey Robinson."
     },
     {
       "title": "When We Get By"
     },
     {
-      "title": "Lady"
+      "title": "Lady",
+      "note": "Um dos singles de maior sucesso do disco."
     },
     {
       "title": "Higher"

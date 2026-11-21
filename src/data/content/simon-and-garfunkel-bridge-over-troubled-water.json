@@ -1,13 +1,26 @@
 {
+  "history": [
+    "Paul Simon e Art Garfunkel gravaram o quinto e último disco de estúdio em 1969, com tensões crescentes. Garfunkel se afastou para atuar no cinema.",
+    "A faixa-título, cantada por Garfunkel, ganhou arranjo gospel e cordas.",
+    "O disco ganhou o Grammy de Álbum do Ano e foi o mais vendido de 1970 nos EUA."
+  ],
+  "trivia": [
+    "\"So Long, Frank Lloyd Wright\" é uma despedida de Simon para Garfunkel, que tinha estudado arquitetura.",
+    "\"El Condor Pasa\" é baseada numa melodia peruana do compositor Daniel Alomía Robles.",
+    "O \"lie-la-lie\" de \"The Boxer\" ocupa o lugar de um refrão que Simon não conseguia escrever."
+  ],
   "tracks": [
     {
-      "title": "Bridge Over Troubled Water"
+      "title": "Bridge Over Troubled Water",
+      "note": "Garfunkel ao piano gospel, com cordas."
     },
     {
-      "title": "El Condor Pasa (If I Could)"
+      "title": "El Condor Pasa (If I Could)",
+      "note": "Uma melodia peruana com letra de Simon."
     },
     {
-      "title": "Cecilia"
+      "title": "Cecilia",
+      "note": "Palmas e batidas num ritmo contagiante."
     },
     {
       "title": "Keep the Customer Satisfied"
@@ -16,7 +29,8 @@
       "title": "So Long, Frank Lloyd Wright"
     },
     {
-      "title": "The Boxer"
+      "title": "The Boxer",
+      "note": "O \"lie-la-lie\" no lugar do refrão."
     },
     {
       "title": "Baby Driver"

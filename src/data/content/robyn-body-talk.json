@@ -1,10 +1,22 @@
 {
+  "history": [
+    "Robyn fez sucesso jovem nos anos 90, saiu de uma gravadora grande e criou o próprio selo. \"Body Talk\" saiu em 2010 em três partes e depois foi reunido num disco só.",
+    "O disco mistura eletrônica, pop e letras sobre solidão e desejo.",
+    "\"Dancing On My Own\" virou um hino de pista para quem está sofrendo."
+  ],
+  "trivia": [
+    "\"Dancing On My Own\" fala de ver a pessoa amada com outra numa boate.",
+    "Snoop Dogg participa de \"U Should Know Better\".",
+    "\"Indestructible\" saiu primeiro numa versão acústica com cordas."
+  ],
   "tracks": [
     {
-      "title": "Dancing On My Own (Radio Version)"
+      "title": "Dancing On My Own (Radio Version)",
+      "note": "Chorar dançando, sozinha na pista."
     },
     {
-      "title": "Fembot"
+      "title": "Fembot",
+      "note": "Robyn como robô."
     },
     {
       "title": "Don't F*****g Tell Me What to Do"
@@ -22,7 +34,8 @@
       "title": "Hang With Me"
     },
     {
-      "title": "Call Your Girlfriend"
+      "title": "Call Your Girlfriend",
+      "note": "Um conselho para o novo amor terminar o antigo."
     },
     {
       "title": "None of Dem (feat. Röyksopp)"
@@ -31,7 +44,8 @@
       "title": "We Dance to the Beat"
     },
     {
-      "title": "U Should Know Better (feat. Snoop Dogg)"
+      "title": "U Should Know Better (feat. Snoop Dogg)",
+      "note": "Com Snoop Dogg."
     },
     {
       "title": "Dancehall Queen"
@@ -44,9 +58,6 @@
     },
     {
       "title": "Stars 4-Ever"
-    },
-    {
-      "title": "Dancehall Queen (Diplo and Stenchman Remix feat. Spoek Mathambo)"
     }
   ]
 }

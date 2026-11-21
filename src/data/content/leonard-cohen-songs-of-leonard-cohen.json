@@ -1,7 +1,18 @@
 {
+  "history": [
+    "Leonard Cohen já era poeta e romancista quando gravou o primeiro disco, em 1967, aos 33 anos.",
+    "Voz grave, violão dedilhado e letras sobre amor, fé e solidão: um estilo que ele seguiria a vida toda.",
+    "O disco vendeu pouco nos EUA, mas fez sucesso na Europa."
+  ],
+  "trivia": [
+    "\"Suzanne\" já tinha sido gravada por Judy Collins antes do disco de Cohen.",
+    "\"So Long, Marianne\" é sobre Marianne Ihlen, com quem ele viveu na ilha grega de Hidra.",
+    "As canções aparecem no faroeste \"McCabe & Mrs. Miller\" (1971), de Robert Altman."
+  ],
   "tracks": [
     {
-      "title": "Suzanne"
+      "title": "Suzanne",
+      "note": "Gravada antes por Judy Collins."
     },
     {
       "title": "Master Song"
@@ -13,10 +24,12 @@
       "title": "The Stranger Song"
     },
     {
-      "title": "Sisters of Mercy"
+      "title": "Sisters of Mercy",
+      "note": "Inspirada em duas jovens que ele abrigou numa noite de neve."
     },
     {
-      "title": "So Long, Marianne"
+      "title": "So Long, Marianne",
+      "note": "Para Marianne Ihlen, de Hidra."
     },
     {
       "title": "Hey, That's No Way to Say Goodbye"
