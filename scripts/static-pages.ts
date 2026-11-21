@@ -73,4 +73,12 @@ for (const a of ALBUMS) {
     imageAlt: `Carta ${r.label} de ${a.title}, de ${a.artist}, com a capa do disco`,
   });
 }
-console.log(`static pages: galeria + ${ALBUMS.length} albums`);
+// Sitemap for search engines (listed in the home's robots.txt, per the ltm-novo-site skill).
+const urls = ['', 'galeria/', ...ALBUMS.map((a) => `disco/${a.id}/`)];
+writeFileSync(
+  `${DIST}sitemap.xml`,
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+    .map((u) => `  <url><loc>${SITE}${u}</loc></url>`)
+    .join('\n')}\n</urlset>\n`,
+);
+console.log(`static pages: galeria + ${ALBUMS.length} albums, sitemap with ${urls.length} urls`);

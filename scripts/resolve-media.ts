@@ -7,7 +7,8 @@
  * Never fails the build: anything unresolved is left for the runtime fallback.
  *
  *   npm run media            # resolve missing
- *   npm run media -- --force # re-resolve everything
+ *   npm run media -- --force           # re-resolve everything
+ *   npm run media -- --check-previews  # HEAD every preview URL, re-resolve the dead ones
  */
 import { ALBUMS } from '../src/data/albums';
 import type { MediaEntry } from '../src/data/media';
@@ -16,6 +17,7 @@ import { discography, itunes, tracklist } from './lib/itunes';
 import { loadMedia, saveMedia } from './lib/media-store';
 
 const FORCE = process.argv.includes('--force');
+const CHECK_PREVIEWS = process.argv.includes('--check-previews');
 const UA = 'disk-discovery/1.0';
 // MusicBrainz asks for ≤1 request/s. (iTunes pacing lives in lib/itunes.ts.)
 const MB_GAP = 1100;
@@ -39,8 +41,39 @@ async function musicbrainz(title: string, artist: string, attempt = 1): Promise<
   return best && best.score >= 90 ? best.id : null;
 }
 
+/**
+ * Store preview URLs are not permanent (Apple re-encodes and moves files). HEAD each one and
+ * forget the dead ones, so the normal pass below resolves them again.
+ */
+async function dropDeadPreviews(media: Record<string, MediaEntry>): Promise<number> {
+  const checks = Object.entries(media).flatMap(([id, m]) =>
+    Object.entries(m.previews ?? {})
+      .filter(([, url]) => url)
+      .map(([track, url]) => ({ id, track, url: url! })),
+  );
+  let dead = 0;
+  const queue = [...checks];
+  await Promise.all(
+    Array.from({ length: 8 }, async () => {
+      for (let c = queue.shift(); c; c = queue.shift()) {
+        const ok = await fetch(c.url, { method: 'HEAD', signal: AbortSignal.timeout(15_000) })
+          .then((r) => r.ok)
+          .catch(() => true); // network hiccup is not a dead URL: keep it
+        if (!ok) {
+          delete media[c.id]!.previews![c.track];
+          dead++;
+          console.log(`dead preview: ${c.id} · ${c.track}`);
+        }
+      }
+    }),
+  );
+  console.log(`previews checked: ${checks.length}, dead: ${dead}`);
+  return dead;
+}
+
 async function main() {
   const media: Record<string, MediaEntry> = FORCE ? {} : loadMedia();
+  if (CHECK_PREVIEWS) await dropDeadPreviews(media);
   let changed = 0;
   // Circuit breaker: if the APIs are unreachable (offline, blocked), stop early
   // instead of waiting out every rate-limit gap.
