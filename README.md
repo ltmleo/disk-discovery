@@ -13,7 +13,7 @@ Todo disco tem a mesma chance de sair. A raridade vem só do tamanho de cada fai
 | ★★ Incomum | 101–200 | 100 | 20% |
 | ★ Comum | 201–500 | 300 | 60% |
 
-Hoje há 25 discos, 5 por raridade, então cada raridade sai em 20% dos pacotes. As chances acima valem quando a lista estiver completa.
+Hoje há 50 discos (5 lendários, 8 épicos, 10 raros, 12 incomuns e 15 comuns). As chances por pacote são, nessa ordem, 10%, 16%, 20%, 24% e 30%. As chances da tabela valem quando a lista estiver completa. Para manter a raridade coerente, as próximas levas devem continuar trazendo mais comuns do que raros.
 
 ## Som
 
