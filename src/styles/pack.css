@@ -27,6 +27,16 @@
   grid-area: 1 / 1;
 }
 
+/* Colour of the light leaking out of the pack (set as soon as the strip is gripped). */
+.stage { --leak: rgba(255, 248, 225, 0.9); }
+.stage[data-rarity='uncommon'] { --leak: rgba(80, 220, 160, 0.95); }
+.stage[data-rarity='rare'] { --leak: rgba(90, 150, 255, 1); }
+.stage[data-rarity='epic'] { --leak: rgba(215, 90, 255, 1); }
+.stage[data-rarity='legendary'] { --leak: rgba(255, 210, 70, 1); }
+
+/* The pack front covers the card while it rises out of the opening. */
+.stage > .pack { z-index: 3; }
+
 .stage__status {
   min-height: 1.6em;
   margin: 12px 0;
@@ -78,9 +88,10 @@
   cursor: grab;
   touch-action: none;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 85%, 90% 100%, 85% 85%, 80% 100%, 75% 85%, 70% 100%, 65% 85%, 60% 100%, 55% 85%, 50% 100%, 45% 85%, 40% 100%, 35% 85%, 30% 100%, 25% 85%, 20% 100%, 15% 85%, 10% 100%, 5% 85%, 0 100%);
-  transform: rotate(calc(var(--tear) * -8deg)) translateY(calc(var(--tear) * -10px));
+  /* peels from the left corner as the drag progresses */
+  transform: rotate(calc(var(--tear) * 14deg)) translate(calc(var(--tear) * 6px), calc(var(--tear) * -16px));
   transform-origin: 100% 100%;
-  transition: transform 0.15s;
+  transition: transform 0.12s;
 }
 
 .pack__strip::after {
@@ -181,25 +192,85 @@
   transform: rotate(-3deg);
 }
 
+/* Gripped: the float stops and the pack squeezes slightly, like a hand holding it. */
+.pack.is-gripped {
+  animation: none;
+  transform: scale(0.985) rotate(calc(var(--tear) * -1.5deg));
+  transition: transform 0.15s;
+}
+
+.pack__light {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 11%;
+  height: calc(3px + var(--tear) * 7px);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 calc(10px + var(--tear) * 40px) calc(4px + var(--tear) * 18px) var(--leak),
+    0 calc(var(--tear) * -24px) calc(var(--tear) * 50px) calc(var(--tear) * 10px) var(--leak);
+  opacity: min(1, calc(var(--tear) * 1.8));
+  z-index: 2;
+  pointer-events: none;
+}
+
 /* Tearing */
 .pack.is-torn {
-  animation: none;
+  animation: pack-jolt 0.35s ease-out;
+}
+
+@keyframes pack-jolt {
+  0% { transform: none; }
+  30% { transform: translateY(6px) scale(1.02, 0.97); }
+  100% { transform: none; }
 }
 
 .pack.is-torn .pack__strip {
   transition: transform 0.6s cubic-bezier(0.3, 0.6, 0.4, 1), opacity 0.6s;
-  transform: translate(140px, -160px) rotate(38deg);
+  transform: translate(160px, -190px) rotate(48deg);
   opacity: 0;
 }
 
-.pack.is-torn .pack__body {
-  animation: pack-drop 0.9s 0.35s cubic-bezier(0.5, 0, 0.7, 0.4) forwards;
+/* The opening flares: a beam of the rarity colour shoots up out of the pack. */
+.pack.is-torn .pack__light {
+  opacity: 1;
+  animation: leak-flare 1.2s ease-out forwards;
+}
+
+.pack.is-torn .pack__light::after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 0;
+  height: 260px;
+  background: linear-gradient(to top, var(--leak), transparent);
+  filter: blur(6px);
+  transform-origin: 50% 100%;
+  animation: leak-beam 1.2s ease-out forwards;
+}
+
+@keyframes leak-flare {
+  0% { box-shadow: 0 0 20px 6px var(--leak); }
+  25% { box-shadow: 0 0 70px 26px var(--leak); }
+  100% { box-shadow: 0 0 40px 12px var(--leak); }
+}
+
+@keyframes leak-beam {
+  0% { transform: scaleY(0); opacity: 0; }
+  25% { transform: scaleY(1); opacity: 0.85; }
+  100% { transform: scaleY(1.2); opacity: 0; }
+}
+
+.pack.is-dropping {
+  animation: pack-drop 0.6s cubic-bezier(0.5, 0, 0.75, 0.3) forwards;
 }
 
 @keyframes pack-drop {
   0% { transform: translateY(0); }
   20% { transform: translateY(-6px) rotate(-1deg); }
-  100% { transform: translateY(120%) rotate(6deg); opacity: 0; }
+  100% { transform: translateY(115%) rotate(7deg); opacity: 0; }
 }
 
 /* ---------- Card reveal ---------- */
@@ -220,13 +291,25 @@
   cursor: default;
 }
 
-.card.is-emerging {
-  animation: emerge 0.75s cubic-bezier(0.2, 1.2, 0.4, 1) both;
+/* Rising out of the pack: starts hidden behind the pack front, scaled to fit inside it. */
+.reveal-slot.is-rising {
+  animation: card-rise 0.7s cubic-bezier(0.25, 0.8, 0.35, 1) both;
 }
 
-@keyframes emerge {
-  from { transform: translateY(90px) scale(0.7); opacity: 0; }
-  to { transform: none; opacity: 1; }
+@keyframes card-rise {
+  from { transform: translateY(10%) scale(0.74); }
+  to { transform: translateY(-46%) scale(0.74); }
+}
+
+.reveal-slot.is-settling {
+  z-index: 4;
+  animation: card-settle 0.55s cubic-bezier(0.3, 1.35, 0.5, 1) both;
+}
+
+@keyframes card-settle {
+  from { transform: translateY(-46%) scale(0.74); }
+  60% { transform: translateY(2%) scale(1.03); }
+  to { transform: none; }
 }
 
 /* the aura hints the rarity before the reveal, as with booster packs */
@@ -286,6 +369,47 @@
 .stage[data-phase='revealed'][data-rarity='epic'] .card,
 .stage[data-phase='revealed'][data-rarity='legendary'] .card {
   filter: drop-shadow(0 0 18px var(--aura));
+}
+
+/* ---------- Charge sparks (rare and up) ---------- */
+.fx.fx--charge { z-index: 3; }
+
+.fx__spark {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 12px 5px var(--fx), 0 0 26px 8px var(--fx);
+  opacity: 0;
+  animation: spark-in var(--t) var(--d) cubic-bezier(0.55, 0, 0.9, 0.5) infinite;
+}
+
+@keyframes spark-in {
+  0% { transform: translate(var(--sx), var(--sy)) scale(0.6); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translate(0, 0) scale(1.4); opacity: 0; }
+}
+
+/* ---------- Screen shake (epic / legendary reveal) ---------- */
+.view--pack.is-quake { animation: quake 0.45s cubic-bezier(0.3, 0.7, 0.4, 1); }
+.view--pack.is-quake-lg { animation: quake-lg 0.7s cubic-bezier(0.3, 0.7, 0.4, 1); }
+
+@keyframes quake {
+  0%, 100% { transform: none; }
+  15% { transform: translate(-5px, 3px); }
+  35% { transform: translate(4px, -3px); }
+  55% { transform: translate(-3px, 2px); }
+  75% { transform: translate(2px, -1px); }
+}
+
+@keyframes quake-lg {
+  0%, 100% { transform: none; }
+  10% { transform: translate(-9px, 5px) rotate(-0.4deg); }
+  25% { transform: translate(8px, -6px) rotate(0.4deg); }
+  40% { transform: translate(-6px, 4px); }
+  55% { transform: translate(5px, -3px); }
+  70% { transform: translate(-3px, 2px); }
+  85% { transform: translate(1px, -1px); }
 }
 
 /* ---------- Stamps ---------- */

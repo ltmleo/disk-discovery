@@ -12,6 +12,7 @@ import { preloadArt } from '../cover';
 import { prefetchContent } from '../data/content';
 import { href } from '../router';
 import { shareButton, SITE_URL } from './share';
+import { haptic } from './haptics';
 import { achievementsFor, setPlayerProfile, track, yesNo } from '../analytics';
 
 type Phase = 'sealed' | 'tearing' | 'facedown' | 'revealed';
@@ -35,6 +36,15 @@ function settleFlip(card: HTMLElement) {
   void card.offsetWidth; // commit the style change before re-enabling transitions
   requestAnimationFrame(() => card.classList.remove('no-flip-transition'));
 }
+
+/** Vibration on reveal, by rarity (ms on/off). */
+const HAPTIC: Record<string, number[]> = {
+  common: [15],
+  uncommon: [20],
+  rare: [30, 40, 30],
+  epic: [40, 40, 60],
+  legendary: [60, 50, 60, 50, 120],
+};
 
 /** Lets the reveal sting play out before the music fades in. */
 const FANFARE_MS: Record<string, number> = {
@@ -89,7 +99,20 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     setPhase('sealed');
     prepareNext();
     stage.removeAttribute('data-rarity');
-    stage.replaceChildren(buildPack(tear));
+    stage.replaceChildren(
+      buildPack({
+        onGrip: () => {
+          sfx.unlock();
+          // The light leaking through the tear takes the rarity colour, like a booster's glow.
+          stage.dataset.rarity = rarityForRank(next!.album.rank).id;
+        },
+        onProgress: (p) => {
+          sfx.tearGrain(p);
+          haptic(6);
+        },
+        onTear: () => void tear(),
+      }),
+    );
     status.textContent = 'Arraste pela linha pontilhada para rasgar o pacote.';
     actions.replaceChildren(
       h('button', { class: 'btn btn--primary', type: 'button', onclick: () => void tear() }, 'Rasgar pacote'),
@@ -102,6 +125,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     actions.replaceChildren();
     sfx.unlock();
     sfx.tear();
+    haptic([25, 30, 15]);
     stopPreview(300);
 
     const { album, art } = next!;
@@ -124,20 +148,29 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     status.textContent = 'Algo está saindo do pacote…';
 
     const reduced = prefersReducedMotion();
-    // Let the tear animation play; if the art is still downloading, give it a little
-    // extra time so the card comes out with its cover already painted.
-    await Promise.all([wait(reduced ? 0 : 650), Promise.race([art, wait(1800)])]);
+    // Let the strip fly off; if the art is still downloading, give it a little extra time
+    // so the card comes out with its cover already painted.
+    await Promise.all([wait(reduced ? 0 : 380), Promise.race([art, wait(1800)])]);
 
+    // The card rises out of the opening (it sits behind the pack front), peeks out,
+    // then the pack falls away and the card settles in the middle of the stage.
     const card = renderCard(album, { faceDown: true, size: 'lg' });
-    card.classList.add('is-emerging');
     const slot = h(
       'button',
       { class: 'reveal-slot', type: 'button', 'aria-label': 'Revelar disco', disabled: true },
       card,
     );
     stage.append(slot);
-    sfx.whoosh();
-    await wait(reduced ? 0 : 500);
+    if (!reduced) {
+      slot.classList.add('is-rising');
+      sfx.rustle();
+      await wait(700);
+      pack.classList.add('is-dropping');
+      slot.classList.replace('is-rising', 'is-settling');
+      sfx.whoosh();
+      await wait(550);
+      slot.classList.remove('is-settling');
+    }
     pack.remove();
     setPhase('facedown');
 
@@ -145,7 +178,10 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     card.classList.add('is-charging');
     const suspense = reduced ? 0 : SUSPENSE_MS[rarity.id] ?? 300;
     sfx.charge(rarity.id, suspense || 200);
+    const sparks = reduced ? null : converge(stage, rarity.id, suspense);
+    if (rarity.id === 'epic' || rarity.id === 'legendary') haptic([20, 120, 20, 90, 20, 60, 20]);
     await wait(suspense);
+    sparks?.remove();
     card.classList.remove('is-charging');
     slot.disabled = false;
     status.textContent = 'Toque na carta para revelar.';
@@ -167,13 +203,18 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     track('reveal_card', { rarity: rarity.id, new_card: yesNo(isNew) });
     // Everything up to the first await runs inside the click gesture (autoplay rules).
     sfx.flip();
+    sfx.impact(rarity.id);
     sfx.reveal(rarity.id);
+    haptic(HAPTIC[rarity.id] ?? [15]);
     enableGyro(); // iOS asks for motion permission, which needs this click gesture
     recalibrateGyro();
     if (album.previewTrack) playPreview(album, album.previewTrack, { delayMs: FANFARE_MS[rarity.id], maxMs: 20_000, source: 'reveal' });
     card.classList.remove('is-facedown', 'is-emerging');
     card.classList.add('is-flipping');
-    if (!prefersReducedMotion()) burst(stage, rarity.id);
+    if (!prefersReducedMotion()) {
+      burst(stage, rarity.id);
+      if (rarity.id === 'epic' || rarity.id === 'legendary') quake(view, rarity.id);
+    }
 
     // Legendary cards spin one and a half turns before settling (see .card--legendary.is-flipping).
     await wait(prefersReducedMotion() ? 0 : rarity.id === 'legendary' ? 1250 : 750);
@@ -211,7 +252,17 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
   return view;
 }
 
-function buildPack(onTear: () => void): HTMLElement {
+interface PackHandlers {
+  /** First touch on the strip (unlock audio, pick the light colour). */
+  onGrip: () => void;
+  /** Called every few percent of drag progress (0..1), for crinkle sounds. */
+  onProgress: (progress: number) => void;
+  onTear: () => void;
+}
+
+const TEAR_AT = 0.55;
+
+function buildPack({ onGrip, onProgress, onTear }: PackHandlers): HTMLElement {
   const strip = h(
     'div',
     { class: 'pack__strip', 'aria-hidden': 'true' },
@@ -220,6 +271,8 @@ function buildPack(onTear: () => void): HTMLElement {
   const pack = h(
     'div',
     { class: 'pack' },
+    // Light leaking through the gap as the strip peels off.
+    h('div', { class: 'pack__light', 'aria-hidden': 'true' }),
     strip,
     h(
       'div',
@@ -235,26 +288,72 @@ function buildPack(onTear: () => void): HTMLElement {
 
   // Drag-to-tear along the top strip. Click on the button is the accessible fallback.
   let startX: number | null = null;
+  let lastStep = 0;
   strip.addEventListener('pointerdown', (e) => {
     startX = e.clientX;
+    lastStep = 0;
     strip.setPointerCapture(e.pointerId);
+    pack.classList.add('is-gripped');
+    onGrip();
   });
   strip.addEventListener('pointermove', (e) => {
     if (startX === null) return;
-    const progress = Math.max(0, Math.min(1, Math.abs(e.clientX - startX) / strip.clientWidth));
-    pack.style.setProperty('--tear', String(progress));
-    if (progress > 0.55) {
+    const progress = Math.max(0, Math.min(1, Math.abs(e.clientX - startX) / strip.clientWidth / TEAR_AT));
+    pack.style.setProperty('--tear', progress.toFixed(3));
+    // A crinkle every ~7% of the way, not on every pointer event.
+    const step = Math.floor(progress * 14);
+    if (step > lastStep) {
+      lastStep = step;
+      onProgress(progress);
+    }
+    if (progress >= 1) {
       startX = null;
       onTear();
     }
   });
   const cancel = () => {
+    if (startX === null) return;
     startX = null;
+    pack.classList.remove('is-gripped');
     pack.style.setProperty('--tear', '0');
   };
   strip.addEventListener('pointerup', cancel);
   strip.addEventListener('pointercancel', cancel);
   return pack;
+}
+
+/** Sparks drawn in towards the face-down card while it charges (rare and up). */
+function converge(stage: HTMLElement, rarity: string, ms: number): HTMLElement | null {
+  const count = { rare: 10, epic: 18, legendary: 28 }[rarity];
+  if (!count || ms <= 0) return null;
+  const fx = h('div', { class: `fx fx--${rarity} fx--charge`, 'aria-hidden': 'true' });
+  for (let i = 0; i < count; i++) {
+    const angle = (i / count) * Math.PI * 2 + Math.random() * 0.4;
+    // Within reach of a phone screen: the card itself is ~330px wide.
+    const dist = 150 + Math.random() * 110;
+    fx.append(
+      h('span', {
+        class: 'fx__spark',
+        style: [
+          `--sx:${Math.cos(angle) * dist}px`,
+          `--sy:${Math.sin(angle) * dist}px`,
+          `--d:${((Math.random() * Math.min(ms, 900)) / 1000) * 0.4}s`,
+          `--t:${0.35 + Math.random() * 0.3}s`,
+        ].join(';'),
+      }),
+    );
+  }
+  stage.append(fx);
+  return fx;
+}
+
+/** Screen shake on the biggest pulls. */
+function quake(view: HTMLElement, rarity: string) {
+  const cls = rarity === 'legendary' ? 'is-quake-lg' : 'is-quake';
+  view.classList.remove('is-quake', 'is-quake-lg');
+  void view.offsetWidth;
+  view.classList.add(cls);
+  setTimeout(() => view.classList.remove(cls), 700);
 }
 
 /** Rarity-scaled celebration: light rays from rare up, paper scraps from epic, flash for legendary. */

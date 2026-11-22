@@ -17,7 +17,8 @@ Os 500 discos estão no jogo, então as chances acima são as reais.
 
 ## Som
 
-- Efeitos (rasgar, carta saindo, suspense, virada, fanfarra por raridade) são sintetizados com Web Audio, sem arquivos de áudio.
+- Efeitos (estalos enquanto rasga, rasgo, carta deslizando, suspense com batimento cardíaco, impacto grave, fanfarra por raridade) são sintetizados com Web Audio, sem arquivos de áudio. Tudo passa por um compressor e por um reverb gerado no próprio navegador.
+- Abertura: a faixa descola aos poucos enquanto é arrastada e deixa vazar uma luz na cor da raridade; a carta sobe de dentro do pacote, o pacote cai, faíscas convergem para a carta (raro em diante) e a tela treme nas épicas e lendárias. No celular, vibra junto (Android). Tudo isso respeita "reduzir movimento", e a vibração segue o botão de som.
 - Na revelação toca um trecho de 30s de `previewTrack`, vindo da API de busca do iTunes (JSONP). Na página do disco cada faixa tem ▶.
 - O botão 🔊/🔇 no topo silencia tudo, e a escolha fica salva no navegador.
 
@@ -117,7 +118,7 @@ O próximo disco é sorteado quando o pacote aparece na tela. A capa (baixada e 
 
 - `src/rarity.ts`, `src/draw.ts`: faixas de raridade e sorteio uniforme. Funções puras, testadas.
 - `src/collection.ts`: coleção no `localStorage`, versionada e tolerante a storage indisponível ou corrompido.
-- `src/audio/`: `sfx.ts` (efeitos sintetizados), `preview.ts` (busca e player de prévias, um único `<audio>` compartilhado), `settings.ts` (mudo).
+- `src/audio/`: `sfx.ts` (efeitos sintetizados), `preview.ts` (busca e player de prévias, um único `<audio>` compartilhado), `settings.ts` (mudo). Vibração em `src/ui/haptics.ts`.
 - `src/cover.ts`: pipeline de capas (fontes, cache, pré-carregamento). `src/net/`: JSONP, fila com prioridade e regras de correspondência compartilhadas com o script de build.
 - `src/ui/*`: views sem framework. `src/router.ts`: rotas reais (`/disk-discovery/`, `/galeria`, `/disco/<id>`) com History API. O build copia `index.html` para `404.html`, para que os links diretos funcionem no GitHub Pages. Links antigos com `#/` são convertidos antes do GA carregar.
 - `src/styles/card.css`: o JS só escreve `--mx/--my/--rx/--ry`. Cada raridade interpreta essas variáveis do seu jeito (foil na arte, reverse holo, moldura dourada).
