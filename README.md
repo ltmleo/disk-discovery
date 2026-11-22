@@ -50,7 +50,8 @@ O site faz parte do ecossistema ltmleo.github.io (skill `ltm-novo-site`): GA4 `G
 
 | Evento | Quando | Parâmetros |
 | --- | --- | --- |
-| `open_pack (com `pool`)` | pacote rasgado | `rarity`, `new_card` |
+| `open_pack` | pacote rasgado | `rarity`, `new_card`, `pool` (`all`, `top10`, `top50`, `top100` ou a raridade) |
+| `select_pool` | recorte do sorteio trocado | `pool` |
 | `reveal_card` | carta virada | `rarity`, `new_card` |
 | `select_content` | página do disco aberta | `content_type`, `content_id`, `rarity`, `source` (`reveal`, `inspect`, `gallery`, `direct`, `back`) |
 | `inspect_card` | carta ampliada na galeria | `content_id`, `rarity` |
