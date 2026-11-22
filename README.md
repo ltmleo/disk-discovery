@@ -18,6 +18,7 @@ Os 500 discos estão no jogo, então as chances acima são as reais.
 ## Som
 
 - Efeitos (estalos enquanto rasga, rasgo, carta deslizando, suspense com batimento cardíaco, impacto grave, fanfarra por raridade) são sintetizados com Web Audio, sem arquivos de áudio. Tudo passa por um compressor e por um reverb gerado no próprio navegador.
+- Recorte do sorteio: um link discreto embaixo do pacote ("Sorteio: Todos ▾") abre as opções Todos, Top 10, Top 50, Top 100 e cada raridade. A escolha fica salva no navegador, o pacote ganha um selo com o recorte e os discos contam para a coleção normalmente (`src/pool.ts`).
 - Abertura: a faixa descola aos poucos enquanto é arrastada e deixa vazar uma luz na cor da raridade; a carta sobe de dentro do pacote, o pacote cai, faíscas convergem para a carta (raro em diante) e a tela treme nas épicas e lendárias. Depois do suspense, a carta virada continua flutuando com a aura pulsando, e um fundo de mistério (drone, motivo sem resolução, brilho e batimento conforme a raridade) toca até o toque que revela; ele para sozinho se a pessoa sair da página, silencia com a aba escondida e segue o botão de som. No celular, vibra junto (Android). Tudo isso respeita "reduzir movimento", e a vibração segue o botão de som.
 - Na revelação toca um trecho de 30s de `previewTrack`, vindo da API de busca do iTunes (JSONP). Na página do disco cada faixa tem ▶.
 - O botão 🔊/🔇 no topo silencia tudo, e a escolha fica salva no navegador.
@@ -49,7 +50,7 @@ O site faz parte do ecossistema ltmleo.github.io (skill `ltm-novo-site`): GA4 `G
 
 | Evento | Quando | Parâmetros |
 | --- | --- | --- |
-| `open_pack` | pacote rasgado | `rarity`, `new_card` |
+| `open_pack (com `pool`)` | pacote rasgado | `rarity`, `new_card` |
 | `reveal_card` | carta virada | `rarity`, `new_card` |
 | `select_content` | página do disco aberta | `content_type`, `content_id`, `rarity`, `source` (`reveal`, `inspect`, `gallery`, `direct`, `back`) |
 | `inspect_card` | carta ampliada na galeria | `content_id`, `rarity` |

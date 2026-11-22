@@ -13,6 +13,7 @@ import { prefetchContent } from '../data/content';
 import { href } from '../router';
 import { shareButton, SITE_URL } from './share';
 import { haptic } from './haptics';
+import { loadPool, POOLS, poolAlbums, poolById, poolHint, savePool, type PoolId } from '../pool';
 import { achievementsFor, setPlayerProfile, track, yesNo } from '../analytics';
 
 type Phase = 'sealed' | 'tearing' | 'facedown' | 'revealed';
@@ -61,6 +62,8 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
   const stage = h('div', { class: 'stage', 'data-phase': 'sealed' });
   const status = h('p', { class: 'stage__status', 'aria-live': 'polite' });
   const actions = h('div', { class: 'stage__actions' });
+  let pool: PoolId = loadPool();
+  const picker = h('details', { class: 'pool' });
   const view = h(
     'section',
     { class: 'view view--pack' },
@@ -77,6 +80,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     stage,
     status,
     actions,
+    picker,
   );
 
   let phase: Phase = 'sealed';
@@ -85,7 +89,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
   let next: { album: Album; art: Promise<string | null> } | null = null;
 
   const prepareNext = () => {
-    const album = drawAlbum(ALBUMS);
+    const album = drawAlbum(poolAlbums(ALBUMS, pool));
     next = { album, art: preloadArt(album, 600, 'high') };
     if (album.previewTrack) prefetchPreview(album, album.previewTrack);
   };
@@ -101,6 +105,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     stage.removeAttribute('data-rarity');
     stage.replaceChildren(
       buildPack({
+        pool: pool === 'all' ? null : poolById(pool).label,
         onGrip: () => {
           sfx.unlock();
           // The light leaking through the tear takes the rarity colour, like a booster's glow.
@@ -137,7 +142,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     const { isNew, entry } = collection.add(album.id);
     onChange();
 
-    track('open_pack', { rarity: rarity.id, new_card: yesNo(isNew) });
+    track('open_pack', { rarity: rarity.id, new_card: yesNo(isNew), pool });
     for (const id of achievementsFor({ isNew, rarity: rarity.id, uniqueBefore, uniqueAfter: collection.uniqueCount, sameRarityBefore })) {
       track('unlock_achievement', { achievement_id: id });
     }
@@ -254,11 +259,48 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     );
   }
 
+  /*
+   * Draw range: tucked away under a small toggle, since the normal game is "all 500".
+   * Changing it while the pack is sealed re-draws that pack from the new range.
+   */
+  function renderPicker() {
+    const summary = h('summary', { class: 'pool__summary' }, `Sorteio: ${poolById(pool).label}`);
+    const chips = h(
+      'div',
+      { class: 'pool__chips', role: 'group', 'aria-label': 'De onde sai o disco' },
+      ...POOLS.map((p) =>
+        h(
+          'button',
+          {
+            class: 'chip',
+            type: 'button',
+            'aria-pressed': String(p.id === pool),
+            title: poolHint(p.id),
+            onclick: () => {
+              if (p.id === pool) return;
+              pool = p.id;
+              savePool(pool);
+              track('select_pool', { pool });
+              renderPicker();
+              picker.open = true;
+              if (phase === 'sealed') mountPack();
+            },
+          },
+          p.label,
+        ),
+      ),
+    );
+    picker.replaceChildren(summary, chips, h('p', { class: 'pool__hint' }, poolHint(pool)));
+  }
+
+  renderPicker();
   mountPack();
   return view;
 }
 
 interface PackHandlers {
+  /** Label of a restricted draw range, shown on the wrapper; null for the full list. */
+  pool: string | null;
   /** First touch on the strip (unlock audio, pick the light colour). */
   onGrip: () => void;
   /** Called every few percent of drag progress (0..1), for crinkle sounds. */
@@ -268,7 +310,7 @@ interface PackHandlers {
 
 const TEAR_AT = 0.55;
 
-function buildPack({ onGrip, onProgress, onTear }: PackHandlers): HTMLElement {
+function buildPack({ pool, onGrip, onProgress, onTear }: PackHandlers): HTMLElement {
   const strip = h(
     'div',
     { class: 'pack__strip', 'aria-hidden': 'true' },
@@ -287,6 +329,7 @@ function buildPack({ onGrip, onProgress, onTear }: PackHandlers): HTMLElement {
       h('span', { class: 'pack__tape pack__tape--b', 'aria-hidden': 'true' }),
       h('div', { class: 'pack__logo' }, ransom('DISK'), ransom('DISCOVERY')),
       h('div', { class: 'pack__sub' }, 'Booster · 1 disco'),
+      pool ? h('span', { class: 'pack__pool' }, pool) : null,
       h('div', { class: 'pack__vinyl', 'aria-hidden': 'true' }),
       h('div', { class: 'pack__odds' }, 'de ★ a ★★★★★'),
     ),

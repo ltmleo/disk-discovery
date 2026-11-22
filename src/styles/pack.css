@@ -551,3 +551,57 @@
   .stage { min-height: 440px; }
   .stamp { right: -6px; }
 }
+
+/* ---------- Draw range (tucked away under the pack) ---------- */
+.pool {
+  margin-top: 22px;
+  max-width: 520px;
+  font: 0.8rem var(--f-type);
+}
+
+.pool__summary {
+  display: inline-block;
+  cursor: pointer;
+  opacity: 0.6;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  list-style: none;
+}
+
+.pool__summary::-webkit-details-marker { display: none; }
+.pool__summary::after { content: ' ▾'; }
+.pool[open] .pool__summary::after { content: ' ▴'; }
+.pool__summary:hover,
+.pool[open] .pool__summary { opacity: 1; }
+
+.pool__chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.pool__chips .chip {
+  padding: 5px 9px;
+  font-size: 0.78rem;
+}
+
+.pool__hint {
+  margin: 10px 0 0;
+  opacity: 0.7;
+}
+
+/* Stamp on the wrapper when the pack draws from a restricted range. */
+.pack__pool {
+  position: absolute !important;
+  top: 34%;
+  right: -6px;
+  padding: 3px 8px;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  font: 0.85rem/1 var(--f-display);
+  letter-spacing: 0.04em;
+  transform: rotate(8deg);
+  z-index: 3 !important;
+}

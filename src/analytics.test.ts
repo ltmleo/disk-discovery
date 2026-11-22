@@ -13,9 +13,9 @@ describe('analytics', () => {
   it('forwards typed events to gtag', () => {
     const gtag = vi.fn();
     window.gtag = gtag;
-    track('open_pack', { rarity: 'epic', new_card: 'yes' });
+    track('open_pack', { rarity: 'epic', new_card: 'yes', pool: 'all' });
     setPlayerProfile(12);
-    expect(gtag).toHaveBeenNthCalledWith(1, 'event', 'open_pack', { rarity: 'epic', new_card: 'yes' });
+    expect(gtag).toHaveBeenNthCalledWith(1, 'event', 'open_pack', { rarity: 'epic', new_card: 'yes', pool: 'all' });
     expect(gtag).toHaveBeenNthCalledWith(2, 'set', 'user_properties', { collection_tier: '10-49' });
   });
 

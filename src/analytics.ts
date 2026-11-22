@@ -16,7 +16,10 @@ type YesNo = 'yes' | 'no';
 
 export interface Events {
   /** Pack torn open (the pull is already decided). */
-  open_pack: { rarity: RarityId; new_card: YesNo };
+  /** `pool`: draw range picked under the pack ("all" = the normal full-list game). */
+  open_pack: { rarity: RarityId; new_card: YesNo; pool: string };
+  /** Draw range changed in the picker under the pack. */
+  select_pool: { pool: string };
   /** Face-down card flipped. */
   reveal_card: { rarity: RarityId; new_card: YesNo };
   /** Album detail page opened. GA recommended event. */
