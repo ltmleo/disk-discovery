@@ -62,7 +62,7 @@ O site faz parte do ecossistema ltmleo.github.io (skill `ltm-novo-site`): GA4 `G
 | `unlock_achievement` | 10, 25, 50, 100, 250 e 500 discos; primeiro de cada raridade | `achievement_id` |
 
 - **Perfil do jogador:** propriedade de usuário `collection_tier` (`0`, `1-9`, `10-49`, `50-199`, `200+`).
-- **No painel do GA**, crie as dimensões personalizadas para ver os parâmetros nos relatórios. Com escopo de evento: `rarity`, `new_card`, `source`, `enabled`, `content_id` e `achievement_id`. Com escopo de usuário: `collection_tier`.
+- **No painel do GA**, crie as dimensões personalizadas para ver os parâmetros nos relatórios. Com escopo de evento: `rarity`, `new_card`, `source`, `enabled`, `content_id`, `achievement_id` e `pool`. Com escopo de usuário: `collection_tier`.
 
 ## Galeria
 
