@@ -18,7 +18,7 @@ Os 500 discos estão no jogo, então as chances acima são as reais.
 ## Som
 
 - Efeitos (estalos enquanto rasga, rasgo, carta deslizando, suspense com batimento cardíaco, impacto grave, fanfarra por raridade) são sintetizados com Web Audio, sem arquivos de áudio. Tudo passa por um compressor e por um reverb gerado no próprio navegador.
-- Abertura: a faixa descola aos poucos enquanto é arrastada e deixa vazar uma luz na cor da raridade; a carta sobe de dentro do pacote, o pacote cai, faíscas convergem para a carta (raro em diante) e a tela treme nas épicas e lendárias. No celular, vibra junto (Android). Tudo isso respeita "reduzir movimento", e a vibração segue o botão de som.
+- Abertura: a faixa descola aos poucos enquanto é arrastada e deixa vazar uma luz na cor da raridade; a carta sobe de dentro do pacote, o pacote cai, faíscas convergem para a carta (raro em diante) e a tela treme nas épicas e lendárias. Depois do suspense, a carta virada continua flutuando com a aura pulsando, e um fundo de mistério (drone, motivo sem resolução, brilho e batimento conforme a raridade) toca até o toque que revela; ele para sozinho se a pessoa sair da página, silencia com a aba escondida e segue o botão de som. No celular, vibra junto (Android). Tudo isso respeita "reduzir movimento", e a vibração segue o botão de som.
 - Na revelação toca um trecho de 30s de `previewTrack`, vindo da API de busca do iTunes (JSONP). Na página do disco cada faixa tem ▶.
 - O botão 🔊/🔇 no topo silencia tudo, e a escolha fica salva no navegador.
 

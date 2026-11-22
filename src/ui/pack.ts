@@ -181,8 +181,11 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     const sparks = reduced ? null : converge(stage, rarity.id, suspense);
     if (rarity.id === 'epic' || rarity.id === 'legendary') haptic([20, 120, 20, 90, 20, 60, 20]);
     await wait(suspense);
-    sparks?.remove();
     card.classList.remove('is-charging');
+    // From here until the tap: a calmer, endless version of the suspense (sound and motion).
+    card.classList.add('is-waiting');
+    sparks?.classList.add('is-calm');
+    const stopMystery = sfx.mystery(rarity.id, () => card.isConnected && phase === 'facedown');
     slot.disabled = false;
     status.textContent = 'Toque na carta para revelar.';
     slot.focus({ preventScroll: true });
@@ -191,6 +194,9 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
       'click',
       () => {
         if (phase !== 'facedown') return;
+        stopMystery();
+        sparks?.remove();
+        card.classList.remove('is-waiting');
         void reveal(slot, card, album, isNew, entry.count);
       },
       { once: true },

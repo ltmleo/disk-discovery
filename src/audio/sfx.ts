@@ -1,5 +1,5 @@
 import type { RarityId } from '../types';
-import { isMuted } from './settings';
+import { isMuted, onMuteChange } from './settings';
 
 /**
  * All sound effects are synthesised with Web Audio: no asset files, no licensing,
@@ -291,3 +291,133 @@ export const stamp = () =>
     tone(c, { freq: 140, to: 60, type: 'sine', dur: 0.18, vol: 0.4 });
     hiss(c, { dur: 0.06, vol: 0.2, freq: 1200, q: 0.8 });
   });
+
+/* ---------------- Mystery loop (face-down card waiting for the tap) ---------------- */
+
+interface MysteryVoice {
+  /** Drone level: kept low so a long wait doesn't get tiring. */
+  drone: number;
+  /** Motif note every `step` seconds; rarer cards tick faster. */
+  step: number;
+  shimmer: boolean;
+  /** Heartbeat period in seconds (epic/legendary only). */
+  beat?: number;
+}
+
+const MYSTERY: Record<RarityId, MysteryVoice> = {
+  common: { drone: 0.035, step: 0.75, shimmer: false },
+  uncommon: { drone: 0.04, step: 0.7, shimmer: false },
+  rare: { drone: 0.05, step: 0.6, shimmer: true },
+  epic: { drone: 0.06, step: 0.55, shimmer: true, beat: 1.05 },
+  legendary: { drone: 0.07, step: 0.5, shimmer: true, beat: 0.85 },
+};
+
+// A minor motif with a raised fourth: unresolved on purpose, it keeps asking a question.
+const MOTIF = [0, 3, 7, 6, 3, 10, 7, 6];
+
+/**
+ * Sustained suspense from the end of the charge until the reveal. Returns `stop()`.
+ * `alive()` is polled, so the loop also ends by itself when the card leaves the page
+ * (navigation) instead of droning on. Muting and hiding the tab silence it live.
+ */
+export function mystery(rarity: RarityId, alive: () => boolean): () => void {
+  const c = ac();
+  if (!c || !master) return () => undefined;
+  const v = MYSTERY[rarity];
+  const t0 = c.currentTime;
+
+  // Bus for the continuous layers, so mute/hide/stop can fade them as one.
+  const bus = c.createGain();
+  bus.gain.setValueAtTime(0.0001, t0);
+  out(c, bus, 0.3);
+  const audible = () => !isMuted() && !document.hidden;
+  const fadeTo = (level: number, secs: number) => {
+    const now = c.currentTime;
+    bus.gain.cancelScheduledValues(now);
+    bus.gain.setValueAtTime(Math.max(0.0001, bus.gain.value), now);
+    bus.gain.exponentialRampToValueAtTime(Math.max(0.0001, level), now + secs);
+  };
+  if (audible()) fadeTo(1, 0.8);
+
+  const nodes: AudioScheduledSourceNode[] = [];
+  // Drone: root and fifth, slightly detuned, through a low-pass that breathes (slow LFO).
+  const filter = c.createBiquadFilter();
+  filter.type = 'lowpass';
+  filter.frequency.value = 420;
+  filter.Q.value = 6;
+  const droneGain = c.createGain();
+  droneGain.gain.value = v.drone;
+  filter.connect(droneGain).connect(bus);
+  for (const [freq, detune] of [[55, -6], [55, 6], [82.4, 0], [110, 4]] as const) {
+    const o = c.createOscillator();
+    o.type = 'sawtooth';
+    o.frequency.value = freq;
+    o.detune.value = detune;
+    o.connect(filter);
+    nodes.push(o);
+  }
+  const lfo = c.createOscillator();
+  lfo.frequency.value = 0.13;
+  const lfoDepth = c.createGain();
+  lfoDepth.gain.value = 260;
+  lfo.connect(lfoDepth).connect(filter.frequency);
+  nodes.push(lfo);
+
+  if (v.shimmer) {
+    // High, airy noise with a slow tremolo: "something glittering in the dark".
+    const src = c.createBufferSource();
+    src.buffer = noise(c);
+    src.loop = true;
+    const bp = c.createBiquadFilter();
+    bp.type = 'bandpass';
+    bp.frequency.value = 6500;
+    bp.Q.value = 3;
+    const g = c.createGain();
+    g.gain.value = 0.02;
+    const trem = c.createOscillator();
+    trem.frequency.value = 0.35;
+    const tremDepth = c.createGain();
+    tremDepth.gain.value = 0.018;
+    trem.connect(tremDepth).connect(g.gain);
+    src.connect(bp).connect(g).connect(bus);
+    nodes.push(src, trem);
+  }
+  for (const n of nodes) n.start(t0);
+
+  // Motif and heartbeat: short notes scheduled on a timer (they use the normal voices,
+  // which already respect mute).
+  let i = 0;
+  const motif = setInterval(() => {
+    if (!alive()) return stop();
+    if (!audible()) return;
+    const n = MOTIF[i++ % MOTIF.length]!;
+    play((cc) => tone(cc, { freq: NOTE(n + 3), type: 'sine', dur: 0.9, vol: 0.045, attack: 0.02, wet: 0.8 }));
+  }, v.step * 1000);
+  const beat = v.beat
+    ? setInterval(() => {
+        if (!audible() || !alive()) return;
+        play((cc) => {
+          tone(cc, { freq: 70, to: 40, dur: 0.12, vol: 0.3 });
+          tone(cc, { freq: 60, to: 38, at: 0.14, dur: 0.1, vol: 0.2 });
+        });
+      }, v.beat * 1000)
+    : 0;
+
+  const unMute = onMuteChange(() => fadeTo(audible() ? 1 : 0, 0.2));
+  const onVisibility = () => fadeTo(audible() ? 1 : 0, 0.2);
+  document.addEventListener('visibilitychange', onVisibility);
+
+  let stopped = false;
+  function stop(): void {
+    if (stopped) return;
+    stopped = true;
+    clearInterval(motif);
+    if (beat) clearInterval(beat);
+    unMute();
+    document.removeEventListener('visibilitychange', onVisibility);
+    fadeTo(0, 0.15);
+    const end = c!.currentTime + 0.25;
+    for (const n of nodes) n.stop(end);
+  }
+  return stop;
+}
