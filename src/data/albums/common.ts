@@ -611,8 +611,8 @@ export const COMMON: Album[] = [
     artist: "Green Day",
     year: 2004,
     label: "Reprise",
-    genre: "Trilha sonora",
-    previewTrack: "Holiday (feat. John Gallagher Jr., Stark Sands, Theo Stockman & Company)",
+    genre: "Alternativo",
+    previewTrack: "Boulevard of Broken Dreams",
   },
   {
     id: "whitney-houston-whitney-houston",
@@ -1300,7 +1300,7 @@ export const COMMON: Album[] = [
     year: 1969,
     label: "RCA",
     genre: "Rock",
-    previewTrack: "Suspicious Minds",
+    previewTrack: "In the Ghetto",
   },
   {
     id: "clash-sandinista",
@@ -1338,7 +1338,7 @@ export const COMMON: Album[] = [
     year: 1970,
     label: "Decca",
     genre: "Hard rock",
-    previewTrack: "Pinball Wizard",
+    previewTrack: "Summertime Blues",
   },
   {
     id: "vampire-weekend-modern-vampires-of-the-city",
@@ -2092,7 +2092,6 @@ export const COMMON: Album[] = [
     year: 1972,
     label: "Elektra",
     genre: "Rock",
-    previewTrack: "Magic Potion",
   },
   {
     id: "magnetic-fields-69-love-songs",
@@ -2352,7 +2351,7 @@ export const COMMON: Album[] = [
     year: 2004,
     label: "Arista",
     genre: "R&B / Soul",
-    previewTrack: "My Boo",
+    previewTrack: "Yeah! (feat. Lil Jon & Ludacris)",
   },
   {
     id: "lcd-soundsystem-sound-of-silver",
@@ -2652,7 +2651,7 @@ export const COMMON: Album[] = [
     year: 1973,
     label: "T-Neck",
     genre: "R&B / Soul",
-    previewTrack: "Summer Breeze (SQ-Quad Mix)",
+    previewTrack: "That Lady, Pts. 1 & 2",
   },
   {
     id: "king-sunny-ade-best-of-the-classic-years",
@@ -2742,7 +2741,7 @@ export const COMMON: Album[] = [
     year: 2004,
     label: "V.I. Music",
     genre: "Urbano latino",
-    previewTrack: "Gasolina (En Directo)",
+    previewTrack: "Gasolina",
   },
   {
     id: "big-star-1-record",
