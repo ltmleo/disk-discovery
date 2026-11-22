@@ -15,3 +15,9 @@ describe('router', () => {
     expect(fromLegacyHash('#section')).toBeNull();
   });
 });
+
+describe('roadmap route', () => {
+  it('parses /em-breve/ and builds its link', () => {
+    expect(parse(href.roadmap())).toEqual({ name: 'roadmap' });
+  });
+});

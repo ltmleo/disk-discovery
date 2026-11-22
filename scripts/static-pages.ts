@@ -2,6 +2,7 @@
  * Writes one static HTML file per shareable route, each with its own title and Open Graph
  * tags, because link-preview bots (WhatsApp, Telegram, X…) never run JavaScript:
  *   dist/galeria/index.html
+ *   dist/em-breve/index.html     (preview notice + roadmap)
  *   dist/disco/<id>/index.html   (×500, og:image = dist/og/<id>.jpg from og-images.ts)
  * They are copies of dist/index.html (same app bundle) with the <!--meta:start…end--> block and
  * <title> replaced. Besides the preview, deep links now answer 200 instead of the 404.html
@@ -62,6 +63,14 @@ write({
   imageAlt: 'Pacote do Disk Discovery com um disco de vinil',
 });
 
+write({
+  path: 'em-breve/',
+  title: 'Em breve · Disk Discovery',
+  description: 'O Disk Discovery é uma prévia. Vem aí: amigos, coleção dos amigos, novas figurinhas e notas e comentários.',
+  image: 'og/site.jpg',
+  imageAlt: 'Pacote do Disk Discovery com um disco de vinil',
+});
+
 for (const a of ALBUMS) {
   const r = rarityForRank(a.rank);
   const hook = a.tagline ? ` ${a.tagline}` : '';
@@ -74,11 +83,11 @@ for (const a of ALBUMS) {
   });
 }
 // Sitemap for search engines (listed in the home's robots.txt, per the ltm-novo-site skill).
-const urls = ['', 'galeria/', ...ALBUMS.map((a) => `disco/${a.id}/`)];
+const urls = ['', 'galeria/', 'em-breve/', ...ALBUMS.map((a) => `disco/${a.id}/`)];
 writeFileSync(
   `${DIST}sitemap.xml`,
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
     .map((u) => `  <url><loc>${SITE}${u}</loc></url>`)
     .join('\n')}\n</urlset>\n`,
 );
-console.log(`static pages: galeria + ${ALBUMS.length} albums, sitemap with ${urls.length} urls`);
+console.log(`static pages: galeria, em-breve + ${ALBUMS.length} albums, sitemap with ${urls.length} urls`);

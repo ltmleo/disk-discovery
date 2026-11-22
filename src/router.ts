@@ -14,10 +14,12 @@ export const SPY_PARAM = 'espiar';
 export type Route =
   | { name: 'pack' }
   | { name: 'gallery'; spy: boolean }
-  | { name: 'album'; id: string; spy: boolean };
+  | { name: 'album'; id: string; spy: boolean }
+  | { name: 'roadmap' };
 
 export const href = {
   pack: () => BASE,
+  roadmap: () => `${BASE}em-breve/`,
   gallery: (spy = false) => `${BASE}galeria/${spy ? `?${SPY_PARAM}` : ''}`,
   // Trailing slash: these paths are real static pages (scripts/static-pages.ts); without it
   // GitHub Pages answers a 301 first.
@@ -29,6 +31,7 @@ export function parse(pathname: string, search = ''): Route {
   const [section, param] = rest.split('/').filter(Boolean);
   const spy = new URLSearchParams(search).has(SPY_PARAM);
   if (section === 'galeria') return { name: 'gallery', spy };
+  if (section === 'em-breve') return { name: 'roadmap' };
   if (section === 'disco' && param) return { name: 'album', id: decodeURIComponent(param), spy };
   return { name: 'pack' };
 }
