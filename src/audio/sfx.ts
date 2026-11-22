@@ -49,6 +49,7 @@ function ac(): AudioContext | null {
 export function unlock(): void {
   const c = ac();
   if (c?.state === 'suspended') void c.resume();
+  void prepareRecord();
 }
 
 function noise(c: AudioContext): AudioBuffer {
@@ -153,45 +154,6 @@ function play(fn: (c: AudioContext) => void): void {
   if (!c || !master) return;
   fn(c);
 }
-
-/** One crinkle while the strip is being dragged; `progress` (0..1) raises the pitch. */
-export const tearGrain = (progress: number) =>
-  play((c) => {
-    for (let i = 0; i < 2; i++) {
-      hiss(c, {
-        at: i * 0.018 + Math.random() * 0.01,
-        dur: 0.035 + Math.random() * 0.03,
-        vol: 0.14 + progress * 0.12,
-        freq: 2200 + progress * 3500 + Math.random() * 900,
-        q: 1.4,
-        type: 'bandpass',
-      });
-    }
-  });
-
-/** The strip coming off: a ripping crack, foil crinkles and a soft thump of the pack opening. */
-export const tear = () =>
-  play((c) => {
-    hiss(c, { dur: 0.28, vol: 0.45, freq: 6500, to: 1400, q: 0.9 });
-    for (let i = 0; i < 9; i++) {
-      hiss(c, { at: 0.03 + i * 0.035 + Math.random() * 0.02, dur: 0.06, vol: 0.22, freq: 2500 + Math.random() * 4000, q: 1.2 });
-    }
-    tone(c, { freq: 110, to: 50, dur: 0.22, vol: 0.35 });
-  });
-
-/** Card sliding out against the inside of the wrapper. */
-export const rustle = () =>
-  play((c) => {
-    hiss(c, { dur: 0.7, vol: 0.22, freq: 700, to: 1800, q: 0.9, attack: 0.25 });
-    hiss(c, { at: 0.1, dur: 0.5, vol: 0.08, freq: 4000, q: 0.7, type: 'highpass', attack: 0.2 });
-  });
-
-/** Card settling into place after the pack falls away. */
-export const whoosh = () =>
-  play((c) => {
-    hiss(c, { dur: 0.45, vol: 0.28, freq: 400, to: 2500, q: 1.2, wet: 0.2 });
-    tone(c, { freq: 90, to: 60, at: 0.3, dur: 0.15, vol: 0.2 });
-  });
 
 const CHARGE: Record<RarityId, { from: number; to: number; vol: number }> = {
   common: { from: 220, to: 260, vol: 0.04 },
@@ -421,3 +383,249 @@ export function mystery(rarity: RarityId, alive: () => boolean): () => void {
   }
   return stop;
 }
+
+/* ---------------- Turntable: the pack opens like a DJ working a record ---------------- */
+
+/*
+ * The "record" is a synthesised vocal "ahh" (sawtooth through three vowel formants), the classic
+ * scratch sample, rendered once offline. A reversed copy plays the backward strokes: Web Audio
+ * can't play a buffer at a negative rate.
+ */
+let record: { fwd: AudioBuffer; rev: AudioBuffer; crackle: AudioBuffer } | null = null;
+let rendering: Promise<void> | null = null;
+
+/**
+ * Renders the record offline. Needs no user gesture (no live AudioContext), so the pack view
+ * calls it on mount and the very first drag already scratches.
+ */
+export function prepareRecord(): Promise<void> {
+  rendering ??= (async () => {
+    const Offline =
+      globalThis.OfflineAudioContext ?? (globalThis as { webkitOfflineAudioContext?: typeof OfflineAudioContext }).webkitOfflineAudioContext;
+    if (!Offline) return;
+    const secs = 1.6;
+    const rate = 44100;
+    const off = new Offline(1, Math.floor(rate * secs), rate);
+    const mix = off.createGain();
+    mix.connect(off.destination);
+    const env = off.createGain();
+    env.gain.setValueAtTime(0, 0);
+    env.gain.linearRampToValueAtTime(1, 0.02);
+    env.gain.setValueAtTime(1, secs - 0.15);
+    env.gain.linearRampToValueAtTime(0, secs);
+    env.connect(mix);
+    const voice = off.createGain();
+    for (const [freq, q, gain] of [[730, 6, 1], [1090, 7, 0.6], [2440, 9, 0.25]] as const) {
+      const f = off.createBiquadFilter();
+      f.type = 'bandpass';
+      f.frequency.value = freq;
+      f.Q.value = q;
+      const g = off.createGain();
+      g.gain.value = gain * 2.2;
+      voice.connect(f).connect(g).connect(env);
+    }
+    // Slight pitch drift, like a real voice, so the scratch has movement even at constant speed.
+    for (const detune of [-5, 5]) {
+      const o = off.createOscillator();
+      o.type = 'sawtooth';
+      o.frequency.setValueAtTime(150, 0);
+      o.frequency.linearRampToValueAtTime(128, secs);
+      o.detune.value = detune;
+      o.connect(voice);
+      o.start(0);
+    }
+    const fwd = await off.startRendering();
+    const rev = new AudioBuffer({ numberOfChannels: 1, length: fwd.length, sampleRate: rate });
+    const src = fwd.getChannelData(0);
+    const dst = rev.getChannelData(0);
+    for (let i = 0; i < src.length; i++) dst[i] = src[src.length - 1 - i]!;
+    // Vinyl crackle: sparse clicks with a short decay.
+    const crackle = new AudioBuffer({ numberOfChannels: 1, length: rate * 2, sampleRate: rate });
+    const d = crackle.getChannelData(0);
+    for (let i = 0; i < d.length; i++) {
+      if (Math.random() < 0.0009) {
+        const amp = (Math.random() * 2 - 1) * (0.3 + Math.random() * 0.7);
+        for (let k = 0; k < 24 && i + k < d.length; k++) d[i + k] = d[i + k]! + amp * Math.exp(-k / 4);
+      }
+    }
+    record = { fwd, rev, crackle };
+  })().catch(() => undefined);
+  return rendering;
+}
+
+function crackleFor(c: AudioContext, at: number, dur: number, vol: number): void {
+  if (!record) return;
+  const src = c.createBufferSource();
+  src.buffer = record.crackle;
+  src.loop = true;
+  const g = c.createGain();
+  g.gain.value = vol;
+  src.connect(g);
+  out(c, g);
+  src.start(c.currentTime + at, Math.random() * 1.5);
+  src.stop(c.currentTime + at + dur);
+}
+
+/**
+ * One hand stroke on the record: the platter speeds up and slows down again (a "baby
+ * scratch"). `cuts` adds crossfader chops (chirp/transformer feel).
+ */
+function stroke(c: AudioContext, o: { at: number; dir: 1 | -1; dur: number; peak: number; vol?: number; cuts?: number }): void {
+  if (!record) return;
+  const t = c.currentTime + o.at;
+  const src = c.createBufferSource();
+  src.buffer = o.dir > 0 ? record.fwd : record.rev;
+  src.playbackRate.setValueAtTime(0.05, t);
+  src.playbackRate.linearRampToValueAtTime(o.peak, t + o.dur * 0.45);
+  src.playbackRate.linearRampToValueAtTime(0.05, t + o.dur);
+  // Brighter when the record moves faster, as with a real stylus.
+  const lp = c.createBiquadFilter();
+  lp.type = 'lowpass';
+  lp.frequency.setValueAtTime(700, t);
+  lp.frequency.linearRampToValueAtTime(900 + o.peak * 2200, t + o.dur * 0.45);
+  lp.frequency.linearRampToValueAtTime(700, t + o.dur);
+  const g = c.createGain();
+  const vol = o.vol ?? 0.55;
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.linearRampToValueAtTime(vol, t + 0.01);
+  if (o.cuts) {
+    const slice = o.dur / (o.cuts * 2);
+    for (let i = 1; i < o.cuts * 2; i++) g.gain.setValueAtTime(i % 2 ? 0.0001 : vol, t + i * slice);
+  }
+  g.gain.setValueAtTime(vol, t + o.dur - 0.015);
+  g.gain.linearRampToValueAtTime(0.0001, t + o.dur);
+  src.connect(lp).connect(g);
+  out(c, g, 0.15);
+  src.start(t, 0.15 + Math.random() * 0.6);
+  src.stop(t + o.dur + 0.02);
+}
+
+/* Live scratch while the strip is dragged: the finger is the hand on the record. */
+let live: {
+  fwd: AudioBufferSourceNode;
+  rev: AudioBufferSourceNode;
+  gF: GainNode;
+  gR: GainNode;
+  lp: BiquadFilterNode;
+  out: GainNode;
+} | null = null;
+
+export function scratchStart(): void {
+  scratchEnd();
+  const c = ac();
+  if (!c || !master || !record || isMuted()) return;
+  const t = c.currentTime;
+  const outGain = c.createGain();
+  outGain.gain.value = 0.6;
+  const lp = c.createBiquadFilter();
+  lp.type = 'lowpass';
+  lp.frequency.value = 900;
+  lp.connect(outGain);
+  out(c, outGain, 0.12);
+  const voice = (buf: AudioBuffer) => {
+    const src = c.createBufferSource();
+    src.buffer = buf;
+    src.loop = true;
+    src.playbackRate.value = 0.001;
+    const g = c.createGain();
+    g.gain.value = 0;
+    src.connect(g).connect(lp);
+    src.start(t, Math.random() * 1.2);
+    return [src, g] as const;
+  };
+  const [fwd, gF] = voice(record.fwd);
+  const [rev, gR] = voice(record.rev);
+  live = { fwd, rev, gF, gR, lp, out: outGain };
+}
+
+/** `velocity`: finger speed along the strip in px/ms, signed (right = forward). */
+export function scratchMove(velocity: number): void {
+  const c = ctx;
+  if (!c || !live) return;
+  const t = c.currentTime;
+  const speed = Math.min(3, Math.abs(velocity) * 1.6);
+  const level = Math.min(1, speed * 0.9);
+  for (const [g, on] of [
+    [live.gF, velocity > 0],
+    [live.gR, velocity < 0],
+  ] as const) {
+    g.gain.cancelScheduledValues(t);
+    g.gain.setTargetAtTime(on ? level : 0, t, 0.008);
+    // A record the hand stops holding still makes no sound: fade unless the next move comes.
+    g.gain.setTargetAtTime(0, t + 0.06, 0.03);
+  }
+  for (const src of [live.fwd, live.rev]) {
+    src.playbackRate.cancelScheduledValues(t);
+    src.playbackRate.setTargetAtTime(Math.max(0.001, speed), t, 0.01);
+  }
+  live.lp.frequency.setTargetAtTime(700 + speed * 2000, t, 0.01);
+}
+
+export function scratchEnd(): void {
+  const c = ctx;
+  if (!c || !live) return;
+  const t = c.currentTime;
+  live.out.gain.setTargetAtTime(0, t, 0.02);
+  live.fwd.stop(t + 0.15);
+  live.rev.stop(t + 0.15);
+  live = null;
+}
+
+/** The strip comes off: a quick scratch combo (forward, back, chirp) landing on a kick. */
+export const tear = () =>
+  play((c) => {
+    stroke(c, { at: 0, dir: 1, dur: 0.11, peak: 2.4 });
+    stroke(c, { at: 0.11, dir: -1, dur: 0.09, peak: 2.6 });
+    stroke(c, { at: 0.2, dir: 1, dur: 0.16, peak: 2.2, cuts: 3 });
+    crackleFor(c, 0, 0.45, 0.25);
+    // Kick on the "one" after the combo.
+    tone(c, { freq: 130, to: 42, at: 0.37, dur: 0.28, vol: 0.55 });
+    hiss(c, { at: 0.37, dur: 0.04, vol: 0.12, freq: 3000, q: 0.7 });
+  });
+
+/** Card rising out of the pack: the DJ's rewind (record spun backwards, speeding up). */
+export const rustle = () =>
+  play((c) => {
+    if (!record) return;
+    const t = c.currentTime;
+    const src = c.createBufferSource();
+    src.buffer = record.rev;
+    src.playbackRate.setValueAtTime(0.4, t);
+    src.playbackRate.exponentialRampToValueAtTime(4, t + 0.55);
+    const lp = c.createBiquadFilter();
+    lp.type = 'lowpass';
+    lp.frequency.setValueAtTime(900, t);
+    lp.frequency.exponentialRampToValueAtTime(5000, t + 0.55);
+    const g = c.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(0.45, t + 0.08);
+    g.gain.setValueAtTime(0.45, t + 0.42);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.6);
+    src.connect(lp).connect(g);
+    out(c, g, 0.25);
+    src.start(t, 0.2);
+    src.stop(t + 0.65);
+    crackleFor(c, 0, 0.6, 0.3);
+  });
+
+/** Card settling: needle drop (thump + crackle) and the turntable spinning up to speed. */
+export const whoosh = () =>
+  play((c) => {
+    tone(c, { freq: 95, to: 55, dur: 0.12, vol: 0.35 });
+    hiss(c, { dur: 0.05, vol: 0.2, freq: 1800, q: 0.8 });
+    crackleFor(c, 0, 0.7, 0.35);
+    if (!record) return;
+    const t = c.currentTime + 0.05;
+    const src = c.createBufferSource();
+    src.buffer = record.fwd;
+    src.playbackRate.setValueAtTime(0.05, t);
+    src.playbackRate.linearRampToValueAtTime(1, t + 0.35);
+    const g = c.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(0.3, t + 0.3);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.55);
+    src.connect(g);
+    out(c, g, 0.2);
+    src.start(t, 0.1);
+    src.stop(t + 0.6);
+  });

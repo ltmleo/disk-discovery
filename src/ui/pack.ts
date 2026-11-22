@@ -101,6 +101,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
 
   function mountPack() {
     setPhase('sealed');
+    void sfx.prepareRecord();
     prepareNext();
     stage.removeAttribute('data-rarity');
     stage.replaceChildren(
@@ -108,13 +109,13 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
         pool: pool === 'all' ? null : poolById(pool).label,
         onGrip: () => {
           sfx.unlock();
+          sfx.scratchStart();
           // The light leaking through the tear takes the rarity colour, like a booster's glow.
           stage.dataset.rarity = rarityForRank(next!.album.rank).id;
         },
-        onProgress: (p) => {
-          sfx.tearGrain(p);
-          haptic(6);
-        },
+        onScratch: (v) => sfx.scratchMove(v),
+        onRelease: () => sfx.scratchEnd(),
+        onProgress: () => haptic(6),
         onTear: () => void tear(),
       }),
     );
@@ -129,6 +130,7 @@ export function renderPackView(collection: Collection, onChange: () => void): HT
     setPhase('tearing');
     actions.replaceChildren();
     sfx.unlock();
+    sfx.scratchEnd();
     sfx.tear();
     haptic([25, 30, 15]);
     stopPreview(300);
@@ -303,14 +305,18 @@ interface PackHandlers {
   pool: string | null;
   /** First touch on the strip (unlock audio, pick the light colour). */
   onGrip: () => void;
-  /** Called every few percent of drag progress (0..1), for crinkle sounds. */
+  /** Called every few percent of drag progress (0..1). */
   onProgress: (progress: number) => void;
+  /** Finger velocity along the strip in px/ms (signed): drives the live scratch. */
+  onScratch: (velocity: number) => void;
+  /** Finger lifted before the tear completed. */
+  onRelease: () => void;
   onTear: () => void;
 }
 
 const TEAR_AT = 0.55;
 
-function buildPack({ pool, onGrip, onProgress, onTear }: PackHandlers): HTMLElement {
+function buildPack({ pool, onGrip, onProgress, onScratch, onRelease, onTear }: PackHandlers): HTMLElement {
   const strip = h(
     'div',
     { class: 'pack__strip', 'aria-hidden': 'true' },
@@ -338,8 +344,12 @@ function buildPack({ pool, onGrip, onProgress, onTear }: PackHandlers): HTMLElem
   // Drag-to-tear along the top strip. Click on the button is the accessible fallback.
   let startX: number | null = null;
   let lastStep = 0;
+  let lastX = 0;
+  let lastT = 0;
   strip.addEventListener('pointerdown', (e) => {
     startX = e.clientX;
+    lastX = e.clientX;
+    lastT = e.timeStamp;
     lastStep = 0;
     strip.setPointerCapture(e.pointerId);
     pack.classList.add('is-gripped');
@@ -347,9 +357,14 @@ function buildPack({ pool, onGrip, onProgress, onTear }: PackHandlers): HTMLElem
   });
   strip.addEventListener('pointermove', (e) => {
     if (startX === null) return;
+    // Hand speed on the "record": back-and-forth drags scratch before the strip gives way.
+    const dt = Math.max(1, e.timeStamp - lastT);
+    onScratch((e.clientX - lastX) / dt);
+    lastX = e.clientX;
+    lastT = e.timeStamp;
     const progress = Math.max(0, Math.min(1, Math.abs(e.clientX - startX) / strip.clientWidth / TEAR_AT));
     pack.style.setProperty('--tear', progress.toFixed(3));
-    // A crinkle every ~7% of the way, not on every pointer event.
+    // A haptic tick every ~7% of the way, not on every pointer event.
     const step = Math.floor(progress * 14);
     if (step > lastStep) {
       lastStep = step;
@@ -363,6 +378,7 @@ function buildPack({ pool, onGrip, onProgress, onTear }: PackHandlers): HTMLElem
   const cancel = () => {
     if (startX === null) return;
     startX = null;
+    onRelease();
     pack.classList.remove('is-gripped');
     pack.style.setProperty('--tear', '0');
   };
